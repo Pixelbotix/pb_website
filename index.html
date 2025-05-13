@@ -269,6 +269,19 @@
                 <i class="ri-menu-line ri-lg"></i>
             </div>
         </div>
+
+        <!-- Mobile View -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95 backdrop-blur-sm w-full border-t border-gray-700">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="#" class="text-gray-300 py-2 hover:text-primary font-medium">Home</a>
+                <a href="About_Us_Dark.html" class="text-gray-300 py-2 hover:text-primary font-medium">About Us</a>
+                <a href="#rnd" class="text-gray-300 py-2 hover:text-primary font-medium">R&D</a>
+                <a href="#eduverse" class="text-gray-300 py-2 hover:text-primary font-medium">EduVerse</a>
+                <a href="#skill_labs" class="text-gray-300 py-2 hover:text-primary font-medium">Skill Labs</a>
+                <a href="#contact_us" class="text-gray-300 py-2 hover:text-primary font-medium">Contact</a>
+            </div>
+        </div>
+
     
     </header>
     <!-- Hero Section -->
@@ -1270,6 +1283,13 @@
         </div>
     </footer>
     <script>
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        
         document.addEventListener('DOMContentLoaded', function () {
             // Hero Slider
             let currentSlide = 0;
