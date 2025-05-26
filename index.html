@@ -555,10 +555,7 @@
                 </div>
                 <!-- Rapid Prototyping -->
                 <div
-                    class="bg-white rounded-lg  href="#" class="text-primary font-medium flex items-center">
-                            Learn More
-                            <i class="ri-arrow-right-line ml-2"></i>
-                        </a>shadow-lg overflow-hidden transition-transform hover:transform hover:scale-105">
+                    class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform hover:transform hover:scale-105">
                     <div class="h-48 overflow-hidden">
                         <img src="static/r&d_section/rapid_prototyping.jpg"
                             alt="Rapid Prototyping"
@@ -568,10 +565,10 @@
                         <h3 class="text-xl font-bold mb-3">Rapid Prototyping</h3>
                         <p class="text-gray-600 mb-4">Utilizing advanced 3D printing, CNC machining, and additive
                             manufacturing technologies to rapidly develop and test innovative product prototypes.</p>
-                        <a href="#" class="text-primary font-medium flex items-center">
+<!--                         <a href="#" class="text-primary font-medium flex items-center">
                             Learn More
                             <i class="ri-arrow-right-line ml-2"></i>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
                 <!-- UAV/Service Drones -->
@@ -2499,16 +2496,17 @@
         });
     </script>
     <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const form = document.querySelector('form');
-        const redirectUrl = 'https://forms.gle/x1cMZfPsmMgJp6T56';
-
-        form.addEventListener('submit', function (e) {
-            e.preventDefault(); // Prevent default form submission
-            window.location.href = redirectUrl; // Redirect to external form
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('form');
+            const redirectUrl = 'https://forms.gle/x1cMZfPsmMgJp6T56';
+    
+            form.addEventListener('submit', function (e) {
+                e.preventDefault(); // Prevent default form submission
+                window.open(redirectUrl, '_blank'); // Open form in a new tab
+            });
         });
-    });
-</script>
+    </script>
+
 </body>
 
 </html>
