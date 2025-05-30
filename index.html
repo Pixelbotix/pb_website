@@ -13,7 +13,7 @@
     PixelBotix offers a diverse ecosystem: Brainy Babies, Little Techies, Maker School, and Future Innovators are part of our Edverse platform for future-ready learners; PixelBotix Skill Labs delivers hands-on technical training; and the AI & Robotics Hub powers research through advanced, domain-specific labs.
     
     We aim to empower the next generation of innovators by bridging the gap between academic research and real-world applications in technology and education." />
-    <meta name="keywords" content="PixelBotix,PIXELBOTIX,pixelbotix,pixel,botix, Robotics, Artificial Intelligence, AI, Machine Learning, Smart Manufacturing, EdTech, STEM Education, UAV, AMR, AI and Robotics Hub, Skill Labs, Maker School, Brainy Babies, Little Techies, Future Innovators, Emerging Technologies, Additive Manufacturing, Computer Vision, Assistive Devices, Research and Development, Hands-on Learning, Innovation, Educational Technology, AI Training, Robotics Training, Future Skills, STEM Learning, Tech Education for Kids" />
+    <meta name="keywords" content="PixelBotix, PIXELBOTIX, pixelbotix, pixel, botix, Robotics, Artificial Intelligence, AI, Machine Learning, Smart Manufacturing, EdTech, STEM , UAV, AMR, AI and Robotics Hub, Skill Labs, Maker School, Brainy Babies, Little Techies, Future Innovators, Emerging Technologies, Additive Manufacturing, Computer Vision, Assistive Devices, Research and Development, Hands-on Learning, Innovation, Educational Technology, AI Training, Robotics Training, Future Skills, STEM Learning, Tech Education for Kids" />
     <meta name="author" content="PixelBotix Technologies Pvt. Ltd." />
     <link rel="canonical" href="https://pixelbotix.com/" />
     <link rel="manifest" href="/site.webmanifest" />
@@ -82,6 +82,22 @@
 
         .dark .bg-white {
             background-color: #374151;
+        }
+
+        /* Default to light theme */
+        .logo-light {
+            display: block;
+        }
+        .logo-dark {
+            display: none;
+        }
+
+        /* When dark mode is enabled */
+        .dark .logo-light {
+            display: none;
+        }
+        .dark .logo-dark {
+            display: block;
         }
 
         .dark .text-gray-700 {
@@ -319,16 +335,22 @@
             margin: 0;
         }
     </style>
-    <link rel="icon" type="image/png" href="static/favicon/2.jpeg">
+    <link rel="icon" type="image/png" href="static/favicon/favicon.png">
 </head>
 
 <body class="bg-gray-50">
     <!-- Header -->
     <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50 transition-colors duration-300">
         <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            
             <a href="#" class="text-2xl font-['Pacifico'] text-primary">
-                <img src="static/logo/logo.png" alt="Logo" class="w-20 h-20">
+                <!-- For Dark Logo -->
+                <img src="static/logo/logo-white.png" alt="Logo Light" class="w-20 h-20 logo-light">
+                <!-- For Light Logo -->
+                <img src="static/logo/logo-dark.png" alt="Logo Dark" class="w-20 h-20 logo-dark">
             </a>
+
+
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex items-center space-x-6">
                 <a href="#home" class="text-gray-800 hover:text-primary transition-colors">Home</a>
@@ -2378,15 +2400,21 @@
                 } else {
                     slidesToShow = 1;
                 }
-                slideWidth = containerWidth / slidesToShow;
-                // Update slide widths
-                const slides = slider.querySelectorAll('div[class^="w-full"]');
-                slides.forEach(slide => {
-                    slide.style.width = `${slideWidth}px`;
-                });
-                // Update slider position
-                goToSlide(currentSlide);
-            }
+              /* Default to light theme */
+              .logo-light {
+            display: block;
+        }
+        .logo-dark {
+            display: none;
+        }
+
+        /* When dark mode is enabled */
+        .dark .logo-light {
+            display: none;
+        }
+        .dark .logo-dark {
+            display: block;
+        }       }
             function goToSlide(index) {
                 const maxIndex = slider.children.length - slidesToShow;
                 currentSlide = Math.max(0, Math.min(index, maxIndex));
