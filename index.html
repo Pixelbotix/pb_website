@@ -328,6 +328,76 @@
                 min-height: 350px;
             }
         }
+        
+        @media (max-width: 480px) {
+            .hero-slider {
+                height: 45vh;
+                min-height: 300px;
+            }
+
+            .gallery-overlay {
+                padding: 12px;
+                font-size: 14px;
+            }
+
+            .switch {
+                width: 40px;
+                height: 20px;
+            }
+
+            .slider:before {
+                height: 16px;
+                width: 16px;
+                left: 2px;
+                bottom: 2px;
+            }
+
+            input:checked + .slider:before {
+                transform: translateX(20px);
+            }
+
+            .custom-checkbox, .custom-radio {
+                width: 18px;
+                height: 18px;
+            }
+
+            .tech-card {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .hero-slider {
+                height: 40vh;
+                min-height: 250px;
+            }
+
+            .gallery-overlay {
+                padding: 8px;
+                font-size: 13px;
+            }
+
+            .custom-checkbox, .custom-radio {
+                width: 16px;
+                height: 16px;
+            }
+
+            .switch {
+                width: 36px;
+                height: 18px;
+            }
+
+            .slider:before {
+                height: 14px;
+                width: 14px;
+                left: 2px;
+                bottom: 2px;
+            }
+
+            input:checked + .slider:before {
+                transform: translateX(18px);
+            }
+        }
 
         input[type="number"]::-webkit-inner-spin-button,
         input[type="number"]::-webkit-outer-spin-button {
