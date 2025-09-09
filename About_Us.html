@@ -38,154 +38,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
 
     <!-- Remix Icon CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
 
-    <style>
-        :where([class^="ri-"])::before {
-            content: "\f3c2";
-        }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        .hero-slider {
-            position: relative;
-            overflow: hidden;
-            height: 600px;
-        }
-
-        .slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .slide.active {
-            opacity: 1;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 50;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .modal.show {
-            display: flex;
-            opacity: 1;
-        }
-
-        input[type="checkbox"],
-        input[type="radio"] {
-            appearance: none;
-            -webkit-appearance: none;
-            width: 20px;
-            height: 20px;
-            border: 2px solid #d1d5db;
-            border-radius: 4px;
-            outline: none;
-            cursor: pointer;
-            position: relative;
-        }
-
-        input[type="checkbox"]:checked {
-            background-color: #3b82f6;
-            border-color: #3b82f6;
-        }
-
-        input[type="checkbox"]:checked::after {
-            content: '';
-            position: absolute;
-            left: 6px;
-            top: 2px;
-            width: 5px;
-            height: 10px;
-            border: solid white;
-            border-width: 0 2px 2px 0;
-            transform: rotate(45deg);
-        }
-
-        input[type="radio"] {
-            border-radius: 50%;
-        }
-
-        input[type="radio"]:checked {
-            border-color: #3b82f6;
-        }
-
-        input[type="radio"]:checked::after {
-            content: '';
-            position: absolute;
-            top: 4px;
-            left: 4px;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background-color: #3b82f6;
-        }
-
-        .switch {
-            position: relative;
-            display: inline-block;
-            width: 50px;
-            height: 24px;
-        }
-
-        .switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: .4s;
-            border-radius: 34px;
-        }
-
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 18px;
-            width: 18px;
-            left: 3px;
-            bottom: 3px;
-            background-color: white;
-            transition: .4s;
-            border-radius: 50%;
-        }
-
-        input:checked+.slider {
-            background-color: #3b82f6;
-        }
-
-        input:checked+.slider:before {
-            transform: translateX(26px);
-        }
-    </style>
 </head>
 
 <body class="bg-gray-900">
@@ -366,7 +224,7 @@
 
 
                     <div class="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full">
-                            <img src="templates/Director_photo/Anand.png" 
+                            <img src="templates/Director_photo/Ananda.png" 
                             alt="Anand Elangovan" 
                             class="w-full h-full object-cover object-top">
                     </div>
@@ -604,19 +462,8 @@
 
 <p class="text-gray-300 mb-6 leading-relaxed text-justify">As Co-Founder and CDO of PixelBotix, he leads R&D initiatives and the design of intelligent, real-world solutions from crashworthy automotive structures to biomedical devices and heritage preservation using 3D printing. He is also the founder of Mithra 3D Tech, a leading 3D printing and prototyping venture.</p>
 `
-                },
-                {
-                    name: 'Balaji Natarajan R',
-                    title: 'Co-Founder & COO',
-                    image: 'templates/Director_photo/Balaji.jpeg',
-                    bio: `
-<p class="text-gray-300 mb-6 leading-relaxed text-justify">Mr. Balaji Natarajan R is a pioneer in the field of Tribology, Nanofluids, Medical Robotics, Drone Technology, and 3D Printing, with over a decade of experience in Mechanical Design, R&D, and Innovation. Being on the verge of completion of his Ph.D. in Mechanical Engineering at Anna University – MIT Campus, his research spans across Intelligent Prosthetics, Exoskeleton, and Bionic limb; Bio-based Nanolubricants; FRP Composites; and Drone Technology.</p>
-
-<p class="text-gray-300 mb-6 leading-relaxed text-justify">He is also a visionary inventor with three patents including Heavy Metal Detecting Nanotech Device; Real-time Brake Analyzer; and AI-Driven Gear Profile Error Detection System. He also actively contributes to global research community through publications and collaborations. </p>
-
-<p class="text-gray-300 mb-6 leading-relaxed text-justify">As Co-Founder and COO of PixelBotix Technologies Pvt. Ltd., he oversees the overall Operations and Innovation road map, which includes R&D, Industrial Support & Solutions, Ed-Tech platform focused on Robotics Education, and Advanced lab setup for Institutions. Under his leadership, PixelBotix delivers cutting-edge Industrial Automation solutions and fosters STEM learning, bridging Academia and Industry.</p>
-`
                 }
+
 
             ];
             // Open modal when a founder card is clicked
