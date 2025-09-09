@@ -774,7 +774,7 @@
                     </div>
 
                     <!-- Submit Button -->
-                    <button type="submit"
+                    <button id="submitForm" type="submit"
                         class="w-full bg-primary text-white px-4 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors">
                         Next: Payment
                     </button>
@@ -782,12 +782,31 @@
             </div>
 
 
+
             <!-- Step 2: Payment -->
-            <div id="step2" class="hidden">
-                <div id="desktopPayment">QR Code Here</div>
-                <div id="mobilePayment" class="hidden"><a href="upi://pay?...">Pay via UPI</a></div>
-                <button id="paidBtn">I have paid</button>
+            <div id="step2" class="hidden space-y-6 text-center">
+                <!-- Desktop QR Code -->
+                <div id="desktopPayment" class="flex flex-col items-center justify-center">
+                    <p class="mb-4 font-semibold text-gray-700 dark:text-gray-200">Scan the QR code to pay ₹999</p>
+                    <img src="static/qr_code/qr.jpeg" alt="QR Code" class="w-48 h-48 object-contain rounded-lg shadow-lg">
+                </div>
+
+                <!-- Mobile Payment -->
+                <div id="mobilePayment" class="hidden flex flex-col items-center justify-center">
+                    <p class="mb-4 font-semibold text-gray-700 dark:text-gray-200">Click the button to pay via UPI</p>
+                    <a href="upi://pay?pa=pixelbotix@yespay&pn=PixelBotix&am=999&cu=INR"
+                    class="w-full max-w-xs bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors">
+                    Pay via UPI
+                    </a>
+                </div>
+
+                <!-- Paid Button -->
+                <button id="paidBtn" 
+                    class="w-full max-w-xs bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors">
+                    I have paid
+                </button>
             </div>
+
 
             <!-- Step 3: Transaction ID -->
             <div id="step3" class="hidden">
@@ -853,44 +872,6 @@
     </script>
 
 
-
-    <script>
-        // Show/hide "Other" textbox based on selection
-        const categorySelect = document.getElementById('category');
-        const otherTextDiv = document.getElementById('otherTextDiv');
-
-        categorySelect.addEventListener('change', function() {
-            if (this.value === 'other') {
-                otherTextDiv.style.display = 'block';
-            } else {
-                otherTextDiv.style.display = 'none';
-                document.getElementById('otherText').value = '';
-            }
-        });
-
-        // Example: Capture form data
-        document.getElementById('registrationForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // prevent default form submission
-
-            const formData = {
-                name: document.getElementById('name').value,
-                phone: document.getElementById('phone').value,
-                email: document.getElementById('email').value,
-                category: document.getElementById('category').value,
-                otherText: document.getElementById('otherText').value
-            };
-
-            console.log(formData); // for testing, you can send this to your backend
-            alert('Form submitted! Check console for data.');
-        });
-    </script>
-
-
-
-
-
-
-
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const modal = document.getElementById("registerModal");
@@ -928,16 +909,17 @@
             submitFormBtn.addEventListener("click", (e) => {
                 e.preventDefault();
 
-                // Collect form values
+                // Collect form values correctly
                 formData = {
                     name: document.getElementById("name").value.trim(),
+                    phone: document.getElementById("phone").value.trim(),
                     email: document.getElementById("email").value.trim(),
-                    mobile: document.getElementById("mobile").value.trim(),
-                    academic: document.querySelector("input[name='academic']:checked")?.value || "",
-                    other: document.getElementById("academicOther")?.value.trim() || ""
+                    category: document.getElementById("category").value,
+                    otherText: document.getElementById("otherText").value.trim()
                 };
 
-                if (!formData.name || !formData.email || !formData.mobile) {
+                // Validation
+                if (!formData.name || !formData.email || !formData.phone || !formData.category) {
                     alert("Please fill all required fields.");
                     return;
                 }
@@ -945,7 +927,7 @@
                 // Next step: Payment
                 showStep(step2);
 
-                // Detect device
+                // Device detection for QR / UPI
                 if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
                     document.getElementById("mobilePayment").classList.remove("hidden");
                     document.getElementById("desktopPayment").classList.add("hidden");
