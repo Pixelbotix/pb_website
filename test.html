@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drone Smooth Random Flight</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        background-color: #f0f0f0;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+    }
+
+    #drone-container {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        z-index: 1000;
+        cursor: pointer;
+        transition: all 6s linear; /* longer duration for slower movement */
+    }
+
+    #drone-icon {
+        width: 100%;
+        height: 100%;
+        background: url('static/icons/dr.jpeg') no-repeat center/contain;
+    }
+
+    #drone-popup {
+        display: none;
+        position: absolute;
+        bottom: 70px;
+        right: 0;
+        background: white;
+        border-radius: 10px;
+        padding: 15px;
+        width: 220px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    #drone-close {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<div id="drone-container">
+    <div id="drone-icon"></div>
+    <div id="drone-popup">
+        <span id="drone-close">&times;</span>
+        <h3>Drone Workshop</h3>
+        <p>Join our workshop to learn drone flying tricks!</p>
+        <a href="#" style="color:blue;">Register Now</a>
+    </div>
+</div>
+
+<script>
+const droneContainer = document.getElementById('drone-container');
+const droneIcon = document.getElementById('drone-icon');
+const dronePopup = document.getElementById('drone-popup');
+const droneClose = document.getElementById('drone-close');
+
+function getRandomPosition() {
+    const maxX = window.innerWidth - droneContainer.offsetWidth;
+    const maxY = window.innerHeight - droneContainer.offsetHeight;
+    const x = Math.floor(Math.random() * maxX);
+    const y = Math.floor(Math.random() * maxY);
+    return { x, y };
+}
+
+function moveDroneSmooth() {
+    const { x, y } = getRandomPosition();
+    droneContainer.style.left = x + 'px';
+    droneContainer.style.top = y + 'px';
+
+    // Move again after current transition ends
+    setTimeout(moveDroneSmooth, 6000); // match transition duration
+}
+
+// Show popup on click
+droneIcon.addEventListener('click', () => {
+    dronePopup.style.display = 'block';
+});
+
+// Close popup
+droneClose.addEventListener('click', () => {
+    dronePopup.style.display = 'none';
+});
+
+// Close popup if clicking outside
+document.addEventListener('click', (e) => {
+    if (!droneContainer.contains(e.target)) {
+        dronePopup.style.display = 'none';
+    }
+});
+
+// Start drone movement
+moveDroneSmooth();
+</script>
+
+</body>
+</html>

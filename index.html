@@ -1869,6 +1869,18 @@
         </div>
     </section>
 
+    <!-- Drone Fly-in CTA -->
+    <div id="drone-container">
+        <img src="static/Director_photo/Sabique.jpeg" id="drone-icon" alt="Drone Workshop">
+        <div id="drone-popup">
+            <span id="drone-close">&times;</span>
+            <h3>Drone Fly-in Workshop</h3>
+            <p>Join our exciting workshop to learn drone flying, tricks, and safety tips!</p>
+            <a href="https://your-registration-link.com" id="drone-register">Register Now</a>
+        </div>
+    </div>
+
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-white pt-16 pb-8">
         <div class="container mx-auto px-4">
@@ -1978,6 +1990,10 @@
 
          
     </footer>
+
+
+
+    
     <!-- Scripts -->
     <script id="theme-toggle-script">
         document.addEventListener('DOMContentLoaded', function () {
@@ -2296,6 +2312,40 @@
             });
         });
     </script>
+    <!-- Drone part -->
+    <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const droneContainer = document.getElementById('drone-container');
+                const droneIcon = document.getElementById('drone-icon');
+                const dronePopup = document.getElementById('drone-popup');
+                const droneClose = document.getElementById('drone-close');
+
+                // Trigger animation immediately
+                if (!localStorage.getItem('droneShown')) {
+                    droneContainer.classList.add('drone-flyin');
+                    localStorage.setItem('droneShown', 'true');
+                }
+
+                // Show popup on click
+                droneIcon.addEventListener('click', () => {
+                    dronePopup.style.display = 'block';
+                });
+
+                // Close popup
+                droneClose.addEventListener('click', () => {
+                    dronePopup.style.display = 'none';
+                });
+
+                // Close if clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!droneContainer.contains(e.target)) {
+                        dronePopup.style.display = 'none';
+                    }
+                });
+            });
+
+    </script>
+
 
 </body>
 

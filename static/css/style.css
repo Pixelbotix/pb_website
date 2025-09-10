@@ -212,3 +212,58 @@ input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
+/* Drone Fly-in CTA */
+
+
+
+/* Drone container styling */
+#drone-container {
+    position: fixed;
+    bottom: -100px; /* start off-screen */
+    right: -100px;  /* start off-screen */
+    z-index: 1000;
+}
+
+/* Drone icon */
+#drone-icon {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+/* Drone popup */
+#drone-popup {
+    display: none;
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 220px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Close button */
+#drone-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Drone fly-in animation along a curved path */
+@keyframes droneFlyPath {
+    0% { transform: translate(0,0) rotate(0deg); opacity: 0; }
+    25% { transform: translate(-50px, -150px) rotate(-10deg); opacity: 1; }
+    50% { transform: translate(-150px, -300px) rotate(5deg); }
+    75% { transform: translate(-300px, -250px) rotate(-5deg); }
+    100% { transform: translate(-400px, -300px) rotate(0deg); }
+}
+
+
+/* Triggered class for animation */
+.drone-flyin {
+    animation: droneFlyPath 3s ease-in-out forwards;
+}
