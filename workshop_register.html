@@ -797,26 +797,18 @@
             </div>
 
 
+        <!-- Step 2: Payment -->
+        <div id="step2" class="hidden space-y-6 text-center">
 
-            <!-- Step 2: Payment -->
-            <div id="step2" class="hidden space-y-6 text-center">
-                
-                <!-- Countdown Timer -->
-                <div id="countdown" class="text-lg font-bold text-red-600"></div>
+            <!-- Countdown Timer -->
+            <div id="countdown" class="text-lg font-bold text-red-600"></div>
 
-                <!-- Desktop QR Code -->
-                <div id="desktopPayment" class="flex flex-col items-center justify-center">
-                    <p class="mb-4 font-semibold text-gray-700 dark:text-gray-200">
-                        Scan the QR code to pay ₹999
-                    </p>
-                    <img src="static/qr_code/qr.jpeg" alt="QR Code" 
-                        class="w-full max-w-md mx-auto object-contain rounded-xl shadow-2xl">
-                </div>
-
-                <!-- Mobile Payment -->
-                <div id="mobilePayment" class="hidden flex flex-col items-center justify-center">
-                    <p class="mb-4 font-semibold text-gray-700 dark:text-gray-200">
-                        Click the button to pay via UPI
+            <!-- Mobile Payment -->
+            <div id="mobilePaymentOptions" class="hidden flex flex-col items-center justify-center space-y-4">
+                <!-- Primary: UPI Button -->
+                <div>
+                    <p class="mb-2 font-semibold text-gray-700 dark:text-gray-200">
+                        Pay directly via UPI
                     </p>
                     <a href="upi://pay?pa=pixelbotix@yespay&pn=PixelBotix&am=999&cu=INR"
                     class="w-full max-w-xs bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors">
@@ -824,13 +816,41 @@
                     </a>
                 </div>
 
-                <!-- Paid Button -->
-                <button id="paidBtn" 
-                    class="w-full max-w-xs bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors">
-                    I have paid
-                </button>
+                <!-- Secondary: QR Code -->
+                <div>
+                    <p class="mb-2 font-semibold text-gray-700 dark:text-gray-200">
+                        Or scan/download this QR code
+                    </p>
+                    <a href="static/qr_code/qr.jpeg" download="PixelBotix_QR.png">
+                        <img src="static/qr_code/qr.jpeg" alt="QR Code" 
+                            class="w-full max-w-sm mx-auto object-contain rounded-xl shadow-2xl cursor-pointer">
+                    </a>
+                    <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                        📲 Tap the QR code to download it, then pay via your UPI app
+                    </p>
+                </div>
             </div>
 
+            <!-- Desktop QR Payment -->
+            <div id="desktopPayment" class="hidden flex flex-col items-center justify-center">
+                <p class="mb-4 font-semibold text-gray-700 dark:text-gray-200">
+                    Scan the QR code to pay ₹999
+                </p>
+                <a href="static/qr_code/qr.jpeg" download="PixelBotix_QR.png">
+                    <img src="static/qr_code/qr.jpeg" alt="QR Code" 
+                        class="w-full max-w-md mx-auto object-contain rounded-xl shadow-2xl cursor-pointer">
+                </a>
+                <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                    📲 Tap the QR code to download it, then pay via your UPI app
+                </p>
+            </div>
+
+            <!-- Paid Button -->
+            <button id="paidBtn" 
+                class="w-full max-w-xs bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors mt-4">
+                I have paid
+            </button>
+        </div>
 
 
             <!-- Step 3: Final Confirmation -->
@@ -1007,16 +1027,32 @@
                 // Next step: Payment
                 showStep(step2);
 
-                // Device detection for QR / UPI
+                // // Device detection for QR / UPI
+
+
+                // Step 1: After form submission
+                // if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+                //     document.getElementById("mobilePayment").classList.remove("hidden"); // UPI button
+                //     document.getElementById("qrPayment").classList.remove("hidden"); // QR code
+                //     document.getElementById("desktopPayment").classList.add("hidden");
+                // } else {
+                //     document.getElementById("qrPayment").classList.remove("hidden"); // QR code only
+                //     document.getElementById("mobilePayment").classList.add("hidden");
+                //     document.getElementById("desktopPayment").classList.add("hidden"); // remove old desktop
+                // }
+
                 if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
-                    document.getElementById("mobilePayment").classList.remove("hidden");
+                    // Mobile: show UPI first, then QR as secondary
+                    document.getElementById("mobilePaymentOptions").classList.remove("hidden");
                     document.getElementById("desktopPayment").classList.add("hidden");
                 } else {
+                    // Desktop: show only QR
                     document.getElementById("desktopPayment").classList.remove("hidden");
-                    document.getElementById("mobilePayment").classList.add("hidden");
+                    document.getElementById("mobilePaymentOptions").classList.add("hidden");
                 }
-            });
 
+                
+            });
 
             // Utility: Show only 1 step at a time
             function showStep(step) {
