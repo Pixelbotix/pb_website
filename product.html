@@ -62,18 +62,13 @@
     <header class="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 shadow-lg transition-colors duration-300">
         <div class="w-full px-4 lg:px-8">
             <div class="flex items-center justify-between h-16">
+
+
                 <a href="#" class="flex items-center">
-                    <!-- For Dark Logo -->
-                    <img src="{{ url_for('static', filename='logo/logo-white.png') }}" 
-                        alt="Logo Light" 
-                        class="w-20 h-20 logo-light hidden dark:inline-block">
-
-                    <!-- For Light Logo -->
-                    <img src="{{ url_for('static', filename='logo/logo-dark.png') }}" 
-                        alt="Logo Dark" 
-                        class="w-20 h-20 logo-dark inline-block dark:hidden">
+                    <!-- Dark theme logo (shown only in dark mode) -->
+                    <img src="static/logo/logo-dark.png" alt="Logo Light" class="w-20 h-20 hidden dark:inline-block">
+                    <img src="static/logo/logo-white.png" alt="Logo Dark" class="w-20 h-20 inline-block dark:hidden">
                 </a>
-
 
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="index.html" class="text-gray-900 dark:text-white hover:text-primary transition-colors">Home</a>
@@ -110,6 +105,8 @@
             </div>
         </div>
     </header>
+    
+
     <main class="pt-16">
         <section class="relative h-screen overflow-hidden">
             <div class="slider-container h-full">
@@ -861,6 +858,7 @@
 
          
     </footer>
+
     <script id="theme-toggle-script">
         document.addEventListener('DOMContentLoaded', function () {
             const themeToggle = document.getElementById('theme-toggle');
@@ -879,6 +877,7 @@
             }
         });
     </script>
+
     <script id="mobile-menu-script">
         document.addEventListener('DOMContentLoaded', function () {
             const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
@@ -888,6 +887,7 @@
             });
         });
     </script>
+
     <script id="slider-script">
         document.addEventListener('DOMContentLoaded', function () {
             const sliderTrack = document.getElementById('slider-track');
