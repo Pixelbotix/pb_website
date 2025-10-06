@@ -255,6 +255,8 @@
                             <div>
                                 <h4 class="text-xl font-semibold mb-6 text-primary">FDM 3D Printers</h4>
                                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                    
+
                                     <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
                                         <img src="https://readdy.ai/api/search-image?query=Professional%20FDM%203D%20printer%20Robu%20brand%20with%20heated%20bed%2C%20dual%20extruder%20system%2C%20enclosed%20chamber%2C%20industrial%20grade%20components%2C%20clean%20white%20background%2C%20product%20photography%20style&width=400&height=300&seq=fdm1&orientation=landscape"
                                             alt="Robu FDM Printer"
@@ -273,8 +275,100 @@
                                                 class="flex-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white px-4 py-2 !rounded-button text-sm font-semibold transition-colors whitespace-nowrap">
                                                 Specs
                                             </button>
+
                                         </div>
                                     </div>
+                                    
+                                    <!-- Product Card -->
+                                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 max-w-sm mx-auto">
+                                        <img src="https://readdy.ai/api/search-image?query=Professional%20FDM%203D%20printer%20Robu%20brand%20with%20heated%20bed%2C%20dual%20extruder%20system%2C%20enclosed%20chamber%2C%20industrial%20grade%20components%2C%20clean%20white%20background%2C%20product%20photography%20style&width=400&height=300&seq=fdm1&orientation=landscape"
+                                            alt="Robu FDM Printer"
+                                            class="w-full h-48 object-cover object-top rounded-lg mb-4">
+                                        <h5 class="font-semibold text-gray-900 dark:text-white mb-2">Bambu Lab A1 Mini 3D Printer</h5>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Build Volume: 300×300×400mm</p>
+                                        <p class="text-lg font-bold text-primary mb-4">₹2,08,250</p>
+                                        <div class="flex gap-3">
+                                            <button
+                                                class="flex-1 bg-primary hover:bg-secondary text-white px-4 py-2 !rounded-button text-sm font-semibold transition-colors whitespace-nowrap">
+                                                Buy Now
+                                            </button>
+                                            <button id="specBtn"
+                                                class="flex-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white px-4 py-2 !rounded-button text-sm font-semibold transition-colors whitespace-nowrap">
+                                                Specs
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Specs Modal -->
+                                    <div id="specModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+                                        <div class="bg-white dark:bg-gray-900 rounded-lg w-11/12 max-w-lg p-6">
+                                            <!-- Close Button -->
+                                            <div class="flex justify-end">
+                                                <button id="closeModal" class="text-gray-500 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white text-2xl">&times;</button>
+                                            </div>
+
+                                            <!-- Tab Buttons -->
+                                            <div class="flex gap-2 mb-4 flex-wrap">
+                                                <button class="tabBtn px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded" data-tab="description">Description</button>
+                                                <button class="tabBtn px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded" data-tab="specs">Specs</button>
+                                                <button class="tabBtn px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded" data-tab="images">Images</button>
+                                                <button class="tabBtn px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded" data-tab="videos">Videos</button>
+                                                <button class="tabBtn px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded" data-tab="pdf">Detailed Description</button>
+                                            </div>
+
+                                            <!-- Tab Contents -->
+                                            <div id="tabContents">
+                                                <div class="tabContent" id="description">
+                                                    <div class="text-gray-800 dark:text-gray-200 space-y-4 leading-relaxed text-base">
+                                                        <p>
+                                                            The A1 mini revolutionizes flow control in 3D printing. It utilizes a high-resolution, high-frequency eddy current sensor to measure the pressure in the nozzle. Our algorithm actively compensates the flow rate according to the readings to extrude with accuracy.
+                                                        </p>
+                                                        <p>
+                                                            The A1 mini handles various calibrations all by itself. It meticulously calibrates the Z-offset, bed-level, vibration resonance, and nozzle pressure for EVERY print job, automatically.
+                                                        </p>
+                                                        <p>
+                                                            The A1 mini comes to you pre-assembled, pre-squared, and pre-tuned with precision. It only takes about 20 minutes to set up for your first print.
+                                                        </p>
+                                                        <p>
+                                                            The A1 mini can calibrate parameters to match tiny individual differences between each drive motor. This compensates for the unwanted harshness of motor noise.
+                                                        </p>
+                                                        <p>
+                                                            Full-metal rails, rigid frame, nozzle pressure sensor, accelerometers, powerful MCU, and above all, an advanced motion control system that utilizes these features to print a 14-minute benchy with high quality, following all speed benchy rules straight out of the box without using specialized filaments.
+                                                        </p>
+                                                        <p>
+                                                            Remote control and monitor your printer on Bambu Studio or Bambu Handy. Through the built-in camera, you can also record timelapse videos.
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="tabContent hidden" id="specs">
+                                                    <ul class="text-gray-800 dark:text-gray-200 list-disc pl-5">
+                                                        <li>Body Build Volume(W*D*H) 180*180*180 mm³</li>
+                                                        <li>Toolhead Hot End All-Metal</li>
+                                                        <li>Nozzle Stainless Steel</li>
+                                                        <li>Max Hot End Temperature 300 °C</li>
+                                                        <li>Nozzle Diameter 0.4 mm (Included)</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tabContent hidden" id="images">
+                                                    <img src="https://via.placeholder.com/400x300" alt="Printer Image 1" class="mb-2 w-full rounded">
+                                                    <img src="https://via.placeholder.com/400x300" alt="Printer Image 2" class="w-full rounded">
+                                                </div>
+                                                <div class="tabContent hidden" id="videos">
+                                                    <video controls class="w-full rounded">
+                                                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                                                    </video>
+                                                </div>
+                                                <div class="tabContent hidden" id="pdf">
+                                                    <iframe src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" width="100%" height="400px"></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
                                     <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
                                         <img src="https://readdy.ai/api/search-image?query=Ideal3D%20FDM%20printer%20with%20automatic%20bed%20leveling%2C%20touchscreen%20interface%2C%20filament%20detection%20system%2C%20professional%20grade%20build%20quality%2C%20clean%20white%20background%2C%20product%20showcase&width=400&height=300&seq=fdm2&orientation=landscape"
                                             alt="Ideal3D FDM Printer"
@@ -784,7 +878,7 @@
                         <li><a href="#ai-robotics" class="text-gray-400 hover:text-white transition-colors">AI &
                                 Robotics</a></li>
                         <li><a href="#eduverse" class="text-gray-400 hover:text-white transition-colors">Eduverse</a>
-                        </li>
+                        </li
                         <li><a href="#skill-labs" class="text-gray-400 hover:text-white transition-colors">Skill
                                 Labs</a></li>
                         <!-- <li><a href="workshop_register.html" class="text-gray-400 hover:text-white transition-colors">Workshops</a></li> -->
@@ -965,7 +1059,59 @@
         }
     </script>
 
-    <script src="js/share.js"></script>
+    <!-- Spec tab -->
+    <script>
+        // Get elements
+        const specBtn = document.getElementById('specBtn');
+        const specModal = document.getElementById('specModal');
+        const closeModal = document.getElementById('closeModal');
+        const tabButtons = document.querySelectorAll('.tabBtn');
+        const tabContents = document.querySelectorAll('.tabContent');
+
+        // Open modal
+        specBtn.addEventListener('click', () => {
+            specModal.classList.remove('hidden');
+            specModal.classList.add('flex');
+            // Show the first tab (Description) by default when modal opens
+            tabContents.forEach(content => content.classList.add('hidden'));
+            document.getElementById('description').classList.remove('hidden');
+        });
+
+        // Close modal
+        closeModal.addEventListener('click', () => {
+            specModal.classList.add('hidden');
+            specModal.classList.remove('flex');
+        });
+
+        // Switch tabs
+        tabButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tab = btn.dataset.tab;
+
+                // Hide all tab contents
+                tabContents.forEach(content => content.classList.add('hidden'));
+
+                // Show selected tab content
+                const activeContent = document.getElementById(tab);
+                if (activeContent) {
+                    activeContent.classList.remove('hidden');
+                }
+
+                // Optional: highlight active tab button
+                tabButtons.forEach(b => b.classList.remove('bg-primary', 'text-white'));
+                btn.classList.add('bg-primary', 'text-white');
+            });
+        });
+
+        // Optional: Close modal when clicking outside the modal content
+        window.addEventListener('click', (e) => {
+            if (e.target === specModal) {
+                specModal.classList.add('hidden');
+                specModal.classList.remove('flex');
+            }
+        });
+    </script>
+
 </body>
 
 </html>
