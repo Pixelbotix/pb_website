@@ -1,0 +1,366 @@
+<!DOCTYPE html><html lang="en"><head><script src="js/e.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - TechPrint Solutions</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#1e40af'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { 
+            content: "\f3c2"; 
+        }
+        .dark-mode {
+            --bg-primary: #1f2937;
+            --bg-secondary: #111827;
+            --text-primary: #f9fafb;
+            --text-secondary: #d1d5db;
+            --border-color: #374151;
+        }
+        .light-mode {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9fafb;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --border-color: #e5e7eb;
+        }
+        body.dark-mode {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+        }
+        body.light-mode {
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+        .header-bg {
+            background-color: var(--bg-primary);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .content-bg {
+            background-color: var(--bg-primary);
+        }
+    </style>
+</head>
+<body class="dark-mode min-h-screen">
+    <header class="fixed top-0 left-0 right-0 z-50 header-bg shadow-lg">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+
+                    <a href="#" class="flex items-center">
+                        <!-- Dark theme logo (shown only in dark mode) -->
+                        <img src="static/logo/logo-dark.png" alt="Logo Light" class="w-20 h-20 hidden dark:inline-block">
+                        <img src="static/logo/logo-white.png" alt="Logo Dark" class="w-20 h-20 inline-block dark:hidden">
+                    </a>
+                </div>
+                
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-sm font-medium hover:text-primary transition-colors">Home</a>
+                    <a href="About_Us.html" class="text-sm font-medium hover:text-primary transition-colors">About Us</a>
+                    <a href="index.html#ai-robotics" class="text-sm font-medium hover:text-primary transition-colors">AI & Robotics</a>
+                    <a href="index.html#eduverse" class="text-sm font-medium hover:text-primary transition-colors">Eduverse</a>
+                    <a href="#" class="text-sm font-medium hover:text-primary transition-colors">Skill Labs</a>
+                    <a href="#" class="text-sm font-medium hover:text-primary transition-colors">Contact</a>
+                </nav>
+
+                <div class="flex items-center space-x-4">
+                    <button id="themeToggle" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                        <i class="ri-sun-line text-lg"></i>
+                    </button>
+                    
+                    <button id="mobileMenuToggle" class="lg:hidden w-8 h-8 flex items-center justify-center">
+                        <i class="ri-menu-line text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="lg:hidden hidden border-t border-gray-200 dark:border-gray-700">
+            <div class="px-4 py-2 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-sm font-medium hover:text-primary transition-colors">Home</a>
+                <a href="#" class="block px-3 py-2 text-sm font-medium hover:text-primary transition-colors">About Us</a>
+                <a href="#" class="block px-3 py-2 text-sm font-medium hover:text-primary transition-colors">AI & Robotics</a>
+                <a href="#" class="block px-3 py-2 text-sm font-medium hover:text-primary transition-colors">Eduverse</a>
+                <a href="#" class="block px-3 py-2 text-sm font-medium hover:text-primary transition-colors">Skill Labs</a>
+                <a href="#" class="block px-3 py-2 text-sm font-medium hover:text-primary transition-colors">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-16 min-h-screen">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="content-bg rounded-xl p-8 shadow-lg">
+                <h1 class="text-4xl font-bold mb-8 text-center">Privacy Policy</h1>
+                
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-lg mb-6 opacity-80">Last updated: October 15, 2025</p>
+                    
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-semibold mb-4">1. Introduction</h2>
+                        <p class="mb-4">Welcome to PixelBotix Technologies Pvt. Ltd. By accessing or using our services, you agree to comply with and be bound by the following Terms of Service. Please read them carefully.</p>
+
+                    </section>
+
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-semibold mb-4">2. Services Provided</h2>
+                        <p class="mb-4">PixelBotix offers R&D Services, educational programs, robotics kits, training workshops, and online/offline courses in robotics, computer vision, AI, rapid prototyping, and other emerging technologies.</p>
+
+                    </section>
+
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-semibold mb-4">3. Eligibility</h2>
+                        <p class="mb-4">Our services are available to students, researchers, faculty, institutions, and professionals. By using our services, you confirm that you meet the eligibility criteria required for enrollment or participation.</p>
+                    </section>
+
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-semibold mb-4">4. Payment and Fees</h2>
+                        <p class="mb-4">All payments for courses, workshops, and kits must be made in full before participation. Fees once paid are generally non-refundable except under special circumstances approved by PixelBotix.</p>
+                    </section>
+
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-semibold mb-4">5. Intellectual Property</h2>
+                        <p class="mb-4">All course materials, software, and content provided by PixelBotix are protected by intellectual property laws. You may not copy, distribute, or use them for commercial purposes without prior written consent.</p>
+                    </section>
+
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-semibold mb-4">6. Code of Conduct</h2>
+                        <p class="mb-4">Participants are expected to maintain respectful behavior during workshops and online sessions. Any misconduct may result in suspension or termination from the program without refund.</p>
+                    </section>
+
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-semibold mb-4">7. Limitation of Liability</h2>
+                        <p class="mb-4">PixelBotix is not responsible for any direct, indirect, incidental, or consequential damages arising from the use of our services, including personal injury or property damage.</p>
+                    </section>
+
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-semibold mb-4">8. Privacy Policy</h2>
+                        <p class="mb-4">Your personal information will be collected and used in accordance with our Privacy Policy. By using our services, you consent to such collection and use.</p>
+                    </section>
+
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-semibold mb-4">9. Amendments</h2>
+                        <p class="mb-4">PixelBotix reserves the right to update or modify these Terms of Service at any time. Users will be notified of significant changes through our website or official communication channels.</p>
+                    </section>
+
+
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-semibold mb-4">11. Changes to Terms</h2>
+                        <p class="mb-4">We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days notice prior to any new terms taking effect.</p>
+                        <p>What constitutes a material change will be determined at our sole discretion. Your continued use of the Service after any such changes constitutes acceptance of the new Terms.</p>
+                    </section>
+
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-semibold mb-4">12. Contact Information</h2>
+                        <p class="mb-4">If you have any questions about these Terms and Conditions, please contact us:</p>
+                        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                            <p class="mb-2"><strong>PixelBotix Technologies Pvt Ltd</strong></p>
+                            <p class="mb-2">Email: support@pixelbotix.com</p>
+                            <p class="mb-2">Phone: +91-7200445335/331</p>
+                            <p>PixelBotix Technologies Pvt. Ltd., Tambaram, Chennai, India</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">PixelBotix Technologies</h3>
+                    <p class="text-gray-400 mb-6">Future-driven product innovation and EdTech company pioneering the
+                        convergence of Robotics, AI, Smart Manufacturing, and Emerging Technologies.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=61575683369348" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-facebook-fill ri-lg"></i>
+                        </a>
+                        <a href="https://x.com/PixelBotix" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-twitter-fill ri-lg"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/pixelbotix/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-linkedin-fill ri-lg"></i>
+                        </a>
+                        <a href="https://www.instagram.com/pixel_botix/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-instagram-fill ri-lg"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@PixelBotix" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-youtube-fill ri-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="About_Us.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="index.html#ai-robotics" class="text-gray-400 hover:text-white transition-colors">AI &
+                                Robotics</a></li>
+                        <li><a href="index.html#eduverse" class="text-gray-400 hover:text-white transition-colors">Eduverse</a>
+                        </li
+                        <li><a href="index.html#skill-labs" class="text-gray-400 hover:text-white transition-colors">Skill
+                                Labs</a></li>
+                        <!-- <li><a href="workshop_register.html" class="text-gray-400 hover:text-white transition-colors">Workshops</a></li> -->
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="refund_cancellation_policy.html" class="text-gray-400 hover:text-white transition-colors">Refund & Cancellation Policy</a></li>                        
+                    </ul>
+                </div>
+                <!-- Programs -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Our Programs</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#brainy-babies" class="text-gray-400 hover:text-white transition-colors">Brainy Babies (0-5
+                                years)</a></li>
+                        <li><a href="index.html#little-techies" class="text-gray-400 hover:text-white transition-colors">Little Techies (5-9
+                                years)</a></li>
+                        <li><a href="index.html#maker-school" class="text-gray-400 hover:text-white transition-colors">Maker School (9-17
+                                years)</a></li>
+                        <li><a href="index.html#future-innovators" class="text-gray-400 hover:text-white transition-colors">Future Innovators
+                                (16-25 years)</a></li>
+                        <li><a href="index.html#school-lab-setup" class="text-gray-400 hover:text-white transition-colors">School Lab Setup</a>
+                        </li>
+                        <li><a href="index.html#faculty-development" class="text-gray-400 hover:text-white transition-colors">Faculty Development</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Subscribe to Our Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Stay updated with our latest news, programs, and innovations.</p>
+                    <form class="mb-4">
+                        <div class="flex">
+                            <input type="email" placeholder="Your email address"
+                                class="px-4 py-3 bg-gray-800 text-white rounded-l focus:outline-none focus:ring-2 focus:ring-primary border-none flex-grow">
+                            <button type="submit"
+                                class="bg-primary text-white px-4 py-3 rounded-r hover:bg-blue-600 transition-colors whitespace-nowrap">Subscribe</button>
+                        </div>
+                    </form>
+                    <p class="text-gray-500 text-sm">By subscribing, you agree to our Privacy Policy and consent to
+                        receive updates from our company.</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2025 PixelBotix Technologies Pvt. Ltd. All
+                        rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Terms of
+                            Service</a>
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Floating Buttons Container -->
+        <div class="fixed bottom-8 right-8 z-50 flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
+            <!-- Back to Top Button -->
+            <button id="back-to-top"
+                class="bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+                <i class="ri-arrow-up-line ri-lg"></i>
+            </button>
+
+            <!-- WhatsApp Button -->
+            <a href="https://wa.me/917200445335?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20PixelBotix%20and%20your%20programs.%20Can%20you%20help%20me?" target="_blank"
+                class="bg-green-500 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-green-600 transition-all transform hover:scale-105">
+                <i class="ri-whatsapp-line text-xl"></i>
+            </a>
+        </div>
+
+         
+    </footer>
+
+    <script id="theme-toggle">
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('themeToggle');
+            const body = document.body;
+            const themeIcon = themeToggle.querySelector('i');
+            
+            let isDarkMode = true;
+            
+            function updateTheme() {
+                if (isDarkMode) {
+                    body.classList.remove('light-mode');
+                    body.classList.add('dark-mode');
+                    themeIcon.className = 'ri-sun-line text-lg';
+                } else {
+                    body.classList.remove('dark-mode');
+                    body.classList.add('light-mode');
+                    themeIcon.className = 'ri-moon-line text-lg';
+                }
+            }
+            
+            themeToggle.addEventListener('click', function() {
+                isDarkMode = !isDarkMode;
+                updateTheme();
+            });
+            
+            updateTheme();
+        });
+    </script>
+
+    <script id="mobile-menu">
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuIcon = mobileMenuToggle.querySelector('i');
+            
+            let isMenuOpen = false;
+            
+            mobileMenuToggle.addEventListener('click', function() {
+                isMenuOpen = !isMenuOpen;
+                
+                if (isMenuOpen) {
+                    mobileMenu.classList.remove('hidden');
+                    menuIcon.className = 'ri-close-line text-xl';
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.className = 'ri-menu-line text-xl';
+                }
+            });
+        });
+    </script>
+
+    <script id="back-to-top">
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopBtn = document.getElementById('backToTop');
+            
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body></html>
