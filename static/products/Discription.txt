@@ -1,0 +1,462 @@
+ 
+
+RESIN 3D PRINTERS
+
+ELEGOO
+
+1. Apexmaker X1 Regular priceRs. 250,000.00 Sale priceRs. 235,000.00
+
+ApexMaker X1 3D Printer, Industrial Grade 3D Printer, 8K Resin 3D Printer with 16’’ 8K Resolution Mono LCD Screen, 353.2x198.7x400mm Large Size Printing Volume
+
+Ds
+【16’’ 8K High Resolution】ApexMaker X1 is one of the few consumer large-scale industrial 3D printers on the market, with a 16 inch UV curable LCD screen and a resolution of 7680 * 4320. Its higher accuracy allows for better processing of printed model details.
+
+【Ultra high pixels】The pixel size of the ApexMaker X1 3D printer is 46 microns, which is better than similar products on the market. Ultra high pixels can bring more excellent printing accuracy and surreal printing details.
+
+【Compatible with Most Slicing Software】The ApexMaker X1 3D printer is compatible with most slicing software, whether it's Lychee, Chitubox, or Tango, you can use it with confidence.
+
+【Easy to get started】Whether you are a player with rich printing experience or a beginner trying, you can quickly and easily get started using ApexMaker X1.
+
+【Perfect after-sales service】If you encounter any problems during the use of our products, you can contact our after-sales team at any time, and we will wholeheartedly solve them for you as soon as possible.
+
+TS
+
+Printer dimensions: 548*440*862
+
+Max printing speed: 180mm/h
+
+Technology: UV LCD
+
+Build volume: 353.28*198.72*400mm
+
+LCD screen: 16-inch monochrome screen
+
+LCD resolution: 8k(7680*4320)
+
+Platform calibration: factory pre-calibrated
+
+Net weight: 44.5kg
+
+Gross weight: 60kg
+
+Pixel size: 46um
+
+Layer thickness: 0.01-0.3mm
+
+Light source:405nm
+
+Release film: high-speed TSP film
+
+Resin feeding: automatic
+
+Temperature control: resin tank heating
+
+Slicing software: Chitubox(pro), Lychee Slicer
+
+Operation:7-inch touchscreen
+
+Materials: UV-curable resin
+
+Total power: 300W
+
+Supported files: .stl,.obj,.slc
+
+Connectivity: Wi-Fi, USB
+ 
+2. Elegoo Jupiter SE  Rs. 68,999.00 Sale priceRs. 65,000.00
+
+12.8-Inch 6K Mono LCD, 51um XY resolution
+Build volume of 277.848 x 156.264 x 300 mm³
+Automatic resin feeding and recycling
+With a 4-point leveling system
+Upgraded USB Air Purifier
+
+DS
+12.8"6K Mono LCD
+Jupiter SE comes with a 12.8-inch 6K monochrome LCD, boasting a resolution of 5448×3064 and 51-micron XY resolution, which ensures that every intricate detail of your designs isaccurately captured, resulting in stunningly precise prints.
+
+Spacious Space for Your Projects With a build volume of 277.848 x 156.264 x 300 mm³/10.94x6.15x11.81 inches, this provides you ample space for more ambitious projects.
+You can print larger models or multiple parts in a single batch, making it ideal for professional or commercial use.
+
+Automated Resin Management System
+Jupiter SE is designed with an automatic resin feeding and recycling device that ensures a continuous supply of resin during the printing process.
+Automatic resin recycling ensures that the unused resin is collected and recycled for future use, reducing waste and saving you money.
+
+COB +Refractive Light Source
+The printer adopts a COB+refractive light source that reduces light dispersion and provides uniform and consistent light exposure, resulting in sharper details, smoother final prints, and accurate dimensions.
+
+Efficient Cooling System
+There are cooling fans and heat-conducting copper tubes on both sides of the COB light source for efficient heatdissipation, maintaining a stable temperature during the printing process to extend the service life of the printer.
+
+Hassle-free Slicing
+Jupiter SE is compatible with Tango and ChituBox. You can choose from these different slicing tools for your 3D printing needs.
+
+TS
+LCD
+
+12.8" 6K Mono LCD
+System
+
+EL3D-3.0.1
+Slicer Software
+
+Chitubox & Voxeldance Tango
+Technology
+
+MSLA Stereo lithography
+Layer Thickness
+
+0.01-0.2mm
+Printing Speed
+
+MAX 70mm/H
+Z Axis Accuracy
+
+0.02mm
+XY Resolution
+
+51*51um (5448*3064)
+Build Volume
+
+277.848mm(L)*156.264mm(W)*300mm(H)
+Light Source
+
+COB+Refractive Light Source (wavelength 405nm)
+Languages
+
+Chinese, English
+Connectivity
+
+USB
+Net Weight
+
+19.5KG
+Gross Weight
+
+26.6 kg
+Operation
+
+3.5-inch Resistive Touch Screen
+Power Requirements
+
+100-240V 50/60 Hz 24V 7.5A
+Printer Dimensions
+
+479.9mm(L)*377.4mm(W)*657.5mm(H)
+
+3. Elegoo Mars 5 Ultra  Regular priceRs. 35,000.00 Sale priceRs. 32,500.00Sale
+
+Automatic Leveling
+Smart Mechanical Sensor
+One-Click Self-Check
+Advanced Overheat Protection
+6.6-Inch 4K Mono LCD
+COB Light Source
+
+
+DS
+Effortless precision is just a click away. The Mars 5 offers advanced automatic leveling function with a simple click, allowing all skill levels to dive straight into the creative process. Say goodbye to tedious calibrations - simply unbox, power on, and print.
+With a smart mechanical sensor, the Mars 5 supports residue detection to prevent damage to the LCD screen. Plus, timely alarms for resin shortages and leveling failures minimize waste and ensure uninterrupted efficiency. Stay worry-free and enjoy high-quality prints every time.
+Tired of setup hassles and unexpected errors ruining your printing projects? With just a simple click, the Mars 5 performs a quick self-check and verifies the optimal functionality of its components before each print. Say goodbye to wasted time and materials due to faulty components.
+Featuring a 4K mono LCD with advanced COB light source, the Mars 5 faithfully reproduces intricate details with stunning fidelity and textures, bringing your ideas to life with flawless precision.
+No more overheating worries. The advanced overheat protection automatically halts printing and triggers an alarm if the LED temperature exceeds 80℃. Enhanced by an efficient cooling system, the printer ensures safety, extended lifespan, and optimal performance.
+
+TS
+Build Volume
+
+143.43 x 89.6 x 150 mm³
+Printing Speed
+
+MAX 70mm/h
+Layer Thickness
+
+0.01-0.2mm
+XY Resolution
+
+35x35μm (4098x2560)
+Z Axis Accuracy
+
+0.02mm
+Printing Technology
+
+MSLA
+Light Source
+
+COB Light Source (wavelength 405nm)
+LCD Screen Size
+
+6.6-inch 4K Mono LCD
+LCD Screen Protector
+
+PET scratch-resistant film
+Connection Method
+
+USB Interface
+System
+
+EL3D-3.0.1
+Slicer Software
+
+Chitubox & Voxeldance Tango
+Heat Dissipation Method
+
+3 copper heat pipes + single fan
+Operation Screen
+
+3.5-inch Resistive Touch Screen
+Languages
+
+Chinese, English
+Air Purifier
+
+USB connection unavailable, compatible with Mars Mate air purifier
+Resin
+
+Supports most resins on the market (water-washable, standard, ABS-like, plant-based, etc.)
+Other Functions
+
+One-Click Automatic Leveling,
+Self-Check & Overheat Protection,
+Smart Mechanical Sensor (Resin Shortage Alarm, Residue Detection Alarm, Leveling Failure Alarm).
+Power Requirements
+
+100-240V 50/60Hz 24V 3A
+Printer Dimensions
+
+230 x 230 x 433.5 mm³
+Net Weight
+
+6.6 kg
+Gross Weight
+
+8.6 kg
+
+4. Elegoo Saturn 3 Ultra Regular priceRs. 50,000.00 Sale priceRs. 43,000.00
+
+10-inch 12K Mono LCD
+Linux OS with 4Gb ROM
+XY Resolution of 19×24μm
+Wi-Fi Transfer Speeds of 6-10Mbps
+Build Volume of 218.88×122.88×260
+
+DS
+12KPrint Quality
+
+Experience the ultimate printing precision and quality with the ELEGOO Saturn 3 Ultra 3D printer. It features a 10-inch 12K mono LCD with a resolution of 11520x5120 and an XY resolution of 19x24 microns, which allows you to print models with exceptional details and sharp edges.
+
+The printer uses a COB + refractive light source, which reduces light dispersion and provides uniform and consistent light distribution, resulting in high-quality prints with a smooth surface and dimensional accuracy.
+
+Powered by a brand new Linux OS with 4G ROM, which guarantees stable file transfer and faster computing, the Saturn 3 Ultra offers a smooth and efficient printing experience. Supporting Wi-Fi transfer of files, with transfer speeds of 6-10Mbps, the printer is compatible with both 2.4G and 5G networks, providing flexibility in transferring files from your computer or mobile device. And it comes with a detachable antenna, located on the right side of the printer.
+
+Experience higher printing success rates with the brand new ACF release film, specially designed for the Saturn 3 Ultra. With less release force, one side is frosted (face down), and the other side is smooth, combined with the upcoming ELEGOO RAPID standard resin allows for printing speeds up to 3 times faster, reaching speeds of up to 150mm/H.
+Saturn 3 Ultra comes with an all-metal machine body to enhance the printer's robustness and durability, making it capable of withstanding the rigors of frequent use. The printer's sleek and modern design also adds a touch of elegance to your workspace.
+
+TS
+LCD
+
+10-inch 12K Mono LCD
+System
+
+EL3D-4.0
+Slicer Software
+
+Chitubox & Voxeldance Tango & Autodesk Fusion
+Technology
+
+MSLA Stereolithography
+Layer Thickness
+
+0.01-0.2mm
+Printing Speed
+
+MAX 150mm/h
+Z Axis Accuracy
+
+0.01mm
+XY Resolution
+
+19x24μm(11520x5120)
+Build Volume
+
+218.88mm(L)*122.88mm(W)*260mm(H)
+Light Source
+
+COB+Refractive Light Source (wavelength 405nm)
+Languages
+
+Chinese, English, Japanese, Dutch, Korean, French, German, Russian, Italian, Spanish, Turkish, Portuguese
+Connectivity
+
+USB Interface & WiFi
+NET WEIGHT
+
+12 kg
+GROSS WEIGHT
+
+16.2 kg
+Operation
+
+4.0-inch Capacitive Touch Screen
+Power Requirements
+
+100-240V 50/60Hz 24V 7.5A
+Printer Dimensions
+
+305.9mm(L)*273mm(W)*562.5mm(H
+
+5. Elegoo Saturn 4  Rs. 45,000.00
+
+10-inch 12K Mono LCD
+COB + Fresnel Collimating Lens
+Auto Leveling & Intelligent Mechanical Sensor
+User-Friendly Structure & Advanced Cooling System
+Large Print Size of 218.88x122.88x220 mm
+
+DS
+With a 10-inch 12K mono LCD, the Saturn 4 boasts an incredible resolution of 11520x5120 and an XY resolution of 19x24μm, presenting you exquisite models with stunning clarity and precision.
+
+When the COB light source emits light at 405nm with the combination of Fresnel collimating lens, it can achieve an ultra-low astigmatism coefficient of 0.5%, an exceptional field uniformity of 92%, and a precise angle deviation control below 5° on the forming surface, realizing accurate and even printing results with delicate finishing and intricate details.
+
+With its intelligent self-check and auto-leveling features, the Saturn 4 delivers a worry-free experience. Simply unbox, power on, and print – the printing experience has never been this effortless.
+
+One-Click Self-Check
+With one single click, the Saturn 4 will perform a quick self-check to ensure all its components are working properly before your printing starts.
+
+One-Click Automatic Leveling
+Thanks to its intelligent mechanical sensor, leveling the build plate has become a breeze every time once you click the button, saving your time and efforts.
+
+Equipped with a mechanical sensor, the Saturn 4 supports residue detection to prevent damage to the LCD screen, as well as resin shortage and leveling failure alarm to further enhance the safety and reliability during printing.
+
+ELEGOO is dedicated to offering users a convenient printing experience. From the quick-release design of the build plate to the dual pour spouts design of the resin tank, along with the drip tray design to prevent resin drips, the replaceable tank lock, and the flip-up cover design for effortless access, every detail has been carefully considered to make your operation easier and more enjoyable.
+
+TS
+LCD
+
+10-Inch 12K Mono LCD
+System
+
+EL3D-3.0.1
+Slicer Software
+
+Voxeldance Tango & ChituBox & Autodesk Fusion
+Technology
+
+MSLA Stereolithography
+Layer Thickness
+
+0.01-0.2mm
+Printing Speed
+
+MAX 70mm/h
+Z Axis Accuracy
+
+0.02mm
+XY Resolution
+
+19*24um (11520*5120)
+Build Volume
+
+218.88mm(L)*122.88mm(W)*220mm(H)
+Light Source
+
+COB Light Source + Fresnel Collimating Lens
+(wavelength 405nm)
+Languages
+
+Chinese, English
+Connectivity
+
+USB Interface
+Net Weight
+
+13.5kg
+Gross Weight
+
+18.3 kg
+Operation
+
+3.5-inch Resistive Touch Screen
+Power Requirements
+
+100-240V 50/60 Hz 24V 6A
+Printer Dimensions
+
+327.4mm(L)*329.2mm(W)*548mm(H)
+
+6. Uniformation GK3 Ultra Rs. 190,000.00 Sale priceRs. 150,000.00
+
+6K Resolution Display
+Generous Build Volume
+Enhanced Print Quality for large scale printers
+User-Friendly Design
+Innovative Resin Management
+Anti-Spill Resin Vat
+Integrated Carbon Filter
+Connectivity and Control
+
+DS
+
+Product name GK3 ultra Layer thickness 0.03mm-0.05mm
+Touch screen 5-inch capacitive touch screen Exposure speed 2-3s/layer(0.05mm)
+Slicing software UniFormation Slicer, Chitubox, Lychee Pixel size 20*26um(AVC 26um)
+Connection USB stick, WiFi file sharing, Ethernet Product dimensions 455*400*575(mm)
+Technology Masked SLA(M-SLA) LCD Screen Curing Maximum print volume 300*160*300(mm)
+Screen size 302.4*161.98mm(16K 13.5”) Official resin compatability Standard Resin(Black, white, Grey,
+Clear, OrangeDark Grey
+, Red Wax)
+ABS Resin (Black, White,
+Grey, Clear,Clear Blue)Flexible Resin(Black, white)
+XY resolution 15120*6230 Resin box capacity 1.2kg
+Maximum heating temperature 25°C,30°C Resin vat capacity 1100ml
+Product weight 30KG Printing power consumption 200W
+
+
+7. Uniformation GKtwo Rs. 120,000.00 Sale priceRs. 100,000.00
+
+Have you ever had to stop printing due to dropping winter temperatures? No worries, we've got you covered. Because GKtwo uses built-in resin heating technology, If the existing ambient temperature is 50 ℉, GKtwo can warm up the printer to 95 ℉ in 8 minutes. Now, there are three temperature settings(77℉,86℉,95℉)(25°C,30°C,35°C) for choosing, and we can know the real-time temperature on the LCD Screen.
+
+DS
+Built-in Heating System
+Have you ever had to stop printing due to dropping winter temperatures? No worries, we've got you covered. Because GKtwo uses built-in resin heating technology, If the existing ambient temperature is 50 ℉, GKtwo can warm up the printer to 95 ℉ in 8 minutes. Now, there are three temperature settings(77℉,86℉,95℉)(25°C,30°C,35°C) for choosing, and we can know the real-time temperature on the LCD Screen.
+10.3'' Larger Build Volume
+UniFormation GKtwo 3D resin printer has a larger build volume than most resin printers currently on the market at 10.3'' (228*128*245mm).
+Non-submersible build plate
+The GKtwo print platform has a non-immersed design, the surface of the platform does not become submerged in resin, keeping the surface of the platform clean, and there are grooves around the perimeter of the platform to prevent resin from spilling out, so your print space stays clean and your resin is saved.
+Highly-detailed Printing（29.6 µm）
+GKtwo resin printer uses a matrix parallel light source with HD resolution 7680*4320, and the XY resolution is 29.6 microns. Additionally, the upgraded anti-scratch film on the LCD can protect the screen from any risk of accidental resin leakage.
+Quick Release Design
+Because of a quick-release design, you don't need to spend time on screwing anymore, and you can slide out the build plate or the resin vat and lift out within 2 seconds, which saves you time.
+Powerful Air Filter
+Large volume activated carbon (100*100*50mm) 4000 RPM high speed purification fan
+
+TS
+Product Size：350*315*H455mm 13.7*12.4*18in
+Package Size：445*420*550mm 18*16.5*21.6in
+Package Weight：20kg
+Printing Volume：228*128*H245mm
+Exposure time: 2-3s/layer（0.05mm）
+Technology：Photocuring LCD
+Wavelength Range：402.5-405nm
+File Transfer：USB
+Software System:windows7(64 bit）and above
+Slicing Software: Chitubox; Gktwo Slicer;lychee&nbsp;
+UI Operation：5’’ Touch screen
+File Format：STL
+HD Resolution：7680*4320
+XY Resolution: 29.6μm
+Printing Tolerance：±0.1mm（L≤100mm）±0.1% xL（L&gt;100mm）
+Layer Height：0.03、0.05、0.1mm
+Resin Vat Capacity：0.7kg
+Voltage：110/220V(Depends on the voltage in your area)
+
+October Monthly Budget
+1. rent 17000 15th
+2. gas 1390 Done sbi
+3. lic 5773.75  done sbi
+4. nps 5000
+5. preethi 10000
+6. aakash 500
+
+
+
+

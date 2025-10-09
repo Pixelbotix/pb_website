@@ -1,0 +1,2212 @@
+1. Bambu Lab A1 Mini 3D Printer_01
+Rs. 20,000.00 Sale priceRs. 16,600.00
+
+Crucks (4 Points)
+
+Smart & Automatic: Fully self-calibrating 3D printer that handles Z-offset, bed leveling, and vibration tuning automatically.
+
+High Precision Printing: Advanced flow control and vibration compensation ensure accurate, smooth, and fast prints.
+
+Quiet & Compact: Operates below 48 dB with a sturdy metal frame and compact design ideal for any workspace.
+
+User-Friendly & Connected: Pre-assembled setup with remote monitoring, control, and timelapse features via Bambu apps.
+
+Short Description (5 Points)
+
+Full-auto calibration system for consistent accuracy.
+
+4-color printing capability with AMS Lite integration.
+
+Under 48 dB operation for silent, smooth performance.
+
+Achieves up to 500 mm/s printing speed with 10,000 mm/s² acceleration.
+
+Remote control, monitoring, and timelapse video recording supported.
+
+Technical Specifications (TS)
+
+🔹 Build & Design
+
+Build Volume: 180 × 180 × 180 mm³
+
+Printer Dimensions: 347 × 315 × 365 mm³
+
+Package Size: 385 × 430 × 460 mm³
+
+Net Weight: 5.5 kg
+
+Gross Weight: 8.2 kg
+
+🔹 Toolhead & Hot End
+
+Hot End Type: All-Metal
+
+Nozzle Material: Stainless Steel
+
+Max Hot End Temperature: 300 °C
+
+Nozzle Diameters: 0.4 mm (included), 0.2 / 0.6 / 0.8 mm options
+
+🔹 Build Plate
+
+Included: Bambu Textured PEI Plate
+
+Optional: Bambu Smooth PEI Plate
+
+Max Temperature: 80 °C
+
+🔹 Printing Performance
+
+Max Speed: 500 mm/s
+
+Max Acceleration: 10,000 mm/s²
+
+🔹 Supported Filaments
+
+Ideal: PLA, PETG, TPU, PVA
+
+Also Supported: ABS, ASA, PC, PA, PET
+
+Not Recommended: Carbon/Glass Fiber Reinforced Polymers
+
+🔹 Sensors & Features
+
+Camera: Up to 1080p, timelapse supported
+
+Filament Run-Out Sensor: Yes
+
+Filament Odometry: Yes
+
+Power Loss Recovery: Yes
+
+Filament Tangle Sensor: Yes
+
+🔹 Other Features
+
+Noise Level: < 48 dB (Silent Mode)
+
+Connectivity: Bambu Studio & Handy (Remote Control & Monitor)
+
+Setup Time: Ready to print in ~20 minutes (pre-assembled and pre-tuned)
+
+2. Bambu Lab A1 Mini Combo 3D Printer Rs. 36,000.00 Sale priceRs. 29,900.00
+
+Crucks (4 Points)
+
+All-in-One Multi-Color Solution: Combines the A1 Mini printer with the AMS Lite system for seamless 4-color printing.
+
+Smart Auto Calibration: Fully automatic calibration of Z-offset, bed-leveling, vibration, and nozzle pressure for consistent results.
+
+Fast, Silent & Precise: Prints up to 500 mm/s while maintaining under 48 dB noise and excellent accuracy.
+
+User-Friendly & Connected: Pre-assembled setup, remote monitoring, and timelapse recording via Bambu Studio or Bambu Handy.
+
+
+Short Description (5 Points)
+
+Features AMS Lite for reliable, easy multi-color 3D printing.
+
+Automatic calibration system ensures precise, hands-free setup for every print.
+
+Operates quietly under 48 dB with motor noise compensation.
+
+Delivers high-speed printing with a max of 500 mm/s and advanced flow control.
+
+Pre-tuned and ready to print within 20 minutes with smart connectivity and camera monitoring.
+
+⚙️ Technical Specifications (TS)
+
+🔹 Build & Design
+
+Build Volume: 180 × 180 × 180 mm³
+
+Package Size: 385 × 430 × 495 mm³
+
+Gross Weight (with AMS Lite): 10.2 kg
+
+🔹 Toolhead & Hot End
+
+Hot End Type: All-Metal
+
+Nozzle Material: Stainless Steel
+
+Max Hot End Temperature: 300 °C
+
+Nozzle Diameters: 0.4 mm (included), optional 0.2 / 0.6 / 0.8 mm
+
+🔹 Build Plate
+
+Included: Bambu Textured PEI Plate
+
+Optional: Bambu Smooth PEI Plate
+
+Max Temperature: 80 °C
+
+🔹 Printing Performance
+
+Max Speed: 500 mm/s
+
+Max Acceleration: 10,000 mm/s²
+
+🔹 Supported Filaments
+
+Ideal: PLA, PETG, TPU, PVA
+
+Also Supported: ABS, ASA, PC, PA, PET
+
+Not Recommended: Carbon/Glass Fiber Reinforced Polymers
+
+🔹 Sensors & Features
+
+Camera: Low-framerate (up to 1080p), timelapse supported
+
+Filament Run-Out Sensor: Yes
+
+Filament Odometry: Yes
+
+Power Loss Recovery: Yes
+
+Filament Tangle Sensor: Yes
+
+🔹 Other Features
+
+Noise Level: < 48 dB (Silent Mode)
+
+Connectivity: Bambu Studio & Handy (Remote Control & Monitoring)
+
+Setup: Pre-assembled, pre-squared, and ready to print in ~20 minutes
+
+3. Bambu Lab A1 3D Printer Rs. 30,000.00 Sale priceRs. 24,900.00
+
+Fully Automatic & Smart: Performs all major calibrations—Z-offset, bed-leveling, vibration, and flow rate—automatically for every print.
+
+High-Speed Precision: Equipped with advanced motion control, low-drag rails, and pressure sensors for stable, accurate, and fast printing.
+
+Large Build Volume: 256 × 256 × 256 mm³ build size allows printing larger models like helmets in one go.
+
+Reliable & Connected: Features print monitoring, LAN or cloud connectivity, and quiet, efficient operation with active motor noise cancellation.
+
+Short Description (5 Points)
+
+Full-auto calibration and active flow rate compensation for precise output.
+
+1-clip quick swap nozzle for easy maintenance and quick changes.
+
+Kevlar-reinforced heatbed cable with upgraded safety and durability.
+
+Powerful hardware setup—MCU, accelerometers, and metal rails for consistent reliability.
+
+Smart connectivity options, including Bambu Cloud and LAN-only mode for privacy control.
+
+⚙️ Technical Specifications (TS)
+
+🔹 Build & Design
+
+Build Volume: 256 × 256 × 256 mm³
+
+Printer Dimensions: 385 × 410 × 430 mm³
+
+Package Size: 596 × 536 × 325 mm³
+
+Net Weight: 8.3 kg
+
+Gross Weight: 13 kg
+
+🔹 Toolhead & Hot End
+
+Hot End Type: All-Metal
+
+Nozzle Material: Stainless Steel
+
+Max Hot End Temperature: 300 °C
+
+Nozzle Diameters: 0.4 mm (included), 0.2 / 0.6 / 0.8 mm optional
+
+Quick Swap: 1-Clip Quick Swap Nozzle
+
+🔹 Build Plate
+
+Included: Bambu Textured PEI Plate
+
+Optional:
+
+Bambu Smooth PEI Plate
+
+Bambu Dual-Texture PEI Plate
+
+Bambu High Temperature Plate (Smooth PEI)
+
+Bambu Cool Plate
+
+Max Temperature: 100 °C
+
+🔹 Printing Performance
+
+Max Speed: 500 mm/s
+
+Max Acceleration: 10,000 mm/s²
+
+🔹 Supported Filaments
+
+Ideal: PLA, PETG, TPU, PVA
+
+Also Supported: ABS, ASA, PC, PA, PET
+
+Not Recommended: Carbon/Glass Fiber Reinforced Polymers
+
+🔹 Sensors & Monitoring
+
+Camera: Low-frame-rate (up to 1080p), timelapse supported
+
+Filament Run-Out Sensor: Yes
+
+Filament Odometry: Yes
+
+Power Loss Recovery: Yes
+
+Filament Tangle Sensor: Yes
+
+Print Status Monitoring: Comprehensive monitoring system
+
+🔹 Other Features
+
+Noise Control: Active Motor Noise Cancelling
+
+Heatbed Cable: Kevlar-reinforced, insulated, optimized wiring with nylon sleeving
+
+Connectivity: Bambu Cloud or LAN-only mode
+
+Setup: Pre-assembled, pre-tuned, and ready for use
+
+4. Bambu Lab A1 Combo 3D Printer Rs. 46,000.00 Sale priceRs. 38,200.00
+
+🧩 Crucks (4 Points)
+
+All-in-One Multi-Color Powerhouse: Combines the high-performance A1 printer with AMS Lite for seamless 4-color 3D printing.
+
+Smart Automation: Performs full-auto calibration of Z-offset, bed leveling, vibration, and flow rate for each print automatically.
+
+High Speed & Quiet Operation: Equipped with active motor noise cancellation, advanced motion control, and fast 500 mm/s print speed.
+
+Robust & Reliable Design: Large build volume, Kevlar-reinforced heatbed cable, and comprehensive print monitoring ensure long-lasting reliability.
+
+📝 Short Description (5 Points)
+
+Integrated AMS Lite system enables smooth and reliable multi-color printing with RFID filament auto-detection.
+
+Automatic calibration and active flow rate control deliver consistently accurate prints.
+
+1-clip quick swap nozzle for effortless maintenance and nozzle changes.
+
+Kevlar-reinforced heatbed cable for added safety, flexibility, and durability.
+
+Offers cloud and LAN-only connectivity for both convenience and privacy control.
+
+⚙️ Technical Specifications (TS)
+
+🔹 Build & Design
+
+Build Volume: 256 × 256 × 256 mm³
+
+Package Size: 560 × 540 × 430 mm³
+
+Gross Weight (with AMS Lite): 13.5 kg
+
+🔹 Toolhead & Hot End
+
+Hot End Type: All-Metal
+
+Nozzle Material: Stainless Steel
+
+Max Hot End Temperature: 300 °C
+
+Nozzle Diameters: 0.4 mm (included), 0.2 / 0.6 / 0.8 mm optional
+
+Quick Swap System: 1-Clip Quick Swap Nozzle
+
+🔹 Build Plate
+
+Included: Bambu Textured PEI Plate
+
+Optional:
+
+Bambu Smooth PEI Plate
+
+Bambu Dual-Texture PEI Plate
+
+Bambu High Temperature Plate (Smooth PEI)
+
+Bambu Cool Plate
+
+Max Temperature: 100 °C
+
+🔹 Printing Performance
+
+Max Speed: 500 mm/s
+
+Max Acceleration: 10,000 mm/s²
+
+🔹 Supported Filaments
+
+Ideal: PLA, PETG, TPU, PVA
+
+Also Supported: ABS, ASA, PC, PA, PET
+
+Not Recommended: Carbon/Glass Fiber Reinforced Polymers
+
+🔹 Sensors & Monitoring
+
+Camera: Low-frame-rate (up to 1080p), timelapse supported
+
+Filament Run-Out Sensor: Yes
+
+Filament Odometry: Yes
+
+Power Loss Recovery: Yes
+
+Filament Tangle Sensor: Yes
+
+Print Status Monitoring: Comprehensive system
+
+🔹 Other Features
+
+Noise Control: Active Motor Noise Cancelling
+
+Heatbed Cable: Kevlar-reinforced, thick insulation, soft copper, nylon sleeving, extended strain relief
+
+Connectivity: Bambu Cloud or LAN-only mode
+
+AMS Lite: Included (RFID sync and auto filament profile detection)
+
+Setup: Pre-assembled, pre-tuned, ready to print
+
+5. Bambu Lab P1S 3D Printer Regular priceRs. 54,000.00 Sale priceRs. 44,800.00
+
+🧩 Crucks (4 Points)
+
+Ready to Print Instantly: Fully assembled and factory-calibrated — starts printing within 15 minutes of setup.
+
+Fast & Accurate: Equipped with vibration compensation and pressure advance for smooth, high-speed printing up to 500 mm/s.
+
+Enclosed & Durable Design: Enclosed plastic-and-glass body allows stable printing with high-temperature materials.
+
+Smart & Connected: Built-in camera, AMS support for up to 16 colors, and real-time monitoring ensure a seamless printing experience.
+
+📝 Short Description (5 Points)
+
+Plug-and-play operation — works right out of the box with automatic calibration.
+
+High-speed performance — up to 20,000 mm/s² acceleration, printing a Benchy in just 18 minutes.
+
+Enclosed design supports high-temperature filaments like ABS and ASA.
+
+AMS compatibility allows up to 16-color multi-material printing.
+
+Smart features include remote monitoring, timelapse recording, and air filtration with an activated carbon filter.
+
+⚙️ Technical Specifications (TS)
+
+🔹 Build & Design
+
+Build Volume: 256 × 256 × 256 mm³
+
+Shell: Enclosed (Plastic & Glass)
+
+Printer Dimensions: 389 × 389 × 458 mm³
+
+Package Size: 485 × 480 × 530 mm³
+
+Net Weight: 12.95 kg
+
+Gross Weight: 17.6 kg
+
+🔹 Toolhead & Hot End
+
+Hot End Type: All-Metal
+
+Nozzle Material: Stainless Steel
+
+Max Hot End Temperature: 300 °C
+
+Nozzle Diameters: 0.4 mm (included), 0.2 / 0.6 / 0.8 mm (optional)
+
+🔹 Build Plate
+
+Compatible Surfaces:
+
+Bambu Textured PEI Plate
+
+Bambu Cool Plate
+
+Bambu Engineering Plate
+
+Bambu High Temperature Plate
+
+Max Build Plate Temperature: 100 °C
+
+🔹 Printing Performance
+
+Max Speed: 500 mm/s
+
+Max Acceleration: 20,000 mm/s²
+
+🔹 Cooling & Air System
+
+Control Board Fan: Closed-loop controlled
+
+Chamber Temperature Regulator Fan: Closed-loop controlled
+
+Auxiliary Part Cooling Fan: Closed-loop controlled
+
+Air Filter: Activated Carbon Filter
+
+🔹 Supported Filaments
+
+Ideal: PLA, PETG, TPU, PVA, PET, ABS, ASA
+
+Capable: PA, PC
+
+🔹 Sensors & Monitoring
+
+Camera: 1280 × 720 resolution, 0.5 fps (Low-frame-rate)
+
+Timelapse: Supported
+
+Filament Run-Out Sensor: Yes
+
+🔹 Electrical
+
+Input Voltage: 100–240 VAC, 50/60 Hz
+
+Power Consumption: 1000 W @ 220V / 350 W @ 110V
+
+🔹 Other Features
+
+AMS Compatibility: Supports up to 16-color printing
+
+Auto Calibration: Includes auto bed leveling and vibration compensation
+
+Setup Time: Ready in 15 minutes
+
+6. Bambu Lab P1S Combo 3D Printer Regular priceRs. 75,000.00 Sale priceRs. 62,300.00
+
+🧩 Crucks (4 Points)
+
+Professional-Grade Multi-Color Printing: Combines the high-speed P1S printer with the AMS system for up to 16-color, multi-material printing.
+
+Ready Out of the Box: Fully assembled and factory-tuned; starts printing within 15 minutes with automatic calibration.
+
+Enclosed & Robust Design: Plastic-and-glass body supports high-temperature filaments like ABS and ASA while maintaining print stability.
+
+Smart & Efficient Performance: Features advanced motion control, active vibration compensation, and a built-in camera for monitoring and timelapse recording.
+
+📝 Short Description (5 Points)
+
+Plug-and-play setup — ready to print in just 15 minutes.
+
+AMS Combo included for multi-color and multi-material printing (expandable up to 16 colors).
+
+High-speed printing with up to 20,000 mm/s² acceleration and 500 mm/s max speed.
+
+Enclosed build chamber enables stable printing of high-temperature materials.
+
+Smart features include auto-calibration, vibration compensation, remote monitoring, and activated carbon air filtration.
+
+⚙️ Technical Specifications (TS)
+
+🔹 Build & Design
+
+Build Volume: 256 × 256 × 256 mm³
+
+Shell: Enclosed (Plastic & Glass)
+
+Package Size: 485 × 480 × 585 mm³
+
+Gross Weight (with AMS): 21.6 kg
+
+🔹 Toolhead & Hot End
+
+Hot End Type: All-Metal
+
+Nozzle Material: Stainless Steel
+
+Max Hot End Temperature: 300 °C
+
+Nozzle Diameters: 0.4 mm (included), 0.2 / 0.6 / 0.8 mm (optional)
+
+🔹 Build Plate
+
+Compatible Surfaces:
+
+Bambu Textured PEI Plate
+
+Bambu Cool Plate
+
+Bambu Engineering Plate
+
+Bambu High Temperature Plate
+
+Max Build Plate Temperature: 100 °C
+
+🔹 Printing Performance
+
+Max Speed: 500 mm/s
+
+Max Acceleration: 20,000 mm/s²
+
+🔹 Cooling & Air System
+
+Control Board Fan: Closed-loop controlled
+
+Chamber Temperature Regulator Fan: Closed-loop controlled
+
+Auxiliary Part Cooling Fan: Closed-loop controlled
+
+Air Filter: Activated Carbon Filter
+
+🔹 Supported Filaments
+
+Ideal: PLA, PETG, TPU, PVA, PET, ABS, ASA
+
+Capable: PA, PC
+
+🔹 Sensors & Monitoring
+
+Camera: 1280 × 720 resolution (0.5 fps, low frame rate)
+
+Timelapse: Supported
+
+Filament Run-Out Sensor: Yes
+
+🔹 Electrical
+
+Input Voltage: 100–240 VAC, 50/60 Hz
+
+Power Consumption: 1000 W @ 220V / 350 W @ 110V
+
+🔹 Other Features
+
+AMS Compatibility: Included (supports up to 16-color printing with 4 AMS units)
+
+Calibration: Auto Bed Leveling & Vibration Compensation
+
+Setup: Fully pre-assembled, plug-and-play
+
+7. Bambu Lab P1S With AMS 2 Pro 3D Printer Regular priceRs. 95,000.00 Sale priceRs. 78,000.00
+
+Crucks (4 Points)
+
+Pro-Grade Multi-Material System: Combines the high-speed P1S printer with the advanced AMS 2 Pro system for 4-color, multi-material precision printing.
+
+Smart & Automated Printing: Features automatic leveling, real-time monitoring, and power failure recovery for seamless, reliable printing.
+
+High-Speed, High-Quality Output: Reaches up to 500 mm/s speed and 20,000 mm/s² acceleration with advanced vibration compensation.
+
+Enclosed & Efficient: Designed for high-temperature filament printing, supported by an air filtration system and intelligent fan control.
+
+📝 Short Description (5 Points)
+
+Plug-and-play performance — ready to print in 15 minutes with full auto-calibration.
+
+AMS 2 Pro integration enables multi-material, multi-color printing with up to 4 filaments simultaneously (expandable up to 16).
+
+High-speed printing up to 500 mm/s with advanced motion control and vibration compensation.
+
+Professional-grade monitoring with intelligent sensors, built-in camera, and fan speed feedback for real-time quality assurance.
+
+Ideal for creators and engineers — reliable performance for prototyping, product design, and complex creative projects.
+
+⚙️ Technical Specifications (TS)
+
+🔹 General Information
+
+Printer Model: Bambu Lab P1S AMS 2 Pro Combo 3D Printer
+
+Build Volume: 256 × 256 × 256 mm
+
+Product Dimensions: 389 × 389 × 458 mm
+
+Build Plate: Flexible Build Plate (Compatible with Bambu PEI, Cool, and Engineering Plates)
+
+Chassis: Enclosed (Plastic & Glass)
+
+🔹 Printing Performance
+
+Max Print Speed: 500 mm/s
+
+Max Acceleration: 20,000 mm/s²
+
+Auto-Leveling: Yes
+
+Vibration Compensation: Supported
+
+Resume After Power Failure: Yes
+
+🔹 Extrusion System
+
+Extruder Quantity: 1
+
+Nozzle Size: 0.4 mm (Included)
+
+Optional Nozzles: 0.2 mm, 0.6 mm, 0.8 mm
+
+Max Printing Temperature: 300 °C
+
+Filament Diameter: 1.75 mm
+
+🔹 Build Plate
+
+Type: Flexible, magnetic build plate
+
+Max Temperature: 100 °C
+
+🔹 AMS 2 Pro System
+
+Function: Automatic Material System for multi-material/multi-color printing
+
+Capacity: Supports up to 4 filaments per AMS unit (expandable to 16 with 4 units)
+
+Compatibility: Works with X1/P1 Series
+
+🔹 Supported Filaments
+
+Ideal: PLA, PETG, TPU, PVA, PET, ABS, ASA
+
+Capable: PA, PC
+
+🔹 Sensors & Monitoring
+
+Filament Run-Out Detection: Yes
+
+Intelligent Sensors: Real-time monitoring for printing status
+
+Built-in Camera: Yes (supports timelapse recording)
+
+Fan Speed Feedback: Supported
+
+Air Filter: Activated Carbon Filter
+
+🔹 Connectivity & Software
+
+Connectivity: Wi-Fi, Bluetooth, Bambu-Bus, Micro SD Card
+
+Slicer Software: Bambu Studio
+
+8. Bambu Lab X1 Carbon 3D Printer  Regular priceRs. 129,000.00 Sale priceRs. 107,100.00
+
+🧩 Crucks (4 Points)
+
+Professional-Grade Performance: Designed for advanced users and businesses needing precision, speed, and reliability.
+
+Smart AI Monitoring: Equipped with Lidar and AI spaghetti detection to ensure every print is accurate and safe.
+
+High-Speed CoreXY System: Delivers up to 500 mm/s print speed and 20,000 mm/s² acceleration for ultra-fast output.
+
+Versatile Material Compatibility: Supports carbon fiber, glass fiber, and engineering-grade filaments with a hardened nozzle and enhanced cooling.
+
+📝 Short Description (5 Points)
+
+The Bambu Lab X1 Carbon brings industrial-grade power to desktop 3D printing with proven reliability and exceptional print quality.
+
+Features dual auto bed leveling using Lidar and analog force sensors for unmatched accuracy and redundancy.
+
+7 μm Lidar resolution ensures ultra-precise first layer inspection and detailed surface measurement.
+
+Equipped with active vibration and extrusion compensation for ultra-smooth, high-speed prints.
+
+Built for multi-color and multi-material printing, the X1C handles everything from PLA to carbon fiber reinforced polymers.
+
+⚙️ Technical Specifications (TS)
+
+🔹 General Information
+
+Printer Model: Bambu Lab X1 Carbon 3D Printer
+
+Build Volume: 256 × 256 × 256 mm³
+
+Physical Dimensions: 389 × 389 × 457 mm³
+
+Package Size: 480 × 480 × 535 mm³
+
+Net Weight: 14.13 kg
+
+Gross Weight: 18 kg
+
+🔹 Printing Performance
+
+Max Print Speed: 500 mm/s
+
+Max Acceleration: 20,000 mm/s²
+
+Auto Bed Leveling: Dual system — Lidar + Analog Force Sensors
+
+Lidar Resolution: 7 μm
+
+Vibration Compensation: Active XY Compensation
+
+Extrusion Compensation: Supported
+
+🔹 Extrusion System
+
+Nozzle: 0.4 mm Hardened Steel (Included)
+
+Optional Nozzle Sizes: 0.2 mm, 0.6 mm, 0.8 mm
+
+Hotend Type: All-Metal
+
+Max Hotend Temperature: 300 ℃
+
+Filament Diameter: 1.75 mm
+
+🔹 Build Plate
+
+Surface Options:
+
+Bambu Textured PEI Plate
+
+Bambu Cool Plate (Pre-installed, random, both compatible with Micro Lidar)
+
+Max Build Plate Temperature: 110 ℃ @ 220V / 120 ℃ @ 110V
+
+🔹 Supported Materials
+
+Standard: PLA, PETG, TPU, ABS, ASA, PVA, PET
+
+Ideal / Advanced: PA, PC, Carbon Fiber, Glass Fiber Reinforced Polymers
+
+🔹 Smart Features
+
+AI Detection: Spaghetti Detection
+
+First Layer Inspection: Lidar-Assisted
+
+Dual Auto Bed Leveling: Yes
+
+Cooling System: Enhanced with Extra Cooling Fan
+
+🔹 Electrical & Power
+
+Input Voltage: 100–240 VAC, 50/60 Hz
+
+Power Consumption: 1000 W @ 220V / 350 W @ 110V
+
+9. Bambu Lab X1 Carbon Combo 3D Printer Rs. 150,000.00 Sale priceRs. 124,500.00 Sold out
+
+🧩 Crucks (4 Points)
+
+Professional Multi-Material Printing: Combines the X1 Carbon printer with AMS for seamless multi-color and multi-material printing.
+
+AI & Lidar Precision: Dual Auto Bed Leveling with 7 μm Lidar ensures ultra-accurate first layers and smooth surfaces.
+
+Industrial-Grade Power: High-speed CoreXY motion system with up to 20,000 mm/s² acceleration for top-tier performance.
+
+Durable & Versatile Build: Hardened steel nozzle and advanced cooling allow printing with engineering-grade and fiber-reinforced materials.
+
+📝 Short Description (5 Points)
+
+The Bambu Lab X1 Carbon Combo is a flagship professional 3D printer featuring multi-color and multi-material capability via AMS integration.
+
+It’s equipped with AI-powered monitoring, Lidar-based precision, and vibration compensation for flawless print quality.
+
+The Dual Auto Bed Leveling system ensures redundancy and reliability in every print.
+
+The hardened nozzle and upgraded cooling system allow printing of high-performance materials like carbon fiber, PA, and PC.
+
+Designed for professionals, it delivers speed, accuracy, and reliability—ideal for prototyping, design, and production.
+
+⚙️ Technical Specifications (TS)
+
+🔹 General Information
+
+Printer Model: Bambu Lab X1 Carbon Combo 3D Printer
+
+Build Volume: 256 × 256 × 256 mm³
+
+Physical Dimensions: 389 × 389 × 457 mm³
+
+Package Size: 480 × 480 × 590 mm³
+
+Gross Weight (AMS Included): 22.3 kg
+
+🔹 Printing Performance
+
+Max Print Speed: 500 mm/s
+
+Max Acceleration: 20,000 mm/s²
+
+Auto Bed Leveling: Dual System (Lidar + Analog Force Sensors)
+
+Lidar Resolution: 7 μm
+
+Vibration Compensation: Active XY Compensation
+
+Extrusion Compensation: Supported
+
+🔹 Extrusion System
+
+Nozzle: 0.4 mm Hardened Steel (Included)
+
+Optional Nozzles: 0.2 mm, 0.6 mm, 0.8 mm
+
+Hotend Type: All-Metal
+
+Max Hot End Temperature: 300 ℃
+
+Filament Diameter: 1.75 mm
+
+🔹 Build Plate
+
+Surface Options:
+
+Bambu Textured PEI Plate
+
+Bambu Cool Plate
+(Both compatible with Micro Lidar)
+
+Max Build Plate Temperature: 110 ℃ @ 220V / 120 ℃ @ 110V
+
+🔹 Supported Materials
+
+Standard: PLA, PETG, TPU, ABS, ASA, PVA, PET
+
+Ideal for: PA, PC, Carbon Fiber & Glass Fiber Reinforced Polymers
+
+🔹 Smart Features
+
+AI Monitoring: Spaghetti Detection & First Layer Inspection (Lidar)
+
+AMS Integration: Yes – Multi-Color/Multi-Material Printing
+
+Dual Auto Bed Leveling: Yes
+
+Enhanced Cooling System: Yes
+
+🔹 Electrical & Power
+
+Input Voltage: 100 – 240 VAC, 50/60 Hz
+
+Power Consumption: 1000 W @ 220V / 350 W @ 110V
+
+10. Bambu Lab H2D 3D Printer ( PRE ORDER ) Regular priceRs. 225,000.00 Sale priceRs. 186,800.00
+
+🧩 Crucks (4 Points)
+
+Dual-Nozzle Multi-Material Printing: Supports two nozzles for simultaneous multi-color or multi-material printing.
+
+Optional Laser & Cutting Module: Upgradeable with 10W or 40W laser modules for engraving/cutting and a 300×285 mm cutting area.
+
+High-Speed Precision: Core-XY system with 5 μm optical motion calibration, closed-loop servo extruder, and 350°C nozzle.
+
+Advanced Monitoring & Safety: AI-backed nozzle camera, BirdsEye camera, flame sensors, door sensors, and optional CO₂ fire extinguisher integration.
+
+📝 Short Description (5 Points)
+
+Ready for high-end projects: Dual-nozzle printing, optional laser cutting/engraving, and large 350×320×325 mm³ build volume.
+
+Precision Printing: 5 μm optical motion calibration and closed-loop servo extruder for accurate filament flow.
+
+High-Temperature Capability: 350°C nozzle and 65°C active chamber for advanced filaments.
+
+Smart Monitoring: Built-in cameras (nozzle, BirdsEye, toolhead) and AI support detect extrusion issues in real time.
+
+Versatile & Safe: Optional laser modules, cutting module, flame sensors, and filtered air chamber ensure high functionality and safety.
+
+⚙️ Technical Specifications (TS)
+
+🔹 General Information
+
+Printing Technology: Fused Deposition Modeling (FDM)
+
+Build Volume:
+
+Single Nozzle: 325 × 320 × 325 mm³
+
+Dual Nozzle: 300 × 320 × 325 mm³
+
+Total Volume (Two Nozzles): 350 × 320 × 325 mm³
+
+Chassis & Shell: Aluminum, Steel, Plastic, Glass
+
+Physical Dimensions: 492 × 514 × 626 mm³
+
+Net Weight: 31 kg
+
+🔹 Toolhead & Extrusion
+
+Hotend: All-Metal
+
+Extruder Gear: Hardened Steel
+
+Nozzle: Hardened Steel (0.4 mm included, optional 0.2 / 0.6 / 0.8 mm)
+
+Max Nozzle Temperature: 350 °C
+
+Filament Diameter: 1.75 mm
+
+Extruder Motor: High-precision Permanent Magnet Synchronous Motor
+
+🔹 Heatbed & Chamber
+
+Supported Build Plate Types: Textured PEI, Smooth PEI
+
+Max Heatbed Temperature: 120 °C
+
+Active Chamber Heating: Yes, max 65 °C
+
+Air Purification: G3 pre-filter, H12 HEPA filter, Activated Carbon filter
+
+🔹 Speed & Motion
+
+Max Toolhead Speed: 1000 mm/s
+
+Max Acceleration: 20,000 mm/s²
+
+Max Flow (Standard Hotend): 40 mm³/s
+
+Max Flow (Optional High-Flow Hotend): 65 mm³/s
+
+Optical Motion Calibration: 5 μm resolution
+
+🔹 Cooling System
+
+Closed-Loop Controlled Fans: Part cooling, auxiliary cooling, chamber heat circulation, hotend cooling, main control board, chamber exhaust
+
+🔹 Supported Filaments
+
+Standard: PLA, PETG, TPU, PVA, BVOH, ABS, ASA, PC, PA, PET
+
+Advanced: Carbon/Glass Fiber Reinforced PLA, PETG, PA, PET, PC, ABS, ASA, PPA-CF/GF, PPS, PPS-CF/GF
+
+🔹 Sensors & Monitoring
+
+Live View Camera: 1920×1080
+
+Nozzle Camera: 1920×1080
+
+BirdsEye Camera: 3264×2448 (Laser Edition)
+
+Toolhead Camera: 1920×1080
+
+Door Sensor: Yes
+
+Filament Run-Out / Tangle Sensor: Supported
+
+Filament Odometry: Supported with AMS
+
+Power Loss Recovery: Supported
+
+🔹 Electrical Requirements
+
+Voltage: 100–120 V / 200–240 V, 50/60 Hz
+
+Max Power: 2200 W @ 220 V / 1320 W @ 110 V
+
+🔹 Display & Control
+
+Touchscreen: 5-inch, 720×1280
+
+Storage: Built-in 8 GB EMMC + USB port
+
+Control Interface: Touchscreen, Mobile App, PC App
+
+Neural Processing Unit: 2 TOPS
+
+🔹 Software & Connectivity
+
+Slicer: Bambu Studio, Bambu Suite, Bambu Handy; supports third-party slicers (SuperSlicer, PrusaSlicer, Cura)
+
+Supported OS: macOS, Windows
+
+Wi-Fi: 2.4 GHz / 5 GHz bands, IEEE 802.11 a/b/g/n
+
+🔹 Optional Laser Module
+
+Laser Power: 10 W ±1 W or 40 W ±2 W
+
+Engraving Area: 10W: 310×270 mm, 40W: 310×250 mm
+
+Max Cutting Thickness: 10W: 5 mm, 40W: 15 mm (Basswood Plywood)
+
+Laser Safety Class: Class 4 (Module), Class 1 (Overall)
+
+🔹 Optional Cutting Module
+
+Cutting Area: 300×285 mm²
+
+Drawing Area: 300×255 mm²
+
+Supported Materials: Paper, vinyl, leather, etc.
+
+Supported Blades/Pens: 10.5–12.5 mm pen, 45°×0.35 mm blade
+
+
+
+11. BAMBULAB - H2D AMS Combo Regular priceRs. 260,000.00 Sale priceRs. 215,800.00
+
+🧩 Crucks (4 Points)
+
+Dual-Nozzle Multi-Material Printing: Supports two nozzles for simultaneous multi-color or multi-material prints.
+
+AMS Integration & Laser/Cutting Modules: Automatic Material System (AMS) for multi-color printing; optional 10W/40W laser and cutting module.
+
+High-Precision Motion: Core-XY architecture with 5 μm optical motion calibration and closed-loop servo extruder.
+
+Advanced Monitoring & Safety: AI-backed cameras, flame sensors, door sensors, CO₂ fire extinguisher compatibility, and active chamber heating.
+
+📝 Short Description (5 Points)
+
+Professional Multi-Material Printing: Dual-nozzle capability with AMS support for complex multi-color and multi-material projects.
+
+Optional Laser & Cutting Module: Expandable for engraving, cutting, or other creative tasks.
+
+High-Speed & Precise: Core-XY system, 1000 mm/s max toolhead speed, and 20,000 mm/s² acceleration.
+
+Smart Monitoring & AI Support: Nozzle camera, BirdsEye camera, and toolhead camera monitor prints in real-time.
+
+Safe & Versatile: High-temperature hotend (350 °C), active chamber heating (65 °C), flame detection, and filtered air for safe operation.
+
+⚙️ Technical Specifications (TS)
+
+🔹 General Information
+
+Printing Technology: Fused Deposition Modeling (FDM)
+
+Build Volume:
+
+Single Nozzle: 325 × 320 × 325 mm³
+
+Dual Nozzle: 300 × 320 × 325 mm³
+
+Total Volume (Two Nozzles): 350 × 320 × 325 mm³
+
+Chassis & Shell: Aluminum, Steel, Plastic, Glass
+
+Physical Dimensions: 492 × 514 × 626 mm³
+
+Net Weight: 31 kg
+
+🔹 Toolhead & Extrusion
+
+Hotend: All-Metal
+
+Extruder Gear: Hardened Steel
+
+Nozzle: Hardened Steel (0.4 mm included, optional 0.2 / 0.6 / 0.8 mm)
+
+Max Nozzle Temperature: 350 °C
+
+Filament Diameter: 1.75 mm
+
+Extruder Motor: High-precision Permanent Magnet Synchronous Motor
+
+🔹 Heatbed & Chamber
+
+Supported Build Plate Types: Textured PEI, Smooth PEI
+
+Max Heatbed Temperature: 120 °C
+
+Active Chamber Heating: Supported (max 65 °C)
+
+Air Purification: G3 pre-filter, H12 HEPA filter, Activated Carbon filter
+
+🔹 Motion & Speed
+
+Max Toolhead Speed: 1000 mm/s
+
+Max Acceleration: 20,000 mm/s²
+
+Max Flow (Standard Hotend): 40 mm³/s
+
+Max Flow (High-Flow Hotend Optional): 65 mm³/s
+
+Optical Motion Calibration: 5 μm
+
+🔹 Cooling System
+
+Closed-Loop Controlled Fans: Part cooling, auxiliary cooling, chamber heat circulation, hotend cooling, main control board, chamber exhaust
+
+🔹 Supported Filaments
+
+Standard: PLA, PETG, TPU, PVA, BVOH, ABS, ASA, PC, PA, PET
+
+Advanced: Carbon/Glass Fiber Reinforced PLA, PETG, PA, PET, PC, ABS, ASA, PPA-CF/GF, PPS, PPS-CF/GF
+
+🔹 Sensors & Monitoring
+
+Live View Camera: 1920 × 1080
+
+Nozzle Camera: 1920 × 1080
+
+BirdsEye Camera: 3264 × 2448 (Laser Edition)
+
+Toolhead Camera: 1920 × 1080
+
+Door Sensor: Supported
+
+Filament Run-Out / Tangle Sensor: Supported
+
+Filament Odometry: Supported with AMS
+
+Power Loss Recovery: Supported
+
+🔹 Electrical & Power
+
+Voltage: 100–120 V / 200–240 V, 50/60 Hz
+
+Max Power: 2200 W @ 220 V / 1320 W @ 110 V
+
+🔹 Display & Control
+
+Touchscreen: 5-inch, 720 × 1280
+
+Storage: Built-in 8 GB EMMC + USB
+
+Control Interface: Touchscreen, Mobile App, PC App
+
+Neural Processing Unit: 2 TOPS
+
+🔹 Software & Connectivity
+
+Slicer: Bambu Studio, Bambu Suite, Bambu Handy; third-party slicers supported (SuperSlicer, PrusaSlicer, Cura)
+
+Supported OS: macOS, Windows
+
+Wi-Fi: 2.4 GHz / 5 GHz, IEEE 802.11 a/b/g/n
+
+🔹 Optional Laser Module
+
+Laser Power: 10 W ±1 W / 40 W ±2 W
+
+Engraving Area: 10W: 310 × 270 mm; 40W: 310 × 250 mm
+
+Max Cutting Thickness: 10W: 5 mm; 40W: 15 mm (Basswood)
+
+Laser Safety Class: Class 4 (module), Class 1 (overall)
+
+🔹 Optional Cutting Module
+
+Cutting Area: 300 × 285 mm²
+
+Drawing Area: 300 × 255 mm²
+
+Supported Materials: Paper, vinyl, leather, etc.
+
+Supported Blades/Pens: 10.5–12.5 mm pen, 45° × 0.35 mm blade
+
+
+
+12. Bambu Lab H2S AMS Combo 3D Printer Rs. 170,000.00
+
+🧩 Crucks (4 Points)
+
+Ultra-High Precision: Vision Encoder ensures distance-independent motion accuracy under 50 μm; Auto Hole/Contour Compensation for fit-critical parts.
+
+Advanced Multi-Material Support: Dual-nozzle printing with AMS, precise extrusion control, filament monitoring, and active vibration compensation.
+
+High-Temperature Capability: 350 °C hotend, 65 °C actively heated chamber; supports full Bambu filament lineup including engineering plastics and reinforced materials.
+
+Integrated Laser & Cutting Options: Optional 10W/40W laser and cutting modules; AI-driven vision system ensures precise alignment and safe operation.
+
+📝 Short Description (5 Points)
+
+Professional Engineering Printer: Combines dual-nozzle AMS with Vision Encoder for ultra-precise printing of functional parts.
+
+Smart Extrusion Control: Servo motors, eddy current sensors, and AI monitoring ensure smooth surfaces and accurate dimensions.
+
+High-Performance Materials: Supports PLA, PETG, TPU, PVA, BVOH, ABS, ASA, PC, PA, PPS, and carbon/glass fiber reinforced filaments.
+
+Safety & Monitoring: Five flame sensors, door/top-cover sensors, emergency stop, and AI-powered real-time print monitoring.
+
+Laser & Cutting Module Ready: Top-vent and filter system for laser/cutting work; supports engraving, cutting, and precise spatial alignment.
+
+⚙️ Technical Specifications (TS)
+
+🔹 General Information
+
+Build Volume (W×D×H): 340 × 320 × 340 mm³
+
+Chassis & Shell: Aluminum, Steel, Plastic, Glass
+
+Laser Safety Windows: Equipped on Laser Edition; optional upgrade kit
+
+Air Assist Pump: Built-in for Laser Edition or optional upgrade
+
+Physical Dimensions: 492 × 514 × 626 mm³
+
+Net Weight: H2S: 30 kg; H2S Laser Edition: 30.5 kg
+
+🔹 Toolhead & Extrusion
+
+Hotend: All-Metal
+
+Extruder Gear: Hardened Steel
+
+Nozzle: Hardened Steel (0.4 mm included; 0.2 / 0.6 / 0.8 mm optional)
+
+Max Nozzle Temperature: 350 °C
+
+Filament Diameter: 1.75 mm
+
+Filament Cutter: Built-in
+
+Extruder Motor: High-precision PMSM servo motor
+
+🔹 Heatbed & Chamber
+
+Supported Build Plate Types: Textured PEI, Smooth PEI
+
+Max Heatbed Temperature: 120 °C
+
+Active Chamber Heating: Supported (max 65 °C)
+
+Air Purification: G3 pre-filter, H12 HEPA filter, Activated Carbon filter, VOC filtration
+
+🔹 Motion & Speed
+
+Max Toolhead Speed: 1000 mm/s
+
+Max Acceleration: 20,000 mm/s²
+
+Max Flow (Standard Hotend): 40 mm³/s
+
+Max Flow (High-Flow Hotend Optional): 65 mm³/s
+
+Vision Encoder Accuracy: Distance-independent under 50 μm
+
+Active Vibration Compensation: Yes
+
+🔹 Cooling System
+
+Closed-Loop Controlled Fans: Part cooling, hotend cooling, chamber exhaust, chamber circulation, auxiliary part cooling, main control board
+
+🔹 Supported Filaments
+
+PLA, PETG, TPU, PVA, BVOH, ABS, ASA, PC, PA, PET, PPS
+
+Carbon/Glass Fiber Reinforced PLA, PETG, PA, PET, PC, ABS, ASA, PPA, PPS
+
+🔹 Sensors & Monitoring
+
+Live View Camera: 1920 × 1080
+
+Toolhead Camera: 1600 × 1200
+
+BirdsEye Camera: 3264 × 2448 (Laser Edition)
+
+Door Sensor: Supported
+
+Filament Run-Out / Tangle / Odometry: Supported with AMS
+
+Power Loss Recovery: Supported
+
+Flame Detection: 5 sensors
+
+🔹 Electrical & Power
+
+Voltage: 100–120 V / 200–240 V, 50/60 Hz
+
+Max Power: 2050 W @ 220 V / 1170 W @ 110 V
+
+🔹 Display & Control
+
+Touchscreen: 5-inch, 720 × 1280
+
+Storage: Built-in 8 GB EMMC + USB
+
+Control Interface: Touchscreen, Mobile App, PC App
+
+Neural Processing Unit: 2 TOPS
+
+🔹 Software & Connectivity
+
+Slicer: Bambu Studio; supports third-party slicers (SuperSlicer, PrusaSlicer, Cura)
+
+Supported OS: macOS, Windows, Linux
+
+Wi-Fi: 2.4 GHz / 5 GHz, IEEE 802.11 a/b/g/n
+
+🔹 Laser Module (Optional)
+
+Laser Type: Semiconductor
+
+Wavelength: Engraving: 455 nm ± 5 nm; Height Measuring: 850 nm ± 5 nm
+
+Power: 10 W ±1 W
+
+Spot Dimension: 0.03 × 0.14 mm²
+
+Max Engraving Speed: 400 mm/s
+
+Max Cutting Thickness: 5 mm (Basswood)
+
+Safety Class: Laser Module Class 4, Overall Class 1
+
+Engraving Area: 310 × 260 mm²
+
+XY Positioning Accuracy: <0.3 mm
+
+Z Height Measuring Accuracy: ±0.1 mm
+
+🔹 Cutting Module (Optional)
+
+Cutting Area: 297.5 × 300 mm²
+
+Drawing Area: 300 × 255 mm²
+
+Supported Pen Diameter: 10.5–12.5 mm
+
+Blade Type & Pressure: 45° × 0.35 mm; 50–600 gf
+
+Max Cutting Thickness: 0.5 mm
+
+Supported Materials: Paper, PVC, vinyl, leather, etc.
+
+
+13. Bambu Lab H2S 10W Full Laser Combo 3D Printer Rs. 240,000.00
+
+🧩 Crucks (4 Points)
+
+Ultra-High Precision: Vision Encoder ensures distance-independent motion accuracy under 50 μm; Auto Hole/Contour Compensation for fit-critical parts.
+
+Advanced Multi-Material Support: Dual-nozzle printing with AMS, precise extrusion control, filament monitoring, and active vibration compensation.
+
+High-Temperature Capability: 350 °C hotend, 65 °C actively heated chamber; supports full Bambu filament lineup including engineering plastics and reinforced materials.
+
+Integrated Laser & Cutting Options: Optional 10W/40W laser and cutting modules; AI-driven vision system ensures precise alignment and safe operation.
+
+📝 Short Description (5 Points)
+
+Professional Engineering Printer: Combines dual-nozzle AMS with Vision Encoder for ultra-precise printing of functional parts.
+
+Smart Extrusion Control: Servo motors, eddy current sensors, and AI monitoring ensure smooth surfaces and accurate dimensions.
+
+High-Performance Materials: Supports PLA, PETG, TPU, PVA, BVOH, ABS, ASA, PC, PA, PPS, and carbon/glass fiber reinforced filaments.
+
+Safety & Monitoring: Five flame sensors, door/top-cover sensors, emergency stop, and AI-powered real-time print monitoring.
+
+Laser & Cutting Module Ready: Top-vent and filter system for laser/cutting work; supports engraving, cutting, and precise spatial alignment.
+
+⚙️ Technical Specifications (TS)
+
+🔹 General Information
+
+Build Volume (W×D×H): 340 × 320 × 340 mm³
+
+Chassis & Shell: Aluminum, Steel, Plastic, Glass
+
+Laser Safety Windows: Equipped on Laser Edition; optional upgrade kit
+
+Air Assist Pump: Built-in for Laser Edition or optional upgrade
+
+Physical Dimensions: 492 × 514 × 626 mm³
+
+Net Weight: H2S: 30 kg; H2S Laser Edition: 30.5 kg
+
+🔹 Toolhead & Extrusion
+
+Hotend: All-Metal
+
+Extruder Gear: Hardened Steel
+
+Nozzle: Hardened Steel (0.4 mm included; 0.2 / 0.6 / 0.8 mm optional)
+
+Max Nozzle Temperature: 350 °C
+
+Filament Diameter: 1.75 mm
+
+Filament Cutter: Built-in
+
+Extruder Motor: High-precision PMSM servo motor
+
+🔹 Heatbed & Chamber
+
+Supported Build Plate Types: Textured PEI, Smooth PEI
+
+Max Heatbed Temperature: 120 °C
+
+Active Chamber Heating: Supported (max 65 °C)
+
+Air Purification: G3 pre-filter, H12 HEPA filter, Activated Carbon filter, VOC filtration
+
+🔹 Motion & Speed
+
+Max Toolhead Speed: 1000 mm/s
+
+Max Acceleration: 20,000 mm/s²
+
+Max Flow (Standard Hotend): 40 mm³/s
+
+Max Flow (High-Flow Hotend Optional): 65 mm³/s
+
+Vision Encoder Accuracy: Distance-independent under 50 μm
+
+Active Vibration Compensation: Yes
+
+🔹 Cooling System
+
+Closed-Loop Controlled Fans: Part cooling, hotend cooling, chamber exhaust, chamber circulation, auxiliary part cooling, main control board
+
+🔹 Supported Filaments
+
+PLA, PETG, TPU, PVA, BVOH, ABS, ASA, PC, PA, PET, PPS
+
+Carbon/Glass Fiber Reinforced PLA, PETG, PA, PET, PC, ABS, ASA, PPA, PPS
+
+🔹 Sensors & Monitoring
+
+Live View Camera: 1920 × 1080
+
+Toolhead Camera: 1600 × 1200
+
+BirdsEye Camera: 3264 × 2448 (Laser Edition)
+
+Door Sensor: Supported
+
+Filament Run-Out / Tangle / Odometry: Supported with AMS
+
+Power Loss Recovery: Supported
+
+Flame Detection: 5 sensors
+
+🔹 Electrical & Power
+
+Voltage: 100–120 V / 200–240 V, 50/60 Hz
+
+Max Power: 2050 W @ 220 V / 1170 W @ 110 V
+
+🔹 Display & Control
+
+Touchscreen: 5-inch, 720 × 1280
+
+Storage: Built-in 8 GB EMMC + USB
+
+Control Interface: Touchscreen, Mobile App, PC App
+
+Neural Processing Unit: 2 TOPS
+
+🔹 Software & Connectivity
+
+Slicer: Bambu Studio; supports third-party slicers (SuperSlicer, PrusaSlicer, Cura)
+
+Supported OS: macOS, Windows, Linux
+
+Wi-Fi: 2.4 GHz / 5 GHz, IEEE 802.11 a/b/g/n
+
+🔹 Laser Module (Optional)
+
+Laser Type: Semiconductor
+
+Wavelength: Engraving: 455 nm ± 5 nm; Height Measuring: 850 nm ± 5 nm
+
+Power: 10 W ±1 W
+
+Spot Dimension: 0.03 × 0.14 mm²
+
+Max Engraving Speed: 400 mm/s
+
+Max Cutting Thickness: 5 mm (Basswood)
+
+Safety Class: Laser Module Class 4, Overall Class 1
+
+Engraving Area: 310 × 260 mm²
+
+XY Positioning Accuracy: <0.3 mm
+
+Z Height Measuring Accuracy: ±0.1 mm
+
+🔹 Cutting Module (Optional)
+
+Cutting Area: 297.5 × 300 mm²
+
+Drawing Area: 300 × 255 mm²
+
+Supported Pen Diameter: 10.5–12.5 mm
+
+Blade Type & Pressure: 45° × 0.35 mm; 50–600 gf
+
+Max Cutting Thickness: 0.5 mm
+
+Supported Materials: Paper, PVC, vinyl, leather, etc.
+
+ELEGOO
+
+ 1. Elegoo Centurai Carbon Regular priceRs. 50,000.00 Sale priceRs. 46,000.00
+ 
+ 🧩 Crucks (4 Points)
+
+Ready-to-Print: Works right out of the box with full-auto calibration and smooth first-layer setup.
+
+High-Speed Performance: CoreXY motion system with 500 mm/s max speed and 20,000 mm/s² acceleration.
+
+Precision & Stability: Die-cast aluminum chassis with vibration compensation and pressure advance for accurate, smooth prints.
+
+Monitoring & Safety: Enclosed metal/glass shell with chamber camera, filament run-out sensor, and power loss recovery.
+
+📝 Short Description (5 Points)
+
+Professional-Grade CoreXY Printer: Achieves high-speed, high-precision printing for complex designs.
+
+Large Build Volume: 256 × 256 × 256 mm accommodates medium-to-large models.
+
+Versatile Material Support: PLA, PETG, TPU, ABS, ASA, PC, PA, and carbon/glass fiber reinforced filaments.
+
+Enhanced Print Quality: Automatic vibration compensation, pressure advance, and dual-sided PLA-specific plate minimize warping and ringing.
+
+Convenient Operation: 4.3-inch capacitive touchscreen, real-time chamber monitoring, and time-lapse recording for monitoring and sharing prints.
+
+⚙️ Technical Specifications (TS)
+
+🔹 Body & Chassis
+
+Shell: Enclosed (Metal & Glass)
+
+Chassis: Die-Cast Aluminum
+
+Build Volume (W × D × H): 256 × 256 × 256 mm
+
+🔹 Printing Performance
+
+Max Speed: 500 mm/s
+
+Max Acceleration: 20,000 mm/s²
+
+Max Hotend Flow Rate: 32 mm³/s
+
+Layer Thickness: 0.1–0.4 mm (recommended 0.2 mm)
+
+Printing Accuracy: ±0.1 mm
+
+Leveling Method: Auto-Leveling
+
+🔹 Filament Support
+
+Materials: PLA, PETG, TPU, ABS, ASA, PC, PA, Carbon/Glass Fiber Reinforced Filaments
+
+Filament Cutter: Yes
+
+🔹 Extruder & Hotend
+
+Extruder: Hardened Steel Dual-Gear Direct Extruder
+
+Nozzle: 0.4 mm Brass-Hardened Steel (included); optional 0.2 / 0.6 / 0.8 / 1.0 mm
+
+Hot End: All-Metal
+
+Max Hot End Temperature: 320 °C
+
+🔹 Build Plate & Heating
+
+Plate Type: PLA Specific & Textured PEI Dual-Sided Plate
+
+Max Heated Bed Temperature: 110 °C
+
+🔹 Cooling & Filtration
+
+Fans: Part Cooling Fan, Hot End Fan, Auxiliary Part Cooling Fan, Chamber Temperature Regulator Fan
+
+Air Filter: Activated Carbon Filter
+
+🔹 Sensors & Monitoring
+
+Chamber Camera: Yes
+
+Filament Run-Out Sensor: Yes
+
+Power Loss Recovery: Yes
+
+🔹 Display & Connectivity
+
+Touchscreen: 4.3-inch Capacitive
+
+Connectivity: USB & Wi-Fi
+
+OTA Firmware Upgrade: Yes
+
+Languages: English, French, German, Russian, Italian, Spanish, Japanese, Chinese
+
+🔹 Software & File Formats
+
+Slicing Software: ELEGOO Slicer (Recommended), Orca, Cura
+
+Input Formats: STL, OBJ, 3MF, STP
+
+Output Format: Gcode
+
+🔹 Physical Dimensions & Power
+
+Printer Dimensions: 398 × 404 × 490 mm
+
+Net Weight: 17.5 kg
+
+Gross Weight: 21 kg
+
+Power Requirements: 100–240 VAC, 50/60 Hz
+
+Max Power: 1100 W @ 220 V / 350 W @ 110 V
+
+2. Elegoo Neptune 4 Max Regular priceRs. 42,000.00 Sale priceRs. 40,000.00
+
+🧩 Crucks (4 Points)
+
+Massive Build Volume: 420 × 420 × 480 mm³ accommodates large-scale models or multiple smaller objects.
+
+High-Speed & Precision: Up to 500 mm/s printing speed and 8000 mm/s² acceleration with Klipper firmware and input shaping.
+
+Versatile Filament Support: 300°C high-temp nozzle handles PLA, PETG, TPU, ABS, ASA, and Nylon.
+
+Smart Monitoring & Connectivity: Wi-Fi/WLAN/USB transfer, filament detection, and resume printing for convenient and reliable operation.
+
+📝 Short Description (5 Points)
+
+Klipper Firmware Integration: Enables ultra-fast printing, input shaping, and pressure advance for smooth and precise prints.
+
+Automatic Calibration: 121-point auto bed leveling and X/Y acceleration sensors optimize print accuracy.
+
+Powerful Hotend & Extruder: 300°C high-temp nozzle with dual-gear direct extruder ensures reliable extrusion for high-performance filaments.
+
+Spacious Printing Area: Large 420 × 420 × 480 mm³ build volume gives freedom for creative or complex prints.
+
+Flexible Connectivity & Control: Wi-Fi, USB, and LAN options with remote printing and multi-machine network support.
+
+⚙️ Technical Specifications (TS)
+
+🔹 Body & Frame
+
+Frame Material: CNC-machined aluminum extrusion
+
+Build Volume (W × D × H): 420 × 420 × 480 mm³
+
+Printing Platform Size (PEI Area): 430 × 430 mm²
+
+Machine Dimensions: 658 × 632 × 740 mm³
+
+Package Size: 790 × 690 × 290 mm³
+
+Max Activity Size (including rack & tray): 658 × 950 × 960 mm
+
+🔹 Printing Performance
+
+Printing Technology: FDM (Fused Deposition Modeling)
+
+Max Tool Head Speed: 500 mm/s
+
+Max Acceleration: 8000 mm/s²
+
+Max Nozzle Temperature: 300 °C
+
+Max Heated Bed Temperature: 85 °C (ambient 25 °C)
+
+Leveling Method: 121-point Auto Bed Leveling
+
+🔹 Filament Support
+
+Materials: PLA, TPU, PETG, ABS, ASA, Nylon
+
+Filament Diameter: 1.75 mm
+
+Filament Detection: Yes
+
+🔹 Extruder & Hotend
+
+Hotend: Extended high-temp nozzle with 60W ceramic heater and brass heating block
+
+Extruder: Dual-gear direct extruder, 5.2:1 reduction ratio, titanium alloy throat for heat dissipation
+
+Supported Nozzle Diameters: 0.4 mm (included)
+
+🔹 Connectivity & Control
+
+Connectivity: Wi-Fi, WLAN, USB
+
+UI Languages: English, French, German, Russian, Italian, Spanish, Japanese, Chinese
+
+Resume Printing: Yes
+
+File Format: STL, OBJ
+
+Remote/Web Printing: Supported, including multi-machine network control
+
+🔹 Electrical Requirements
+
+Voltage: 100–120 V / 220–240 V
+
+Net Weight: 18.1 kg
+
+Gross Weight: 26.35 kg
+
+3. Elegoo Neptune 4 Pro  Regular priceRs. 32,000.00 Sale priceRs. 28,000.00
+
+🧩 Key Features
+
+Fast Printing: Max speed up to 500 mm/s with 20,000 mm/s² acceleration.
+
+Precise Auto-Leveling: 121-point (11×11) segmented heatbed leveling.
+
+High-Temp Capability: Nozzle up to 300 °C supports PLA, PETG, ABS, ASA, TPU, Nylon.
+
+Advanced Extrusion: Dual-gear direct drive extruder with copper-titanium bi-metal throat for smooth filament feeding.
+
+Silent & Stable: Silent drivers, dual Z-axis lead screws/motors, and POM V-guide wheels reduce noise and improve precision.
+
+📝 Short Description
+
+Equipped with Klipper firmware on a 64-bit ARM quad-core processor for fast, reliable printing.
+
+Input shaping and pressure advance reduce artifacts and improve extrusion consistency.
+
+Extended high-temp nozzle with dual fans and auxiliary cooling ensures smooth overhangs and bridging.
+
+Intelligent segmented heatbed with dual heating zones for precise temperature control.
+
+Supports USB/LAN connectivity, filament detection, and resume printing for ease of use.
+
+⚙️ Technical Specifications (TS)
+
+🔹 Body & Frame
+
+Frame Material: CNC-machined aluminum extrusion
+
+Build Volume (W×D×H): 225 × 225 × 265 mm³
+
+Printing Platform Size (PEI Area): 235 × 235 mm²
+
+Machine Size: 475 × 445 × 515 mm³
+
+Package Size: 630 × 510 × 260 mm³
+
+Max Activity Size (including rack & tray): 475 × 550 × 735 mm
+
+🔹 Printing Performance
+
+Printing Technology: FDM (Fused Deposition Modeling)
+
+Max Tool Head Speed: 500 mm/s
+
+Max Acceleration: 20,000 mm/s²
+
+Max Nozzle Temperature: 300 °C
+
+Max Heated Bed Temperature: 110 °C
+
+Leveling Method: 121-point auto bed leveling (segmented heatbed)
+
+🔹 Filament Support
+
+Materials: PLA, TPU, PETG, ABS, ASA, Nylon
+
+Filament Diameter: 1.75 mm
+
+Filament Detection: Yes
+
+🔹 Extruder & Hotend
+
+Hotend: Extended high-temp nozzle with 60W ceramic heating and brass heating block
+
+Extruder: Dual-gear direct drive, 5.2:1 reduction ratio, copper-titanium bi-metal throat
+
+Supported Nozzle Diameters: 0.4 mm (included)
+
+🔹 Connectivity & Control
+
+File Transfer: USB, LAN
+
+UI Languages: English, French, German, Russian, Italian, Spanish, Japanese, Chinese
+
+Resume Printing: Yes
+
+Slicer Compatibility: ELEGOO Slicer, Cura, others
+
+Power Output: 100W + 150W zones for heatbed
+
+🔹 Electrical Requirements
+
+Voltage: 115/230 V, 50/60 Hz
+
+Net Weight: 8.9 kg
+
+Gross Weight: 13.92 kg
+
+RESIN 3D PRINTERS
+
+Elegoo
+
+1. Elegoo Saturn 4 Ultra 16K Regular priceRs. 61,500.00
+🧩 Key Features
+
+Ultra-High Precision: 16K Mono LCD for extremely fine details (XY resolution 14 × 19 μm).
+
+Smart Tank Heating: Maintains resin at 30 °C for optimal fluidity and layer adhesion.
+
+High-Speed Printing: Tilt release technology enables up to 150 mm/h printing.
+
+Automatic Leveling: Plug-and-play, no manual adjustment needed.
+
+AI Monitoring: Upgraded camera with light for real-time monitoring, alerts, and time-lapse recording.
+
+📝 Short Description
+
+Designed for users of all skill levels with out-of-the-box precision.
+
+Intelligent sensors detect resin levels, residue, and print issues to minimize waste.
+
+Tilt release technology ensures smooth model peeling and effortless post-processing.
+
+Compatible with USB and built-in Wi-Fi for file transfer and remote monitoring.
+
+Supports SatelLite & Chitubox slicers.
+
+⚙️ Technical Specifications (TS)
+
+🔹 Printing Technology & Display
+
+Technology: MSLA (Masked Stereolithography)
+
+LCD Screen: 10-inch 16K Mono LCD
+
+XY Resolution: 14 × 19 μm (15120 × 6230)
+
+Z-axis Accuracy: 0.02 mm
+
+Layer Thickness: 0.01–0.2 mm
+
+Printing Speed: Up to 150 mm/h (fast/slow modes)
+
+Tilt Release: Yes
+
+Leveling: Auto-Leveling
+
+🔹 Resin Tank & Build Plate
+
+Resin Tank: Smart heating tank (maintains 30 °C)
+
+Build Plate: Laser-engraved
+
+Release Film: PFA
+
+🔹 Light & Exposure
+
+Light Source: COB LED + Fresnel collimating lens
+
+Exposure Setting: Section-based
+
+🔹 System & Connectivity
+
+Operating Screen: 4-inch capacitive touchscreen
+
+Firmware Upgrade: OTA supported
+
+Connectivity: USB & Built-in Wi-Fi
+
+Supported Languages: Chinese, English, Japanese, Dutch, Korean, French, German, Russian, Italian, Spanish, Turkish, Portuguese
+
+Slicer Software: SatelLite & Chitubox
+
+🔹 Power & Cooling
+
+Power Supply: 100–240 VAC, 50/60 Hz, 24 V 6 A
+
+Cooling: 4 copper heat pipes + single fan
+
+Air Purifier: USB unavailable, compatible with Mars Mate
+
+🔹 Physical Dimensions
+
+Printer Size: 327.4 × 329.2 × 548 mm
+
+Net Weight: 16.1 kg
+
+Gross Weight: 18.7 kg
+
+2. Elegoo Jupiter SE  Regular priceRs. 68,999.00 Sale priceRs. 65,000.00
+🧩 Key Features
+
+High Resolution: 12.8-inch 6K monochrome LCD (5448 × 3064) with 51 μm XY resolution.
+
+Large Build Volume: 277.848 × 156.264 × 300 mm³, ideal for larger models or batch printing.
+
+Automated Resin Management: Automatic resin feeding and recycling reduces waste and ensures continuous printing.
+
+Uniform Light Exposure: COB + refractive light source for sharper details and consistent layer curing.
+
+Efficient Cooling: Dual cooling fans with copper heat-conducting tubes maintain stable temperatures.
+
+Easy Slicing: Compatible with Chitubox and Tango slicers.
+
+Upgraded USB Air Purifier: Keeps the workspace clean during printing.
+
+📝 Short Description
+
+Designed for professional and commercial applications, Jupiter SE enables high-precision, large-format printing.
+
+Features automated resin management, efficient thermal control, and high-resolution MSLA technology.
+
+User-friendly interface with 3.5-inch touch screen and USB connectivity for easy operation.
+
+⚙️ Technical Specifications (TS)
+
+🔹 LCD & Printing
+
+LCD: 12.8" 6K Mono LCD
+
+XY Resolution: 51 × 51 μm (5448 × 3064)
+
+Z-axis Accuracy: 0.02 mm
+
+Layer Thickness: 0.01–0.2 mm
+
+Printing Speed: Up to 70 mm/h
+
+Technology: MSLA (Masked Stereolithography)
+
+🔹 Build Volume
+
+Size: 277.848 × 156.264 × 300 mm
+
+🔹 Light & Exposure
+
+Light Source: COB + refractive light (405 nm)
+
+Cooling System: Fans with heat-conducting copper tubes
+
+🔹 System & Software
+
+Firmware/System: EL3D-3.0.1
+
+Slicer Software: Chitubox & Voxeldance Tango
+
+Operating Screen: 3.5-inch resistive touchscreen
+
+Languages: Chinese, English
+
+🔹 Connectivity & Power
+
+Connectivity: USB
+
+Power Supply: 100–240 V, 50/60 Hz, 24 V 7.5 A
+
+🔹 Physical Dimensions & Weight
+
+Printer Size: 479.9 × 377.4 × 657.5 mm
+
+Net Weight: 19.5 kg
+
+Gross Weight: 26.6 kg
+
+3. Elegoo Mars 5 Ultra Regular priceRs. 35,000.00 Sale priceRs. 32,500.00
+
+🧩 Key Features
+
+Automatic Leveling: One-click calibration for effortless setup and precise first layers.
+
+Smart Mechanical Sensor: Detects resin residues and shortages to protect the LCD and reduce waste.
+
+Advanced Overheat Protection: Automatically halts printing and triggers alarms if LED temperature exceeds 80 °C.
+
+High-Resolution Printing: 6.6-inch 4K mono LCD with COB light source ensures sharp details and textures.
+
+📝 Short Description
+
+Elegoo Mars 5 Ultra delivers precision MSLA printing with minimal setup and hassle-free operation.
+
+Features automatic leveling, smart mechanical sensing, and one-click self-check for reliable performance.
+
+Advanced COB light source reproduces intricate details with high fidelity.
+
+Overheat protection and efficient cooling ensure safety and extended printer lifespan.
+
+Supports a wide range of resins, making it ideal for professional or hobbyist applications.
+
+⚙️ Technical Specifications (TS)
+
+🔹 LCD & Printing
+
+LCD Screen: 6.6-inch 4K Mono LCD
+
+XY Resolution: 35 × 35 μm (4098 × 2560)
+
+Z-axis Accuracy: 0.02 mm
+
+Layer Thickness: 0.01–0.2 mm
+
+Printing Speed: Up to 70 mm/h
+
+Printing Technology: MSLA
+
+Light Source: COB (405 nm)
+
+LCD Protector: PET scratch-resistant film
+
+🔹 Build Volume
+
+143.43 × 89.6 × 150 mm³
+
+🔹 System & Software
+
+Firmware/System: EL3D-3.0.1
+
+Slicer Software: Chitubox & Voxeldance Tango
+
+Operation Screen: 3.5-inch resistive touchscreen
+
+Languages: Chinese, English
+
+🔹 Cooling & Air Management
+
+Heat Dissipation: 3 copper heat pipes + single fan
+
+Air Purifier: USB connection unavailable; compatible with Mars Mate
+
+🔹 Connectivity & Power
+
+Connection: USB Interface
+
+Power Supply: 100–240 V, 50/60 Hz, 24 V, 3 A
+
+🔹 Physical Dimensions & Weight
+
+Printer Size: 230 × 230 × 433.5 mm³
+
+Net Weight: 6.6 kg
+
+Gross Weight: 8.6 kg
+
+4. Elegoo Saturn 3 Ultra Regular priceRs. 50,000.00 Sale priceRs. 43,000.00 
+🧩 Key Features
+
+High-Resolution Printing: 10-inch 12K mono LCD with 19 × 24 μm XY resolution for precise, detailed models.
+
+Fast & Efficient: Supports printing speeds up to 150 mm/h with ACF release film and RAPID resin.
+
+Stable & Robust: All-metal body with COB + refractive light source ensures uniform curing and durability.
+
+Convenient Connectivity: Wi-Fi and USB support, with 4 GB ROM and Linux OS for smooth file transfers.
+
+📝 Short Description
+
+Elegoo Saturn 3 Ultra delivers high-precision MSLA printing with ultra-fine details and smooth surfaces.
+
+Equipped with a 12K mono LCD, COB light source, and advanced ACF release film for high-quality results.
+
+Fast printing speeds and reliable thermal management improve efficiency and success rates.
+
+User-friendly interface with 4-inch capacitive touch screen, Wi-Fi/USB connectivity, and multi-language support.
+
+Sleek, durable all-metal design for professional or advanced hobbyist applications.
+
+⚙️ Technical Specifications (TS)
+
+🔹 LCD & Printing
+
+LCD Screen: 10-inch 12K Mono LCD
+
+XY Resolution: 19 × 24 μm (11520 × 5120)
+
+Z-axis Accuracy: 0.01 mm
+
+Layer Thickness: 0.01–0.2 mm
+
+Printing Speed: Up to 150 mm/h
+
+Printing Technology: MSLA Stereolithography
+
+Light Source: COB + Refractive Light (405 nm)
+
+🔹 Build Volume
+
+218.88 × 122.88 × 260 mm³
+
+🔹 System & Software
+
+Firmware/System: EL3D-4.0
+
+Slicer Software: Chitubox, Voxeldance Tango, Autodesk Fusion
+
+Operation Screen: 4.0-inch Capacitive Touch Screen
+
+Languages: Chinese, English, Japanese, Dutch, Korean, French, German, Russian, Italian, Spanish, Turkish, Portuguese
+
+🔹 Connectivity & Power
+
+Connectivity: USB Interface & Wi-Fi (2.4G/5G)
+
+Power Supply: 100–240 V, 50/60 Hz, 24 V, 7.5 A
+
+🔹 Physical Dimensions & Weight
+
+Printer Size: 305.9 × 273 × 562.5 mm
+
+Net Weight: 12 kg
+
+Gross Weight: 16.2 kg
+
+5. Elegoo Saturn 4  Regular priceRs. 45,000.00
+
+🧩 Key Features
+
+High-Resolution Printing: 10-inch 12K mono LCD with 19 × 24 μm XY resolution for intricate, precise models.
+
+COB + Fresnel Lens: Ensures uniform light exposure with ultra-low astigmatism and precise angle control.
+
+Smart Leveling & Self-Check: One-click automatic leveling and intelligent mechanical sensor for worry-free printing.
+
+User-Friendly Design: Quick-release build plate, dual pour spouts, drip tray, tank lock, and flip-up cover for easy operation.
+
+📝 Short Description
+
+Elegoo Saturn 4 delivers professional MSLA printing with high precision and intricate detail.
+
+Intelligent self-check and auto-leveling make the printing experience effortless and reliable.
+
+COB + Fresnel collimating lens provides uniform exposure for sharp, accurate prints.
+
+Large build volume of 218.88 × 122.88 × 220 mm accommodates bigger projects or multiple parts.
+
+User-friendly structure with advanced cooling and safety sensors ensures convenience and print quality.
+
+⚙️ Technical Specifications (TS)
+
+🔹 LCD & Printing
+
+LCD Screen: 10-inch 12K Mono LCD
+
+XY Resolution: 19 × 24 μm (11520 × 5120)
+
+Z-axis Accuracy: 0.02 mm
+
+Layer Thickness: 0.01–0.2 mm
+
+Printing Speed: Up to 70 mm/h
+
+Printing Technology: MSLA Stereolithography
+
+Light Source: COB + Fresnel Collimating Lens (405 nm)
+
+🔹 Build Volume
+
+218.88 × 122.88 × 220 mm³
+
+🔹 System & Software
+
+Firmware/System: EL3D-3.0.1
+
+Slicer Software: Voxeldance Tango, ChituBox, Autodesk Fusion
+
+Operation Screen: 3.5-inch Resistive Touch Screen
+
+Languages: Chinese, English
+
+🔹 Connectivity & Power
+
+Connectivity: USB Interface
+
+Power Supply: 100–240 V, 50/60 Hz, 24 V, 6 A
+
+🔹 Physical Dimensions & Weight
+
+Printer Size: 327.4 × 329.2 × 548 mm
+
+Net Weight: 13.5 kg
+
+Gross Weight: 18.3 kg
+
+
