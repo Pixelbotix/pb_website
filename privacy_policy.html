@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head><script src="js/e.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms and Conditions -PixelBotix</title>
+    <title>Privacy_Policy -PixelBotix</title>
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
     <script>
         tailwind.config = {
@@ -74,9 +74,12 @@
                 <div class="flex items-center">
 
                     <a href="#" class="flex items-center">
-                        <!-- Dark theme logo (shown only in dark mode) -->
-                        <img src="static/logo/logo-dark.png" alt="Logo Light" class="w-20 h-20 hidden dark:inline-block">
-                        <img src="static/logo/logo-white.png" alt="Logo Dark" class="w-20 h-20 inline-block dark:hidden">
+                        <!-- Light mode logo -->
+                        <img src="static/logo/logo-dark.png" alt="Logo Light" class="w-20 h-20 inline-block dark:hidden">
+
+                        <!-- Dark mode logo -->
+                        <img src="static/logo/logo-white.png" alt="Logo Dark" class="w-20 h-20 hidden dark:inline-block">
+
                     </a>
                 </div>
                 
@@ -355,7 +358,7 @@
          
     </footer>
 
-    <script id="theme-toggle">
+    <!-- <script id="theme-toggle">
         document.addEventListener('DOMContentLoaded', function() {
             const themeToggle = document.getElementById('themeToggle');
             const body = document.body;
@@ -382,7 +385,45 @@
             
             updateTheme();
         });
+    </script> -->
+    <script id="theme-toggle">
+    document.addEventListener('DOMContentLoaded', function() {
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        const themeIcon = themeToggle.querySelector('i');
+        const html = document.documentElement; // <html> tag for Tailwind dark mode
+
+        // Load saved theme preference or default to dark mode
+        let isDarkMode = localStorage.getItem('theme') === 'dark' || 
+                        (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+        function updateTheme() {
+            if (isDarkMode) {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                html.classList.add('dark'); // ✅ enables Tailwind dark:
+                themeIcon.className = 'ri-sun-line text-lg';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                html.classList.remove('dark'); // ✅ disables Tailwind dark:
+                themeIcon.className = 'ri-moon-line text-lg';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Toggle theme when user clicks
+        themeToggle.addEventListener('click', function() {
+            isDarkMode = !isDarkMode;
+            updateTheme();
+        });
+
+        // Apply theme on page load
+        updateTheme();
+    });
     </script>
+
 
     <script id="mobile-menu">
         document.addEventListener('DOMContentLoaded', function() {
