@@ -1,0 +1,556 @@
+<!DOCTYPE html><html lang="en"><head><script src="js/e.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engagements Hub - PixelBotix</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>
+tailwind.config = {
+darkMode: 'class',
+theme: {
+extend: {
+colors: {
+primary: '#3b82f6',
+secondary: '#1e40af'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before {
+content: "\f3c2";
+}
+.slider-container {
+overflow: hidden;
+}
+.slider-track {
+display: flex;
+transition: transform 0.5s ease-in-out;
+}
+.slider-slide {
+min-width: 100%;
+flex-shrink: 0;
+}
+</style>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+<header class="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 shadow-md transition-colors duration-300">
+<div class="w-full px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center">
+<h1 class="text-xl sm:text-2xl font-['Pacifico'] text-gray-900 dark:text-white">logo</h1>
+</div>
+<nav class="hidden lg:flex items-center space-x-6 xl:space-x-8">
+<a href="#" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors text-sm xl:text-base">Home</a>
+<a href="#" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors text-sm xl:text-base">About Us</a>
+<a href="#" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors text-sm xl:text-base">AI & Robotics</a>
+<a href="#" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors text-sm xl:text-base">Eduverse</a>
+<a href="#" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors text-sm xl:text-base">Skill Labs</a>
+<a href="#" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors text-sm xl:text-base">Contact</a>
+</nav>
+<div class="flex items-center space-x-2 sm:space-x-4">
+<button id="theme-toggle" class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+<i class="ri-sun-line dark:hidden ri-lg"></i>
+<i class="ri-moon-line hidden dark:block ri-lg"></i>
+</button>
+<button id="mobile-menu-toggle" class="lg:hidden w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center text-gray-700 dark:text-gray-300">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</div>
+</div>
+<div id="mobile-menu" class="lg:hidden hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+<div class="px-4 py-2 space-y-1">
+<a href="#" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">Home</a>
+<a href="#" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">About Us</a>
+<a href="#" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">AI & Robotics</a>
+<a href="#" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">Eduverse</a>
+<a href="#" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">Skill Labs</a>
+<a href="#" class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">Contact</a>
+</div>
+</div>
+</header>
+<main class="pt-16">
+<section class="relative h-screen min-h-[600px] max-h-[800px]">
+<div class="slider-container h-full">
+<div id="slider-track" class="slider-track h-full">
+<div class="slider-slide relative">
+<div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+<div class="h-full w-full bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=modern%20technology%20workshop%20with%20students%20and%20instructors%20working%20on%20robotics%20projects%20in%20a%20bright%20innovation%20lab%20with%20computers%20and%20electronic%20equipment&width=1920&height=1080&seq=hero1&orientation=landscape')"></div>
+<div class="absolute inset-0 z-20 flex items-center justify-center">
+<div class="text-center max-w-4xl px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">Innovation Through Collaboration</h2>
+<p class="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 text-gray-200">Discover cutting-edge workshops, inspiring guest lectures, and transformative partnerships that drive the future of technology</p>
+</div>
+</div>
+</div>
+<div class="slider-slide relative">
+<div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+<div class="h-full w-full bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=professional%20guest%20speaker%20presenting%20to%20engaged%20audience%20in%20modern%20conference%20hall%20with%20advanced%20presentation%20technology%20and%20interactive%20displays&width=1920&height=1080&seq=hero2&orientation=landscape')"></div>
+<div class="absolute inset-0 z-20 flex items-center justify-center">
+<div class="text-center max-w-4xl px-4">
+<h2 class="text-5xl md:text-6xl font-bold mb-6 text-white">Expert Guest Lectures</h2>
+<p class="text-xl md:text-2xl mb-8 text-gray-200">Learn from industry leaders and renowned academics who share their expertise and vision for tomorrow's technology</p>
+</div>
+</div>
+</div>
+<div class="slider-slide relative">
+<div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+<div class="h-full w-full bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=diverse%20team%20collaboration%20in%20high-tech%20workspace%20with%20artificial%20intelligence%20displays%20and%20robotics%20equipment%20showcasing%20innovation%20partnership&width=1920&height=1080&seq=hero3&orientation=landscape')"></div>
+<div class="absolute inset-0 z-20 flex items-center justify-center">
+<div class="text-center max-w-4xl px-4">
+<h2 class="text-5xl md:text-6xl font-bold mb-6">Strategic Partnerships</h2>
+<p class="text-xl md:text-2xl mb-8 text-gray-200">Building bridges between academia and industry to create groundbreaking solutions and opportunities</p>
+</div>
+</div>
+</div>
+<div class="slider-slide relative">
+<div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+<div class="h-full w-full bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=hands-on%20workshop%20session%20with%20participants%20building%20and%20programming%20robots%20in%20collaborative%20learning%20environment%20with%20modern%20equipment&width=1920&height=1080&seq=hero4&orientation=landscape')"></div>
+<div class="absolute inset-0 z-20 flex items-center justify-center">
+<div class="text-center max-w-4xl px-4">
+<h2 class="text-5xl md:text-6xl font-bold mb-6">Hands-On Learning</h2>
+<p class="text-xl md:text-2xl mb-8 text-gray-200">Immersive workshops that transform theoretical knowledge into practical skills and real-world applications</p>
+</div>
+</div>
+</div>
+<div class="slider-slide relative">
+<div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+<div class="h-full w-full bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=vibrant%20community%20event%20showcasing%20technology%20achievements%20with%20networking%20and%20celebration%20of%20innovation%20milestones%20in%20modern%20venue&width=1920&height=1080&seq=hero5&orientation=landscape')"></div>
+<div class="absolute inset-0 z-20 flex items-center justify-center">
+<div class="text-center max-w-4xl px-4">
+<h2 class="text-5xl md:text-6xl font-bold mb-6 text-white">Community Impact</h2>
+<p class="text-xl md:text-2xl mb-8 text-gray-200">Celebrating achievements and fostering connections that drive positive change in our technological landscape</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<button id="prev-slide" class="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full transition-all">
+<i class="ri-arrow-left-line ri-lg sm:ri-xl text-white"></i>
+</button>
+<button id="next-slide" class="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full transition-all">
+<i class="ri-arrow-right-line ri-lg sm:ri-xl text-white"></i>
+</button>
+<div class="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex space-x-2">
+<button class="slider-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all" data-slide="0"></button>
+<button class="slider-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all" data-slide="1"></button>
+<button class="slider-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all" data-slide="2"></button>
+<button class="slider-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all" data-slide="3"></button>
+<button class="slider-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all" data-slide="4"></button>
+</div>
+</section>
+<section class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-white dark:bg-gray-900">
+<div class="text-center mb-8 sm:mb-12">
+<h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gray-900 dark:text-white">🗓️ Upcoming Workshops</h2>
+<p class="text-lg sm:text-xl text-gray-600 dark:text-gray-400">Join our hands-on learning experiences</p>
+</div>
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
+<div class="bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=advanced%20machine%20learning%20workshop%20with%20participants%20working%20on%20AI%20algorithms%20using%20laptops%20and%20neural%20network%20visualizations%20on%20large%20displays%20in%20modern%20classroom%20setting&width=400&height=300&seq=workshop1&orientation=landscape')"></div>
+<div class="p-4 sm:p-6">
+<div class="mb-4">
+<span class="inline-block px-3 py-1 bg-primary text-white text-sm rounded-full">Dec 15, 2024</span>
+</div>
+<h3 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900 dark:text-white">Advanced Machine Learning Techniques</h3>
+<p class="text-gray-600 dark:text-gray-400 mb-4 text-sm sm:text-base">Dr. Sarah Chen from MIT will guide participants through cutting-edge ML algorithms and practical applications in real-world scenarios.</p>
+<div class="flex items-center text-sm text-gray-500 dark:text-gray-500">
+<i class="ri-user-line ri-sm mr-2"></i>
+<span>Dr. Sarah Chen, MIT</span>
+</div>
+</div>
+</div>
+<div class="bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=robotics%20programming%20workshop%20with%20students%20assembling%20and%20coding%20autonomous%20robots%20with%20sensors%20and%20control%20boards%20in%20high-tech%20laboratory%20environment&width=400&height=300&seq=workshop2&orientation=landscape')"></div>
+<div class="p-4 sm:p-6">
+<div class="mb-4">
+<span class="inline-block px-3 py-1 bg-primary text-white text-sm rounded-full">Dec 22, 2024</span>
+</div>
+<h3 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900 dark:text-white">Robotics Programming Fundamentals</h3>
+<p class="text-gray-600 dark:text-gray-400 mb-4 text-sm sm:text-base">Hands-on workshop covering robot control systems, sensor integration, and autonomous navigation using industry-standard platforms.</p>
+<div class="flex items-center text-sm text-gray-500 dark:text-gray-500">
+<i class="ri-user-line ri-sm mr-2"></i>
+<span>Prof. Michael Rodriguez, Stanford</span>
+</div>
+</div>
+</div>
+<div class="bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=IoT%20innovation%20workshop%20with%20participants%20building%20connected%20devices%20and%20sensors%20with%20microcontrollers%20and%20wireless%20modules%20in%20collaborative%20workspace&width=400&height=300&seq=workshop3&orientation=landscape')"></div>
+<div class="p-4 sm:p-6">
+<div class="mb-4">
+<span class="inline-block px-3 py-1 bg-primary text-white text-sm rounded-full">Jan 8, 2025</span>
+</div>
+<h3 class="text-lg sm:text-xl font-semibold mb-3 text-gray-900 dark:text-white">IoT Innovation Lab</h3>
+<p class="text-gray-600 dark:text-gray-400 mb-4 text-sm sm:text-base">Build connected devices and explore the Internet of Things ecosystem with practical projects and industry best practices.</p>
+<div class="flex items-center text-sm text-gray-500 dark:text-gray-500">
+<i class="ri-user-line ri-sm mr-2"></i>
+<span>Dr. Emma Thompson, Google</span>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center">
+<button class="bg-primary hover:bg-secondary text-white px-8 py-3 rounded-button font-semibold transition-colors whitespace-nowrap">
+View All Workshops
+</button>
+</div>
+</section>
+<section class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-100 dark:bg-gray-800 rounded-2xl">
+<div class="text-center mb-8 sm:mb-12">
+<h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gray-900 dark:text-white">🎙️ Our Guest Lectures</h2>
+<p class="text-lg sm:text-xl text-gray-600 dark:text-gray-400">PixelBotix professors sharing expertise at leading universities</p>
+</div>
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
+<div class="bg-white dark:bg-gray-700 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=PixelBotix%20professor%20delivering%20AI%20ethics%20lecture%20to%20university%20students%20in%20modern%20lecture%20hall%20with%20large%20screens%20and%20engaged%20audience&width=400&height=300&seq=lecture1&orientation=landscape')"></div>
+<div class="p-4 sm:p-6">
+<h3 class="text-lg sm:text-xl font-semibold mb-2 text-gray-900 dark:text-white">Advanced AI Ethics Framework</h3>
+<p class="text-gray-600 dark:text-gray-400 mb-2">Prof. Dr. Sarah Mitchell</p>
+<p class="text-sm text-gray-500 dark:text-gray-500 mb-3">Stanford University</p>
+<div class="flex items-center text-xs text-gray-500 dark:text-gray-500">
+<i class="ri-calendar-line ri-sm mr-2"></i>
+<span>November 28, 2024</span>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-700 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=PixelBotix%20robotics%20expert%20demonstrating%20autonomous%20systems%20to%20MIT%20engineering%20students%20in%20high-tech%20laboratory%20setting&width=400&height=300&seq=lecture2&orientation=landscape')"></div>
+<div class="p-4 sm:p-6">
+<h3 class="text-lg sm:text-xl font-semibold mb-2 text-gray-900 dark:text-white">Autonomous Robotics Systems</h3>
+<p class="text-gray-600 dark:text-gray-400 mb-2">Prof. Dr. James Chen</p>
+<p class="text-sm text-gray-500 dark:text-gray-500 mb-3">MIT</p>
+<div class="flex items-center text-xs text-gray-500 dark:text-gray-500">
+<i class="ri-calendar-line ri-sm mr-2"></i>
+<span>December 5, 2024</span>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-700 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=PixelBotix%20quantum%20computing%20specialist%20presenting%20breakthrough%20research%20to%20Harvard%20physics%20students%20in%20modern%20classroom%20environment&width=400&height=300&seq=lecture3&orientation=landscape')"></div>
+<div class="p-4 sm:p-6">
+<h3 class="text-lg sm:text-xl font-semibold mb-2 text-gray-900 dark:text-white">Quantum Computing Breakthroughs</h3>
+<p class="text-gray-600 dark:text-gray-400 mb-2">Prof. Dr. Maria Rodriguez</p>
+<p class="text-sm text-gray-500 dark:text-gray-500 mb-3">Harvard University</p>
+<div class="flex items-center text-xs text-gray-500 dark:text-gray-500">
+<i class="ri-calendar-line ri-sm mr-2"></i>
+<span>December 12, 2024</span>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center">
+<button class="bg-primary hover:bg-secondary text-white px-8 py-3 rounded-button font-semibold transition-colors whitespace-nowrap">
+Explore Guest Lectures
+</button>
+</div>
+</section>
+<section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+<div class="text-center mb-12">
+<h2 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">🤝 Collaborations</h2>
+<p class="text-xl text-gray-600 dark:text-gray-400">Strategic partnerships driving innovation</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-12">
+<div class="bg-gray-100 dark:bg-gray-800 rounded-xl p-6 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<div class="text-center">
+<i class="ri-google-fill ri-3x text-blue-500 mb-2"></i>
+<p class="text-sm font-medium text-gray-900 dark:text-white">Google</p>
+</div>
+</div>
+<div class="bg-gray-100 dark:bg-gray-800 rounded-xl p-6 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<div class="text-center">
+<i class="ri-microsoft-fill ri-3x text-blue-600 mb-2"></i>
+<p class="text-sm font-medium text-gray-900 dark:text-white">Microsoft</p>
+</div>
+</div>
+<div class="bg-gray-100 dark:bg-gray-800 rounded-xl p-6 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<div class="text-center">
+<i class="ri-apple-fill ri-3x text-gray-400 mb-2"></i>
+<p class="text-sm font-medium text-gray-900 dark:text-white">Apple</p>
+</div>
+</div>
+<div class="bg-gray-100 dark:bg-gray-800 rounded-xl p-6 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<div class="text-center">
+<i class="ri-amazon-fill ri-3x text-orange-500 mb-2"></i>
+<p class="text-sm font-medium text-gray-900 dark:text-white">Amazon</p>
+</div>
+</div>
+<div class="bg-gray-100 dark:bg-gray-800 rounded-xl p-6 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<div class="text-center">
+<i class="ri-meta-fill ri-3x text-blue-500 mb-2"></i>
+<p class="text-sm font-medium text-gray-900 dark:text-white">Meta</p>
+</div>
+</div>
+<div class="bg-gray-100 dark:bg-gray-800 rounded-xl p-6 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<div class="text-center">
+<i class="ri-netflix-fill ri-3x text-red-600 mb-2"></i>
+<p class="text-sm font-medium text-gray-900 dark:text-white">Netflix</p>
+</div>
+</div>
+</div>
+<div class="text-center">
+<button class="bg-primary hover:bg-secondary text-white px-8 py-3 rounded-button font-semibold transition-colors whitespace-nowrap">
+See All Collaborations
+</button>
+</div>
+</section>
+<section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-100 dark:bg-gray-800 rounded-2xl mx-4 sm:mx-6 lg:mx-8">
+<div class="text-center mb-12">
+<h2 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">📸 Photo Gallery</h2>
+<p class="text-xl text-gray-600 dark:text-gray-400">Capturing moments of innovation and learning</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
+<div class="aspect-square rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=students%20collaborating%20on%20robotics%20project%20in%20modern%20workshop%20with%20focused%20expressions%20and%20high-tech%20equipment&width=300&height=300&seq=gallery1&orientation=squarish')"></div>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=guest%20speaker%20presenting%20to%20engaged%20audience%20with%20interactive%20technology%20displays%20and%20professional%20lighting&width=300&height=300&seq=gallery2&orientation=squarish')"></div>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=team%20celebration%20after%20successful%20project%20completion%20with%20awards%20and%20recognition%20ceremony%20atmosphere&width=300&height=300&seq=gallery3&orientation=squarish')"></div>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=networking%20event%20with%20professionals%20discussing%20technology%20innovations%20in%20modern%20conference%20setting&width=300&height=300&seq=gallery4&orientation=squarish')"></div>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=hands-on%20workshop%20participants%20building%20electronic%20devices%20with%20concentration%20and%20teamwork&width=300&height=300&seq=gallery5&orientation=squarish')"></div>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=innovation%20showcase%20with%20technology%20demonstrations%20and%20interactive%20exhibits%20in%20bright%20exhibition%20space&width=300&height=300&seq=gallery6&orientation=squarish')"></div>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=collaborative%20workspace%20with%20diverse%20team%20members%20working%20on%20artificial%20intelligence%20projects&width=300&height=300&seq=gallery7&orientation=squarish')"></div>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=graduation%20ceremony%20for%20workshop%20participants%20with%20certificates%20and%20proud%20achievements%20celebration&width=300&height=300&seq=gallery8&orientation=squarish')"></div>
+</div>
+</div>
+<div class="text-center">
+<button class="bg-primary hover:bg-secondary text-white px-8 py-3 rounded-button font-semibold transition-colors whitespace-nowrap">
+View Full Gallery
+</button>
+</div>
+</section>
+<section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+<div class="text-center mb-12">
+<h2 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">🎬 Video Highlights</h2>
+<p class="text-xl text-gray-600 dark:text-gray-400">Experience our events through dynamic video content</p>
+</div>
+<div class="grid md:grid-cols-2 gap-8 mb-12">
+<div class="bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden">
+<div class="aspect-video bg-gray-200 dark:bg-gray-700 flex items-center justify-center relative">
+<div class="absolute inset-0 bg-cover bg-center opacity-50" style="background-image: url('https://readdy.ai/api/search-image?query=video%20thumbnail%20showing%20dynamic%20workshop%20session%20with%20participants%20actively%20engaged%20in%20technology%20learning&width=640&height=360&seq=video1&orientation=landscape')"></div>
+<button class="relative z-10 w-16 h-16 bg-primary hover:bg-secondary rounded-full flex items-center justify-center transition-colors">
+<i class="ri-play-fill ri-2x text-white ml-1"></i>
+</button>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">AI Workshop Highlights 2024</h3>
+<p class="text-gray-600 dark:text-gray-400">Watch the best moments from our intensive AI and machine learning workshops featuring industry experts and breakthrough projects.</p>
+</div>
+</div>
+<div class="bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden">
+<div class="aspect-video bg-gray-200 dark:bg-gray-700 flex items-center justify-center relative">
+<div class="absolute inset-0 bg-cover bg-center opacity-50" style="background-image: url('https://readdy.ai/api/search-image?query=video%20thumbnail%20featuring%20guest%20lecture%20presentation%20with%20speaker%20and%20audience%20in%20professional%20conference%20setting&width=640&height=360&seq=video2&orientation=landscape')"></div>
+<button class="relative z-10 w-16 h-16 bg-primary hover:bg-secondary rounded-full flex items-center justify-center transition-colors">
+<i class="ri-play-fill ri-2x text-white ml-1"></i>
+</button>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Guest Lecture Series Recap</h3>
+<p class="text-gray-600 dark:text-gray-400">Discover insights from renowned speakers who shared their expertise on emerging technologies and future innovations.</p>
+</div>
+</div>
+</div>
+<div class="text-center">
+<button class="bg-primary hover:bg-secondary text-white px-8 py-3 rounded-button font-semibold transition-colors whitespace-nowrap">
+See More Videos
+</button>
+</div>
+</section>
+</main>
+<footer class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
+<div>
+<h3 class="text-lg font-semibold mb-4 sm:mb-6 text-gray-900 dark:text-white">Quick Links</h3>
+<ul class="space-y-2 sm:space-y-3">
+<li><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors text-sm sm:text-base">Home</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">AI & Robotics</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Eduverse</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Skill Labs</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-6">Contact Info</h3>
+<div class="space-y-3">
+<div class="flex items-start">
+<i class="ri-map-pin-line ri-lg mr-3 mt-1 text-primary"></i>
+<div>
+<p class="text-gray-400">123 Innovation Drive</p>
+<p class="text-gray-400">Tech Valley, CA 94025</p>
+</div>
+</div>
+<div class="flex items-center">
+<i class="ri-phone-line ri-lg mr-3 text-primary"></i>
+<p class="text-gray-400">+1 (555) 123-4567</p>
+</div>
+<div class="flex items-center">
+<i class="ri-mail-line ri-lg mr-3 text-primary"></i>
+<p class="text-gray-400">info@pixelbotix.com</p>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-6">Social Media</h3>
+<div class="space-y-3">
+<a href="#" class="flex items-center text-gray-400 hover:text-white transition-colors">
+<i class="ri-linkedin-fill ri-lg mr-3 text-blue-500"></i>
+<span>LinkedIn (12.5K followers)</span>
+</a>
+<a href="#" class="flex items-center text-gray-400 hover:text-white transition-colors">
+<i class="ri-twitter-fill ri-lg mr-3 text-blue-400"></i>
+<span>Twitter (8.2K followers)</span>
+</a>
+<a href="#" class="flex items-center text-gray-400 hover:text-white transition-colors">
+<i class="ri-instagram-fill ri-lg mr-3 text-pink-500"></i>
+<span>Instagram (15.7K followers)</span>
+</a>
+<a href="#" class="flex items-center text-gray-400 hover:text-white transition-colors">
+<i class="ri-youtube-fill ri-lg mr-3 text-red-500"></i>
+<span>YouTube (6.3K subscribers)</span>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-6">Newsletter Signup</h3>
+<p class="text-gray-400 mb-4">Stay updated with our latest workshops, events, and innovations.</p>
+<div class="flex flex-col sm:flex-row gap-2">
+<input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary">
+<button class="bg-primary hover:bg-secondary text-white px-6 py-2 rounded-button font-semibold transition-colors whitespace-nowrap">
+Subscribe
+</button>
+</div>
+<p class="text-xs text-gray-500 mt-2">
+By subscribing, you agree to our <a href="#" class="text-primary hover:underline">Privacy Policy</a>
+</p>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">
+© 2024 PixelBotix. All rights reserved.
+</p>
+<div class="flex items-center space-x-6">
+<a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms & Conditions</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+<button id="back-to-top" class="bg-primary hover:bg-secondary text-white p-2 rounded-lg transition-colors">
+<i class="ri-arrow-up-line ri-lg"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script id="theme-toggle-script">
+document.addEventListener('DOMContentLoaded', function() {
+const themeToggle = document.getElementById('theme-toggle');
+const html = document.documentElement;
+const body = document.body;
+// Set dark mode as default
+html.classList.add('dark');
+body.classList.add('dark');
+themeToggle.addEventListener('click', function() {
+html.classList.toggle('dark');
+body.classList.toggle('dark');
+});
+});
+</script>
+<script id="mobile-menu-script">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuToggle.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+});
+});
+</script>
+<script id="slider-script">
+document.addEventListener('DOMContentLoaded', function() {
+const sliderTrack = document.getElementById('slider-track');
+const prevButton = document.getElementById('prev-slide');
+const nextButton = document.getElementById('next-slide');
+const dots = document.querySelectorAll('.slider-dot');
+let currentSlide = 0;
+const totalSlides = 5;
+function updateSlider() {
+sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+dots.forEach((dot, index) => {
+dot.classList.toggle('bg-opacity-100', index === currentSlide);
+dot.classList.toggle('bg-opacity-50', index !== currentSlide);
+});
+}
+function nextSlide() {
+currentSlide = (currentSlide + 1) % totalSlides;
+updateSlider();
+}
+function prevSlide() {
+currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+updateSlider();
+}
+nextButton.addEventListener('click', nextSlide);
+prevButton.addEventListener('click', prevSlide);
+dots.forEach((dot, index) => {
+dot.addEventListener('click', () => {
+currentSlide = index;
+updateSlider();
+});
+});
+setInterval(nextSlide, 5000);
+updateSlider();
+});
+</script>
+<script id="back-to-top-script">
+document.addEventListener('DOMContentLoaded', function() {
+const backToTop = document.getElementById('back-to-top');
+backToTop.addEventListener('click', function() {
+window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+});
+</script>
+<script>
+    !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+    posthog.init('phc_t9tkQZJiyi2ps9zUYm8TDsL6qXo4YmZx0Ot5rBlAlEd', {
+        api_host: 'https://us.i.posthog.com',
+        autocapture: false,
+        capture_pageview: false,
+        capture_pageleave: false,
+        capture_performance: {
+            web_vitals: false,
+        },
+        rageclick: false,
+    })
+    window.shareKey = '0ZtxM1gctwLy5k7ecNEElg';
+    window.host = 'readdy.ai';
+</script>
+<script src="js/share.js"></script>
+</body></html>
