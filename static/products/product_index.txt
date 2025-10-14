@@ -1,0 +1,38 @@
+fdm
+1.  Bambu Lab A1 Mini 3D Printer
+2.  Bambu Lab A1 Mini Combo 3D Printer
+3.  Bambu Lab A1 3D Printer
+4.  Bambu Lab A1 Combo 3D Printer
+5.  Bambu Lab P1S 3D Printer
+6.  Bambu Lab P1S Combo 3D Printer
+7.  Bambu Lab P1S With AMS 2 Pro 3D Printer not 
+8.  Bambu Lab X1 Carbon 3D Printer
+9.  Bambu Lab X1 Carbon Combo 3D Printer / Bambu Lab X1 – Carbon Combo 3D Printer
+10. Bambu Lab H2D 3D Printer
+11. BAMBULAB - H2D AMS Combo not
+12. Bambu Lab H2S AMS Combo 3D Printer
+13. Bambu Lab H2S 10W Full Laser Combo 3D Printer
+
+Bambu Lab AMS – Automatic Material
+Bambu Lab H2D- Combo 1 3D Printer
+Bambu Lab X1E Combo 3D Printer
+Bambu Lab H2S-AMS 2 Pro-Combo 3D Printer
+Bambu Lab H2D- Combo 2 40W 3D Printer
+Bambu Lab H2D- Combo 2 10W 3D Printer
+Bambu Lab H2D 3D Printer (Without AMS)
+
+
+Elegoo
+
+1.  Elegoo Centurai Carbon
+2.  Elegoo Neptune 4 Max
+3.  Elegoo Neptune 4 Pro 
+
+
+Resin
+
+1.  Elegoo Saturn 4 Ultra 16K 
+2.  Elegoo Jupiter SE
+3.  Elegoo Mars 5 Ultra
+4.  Elegoo Saturn 3 Ultra
+5.  Elegoo Saturn 4

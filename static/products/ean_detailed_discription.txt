@@ -3,25 +3,25 @@ Rs. 20,000.00 Sale priceRs. 16,600.00
 
 Crucks (4 Points)
 
-Smart & Automatic: Fully self-calibrating 3D printer that handles Z-offset, bed leveling, and vibration tuning automatically.
+    Smart & Automatic: Fully self-calibrating 3D printer that handles Z-offset, bed leveling, and vibration tuning automatically.
 
-High Precision Printing: Advanced flow control and vibration compensation ensure accurate, smooth, and fast prints.
+    High Precision Printing: Advanced flow control and vibration compensation ensure accurate, smooth, and fast prints.
 
-Quiet & Compact: Operates below 48 dB with a sturdy metal frame and compact design ideal for any workspace.
+    Quiet & Compact: Operates below 48 dB with a sturdy metal frame and compact design ideal for any workspace.
 
-User-Friendly & Connected: Pre-assembled setup with remote monitoring, control, and timelapse features via Bambu apps.
+    User-Friendly & Connected: Pre-assembled setup with remote monitoring, control, and timelapse features via Bambu apps.
 
 Short Description (5 Points)
 
-Full-auto calibration system for consistent accuracy.
+    Full-auto calibration system for consistent accuracy.
 
-4-color printing capability with AMS Lite integration.
+    4-color printing capability with AMS Lite integration.
 
-Under 48 dB operation for silent, smooth performance.
+    Under 48 dB operation for silent, smooth performance.
 
-Achieves up to 500 mm/s printing speed with 10,000 mm/s² acceleration.
+    Achieves up to 500 mm/s printing speed with 10,000 mm/s² acceleration.
 
-Remote control, monitoring, and timelapse video recording supported.
+    Remote control, monitoring, and timelapse video recording supported.
 
 Technical Specifications (TS)
 
@@ -2209,4 +2209,16 @@ Net Weight: 13.5 kg
 
 Gross Weight: 18.3 kg
 
+3d scanning
+3D printing service, Engineering consultant, Model design company, Plastic fabrication company, Industrial design company, Model design company,"Manufacturer,Engineering consultant,3D printing service, Manufacturer,3D printing service, Engineering consultant, Model design company, Plastic fabrication company,3D printing service, Architectural and engineering model maker, Commercial printer, Industrial design company, Manufacturer, Model design company, Print shop
+
+
+
+"Categories","3D printing service"
+
+"Title","Ntech Engineering Solutions - 3D Printing in ahmedabad | 3D Scanning in ahmedabad| SLA & SLS 3d Printing | 3D Product design"
+"Categories","3D printing service, Model design company"
+
+"Title","Go3D Innovation LLP - 3d printer Manufacturer"
+"Categories","Manufacturer, 3D printing service"
 
