@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="js/e.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPrint Pro - 3D Printing Solutions</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#8b5cf6'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        .dark {
+            color-scheme: dark;
+        }
+
+        .carousel-container {
+            overflow: hidden;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .filter-sidebar {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .filter-sidebar.open {
+            transform: translateX(0);
+        }
+
+        .product-images {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .modal {
+            display: none;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .quantity-input {
+            -moz-appearance: textfield;
+        }
+
+        .quantity-input::-webkit-outer-spin-button,
+        .quantity-input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white transition-colors duration-300">
+    <!-- Navigation Header -->
+    <header
+        class="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-sm shadow-lg transition-colors duration-300">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center">
+                <span class="font-['Pacifico'] text-2xl text-primary">TechPrint Pro</span>
+            </div>
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="#" class="hover:text-primary transition-colors">Home</a>
+                <a href="#" class="hover:text-primary transition-colors">About Us</a>
+                <a href="#" class="hover:text-primary transition-colors">AI & Robotics</a>
+                <a href="#" class="hover:text-primary transition-colors">Eduverse</a>
+                <a href="#" class="hover:text-primary transition-colors">Skill Labs</a>
+                <a href="#" class="hover:text-primary transition-colors">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle"
+                    class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-gray-700 !rounded-button transition-colors">
+                    <i class="ri-sun-line text-lg"></i>
+                </button>
+                <button id="mobile-menu-toggle"
+                    class="lg:hidden w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-gray-700 !rounded-button">
+                    <i class="ri-menu-line text-lg"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-gray-900 border-t border-gray-700">
+            <div class="container mx-auto px-4 py-4 space-y-4">
+                <a href="#" class="block hover:text-primary transition-colors">Home</a>
+                <a href="#" class="block hover:text-primary transition-colors">About Us</a>
+                <a href="#" class="block hover:text-primary transition-colors">AI & Robotics</a>
+                <a href="#" class="block hover:text-primary transition-colors">Eduverse</a>
+                <a href="#" class="block hover:text-primary transition-colors">Skill Labs</a>
+                <a href="#" class="block hover:text-primary transition-colors">Contact</a>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Filter Section -->
+        <section class="container mx-auto px-4 py-6">
+            <!-- Primary Filters -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                <div
+                    class="relative overflow-hidden rounded-lg hover:scale-105 transition-transform cursor-pointer bg-gray-800">
+                    <div class="relative h-24">
+                        <img src="https://readdy.ai/api/search-image?query=Modern%20FDM%203D%20printer%20with%20sleek%20design%2C%20desktop%20manufacturing%20equipment%2C%20professional%20technology%20device%2C%20clean%20minimal%20background%2C%20high-tech%20industrial%20aesthetic&width=300&height=150&seq=filter1&orientation=landscape"
+                            alt="FDM Printers" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <div class="flex items-center space-x-2 mb-1">
+                            <div class="w-6 h-6 flex items-center justify-center bg-primary/20 rounded">
+                                <i class="ri-printer-line text-sm text-primary"></i>
+                            </div>
+                            <h3 class="text-sm font-semibold">FDM Printers</h3>
+                        </div>
+                        <p class="text-xs text-gray-200 opacity-90">Professional solutions</p>
+                    </div>
+                </div>
+                <div
+                    class="relative overflow-hidden rounded-lg hover:scale-105 transition-transform cursor-pointer bg-gray-800">
+                    <div class="relative h-24">
+                        <img src="https://readdy.ai/api/search-image?query=Advanced%20resin%203D%20printer%20with%20transparent%20UV%20chamber%2C%20purple%20LED%20lighting%2C%20precision%20SLA%20technology%2C%20modern%20laboratory%20equipment%2C%20clean%20background&width=300&height=150&seq=filter2&orientation=landscape"
+                            alt="Resin Printers" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <div class="flex items-center space-x-2 mb-1">
+                            <div class="w-6 h-6 flex items-center justify-center bg-secondary/20 rounded">
+                                <i class="ri-drop-line text-sm text-secondary"></i>
+                            </div>
+                            <h3 class="text-sm font-semibold">Resin Printers</h3>
+                        </div>
+                        <p class="text-xs text-gray-200 opacity-90">High-precision printing</p>
+                    </div>
+                </div>
+                <div
+                    class="relative overflow-hidden rounded-lg hover:scale-105 transition-transform cursor-pointer bg-gray-800">
+                    <div class="relative h-24">
+                        <img src="https://readdy.ai/api/search-image?query=Professional%203D%20scanner%20with%20blue%20laser%20technology%2C%20handheld%20measurement%20device%2C%20precision%20engineering%20equipment%2C%20clean%20white%20background%2C%20modern%20scanning%20technology&width=300&height=150&seq=filter3&orientation=landscape"
+                            alt="3D Scanners" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <div class="flex items-center space-x-2 mb-1">
+                            <div class="w-6 h-6 flex items-center justify-center bg-green-500/20 rounded">
+                                <i class="ri-scan-line text-sm text-green-500"></i>
+                            </div>
+                            <h3 class="text-sm font-semibold">3D Scanners</h3>
+                        </div>
+                        <p class="text-xs text-gray-200 opacity-90">Advanced scanning</p>
+                    </div>
+                </div>
+                <div
+                    class="relative overflow-hidden rounded-lg hover:scale-105 transition-transform cursor-pointer bg-gray-800">
+                    <div class="relative h-24">
+                        <img src="https://readdy.ai/api/search-image?query=Collection%20of%203D%20printing%20accessories%20and%20materials%2C%20colorful%20filament%20spools%2C%20printing%20tools%2C%20maintenance%20equipment%2C%20organized%20workspace%2C%20clean%20background&width=300&height=150&seq=filter4&orientation=landscape"
+                            alt="More Categories" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <div class="flex items-center space-x-2 mb-1">
+                            <div class="w-6 h-6 flex items-center justify-center bg-orange-500/20 rounded">
+                                <i class="ri-more-line text-sm text-orange-500"></i>
+                            </div>
+                            <h3 class="text-sm font-semibold">More Categories</h3>
+                        </div>
+                        <p class="text-xs text-gray-200 opacity-90">Explore more</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Secondary Filter Button -->
+            <button id="filter-toggle"
+                class="fixed left-4 top-1/2 transform -translate-y-1/2 z-40 bg-primary hover:bg-primary/90 w-12 h-12 flex items-center justify-center !rounded-button shadow-lg transition-colors">
+                <i class="ri-filter-line text-white"></i>
+            </button>
+        </section>
+        <!-- Filter Sidebar -->
+        <div id="filter-sidebar"
+            class="filter-sidebar fixed left-0 top-0 h-full w-80 bg-gray-800 z-30 p-6 overflow-y-auto">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-semibold">Filters</h3>
+                <button id="close-sidebar" class="w-8 h-8 flex items-center justify-center hover:bg-gray-700 rounded">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+            <div class="space-y-6">
+                <div>
+                    <h4 class="font-semibold mb-3">Price Range</h4>
+                    <div class="space-y-2">
+                        <label class="flex items-center">
+                            <input type="checkbox" class="sr-only">
+                            <div
+                                class="w-4 h-4 bg-gray-700 rounded border-2 border-gray-600 flex items-center justify-center mr-3 cursor-pointer">
+                                <i class="ri-check-line text-xs text-primary hidden"></i>
+                            </div>
+                            <span>Under ₹50,000</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="sr-only">
+                            <div
+                                class="w-4 h-4 bg-gray-700 rounded border-2 border-gray-600 flex items-center justify-center mr-3 cursor-pointer">
+                                <i class="ri-check-line text-xs text-primary hidden"></i>
+                            </div>
+                            <span>₹50,000 - ₹1,00,000</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="sr-only">
+                            <div
+                                class="w-4 h-4 bg-gray-700 rounded border-2 border-gray-600 flex items-center justify-center mr-3 cursor-pointer">
+                                <i class="ri-check-line text-xs text-primary hidden"></i>
+                            </div>
+                            <span>Above ₹1,00,000</span>
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3">Brand</h4>
+                    <div class="space-y-2">
+                        <label class="flex items-center">
+                            <input type="checkbox" class="sr-only">
+                            <div
+                                class="w-4 h-4 bg-gray-700 rounded border-2 border-gray-600 flex items-center justify-center mr-3 cursor-pointer">
+                                <i class="ri-check-line text-xs text-primary hidden"></i>
+                            </div>
+                            <span>Ideal3D</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="sr-only">
+                            <div
+                                class="w-4 h-4 bg-gray-700 rounded border-2 border-gray-600 flex items-center justify-center mr-3 cursor-pointer">
+                                <i class="ri-check-line text-xs text-primary hidden"></i>
+                            </div>
+                            <span>3DVoke</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="sr-only">
+                            <div
+                                class="w-4 h-4 bg-gray-700 rounded border-2 border-gray-600 flex items-center justify-center mr-3 cursor-pointer">
+                                <i class="ri-check-line text-xs text-primary hidden"></i>
+                            </div>
+                            <span>Robu</span>
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3">Print Technology</h4>
+                    <div class="space-y-2">
+                        <label class="flex items-center">
+                            <input type="checkbox" class="sr-only">
+                            <div
+                                class="w-4 h-4 bg-gray-700 rounded border-2 border-gray-600 flex items-center justify-center mr-3 cursor-pointer">
+                                <i class="ri-check-line text-xs text-primary hidden"></i>
+                            </div>
+                            <span>FDM/FFF</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="sr-only">
+                            <div
+                                class="w-4 h-4 bg-gray-700 rounded border-2 border-gray-600 flex items-center justify-center mr-3 cursor-pointer">
+                                <i class="ri-check-line text-xs text-primary hidden"></i>
+                            </div>
+                            <span>SLA/DLP</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="sr-only">
+                            <div
+                                class="w-4 h-4 bg-gray-700 rounded border-2 border-gray-600 flex items-center justify-center mr-3 cursor-pointer">
+                                <i class="ri-check-line text-xs text-primary hidden"></i>
+                            </div>
+                            <span>LCD</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Featured Products Carousel -->
+        <section class="container mx-auto px-4 py-12">
+            <h2 class="text-3xl font-bold text-center mb-8">Featured Products</h2>
+            <div class="relative">
+                <div class="carousel-container">
+                    <div id="featured-carousel" class="carousel-track">
+                        <div class="min-w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+                            <div class="bg-gray-800 rounded-lg overflow-hidden relative group">
+                                <div class="relative h-64">
+                                    <img src="https://readdy.ai/api/search-image?query=Professional%20FDM%203D%20printer%20with%20sleek%20black%20design%2C%20modern%20industrial%20equipment%2C%20clean%20white%20background%2C%20high-tech%20manufacturing%20device%2C%20precision%20engineering%2C%20studio%20lighting&width=400&height=300&seq=1&orientation=landscape"
+                                        alt="FDM Printer" class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors">
+                                    </div>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                    <h3 class="text-xl font-semibold mb-2">Professional FDM Series</h3>
+                                    <p class="text-gray-200 mb-4">High-precision industrial grade 3D printing solutions
+                                        for professional applications</p>
+                                    <button
+                                        class="bg-primary hover:bg-primary/90 px-6 py-2 !rounded-button font-medium transition-colors whitespace-nowrap">
+                                        Explore Now
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="bg-gray-800 rounded-lg overflow-hidden relative group">
+                                <div class="relative h-64">
+                                    <img src="https://readdy.ai/api/search-image?query=Advanced%20resin%203D%20printer%20with%20transparent%20build%20chamber%2C%20purple%20LED%20lighting%2C%20high-precision%20SLA%20technology%2C%20modern%20laboratory%20equipment%2C%20clean%20white%20background%2C%20professional%20photography&width=400&height=300&seq=2&orientation=landscape"
+                                        alt="Resin Printer" class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors">
+                                    </div>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                    <h3 class="text-xl font-semibold mb-2">Ultra-Precision Resin</h3>
+                                    <p class="text-gray-200 mb-4">Exceptional detail and surface finish for miniatures,
+                                        jewelry, and dental applications</p>
+                                    <button
+                                        class="bg-secondary hover:bg-secondary/90 px-6 py-2 !rounded-button font-medium transition-colors whitespace-nowrap">
+                                        Discover More
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="bg-gray-800 rounded-lg overflow-hidden relative group">
+                                <div class="relative h-64">
+                                    <img src="https://readdy.ai/api/search-image?query=Professional%203D%20scanner%20device%20with%20rotating%20platform%2C%20blue%20laser%20scanning%20technology%2C%20high-tech%20measurement%20equipment%2C%20clean%20white%20background%2C%20precision%20engineering%2C%20modern%20design&width=400&height=300&seq=3&orientation=landscape"
+                                        alt="3D Scanner" class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors">
+                                    </div>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                    <h3 class="text-xl font-semibold mb-2">Advanced 3D Scanning</h3>
+                                    <p class="text-gray-200 mb-4">Capture reality with millimeter precision for reverse
+                                        engineering and quality control</p>
+                                    <button
+                                        class="bg-green-500 hover:bg-green-600 px-6 py-2 !rounded-button font-medium transition-colors whitespace-nowrap">
+                                        Learn More
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="min-w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+                            <div class="bg-gray-800 rounded-lg overflow-hidden relative group">
+                                <div class="relative h-64">
+                                    <img src="https://readdy.ai/api/search-image?query=Large%20format%20industrial%203D%20printer%20with%20dual%20extruders%2C%20professional%20manufacturing%20equipment%2C%20metal%20frame%20construction%2C%20clean%20white%20background%2C%20high-end%20technology&width=400&height=300&seq=4&orientation=landscape"
+                                        alt="Industrial Printer" class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors">
+                                    </div>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                    <h3 class="text-xl font-semibold mb-2">Industrial Scale Solutions</h3>
+                                    <p class="text-gray-200 mb-4">Large format printing capabilities for automotive and
+                                        aerospace applications</p>
+                                    <button
+                                        class="bg-orange-500 hover:bg-orange-600 px-6 py-2 !rounded-button font-medium transition-colors whitespace-nowrap">
+                                        View Details
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="bg-gray-800 rounded-lg overflow-hidden relative group">
+                                <div class="relative h-64">
+                                    <img src="https://readdy.ai/api/search-image?query=Compact%20desktop%203D%20printer%20with%20touchscreen%20interface%2C%20user-friendly%20design%2C%20modern%20home%20office%20equipment%2C%20clean%20white%20background%2C%20accessible%20technology&width=400&height=300&seq=5&orientation=landscape"
+                                        alt="Desktop Printer" class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors">
+                                    </div>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                    <h3 class="text-xl font-semibold mb-2">Desktop Innovation</h3>
+                                    <p class="text-gray-200 mb-4">Perfect for education, prototyping, and creative
+                                        projects in any workspace</p>
+                                    <button
+                                        class="bg-primary hover:bg-primary/90 px-6 py-2 !rounded-button font-medium transition-colors whitespace-nowrap">
+                                        Get Started
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="bg-gray-800 rounded-lg overflow-hidden relative group">
+                                <div class="relative h-64">
+                                    <img src="https://readdy.ai/api/search-image?query=Multi-material%203D%20printer%20with%20advanced%20filament%20system%2C%20professional%20engineering%20equipment%2C%20innovative%20technology%2C%20clean%20white%20background%2C%20cutting-edge%20design&width=400&height=300&seq=6&orientation=landscape"
+                                        alt="Multi-Material Printer" class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors">
+                                    </div>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                    <h3 class="text-xl font-semibold mb-2">Multi-Material Mastery</h3>
+                                    <p class="text-gray-200 mb-4">Revolutionary multi-color and multi-material printing
+                                        in a single build</p>
+                                    <button
+                                        class="bg-purple-500 hover:bg-purple-600 px-6 py-2 !rounded-button font-medium transition-colors whitespace-nowrap">
+                                        Explore Tech
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="prev-slide"
+                    class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 w-12 h-12 flex items-center justify-center !rounded-button text-white transition-colors">
+                    <i class="ri-arrow-left-line text-xl"></i>
+                </button>
+                <button id="next-slide"
+                    class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 w-12 h-12 flex items-center justify-center !rounded-button text-white transition-colors">
+                    <i class="ri-arrow-right-line text-xl"></i>
+                </button>
+                <div class="flex justify-center mt-6 space-x-2">
+                    <button class="w-3 h-3 bg-primary rounded-full transition-colors"></button>
+                    <button class="w-3 h-3 bg-gray-600 hover:bg-gray-500 rounded-full transition-colors"></button>
+                </div>
+            </div>
+        </section>
+        <!-- FDM 3D Printers -->
+        <section class="container mx-auto px-4 py-12">
+            <h2 class="text-3xl font-bold mb-8">FDM 3D Printers</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="product-images flex transition-transform duration-300" data-current="0">
+                            <img src="https://readdy.ai/api/search-image?query=Ender%203%20V2%20FDM%203D%20printer%2C%20black%20and%20orange%20design%2C%20professional%20desktop%20printer%2C%20clean%20white%20background%2C%20detailed%20product%20photography&width=300&height=200&seq=7&orientation=landscape"
+                                alt="Ender 3 V2" class="min-w-full h-48 object-cover">
+                            <img src="https://readdy.ai/api/search-image?query=Ender%203%20V2%203D%20printer%20side%20view%2C%20showing%20build%20plate%20and%20extruder%20assembly%2C%20professional%20product%20photography%2C%20white%20background&width=300&height=200&seq=8&orientation=landscape"
+                                alt="Ender 3 V2 Side" class="min-w-full h-48 object-cover">
+                            <img src="https://readdy.ai/api/search-image?query=Ender%203%20V2%203D%20printer%20printing%20process%2C%20filament%20extrusion%2C%20active%20printing%20demonstration%2C%20clean%20studio%20lighting&width=300&height=200&seq=9&orientation=landscape"
+                                alt="Ender 3 V2 Printing" class="min-w-full h-48 object-cover">
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2">Creality Ender 3 V2</h3>
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="text-gray-400 line-through">₹25,999</span>
+                            <span class="text-xl font-bold text-green-400">₹18,999</span>
+                            <span class="bg-red-500 text-xs px-2 py-1 rounded">27% OFF</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <button
+                                class="w-8 h-8 flex items-center justify-center hover:bg-gray-700 !rounded-button transition-colors"
+                                onclick="openProductModal('ender3v2')">
+                                <i class="ri-information-line"></i>
+                            </button>
+                            <div class="flex items-center space-x-2">
+                                <button
+                                    class="w-8 h-8 flex items-center justify-center bg-gray-700 hover:bg-gray-600 !rounded-button transition-colors"
+                                    onclick="decreaseQuantity(this)">
+                                    <i class="ri-subtract-line"></i>
+                                </button>
+                                <input type="number" value="1" min="1"
+                                    class="quantity-input w-12 text-center bg-gray-700 border-none rounded text-sm">
+                                <button
+                                    class="w-8 h-8 flex items-center justify-center bg-gray-700 hover:bg-gray-600 !rounded-button transition-colors"
+                                    onclick="increaseQuantity(this)">
+                                    <i class="ri-add-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button
+                                class="flex-1 bg-primary hover:bg-primary/90 py-2 px-3 !rounded-button text-sm font-medium transition-colors whitespace-nowrap">
+                                <i class="ri-shopping-cart-line mr-1"></i>Add to Cart
+                            </button>
+                            <button
+                                class="flex-1 bg-green-500 hover:bg-green-600 py-2 px-3 !rounded-button text-sm font-medium transition-colors whitespace-nowrap">
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="product-images flex transition-transform duration-300" data-current="0">
+                            <img src="https://readdy.ai/api/search-image?query=Prusa%20i3%20MK3S%20%203D%20printer%2C%20orange%20and%20black%20design%2C%20professional%20FDM%20printer%2C%20clean%20white%20background%2C%20high-quality%20product%20photography&width=300&height=200&seq=10&orientation=landscape"
+                                alt="Prusa i3 MK3S+" class="min-w-full h-48 object-cover">
+                            <img src="https://readdy.ai/api/search-image?query=Prusa%20i3%20MK3S%20%20extruder%20close-up%2C%20precision%20engineering%2C%20detailed%20mechanical%20components%2C%20professional%20photography&width=300&height=200&seq=11&orientation=landscape"
+                                alt="Prusa Extruder" class="min-w-full h-48 object-cover">
+                            <img src="https://readdy.ai/api/search-image?query=Prusa%20i3%20MK3S%20%20printing%20high-quality%20model%2C%20precision%20printing%20demonstration%2C%20active%20operation%2C%20studio%20lighting&width=300&height=200&seq=12&orientation=landscape"
+                                alt="Prusa Printing" class="min-w-full h-48 object-cover">
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2">Prusa i3 MK3S+</h3>
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="text-gray-400 line-through">₹89,999</span>
+                            <span class="text-xl font-bold text-green-400">₹75,999</span>
+                            <span class="bg-red-500 text-xs px-2 py-1 rounded">16% OFF</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <button
+                                class="w-8 h-8 flex items-center justify-center hover:bg-gray-700 !rounded-button transition-colors"
+                                onclick="openProductModal('prusa')">
+                                <i class="ri-information-line"></i>
+                            </button>
+                            <div class="flex items-center space-x-2">
+                                <button
+                                    class="w-8 h-8 flex items-center justify-center bg-gray-700 hover:bg-gray-600 !rounded-button transition-colors"
+                                    onclick="decreaseQuantity(this)">
+                                    <i class="ri-subtract-line"></i>
+                                </button>
+                                <input type="number" value="1" min="1"
+                                    class="quantity-input w-12 text-center bg-gray-700 border-none rounded text-sm">
+                                <button
+                                    class="w-8 h-8 flex items-center justify-center bg-gray-700 hover:bg-gray-600 !rounded-button transition-colors"
+                                    onclick="increaseQuantity(this)">
+                                    <i class="ri-add-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button
+                                class="flex-1 bg-primary hover:bg-primary/90 py-2 px-3 !rounded-button text-sm font-medium transition-colors whitespace-nowrap">
+                                <i class="ri-shopping-cart-line mr-1"></i>Add to Cart
+                            </button>
+                            <button
+                                class="flex-1 bg-green-500 hover:bg-green-600 py-2 px-3 !rounded-button text-sm font-medium transition-colors whitespace-nowrap">
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="product-images flex transition-transform duration-300" data-current="0">
+                            <img src="https://readdy.ai/api/search-image?query=Ultimaker%20S3%20professional%203D%20printer%2C%20sleek%20white%20and%20blue%20design%2C%20industrial%20grade%20FDM%20printer%2C%20clean%20white%20background%2C%20premium%20product%20photography&width=300&height=200&seq=13&orientation=landscape"
+                                alt="Ultimaker S3" class="min-w-full h-48 object-cover">
+                            <img src="https://readdy.ai/api/search-image?query=Ultimaker%20S3%20dual%20extrusion%20system%2C%20professional%20engineering%2C%20precision%20manufacturing%2C%20detailed%20component%20view&width=300&height=200&seq=14&orientation=landscape"
+                                alt="Ultimaker Dual" class="min-w-full h-48 object-cover">
+                            <img src="https://readdy.ai/api/search-image?query=Ultimaker%20S3%20touchscreen%20interface%2C%20user-friendly%20controls%2C%20modern%20technology%2C%20professional%20equipment&width=300&height=200&seq=15&orientation=landscape"
+                                alt="Ultimaker Interface" class="min-w-full h-48 object-cover">
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2">Ultimaker S3</h3>
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="text-gray-400 line-through">₹4,25,000</span>
+                            <span class="text-xl font-bold text-green-400">₹3,89,999</span>
+                            <span class="bg-red-500 text-xs px-2 py-1 rounded">8% OFF</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <button
+                                class="w-8 h-8 flex items-center justify-center hover:bg-gray-700 !rounded-button transition-colors"
+                                onclick="openProductModal('ultimaker')">
+                                <i class="ri-information-line"></i>
+                            </button>
+                            <div class="flex items-center space-x-2">
+                                <button
+                                    class="w-8 h-8 flex items-center justify-center bg-gray-700 hover:bg-gray-600 !rounded-button transition-colors"
+                                    onclick="decreaseQuantity(this)">
+                                    <i class="ri-subtract-line"></i>
+                                </button>
+                                <input type="number" value="1" min="1"
+                                    class="quantity-input w-12 text-center bg-gray-700 border-none rounded text-sm">
+                                <button
+                                    class="w-8 h-8 flex items-center justify-center bg-gray-700 hover:bg-gray-600 !rounded-button transition-colors"
+                                    onclick="increaseQuantity(this)">
+                                    <i class="ri-add-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button
+                                class="flex-1 bg-primary hover:bg-primary/90 py-2 px-3 !rounded-button text-sm font-medium transition-colors whitespace-nowrap">
+                                <i class="ri-shopping-cart-line mr-1"></i>Add to Cart
+                            </button>
+                            <button
+                                class="flex-1 bg-green-500 hover:bg-green-600 py-2 px-3 !rounded-button text-sm font-medium transition-colors whitespace-nowrap">
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="product-images flex transition-transform duration-300" data-current="0">
+                            <img src="https://readdy.ai/api/search-image?query=Bambu%20Lab%20X1%20Carbon%203D%20printer%2C%20modern%20black%20design%2C%20advanced%20FDM%20technology%2C%20clean%20white%20background%2C%20cutting-edge%20product%20photography&width=300&height=200&seq=16&orientation=landscape"
+                                alt="Bambu Lab X1" class="min-w-full h-48 object-cover">
+                            <img src="https://readdy.ai/api/search-image?query=Bambu%20Lab%20X1%20Carbon%20automatic%20material%20system%2C%20innovative%20engineering%2C%20high-tech%20components%2C%20professional%20photography&width=300&height=200&seq=17&orientation=landscape"
+                                alt="Bambu AMS" class="min-w-full h-48 object-cover">
+                            <img src="https://readdy.ai/api/search-image?query=Bambu%20Lab%20X1%20Carbon%20printing%20multi-color%20model%2C%20advanced%20printing%20technology%2C%20precision%20demonstration%2C%20studio%20lighting&width=300&height=200&seq=18&orientation=landscape"
+                                alt="Bambu Printing" class="min-w-full h-48 object-cover">
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2">Bambu Lab X1 Carbon</h3>
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="text-gray-400 line-through">₹1,45,000</span>
+                            <span class="text-xl font-bold text-green-400">₹1,29,999</span>
+                            <span class="bg-red-500 text-xs px-2 py-1 rounded">10% OFF</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <button
+                                class="w-8 h-8 flex items-center justify-center hover:bg-gray-700 !rounded-button transition-colors"
+                                onclick="openProductModal('bambu')">
+                                <i class="ri-information-line"></i>
+                            </button>
+                            <div class="flex items-center space-x-2">
+                                <button
+                                    class="w-8 h-8 flex items-center justify-center bg-gray-700 hover:bg-gray-600 !rounded-button transition-colors"
+                                    onclick="decreaseQuantity(this)">
+                                    <i class="ri-subtract-line"></i>
+                                </button>
+                                <input type="number" value="1" min="1"
+                                    class="quantity-input w-12 text-center bg-gray-700 border-none rounded text-sm">
+                                <button
+                                    class="w-8 h-8 flex items-center justify-center bg-gray-700 hover:bg-gray-600 !rounded-button transition-colors"
+                                    onclick="increaseQuantity(this)">
+                                    <i class="ri-add-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button
+                                class="flex-1 bg-primary hover:bg-primary/90 py-2 px-3 !rounded-button text-sm font-medium transition-colors whitespace-nowrap">
+                                <i class="ri-shopping-cart-line mr-1"></i>Add to Cart
+                            </button>
+                            <button
+                                class="flex-1 bg-green-500 hover:bg-green-600 py-2 px-3 !rounded-button text-sm font-medium transition-colors whitespace-nowrap">
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="product-images flex transition-transform duration-300" data-current="0">
+                            <img src="https://readdy.ai/api/search-image?query=Formlabs%20Fuse%201%20%20SLS%203D%20printer%2C%20professional%20industrial%20design%2C%20powder-based%20printing%20technology%2C%20clean%20white%20background%2C%20premium%20equipment%20photography&width=300&height=200&seq=19&orientation=landscape"
+                                alt="Formlabs Fuse" class="min-w-full h-48 object-cover">
+                            <img src="https://readdy.ai/api/search-image?query=Formlabs%20Fuse%201%20%20powder%20handling%20system%2C%20advanced%20engineering%2C%20industrial%20components%2C%20professional%20photography&width=300&height=200&seq=20&orientation=landscape"
+                                alt="Fuse System" class="min-w-full h-48 object-cover">
+                            <img src="https://readdy.ai/api/search-image?query=Formlabs%20Fuse%201%20%20printed%20parts%2C%20high-quality%20SLS%20output%2C%20precision%20manufacturing%20results%2C%20clean%20presentation&width=300&height=200&seq=21&orientation=landscape"
+                                alt="Fuse Parts" class="min-w-full h-48 object-cover">
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2">Formlabs Fuse 1+</h3>
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="text-gray-400 line-through">₹22,50,000</span>
+                            <span class="text-xl font-bold text-green-400">₹19,99,999</span>
+                            <span class="bg-red-500 text-xs px-2 py-1 rounded">11% OFF</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <button
+                                class="w-8 h-8 flex items-center justify-center hover:bg-gray-700 !rounded-button transition-colors"
+                                onclick="openProductModal('fuse')">
+                                <i class="ri-information-line"></i>
+                            </button>
+                            <div class="flex items-center space-x-2">
+                                <button
+                                    class="w-8 h-8 flex items-center justify-center bg-gray-700 hover:bg-gray-600 !rounded-button transition-colors"
+                                    onclick="decreaseQuantity(this)">
+                                    <i class="ri-subtract-line"></i>
+                                </button>
+                                <input type="number" value="1" min="1"
+                                    class="quantity-input w-12 text-center bg-gray-700 border-none rounded text-sm">
+                                <button
+                                    class="w-8 h-8 flex items-center justify-center bg-gray-700 hover:bg-gray-600 !rounded-button transition-colors"
+                                    onclick="increaseQuantity(this)">
+                                    <i class="ri-add-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button
+                                class="flex-1 bg-primary hover:bg-primary/90 py-2 px-3 !rounded-button text-sm font-medium transition-colors whitespace-nowrap">
+                                <i class="ri-shopping-cart-line mr-1"></i>Add to Cart
+                            </button>
+                            <button
+                                class="flex-1 bg-green-500 hover:bg-green-600 py-2 px-3 !rounded-button text-sm font-medium transition-colors whitespace-nowrap">
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Resin 3D Printers -->
+        <section class="container mx-auto px-4 py-12">
+            <h2 class="text-3xl font-bold mb-8">Resin 3D Printers</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="product-images flex transition-transform duration-300" data-current="0">
+                            <img src="https://readdy.ai/api/search-image?query=Elegoo%20Mars%203%20Pro%20resin%203D%20printer%2C%20compact%20black%20design%20with%20transparent%20build%20chamber%2C%20UV%20LCD%20technology%2C%20clean%20white%20background%2C%20detailed%20product%20photography&width=300&height=200&seq=22&orientation=landscape"
+                                alt="Elegoo Mars 3 Pro" class="min-w-full h-48 object-cover">
+                            <img src="https://readdy.ai/api/search-image?query=Elegoo%20Mars%203%20Pro%20LCD%20screen%20detail%2C%20high-resolution%20display%20technology%2C%20precision%20engineering%20components%2C%20professional%20photography&width=300&height=200&seq=23&orientation=landscape"
+                                alt="Mars LCD" class="min-w-full h-48 object-cover">
+                            <img src="https://readdy.ai/api/search-image?query=Elegoo%20Mars%203%20Pro%20printing%20miniature%20models%2C%20high-detail%20resin%20printing%20process%2C%20precision%20demonstration%2C%20studio%20lighting&width=300&height=200&seq=24&orientation=landscape"
+                                alt="Mars Printing" class="min-w-full h-48 object-cover">
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2">Elegoo Mars 3 Pro</h3>
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="text-gray-400 line-through">₹32,999</span>
+                            <span class="text-xl font-bold text-green-400">₹24,999</span>
+                            <span class="bg-red-500 text-xs px-2 py-1 rounded">24% OFF</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <button
+                                class="w-8 h-8 flex items-center justify-center hover:bg-gray-700 !rounded-button transition-colors"
+                                onclick="openProductModal('mars')">
+                                <i class="ri-information-line"></i>
+                            </button>
+                            <div class="flex items-center space-x-2">
+                                <button
+                                    class="w-8 h-8 flex items-center justify-center bg-gray-700 hover:bg-gray-600 !rounded-button transition-colors"
+                                    onclick="decreaseQuantity(this)">
+                                    <i class="ri-subtract-line"></i>
+                                </button>
+                                <input type="number" value="1" min="1"
+                                    class="quantity-input w-12 text-center bg-gray-700 border-none rounded text-sm">
+                                <button
+                                    class="w-8 h-8 flex items-center justify-center bg-gray-700 hover:bg-gray-600 !rounded-button transition-colors"
+                                    onclick="increaseQuantity(this)">
+                                    <i class="ri-add-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button
+                                class="flex-1 bg-primary hover:bg-primary/90 py-2 px-3 !rounded-button text-sm font-medium transition-colors whitespace-nowrap">
+                                <i class="ri-shopping-cart-line mr-1"></i>Add to Cart
+                            </button>
+                            <button
+                                class="flex-1 bg-green-500 hover:bg-green-600 py-2 px-3 !rounded-button text-sm font-medium transition-colors whitespace-nowrap">
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="product-images flex transition-transform duration-300" data-current="0">
+                            <img src="https://readdy.ai/api/search-image?query=Anycubic%20Photon%20Mono%20X%206K%20resin%20printer%2C%20large%20format%20SLA%20technology%2C%20professional%20black%20design%2C%20clean%20white%20background%2C%20high-end%20product%20photography&width=300&height=200&seq=25&orientation=landscape"
+                                alt="Anycubic Photon" class="min-w-full h-48 object-cover">
+                            <img src="https://readdy.ai/api/search-image?query=Anycubic%20Photon%20Mono%20X%206K%20build%20platform%2C%20precision%20engineering%2C%20large%20format%20capability%2C%20detailed%20component%20view&width=300&height=200&seq=26&orientation=landscape"
+                                alt="Photon Platform" class="min-w-full h-48 object-cover">
+                            <img src="https://readdy.ai/api/search-image?query=Anycubic%20Photon%20Mono%20X%206K%20high-resolution%20prints%2C%20detailed%20miniatures%20and%20models%2C%20precision%20output%20demonstration&width=300&height=200&seq=27&orientation=landscape"
+                                alt="Photon Results" class="min-w-full h-48 object-cover">
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2">Anycubic Photon Mono X 6K</h3>
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="text-gray-400 line-through">₹65,999</span>
+                            <span class="text-xl font-bold text-green-400">₹52,999</span>
+                            <span class="bg-red-500 text-xs px-2 py-1 rounded">20% OFF</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <button
+                                class="w-8 h-8 flex items-center justify-center hover:bg-gray-700 !rounded-button transition-colors"
+                                onclick="openProductModal('photon')">
+                                <i class="ri-information-line"></i>
+                            </button>
+                            <div class="flex items-center space-x-2">
+                                <button
+                                    class="w-8 h-8 flex items-center justify-center bg-gray-700 hover:bg-gray-600 !rounded-button transition-colors"
+                                    onclick="decreaseQuantity(this)">
+                                    <i class="ri-subtract-line"></i>
+                                </button>
+                                <input type="number" value="1" min="1"
+                                    class="quantity-input w-12 text-center bg-gray-700 border-none rounded text-sm">
+                                <button
+                                    class="w-8 h-8 flex items-center justify-center bg-gray-700 hover:bg-gray-600 !rounded-button transition-colors"
+                                    onclick="increaseQuantity(this)">
+                                    <i class="ri-add-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button
+                                class="flex-1 bg-primary hover:bg-primary/90 py-2 px-3 !rounded-button text-sm font-medium transition-colors whitespace-nowrap">
+                                <i class="ri-shopping-cart-line mr-1"></i>Add to Cart
+                            </button>
+                            <button
+                                class="flex-1 bg-green-500 hover:bg-green-600 py-2 px-3 !rounded-button text-sm font-medium transition-colors whitespace-nowrap">
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="product-images flex transition-transform duration-300" data-current="0">
+                            <img src="https://readdy.ai/api/search-image?query=Formlabs%20Form%203%20%20professional%20SLA%20printer%2C%20sleek%20white%20and%20orange%20design%2C%20industrial%20grade%20resin%20technology%2C%20clean%20white%20background%2C%20premium%20product%20photography&width=300&height=200&seq=28&orientation=landscape"
+                                alt="Formlabs Form 3+" class="min-w-full h-48 object-cover">
+                            <img src="https://readdy.ai/api/search-image?query=Formlabs%20Form%203%20%20laser%20system%20detail%2C%20precision%20engineering%2C%20advanced%20SLA%20technology%2C%20professional%20component%20photography&width=300&height=200&seq=29&orientation=landscape"
+                                alt="Form 3 Laser" class="min-w-full h-48 object-cover">
+                            <img src="https://readdy.ai/api/search-image?query=Formlabs%20Form%203%20%20professional%20prints%2C%20dental%20and%20jewelry%20applications%2C%20high-quality%20output%20demonstration&width=300&height=200&seq=30&orientation=landscape"
+                                alt="Form 3 Output" class="min-w-full h-48 object-cover">
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2">Formlabs Form 3+</h3>
+                        <div class="flex items-center space-x-2 mb-3">
+                            <span class="text-gray-400 line-through">₹4,85,000</span>
+                            <span class="text-xl font-bold text-green-400">₹4,25,999</span>
+                            <span class="bg-red-500 text-xs px-2 py-1 rounded">12% OFF</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <button
+                                class="w-8 h-8 flex items-center justify-center hover:bg-gray-700 !rounded-button transition-colors"
+                                onclick="openProductModal('form3')">
+                                <i class="ri-information-line"></i>
+                            </button>
+                            <div class="flex items-center space-x-2">
+                                <button
+                                    class="w-8 h-8 flex items-center justify-center bg-gray-700 hover:bg-gray-600 !rounded-button transition-colors"
+                                    onclick="decreaseQuantity(this)">
+                                    <i class="ri-subtract-line"></i>
+                                </button>
+                                <input type="number" value="1" min="1"
+                                    class="quantity-input w-12 text-center bg-gray-700 border-none rounded text-sm">
+                                <button
+                                    class="w-8 h-8 flex items-center justify-center bg-gray-700 hover:bg-gray-600 !rounded-button transition-colors"
+                                    onclick="increaseQuantity(this)">
+                                    <i class="ri-add-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button
+                                class="flex-1 bg-primary hover:bg-primary/90 py-2 px-3 !rounded-button text-sm font-medium transition-colors whitespace-nowrap">
+                                <i class="ri-shopping-cart-line mr-1"></i>Add to Cart
+                            </button>
+                            <button
+                                class="flex-1 bg-green-500 hover:bg-green-600 py-2 px-3 !rounded-button text-sm font-medium transition-colors whitespace-nowrap">
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 3D Scanners -->
+        <section class="container mx-auto px-4 py-12">
+            <h2 class="text-3xl font-bold mb-8">3D Scanners</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="product-images flex transition-transform duration-300" data-current="0">
+                            <img src="https://readdy.ai/api/search-image?query=EinScan%20Pro%202X%20Plus%20professional%203D%20scanner%2C%20portable%20handheld%20design%20with%20blue%20laser%20technology%2C%20clean%20white%20background%2C%20high-tech%20measurement%20equipment&width=400&height=200&seq=31&orientation=landscape"
+                                alt="EinScan Pro 2X" class="min-w-full h-48 object-cover">
+                            <img src="https://readdy.ai/api/search-image?query=EinScan%20Pro%202X%20Plus%20scanning%20process%20demonstration%2C%20blue%20laser%20projection%2C%20precision%20measurement%20in%20action%2C%20professional%20photography&width=400&height=200&seq=32&orientation=landscape"
+                                alt="EinScan Scanning" class="min-w-full h-48 object-cover">
+                            <img src="https://readdy.ai/api/search-image?query=EinScan%20Pro%202X%20Plus%20scan%20results%20on%20computer%20screen%2C%203D%20model%20reconstruction%2C%20professional%20software%20interface%2C%20detailed%20output&width=400&height=200&seq=33&orientation=landscape"
+                                alt="EinScan Results" class="min-w-full h-48 object-cover">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">EinScan Pro 2X Plus</h3>
+                        <p class="text-gray-400 mb-4">Professional handheld 3D scanner with multi-mode scanning
+                            capabilities for industrial applications</p>
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span class="text-gray-400 line-through">₹8,75,000</span>
+                            <span class="text-2xl font-bold text-green-400">₹7,99,999</span>
+                            <span class="bg-red-500 text-xs px-2 py-1 rounded">9% OFF</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <button
+                                class="w-10 h-10 flex items-center justify-center hover:bg-gray-700 !rounded-button transition-colors"
+                                onclick="openProductModal('einscan')">
+                                <i class="ri-information-line text-lg"></i>
+                            </button>
+                            <div class="flex items-center space-x-3">
+                                <button
+                                    class="w-10 h-10 flex items-center justify-center bg-gray-700 hover:bg-gray-600 !rounded-button transition-colors"
+                                    onclick="decreaseQuantity(this)">
+                                    <i class="ri-subtract-line"></i>
+                                </button>
+                                <input type="number" value="1" min="1"
+                                    class="quantity-input w-16 text-center bg-gray-700 border-none rounded">
+                                <button
+                                    class="w-10 h-10 flex items-center justify-center bg-gray-700 hover:bg-gray-600 !rounded-button transition-colors"
+                                    onclick="increaseQuantity(this)">
+                                    <i class="ri-add-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex space-x-3">
+                            <button
+                                class="flex-1 bg-primary hover:bg-primary/90 py-3 px-4 !rounded-button font-medium transition-colors whitespace-nowrap">
+                                <i class="ri-shopping-cart-line mr-2"></i>Add to Cart
+                            </button>
+                            <button
+                                class="flex-1 bg-green-500 hover:bg-green-600 py-3 px-4 !rounded-button font-medium transition-colors whitespace-nowrap">
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg overflow-hidden">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="product-images flex transition-transform duration-300" data-current="0">
+                            <img src="https://readdy.ai/api/search-image?query=Artec%20Eva%20professional%203D%20scanner%2C%20ergonomic%20handheld%20design%20with%20structured%20light%20technology%2C%20clean%20white%20background%2C%20precision%20measurement%20device&width=400&height=200&seq=34&orientation=landscape"
+                                alt="Artec Eva" class="min-w-full h-48 object-cover">
+                            <img src="https://readdy.ai/api/search-image?query=Artec%20Eva%203D%20scanning%20human%20face%2C%20structured%20light%20projection%2C%20professional%20measurement%20application%2C%20real-world%20usage%20demonstration&width=400&height=200&seq=35&orientation=landscape"
+                                alt="Artec Face Scan" class="min-w-full h-48 object-cover">
+                            <img src="https://readdy.ai/api/search-image?query=Artec%20Eva%20scan%20data%20processing%2C%203D%20reconstruction%20software%2C%20professional%20workflow%2C%20detailed%20digital%20model%20creation&width=400&height=200&seq=36&orientation=landscape"
+                                alt="Artec Processing" class="min-w-full h-48 object-cover">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Artec Eva</h3>
+                        <p class="text-gray-400 mb-4">High-precision structured light 3D scanner ideal for medium-sized
+                            objects and human body scanning</p>
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span class="text-gray-400 line-through">₹18,50,000</span>
+                            <span class="text-2xl font-bold text-green-400">₹16,99,999</span>
+                            <span class="bg-red-500 text-xs px-2 py-1 rounded">8% OFF</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <button
+                                class="w-10 h-10 flex items-center justify-center hover:bg-gray-700 !rounded-button transition-colors"
+                                onclick="openProductModal('artec')">
+                                <i class="ri-information-line text-lg"></i>
+                            </button>
+                            <div class="flex items-center space-x-3">
+                                <button
+                                    class="w-10 h-10 flex items-center justify-center bg-gray-700 hover:bg-gray-600 !rounded-button transition-colors"
+                                    onclick="decreaseQuantity(this)">
+                                    <i class="ri-subtract-line"></i>
+                                </button>
+                                <input type="number" value="1" min="1"
+                                    class="quantity-input w-16 text-center bg-gray-700 border-none rounded">
+                                <button
+                                    class="w-10 h-10 flex items-center justify-center bg-gray-700 hover:bg-gray-600 !rounded-button transition-colors"
+                                    onclick="increaseQuantity(this)">
+                                    <i class="ri-add-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex space-x-3">
+                            <button
+                                class="flex-1 bg-primary hover:bg-primary/90 py-3 px-4 !rounded-button font-medium transition-colors whitespace-nowrap">
+                                <i class="ri-shopping-cart-line mr-2"></i>Add to Cart
+                            </button>
+                            <button
+                                class="flex-1 bg-green-500 hover:bg-green-600 py-3 px-4 !rounded-button font-medium transition-colors whitespace-nowrap">
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Product Modal -->
+    <div id="product-modal" class="modal fixed inset-0 bg-black/50 z-50 items-center justify-center p-4">
+        <div class="bg-gray-800 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
+            <div class="flex h-full">
+                <div class="w-1/2 p-6">
+                    <img id="modal-image" src="" alt="Product" class="w-full h-96 object-cover rounded-lg">
+                </div>
+                <div class="w-1/2 p-6 flex flex-col">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 id="modal-title" class="text-2xl font-bold"></h3>
+                        <button onclick="closeProductModal()"
+                            class="w-8 h-8 flex items-center justify-center hover:bg-gray-700 !rounded-button transition-colors">
+                            <i class="ri-close-line"></i>
+                        </button>
+                    </div>
+                    <div class="flex space-x-1 mb-6">
+                        <button class="modal-tab active px-4 py-2 bg-primary text-white !rounded-button text-sm"
+                            onclick="switchTab('specs')">Specs</button>
+                        <button class="modal-tab px-4 py-2 bg-gray-700 hover:bg-gray-600 !rounded-button text-sm"
+                            onclick="switchTab('description')">Description</button>
+                        <button class="modal-tab px-4 py-2 bg-gray-700 hover:bg-gray-600 !rounded-button text-sm"
+                            onclick="switchTab('images')">Images</button>
+                        <button class="modal-tab px-4 py-2 bg-gray-700 hover:bg-gray-600 !rounded-button text-sm"
+                            onclick="switchTab('videos')">Videos</button>
+                        <button class="modal-tab px-4 py-2 bg-gray-700 hover:bg-gray-600 !rounded-button text-sm"
+                            onclick="switchTab('technical')">Technical</button>
+                    </div>
+                    <div class="flex-1 overflow-y-auto">
+                        <div id="tab-content" class="space-y-4">
+                            <div class="tab-panel" id="specs-panel">
+                                <h4 class="font-semibold mb-3">Specifications</h4>
+                                <div id="specs-content" class="space-y-2 text-sm"></div>
+                            </div>
+                            <div class="tab-panel hidden" id="description-panel">
+                                <h4 class="font-semibold mb-3">Product Description</h4>
+                                <div id="description-content" class="text-sm text-gray-300"></div>
+                            </div>
+                            <div class="tab-panel hidden" id="images-panel">
+                                <h4 class="font-semibold mb-3">Product Images</h4>
+                                <div id="images-content" class="grid grid-cols-2 gap-4"></div>
+                            </div>
+                            <div class="tab-panel hidden" id="videos-panel">
+                                <h4 class="font-semibold mb-3">Product Videos</h4>
+                                <div id="videos-content" class="space-y-4"></div>
+                            </div>
+                            <div class="tab-panel hidden" id="technical-panel">
+                                <h4 class="font-semibold mb-3">Technical Specifications</h4>
+                                <div id="technical-content" class="space-y-2 text-sm"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-700 mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="#" class="block text-gray-400 hover:text-white transition-colors">Home</a>
+                        <a href="#" class="block text-gray-400 hover:text-white transition-colors">About Us</a>
+                        <a href="#" class="block text-gray-400 hover:text-white transition-colors">Products</a>
+                        <a href="#" class="block text-gray-400 hover:text-white transition-colors">Support</a>
+                        <a href="#" class="block text-gray-400 hover:text-white transition-colors">Blog</a>
+                        <a href="#" class="block text-gray-400 hover:text-white transition-colors">Careers</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Contact Info</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-5 h-5 flex items-center justify-center mt-0.5">
+                                <i class="ri-map-pin-line text-gray-400"></i>
+                            </div>
+                            <span class="text-gray-400">123 Tech Street, Innovation District, Mumbai 400001,
+                                India</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="ri-phone-line text-gray-400"></i>
+                            </div>
+                            <span class="text-gray-400">+91 98765 43210</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="ri-mail-line text-gray-400"></i>
+                            </div>
+                            <span class="text-gray-400">info@techprintpro.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Social Media</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 flex items-center justify-center bg-blue-600 rounded">
+                                <i class="ri-facebook-fill text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block text-white">Facebook</span>
+                                <span class="text-sm text-gray-400">25.2K followers</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 flex items-center justify-center bg-blue-400 rounded">
+                                <i class="ri-twitter-fill text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block text-white">Twitter</span>
+                                <span class="text-sm text-gray-400">18.7K followers</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 flex items-center justify-center bg-pink-600 rounded">
+                                <i class="ri-instagram-fill text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block text-white">Instagram</span>
+                                <span class="text-sm text-gray-400">32.1K followers</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 flex items-center justify-center bg-blue-700 rounded">
+                                <i class="ri-linkedin-fill text-white"></i>
+                            </div>
+                            <div>
+                                <span class="block text-white">LinkedIn</span>
+                                <span class="text-sm text-gray-400">12.4K followers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Stay updated with our latest products and industry news</p>
+                    <div class="space-y-3">
+                        <input type="email" placeholder="Enter your email"
+                            class="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded text-white placeholder-gray-400 focus:border-primary focus:outline-none">
+                        <button
+                            class="w-full bg-primary hover:bg-primary/90 py-2 px-4 !rounded-button font-medium transition-colors whitespace-nowrap">
+                            Subscribe
+                        </button>
+                        <p class="text-xs text-gray-500">
+                            By subscribing, you agree to our <a href="#" class="text-primary hover:underline">Privacy
+                                Policy</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 py-6">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+                <p class="text-gray-400 text-sm">© 2024 TechPrint Pro. All rights reserved.</p>
+                <div class="flex items-center space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                    <button onclick="scrollToTop()"
+                        class="bg-gray-800 hover:bg-gray-700 w-10 h-10 flex items-center justify-center !rounded-button transition-colors">
+                        <i class="ri-arrow-up-line"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script id="theme-toggle-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+            const themeIcon = themeToggle.querySelector('i');
+            // Set initial dark mode
+            body.classList.add('dark');
+            themeToggle.addEventListener('click', function () {
+                if (body.classList.contains('dark')) {
+                    // Switch to light mode
+                    body.classList.remove('dark');
+                    body.classList.remove('bg-gray-900', 'text-white');
+                    body.classList.add('bg-white', 'text-gray-900');
+                    themeIcon.className = 'ri-moon-line text-lg';
+                    // Update header
+                    const header = document.querySelector('header');
+                    header.classList.remove('bg-gray-900/95');
+                    header.classList.add('bg-white/95', 'shadow-lg', 'border-b', 'border-gray-200');
+                    // Update all dark elements
+                    const darkElements = document.querySelectorAll('.bg-gray-800');
+                    darkElements.forEach(el => {
+                        if (!el.classList.contains('fixed') && !el.closest('header')) {
+                            el.classList.remove('bg-gray-800');
+                            el.classList.add('bg-white', 'border', 'border-gray-200');
+                        }
+                    });
+                    // Update quantity controls specifically
+                    const quantityButtons = document.querySelectorAll('.bg-gray-700');
+                    quantityButtons.forEach(btn => {
+                        btn.classList.remove('bg-gray-700', 'hover:bg-gray-600');
+                        btn.classList.add('bg-gray-100', 'hover:bg-gray-200', 'border', 'border-gray-300');
+                    });
+                    // Update quantity inputs
+                    const quantityInputs = document.querySelectorAll('.quantity-input');
+                    quantityInputs.forEach(input => {
+                        input.classList.remove('bg-gray-700');
+                        input.classList.add('bg-gray-50', 'border', 'border-gray-300', 'text-gray-900');
+                    });
+                    // Update text colors
+                    const whiteTextElements = document.querySelectorAll('.text-white');
+                    whiteTextElements.forEach(el => {
+                        if (!el.closest('button') || !el.closest('button').classList.contains('bg-primary')) {
+                            el.classList.remove('text-white');
+                            el.classList.add('text-gray-900');
+                        }
+                    });
+                    const grayTextElements = document.querySelectorAll('.text-gray-400');
+                    grayTextElements.forEach(el => {
+                        el.classList.remove('text-gray-400');
+                        el.classList.add('text-gray-600');
+                    });
+                    // Update footer
+                    const footer = document.querySelector('footer');
+                    footer.classList.remove('bg-gray-900');
+                    footer.classList.add('bg-gray-50', 'border-t', 'border-gray-200');
+                } else {
+                    // Switch to dark mode
+                    body.classList.add('dark');
+                    body.classList.remove('bg-white', 'text-gray-900');
+                    body.classList.add('bg-gray-900', 'text-white');
+                    themeIcon.className = 'ri-sun-line text-lg';
+                    // Update header
+                    const header = document.querySelector('header');
+                    header.classList.remove('bg-white/95', 'border-b', 'border-gray-200');
+                    header.classList.add('bg-gray-900/95');
+                    // Update all light elements back to dark
+                    const lightElements = document.querySelectorAll('.bg-white');
+                    lightElements.forEach(el => {
+                        if (!el.closest('body') && el.classList.contains('border')) {
+                            el.classList.remove('bg-white', 'border', 'border-gray-200');
+                            el.classList.add('bg-gray-800');
+                        }
+                    });
+                    // Update quantity controls back to dark
+                    const quantityButtons = document.querySelectorAll('.bg-gray-100');
+                    quantityButtons.forEach(btn => {
+                        btn.classList.remove('bg-gray-100', 'hover:bg-gray-200', 'border', 'border-gray-300');
+                        btn.classList.add('bg-gray-700', 'hover:bg-gray-600');
+                    });
+                    // Update quantity inputs back to dark
+                    const quantityInputs = document.querySelectorAll('.quantity-input');
+                    quantityInputs.forEach(input => {
+                        input.classList.remove('bg-gray-50', 'border', 'border-gray-300', 'text-gray-900');
+                        input.classList.add('bg-gray-700', 'text-white');
+                    });
+                    // Update text colors back to dark theme
+                    const darkTextElements = document.querySelectorAll('.text-gray-900');
+                    darkTextElements.forEach(el => {
+                        if (!el.closest('button') || !el.closest('button').classList.contains('bg-primary')) {
+                            el.classList.remove('text-gray-900');
+                            el.classList.add('text-white');
+                        }
+                    });
+                    const grayTextElements = document.querySelectorAll('.text-gray-600');
+                    grayTextElements.forEach(el => {
+                        el.classList.remove('text-gray-600');
+                        el.classList.add('text-gray-400');
+                    });
+                    // Update footer
+                    const footer = document.querySelector('footer');
+                    footer.classList.remove('bg-gray-50', 'border-t', 'border-gray-200');
+                    footer.classList.add('bg-gray-900');
+                }
+            });
+        });
+    </script>
+    <script id="mobile-menu-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuToggle.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+    <script id="filter-sidebar-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterToggle = document.getElementById('filter-toggle');
+            const filterSidebar = document.getElementById('filter-sidebar');
+            const closeSidebar = document.getElementById('close-sidebar');
+            filterToggle.addEventListener('click', function () {
+                filterSidebar.classList.add('open');
+            });
+            closeSidebar.addEventListener('click', function () {
+                filterSidebar.classList.remove('open');
+            });
+            filterSidebar.addEventListener('mouseleave', function () {
+                filterSidebar.classList.remove('open');
+            });
+            const checkboxes = document.querySelectorAll('.filter-sidebar input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                const customCheckbox = checkbox.nextElementSibling;
+                const checkIcon = customCheckbox.querySelector('i');
+                checkbox.addEventListener('change', function () {
+                    if (this.checked) {
+                        customCheckbox.classList.add('bg-primary', 'border-primary');
+                        customCheckbox.classList.remove('bg-gray-700', 'border-gray-600');
+                        checkIcon.classList.remove('hidden');
+                    } else {
+                        customCheckbox.classList.remove('bg-primary', 'border-primary');
+                        customCheckbox.classList.add('bg-gray-700', 'border-gray-600');
+                        checkIcon.classList.add('hidden');
+                    }
+                });
+                customCheckbox.addEventListener('click', function () {
+                    checkbox.click();
+                });
+            });
+        });
+    </script>
+    <script id="carousel-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const carousel = document.getElementById('featured-carousel');
+            const prevBtn = document.getElementById('prev-slide');
+            const nextBtn = document.getElementById('next-slide');
+            const indicators = document.querySelectorAll('.flex.justify-center button');
+            let currentSlide = 0;
+            const totalSlides = 2;
+            function updateCarousel() {
+                carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+                indicators.forEach((indicator, index) => {
+                    if (index === currentSlide) {
+                        indicator.classList.remove('bg-gray-600');
+                        indicator.classList.add('bg-primary');
+                    } else {
+                        indicator.classList.remove('bg-primary');
+                        indicator.classList.add('bg-gray-600');
+                    }
+                });
+            }
+            nextBtn.addEventListener('click', function () {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateCarousel();
+            });
+            prevBtn.addEventListener('click', function () {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            });
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', function () {
+                    currentSlide = index;
+                    updateCarousel();
+                });
+            });
+            setInterval(() => {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateCarousel();
+            }, 5000);
+        });
+    </script>
+    <script id="product-images-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const productImages = document.querySelectorAll('.product-images');
+            productImages.forEach(imageContainer => {
+                const images = imageContainer.querySelectorAll('img');
+                let currentImage = 0;
+                function rotateImages() {
+                    currentImage = (currentImage + 1) % images.length;
+                    imageContainer.style.transform = `translateX(-${currentImage * 100}%)`;
+                }
+                setInterval(rotateImages, 3000);
+            });
+        });
+    </script>
+    <script id="quantity-controls-script">
+        function increaseQuantity(button) {
+            const input = button.previousElementSibling;
+            input.value = parseInt(input.value) + 1;
+        }
+        function decreaseQuantity(button) {
+            const input = button.nextElementSibling;
+            if (parseInt(input.value) > 1) {
+                input.value = parseInt(input.value) - 1;
+            }
+        }
+    </script>
+    <script id="product-modal-script">
+        const productData = {
+            ender3v2: {
+                title: 'Creality Ender 3 V2',
+                image: 'https://readdy.ai/api/search-image?query=Ender%203%20V2%20FDM%203D%20printer%2C%20black%20and%20orange%20design%2C%20professional%20desktop%20printer%2C%20clean%20white%20background%2C%20detailed%20product%20photography&width=400&height=300&seq=7&orientation=landscape',
+                specs: {
+                    'Build Volume': '220 × 220 × 250 mm',
+                    'Layer Resolution': '0.1-0.4 mm',
+                    'Printing Speed': '180 mm/s',
+                    'Nozzle Temperature': '260°C',
+                    'Bed Temperature': '100°C',
+                    'Filament': '1.75 mm PLA, ABS, PETG'
+                },
+                description: 'The Creality Ender 3 V2 is an upgraded version of the popular Ender 3, featuring improved user experience with a new 4.3-inch color LCD, enhanced extruder, and better print quality. This printer offers excellent value for money with reliable performance and easy assembly.',
+                technical: {
+                    'Frame': 'Aluminum Profile',
+                    'Connectivity': 'SD Card, USB',
+                    'Power Supply': '350W',
+                    'Dimensions': '440 × 440 × 465 mm',
+                    'Weight': '7.5 kg'
+                },
+                images: [
+                    'https://readdy.ai/api/search-image?query=Ender%203%20V2%20FDM%203D%20printer%2C%20black%20and%20orange%20design%2C%20professional%20desktop%20printer%2C%20clean%20white%20background%2C%20detailed%20product%20photography&width=300&height=200&seq=7&orientation=landscape',
+                    'https://readdy.ai/api/search-image?query=Ender%203%20V2%203D%20printer%20side%20view%2C%20showing%20build%20plate%20and%20extruder%20assembly%2C%20professional%20product%20photography%2C%20white%20background&width=300&height=200&seq=8&orientation=landscape',
+                    'https://readdy.ai/api/search-image?query=Ender%203%20V2%203D%20printer%20printing%20process%2C%20filament%20extrusion%2C%20active%20printing%20demonstration%2C%20clean%20studio%20lighting&width=300&height=200&seq=9&orientation=landscape'
+                ],
+                videos: [
+                    'Assembly Guide - Step by step setup instructions',
+                    'First Print Tutorial - Getting started with your first print',
+                    'Maintenance Tips - Keep your printer in top condition'
+                ]
+            },
+            prusa: {
+                title: 'Prusa i3 MK3S+',
+                image: 'https://readdy.ai/api/search-image?query=Prusa%20i3%20MK3S%20%203D%20printer%2C%20orange%20and%20black%20design%2C%20professional%20FDM%20printer%2C%20clean%20white%20background%2C%20high-quality%20product%20photography&width=400&height=300&seq=10&orientation=landscape',
+                specs: {
+                    'Build Volume': '250 × 210 × 210 mm',
+                    'Layer Resolution': '0.05-0.35 mm',
+                    'Printing Speed': '200 mm/s',
+                    'Nozzle Temperature': '300°C',
+                    'Bed Temperature': '120°C',
+                    'Filament': '1.75 mm Multi-material'
+                },
+                description: 'The Prusa i3 MK3S+ offers exceptional print quality with advanced features like filament sensor, power panic, and magnetic flexible steel sheet. This professional-grade printer delivers consistent results and is perfect for both hobbyists and professionals.',
+                technical: {
+                    'Frame': 'Aluminum with Steel Rods',
+                    'Connectivity': 'USB, Ethernet, WiFi',
+                    'Power Supply': '240W',
+                    'Dimensions': '500 × 550 × 400 mm',
+                    'Weight': '7 kg'
+                },
+                images: [
+                    'https://readdy.ai/api/search-image?query=Prusa%20i3%20MK3S%20%203D%20printer%2C%20orange%20and%20black%20design%2C%20professional%20FDM%20printer%2C%20clean%20white%20background%2C%20high-quality%20product%20photography&width=300&height=200&seq=10&orientation=landscape',
+                    'https://readdy.ai/api/search-image?query=Prusa%20i3%20MK3S%20%20extruder%20close-up%2C%20precision%20engineering%2C%20detailed%20mechanical%20components%2C%20professional%20photography&width=300&height=200&seq=11&orientation=landscape',
+                    'https://readdy.ai/api/search-image?query=Prusa%20i3%20MK3S%20%20printing%20high-quality%20model%2C%20precision%20printing%20demonstration%2C%20active%20operation%2C%20studio%20lighting&width=300&height=200&seq=12&orientation=landscape'
+                ],
+                videos: [
+                    'Unboxing and Setup - Complete installation guide',
+                    'Multi-material Printing - Advanced printing techniques',
+                    'Calibration Tutorial - Perfect your print settings'
+                ]
+            },
+            ultimaker: {
+                title: 'Ultimaker S3',
+                image: 'https://readdy.ai/api/search-image?query=Ultimaker%20S3%20professional%203D%20printer%2C%20sleek%20white%20and%20blue%20design%2C%20industrial%20grade%20FDM%20printer%2C%20clean%20white%20background%2C%20premium%20product%20photography&width=400&height=300&seq=13&orientation=landscape',
+                specs: {
+                    'Build Volume': '230 × 190 × 200 mm',
+                    'Layer Resolution': '0.06-0.4 mm',
+                    'Printing Speed': '24 mm³/s',
+                    'Nozzle Temperature': '280°C',
+                    'Bed Temperature': '100°C',
+                    'Filament': '2.85 mm Dual Material'
+                },
+                description: 'The Ultimaker S3 is a professional dual-extrusion 3D printer designed for reliable operation in office environments. With advanced features and superior build quality, it delivers consistent professional results.',
+                technical: {
+                    'Frame': 'Steel with Aluminum',
+                    'Connectivity': 'WiFi, Ethernet, USB',
+                    'Power Supply': '221W',
+                    'Dimensions': '394 × 489 × 520 mm',
+                    'Weight': '14.4 kg'
+                },
+                images: [
+                    'https://readdy.ai/api/search-image?query=Ultimaker%20S3%20professional%203D%20printer%2C%20sleek%20white%20and%20blue%20design%2C%20industrial%20grade%20FDM%20printer%2C%20clean%20white%20background%2C%20premium%20product%20photography&width=300&height=200&seq=13&orientation=landscape',
+                    'https://readdy.ai/api/search-image?query=Ultimaker%20S3%20dual%20extrusion%20system%2C%20professional%20engineering%2C%20precision%20manufacturing%2C%20detailed%20component%20view&width=300&height=200&seq=14&orientation=landscape',
+                    'https://readdy.ai/api/search-image?query=Ultimaker%20S3%20touchscreen%20interface%2C%20user-friendly%20controls%2C%20modern%20technology%2C%20professional%20equipment&width=300&height=200&seq=15&orientation=landscape'
+                ],
+                videos: [
+                    'Professional Setup Guide - Enterprise installation',
+                    'Dual Material Printing - Advanced applications',
+                    'Software Integration - Workflow optimization'
+                ]
+            },
+            bambu: {
+                title: 'Bambu Lab X1 Carbon',
+                image: 'https://readdy.ai/api/search-image?query=Bambu%20Lab%20X1%20Carbon%203D%20printer%2C%20modern%20black%20design%2C%20advanced%20FDM%20technology%2C%20clean%20white%20background%2C%20cutting-edge%20product%20photography&width=400&height=300&seq=16&orientation=landscape',
+                specs: {
+                    'Build Volume': '256 × 256 × 256 mm',
+                    'Layer Resolution': '0.08-0.35 mm',
+                    'Printing Speed': '500 mm/s',
+                    'Nozzle Temperature': '300°C',
+                    'Bed Temperature': '100°C',
+                    'Filament': '1.75 mm Multi-color AMS'
+                },
+                description: 'The Bambu Lab X1 Carbon represents the future of 3D printing with AI-powered features, automatic calibration, and multi-color printing capabilities. Perfect for advanced users seeking cutting-edge technology.',
+                technical: {
+                    'Frame': 'Carbon Fiber Reinforced',
+                    'Connectivity': 'WiFi, Cloud, Mobile App',
+                    'Power Supply': '350W',
+                    'Dimensions': '389 × 389 × 457 mm',
+                    'Weight': '13.2 kg'
+                },
+                images: [
+                    'https://readdy.ai/api/search-image?query=Bambu%20Lab%20X1%20Carbon%203D%20printer%2C%20modern%20black%20design%2C%20advanced%20FDM%20technology%2C%20clean%20white%20background%2C%20cutting-edge%20product%20photography&width=300&height=200&seq=16&orientation=landscape',
+                    'https://readdy.ai/api/search-image?query=Bambu%20Lab%20X1%20Carbon%20automatic%20material%20system%2C%20innovative%20engineering%2C%20high-tech%20components%2C%20professional%20photography&width=300&height=200&seq=17&orientation=landscape',
+                    'https://readdy.ai/api/search-image?query=Bambu%20Lab%20X1%20Carbon%20printing%20multi-color%20model%2C%20advanced%20printing%20technology%2C%20precision%20demonstration%2C%20studio%20lighting&width=300&height=200&seq=18&orientation=landscape'
+                ],
+                videos: [
+                    'AI Features Overview - Smart printing technology',
+                    'Multi-color Setup - AMS system guide',
+                    'Mobile App Tutorial - Remote monitoring and control'
+                ]
+            },
+            fuse: {
+                title: 'Formlabs Fuse 1+',
+                image: 'https://readdy.ai/api/search-image?query=Formlabs%20Fuse%201%20%20SLS%203D%20printer%2C%20professional%20industrial%20design%2C%20powder-based%20printing%20technology%2C%20clean%20white%20background%2C%20premium%20equipment%20photography&width=400&height=300&seq=19&orientation=landscape',
+                specs: {
+                    'Build Volume': '165 × 165 × 300 mm',
+                    'Layer Resolution': '0.1 mm',
+                    'Printing Speed': '20 mm/hour',
+                    'Operating Temperature': '175°C',
+                    'Material': 'Nylon PA12',
+                    'Technology': 'Selective Laser Sintering'
+                },
+                description: 'The Formlabs Fuse 1+ is an industrial SLS 3D printer that delivers production-ready parts with exceptional surface finish and mechanical properties. Ideal for functional prototypes and end-use parts.',
+                technical: {
+                    'Frame': 'Industrial Steel Construction',
+                    'Connectivity': 'Ethernet, USB',
+                    'Power Supply': '3000W',
+                    'Dimensions': '740 × 540 × 1020 mm',
+                    'Weight': '160 kg'
+                },
+                images: [
+                    'https://readdy.ai/api/search-image?query=Formlabs%20Fuse%201%20%20SLS%203D%20printer%2C%20professional%20industrial%20design%2C%20powder-based%20printing%20technology%2C%20clean%20white%20background%2C%20premium%20equipment%20photography&width=300&height=200&seq=19&orientation=landscape',
+                    'https://readdy.ai/api/search-image?query=Formlabs%20Fuse%201%20%20powder%20handling%20system%2C%20advanced%20engineering%2C%20industrial%20components%2C%20professional%20photography&width=300&height=200&seq=20&orientation=landscape',
+                    'https://readdy.ai/api/search-image?query=Formlabs%20Fuse%201%20%20printed%20parts%2C%20high-quality%20SLS%20output%2C%20precision%20manufacturing%20results%2C%20clean%20presentation&width=300&height=200&seq=21&orientation=landscape'
+                ],
+                videos: [
+                    'Industrial Setup - Professional installation guide',
+                    'Powder Handling - Safety and best practices',
+                    'Post-processing Workflow - Finishing techniques'
+                ]
+            },
+            mars: {
+                title: 'Elegoo Mars 3 Pro',
+                image: 'https://readdy.ai/api/search-image?query=Elegoo%20Mars%203%20Pro%20resin%203D%20printer%2C%20compact%20black%20design%20with%20transparent%20build%20chamber%2C%20UV%20LCD%20technology%2C%20clean%20white%20background%2C%20detailed%20product%20photography&width=400&height=300&seq=22&orientation=landscape',
+                specs: {
+                    'Build Volume': '143.43 × 89.6 × 175 mm',
+                    'Layer Resolution': '0.01-0.2 mm',
+                    'LCD Resolution': '4098 × 2560',
+                    'UV Power': '405nm wavelength',
+                    'Printing Speed': '30-50 mm/h',
+                    'Material': 'UV Resin 405nm'
+                },
+                description: 'The Elegoo Mars 3 Pro offers exceptional detail and precision for miniatures, jewelry, and dental applications. With its 4K LCD screen and improved cooling system, it delivers professional results at an affordable price.',
+                technical: {
+                    'Frame': 'Aluminum Alloy',
+                    'Connectivity': 'USB',
+                    'Power Supply': '65W',
+                    'Dimensions': '227 × 227 × 438.5 mm',
+                    'Weight': '5.5 kg'
+                },
+                images: [
+                    'https://readdy.ai/api/search-image?query=Elegoo%20Mars%203%20Pro%20resin%203D%20printer%2C%20compact%20black%20design%20with%20transparent%20build%20chamber%2C%20UV%20LCD%20technology%2C%20clean%20white%20background%2C%20detailed%20product%20photography&width=300&height=200&seq=22&orientation=landscape',
+                    'https://readdy.ai/api/search-image?query=Elegoo%20Mars%203%20Pro%20LCD%20screen%20detail%2C%20high-resolution%20display%20technology%2C%20precision%20engineering%20components%2C%20professional%20photography&width=300&height=200&seq=23&orientation=landscape',
+                    'https://readdy.ai/api/search-image?query=Elegoo%20Mars%203%20Pro%20printing%20miniature%20models%2C%20high-detail%20resin%20printing%20process%2C%20precision%20demonstration%2C%20studio%20lighting&width=300&height=200&seq=24&orientation=landscape'
+                ],
+                videos: [
+                    'Setup and First Print - Getting started guide',
+                    'Resin Handling Safety - Important safety procedures',
+                    'Miniature Printing Tips - Achieving perfect details'
+                ]
+            },
+            photon: {
+                title: 'Anycubic Photon Mono X 6K',
+                image: 'https://readdy.ai/api/search-image?query=Anycubic%20Photon%20Mono%20X%206K%20resin%20printer%2C%20large%20format%20SLA%20technology%2C%20professional%20black%20design%2C%20clean%20white%20background%2C%20high-end%20product%20photography&width=400&height=300&seq=25&orientation=landscape',
+                specs: {
+                    'Build Volume': '197 × 122 × 245 mm',
+                    'Layer Resolution': '0.01-0.3 mm',
+                    'LCD Resolution': '5760 × 3600',
+                    'UV Power': '405nm high-power',
+                    'Printing Speed': '60 mm/h',
+                    'Material': 'UV Resin 405nm'
+                },
+                description: 'The Anycubic Photon Mono X 6K delivers large-format resin printing with exceptional 6K resolution. Perfect for detailed models, prototypes, and artistic creations with superior surface finish.',
+                technical: {
+                    'Frame': 'Aluminum Construction',
+                    'Connectivity': 'USB, WiFi',
+                    'Power Supply': '120W',
+                    'Dimensions': '245 × 245 × 506 mm',
+                    'Weight': '8.5 kg'
+                },
+                images: [
+                    'https://readdy.ai/api/search-image?query=Anycubic%20Photon%20Mono%20X%206K%20resin%20printer%2C%20large%20format%20SLA%20technology%2C%20professional%20black%20design%2C%20clean%20white%20background%2C%20high-end%20product%20photography&width=300&height=200&seq=25&orientation=landscape',
+                    'https://readdy.ai/api/search-image?query=Anycubic%20Photon%20Mono%20X%206K%20build%20platform%2C%20precision%20engineering%2C%20large%20format%20capability%2C%20detailed%20component%20view&width=300&height=200&seq=26&orientation=landscape',
+                    'https://readdy.ai/api/search-image?query=Anycubic%20Photon%20Mono%20X%206K%20high-resolution%20prints%2C%20detailed%20miniatures%20and%20models%2C%20precision%20output%20demonstration&width=300&height=200&seq=27&orientation=landscape'
+                ],
+                videos: [
+                    '6K Technology Overview - Understanding high resolution',
+                    'Large Format Printing - Maximizing build volume',
+                    'Advanced Settings - Optimizing print quality'
+                ]
+            },
+            form3: {
+                title: 'Formlabs Form 3+',
+                image: 'https://readdy.ai/api/search-image?query=Formlabs%20Form%203%20%20professional%20SLA%20printer%2C%20sleek%20white%20and%20orange%20design%2C%20industrial%20grade%20resin%20technology%2C%20clean%20white%20background%2C%20premium%20product%20photography&width=400&height=300&seq=28&orientation=landscape',
+                specs: {
+                    'Build Volume': '145 × 145 × 185 mm',
+                    'Layer Resolution': '0.025-0.3 mm',
+                    'Laser': 'Low Force Stereolithography',
+                    'Operating Temperature': '18-28°C',
+                    'Material': 'Professional Resins',
+                    'Technology': 'SLA with LFS'
+                },
+                description: 'The Formlabs Form 3+ represents professional-grade SLA printing with Low Force Stereolithography technology. Designed for dental, jewelry, and engineering applications requiring exceptional accuracy and surface finish.',
+                technical: {
+                    'Frame': 'Precision Aluminum',
+                    'Connectivity': 'WiFi, Ethernet, USB',
+                    'Power Supply': '65W',
+                    'Dimensions': '405 × 375 × 535 mm',
+                    'Weight': '17.5 kg'
+                },
+                images: [
+                    'https://readdy.ai/api/search-image?query=Formlabs%20Form%203%20%20professional%20SLA%20printer%2C%20sleek%20white%20and%20orange%20design%2C%20industrial%20grade%20resin%20technology%2C%20clean%20white%20background%2C%20premium%20product%20photography&width=300&height=200&seq=28&orientation=landscape',
+                    'https://readdy.ai/api/search-image?query=Formlabs%20Form%203%20%20laser%20system%20detail%2C%20precision%20engineering%2C%20advanced%20SLA%20technology%2C%20professional%20component%20photography&width=300&height=200&seq=29&orientation=landscape',
+                    'https://readdy.ai/api/search-image?query=Formlabs%20Form%203%20%20professional%20prints%2C%20dental%20and%20jewelry%20applications%2C%20high-quality%20output%20demonstration&width=300&height=200&seq=30&orientation=landscape'
+                ],
+                videos: [
+                    'LFS Technology Explained - Advanced printing process',
+                    'Professional Applications - Industry use cases',
+                    'Resin Selection Guide - Choosing the right material'
+                ]
+            },
+            einscan: {
+                title: 'EinScan Pro 2X Plus',
+                image: 'https://readdy.ai/api/search-image?query=EinScan%20Pro%202X%20Plus%20professional%203D%20scanner%2C%20portable%20handheld%20design%20with%20blue%20laser%20technology%2C%20clean%20white%20background%2C%20high-tech%20measurement%20equipment&width=400&height=300&seq=31&orientation=landscape',
+                specs: {
+                    'Scanning Volume': '200 × 200 × 200 mm - 4 × 4 × 4 m',
+                    'Accuracy': 'up to 0.1 mm',
+                    'Resolution': 'up to 0.2 mm',
+                    'Scanning Speed': '550,000 points/s',
+                    'Light Source': 'Blue LED + laser',
+                    'Output Formats': 'OBJ, STL, PLY, ASC'
+                },
+                description: 'The EinScan Pro 2X Plus is a versatile professional 3D scanner offering multiple scanning modes for various applications. From small objects to large industrial parts, it delivers exceptional accuracy and detail.',
+                technical: {
+                    'Weight': '0.8 kg (handheld)',
+                    'Connectivity': 'USB 3.0',
+                    'Power Supply': 'USB powered',
+                    'Operating System': 'Windows 10/11',
+                    'Processor': 'Intel i5 or higher'
+                },
+                images: [
+                    'https://readdy.ai/api/search-image?query=EinScan%20Pro%202X%20Plus%20professional%203D%20scanner%2C%20portable%20handheld%20design%20with%20blue%20laser%20technology%2C%20clean%20white%20background%2C%20high-tech%20measurement%20equipment&width=300&height=200&seq=31&orientation=landscape',
+                    'https://readdy.ai/api/search-image?query=EinScan%20Pro%202X%20Plus%20scanning%20process%20demonstration%2C%20blue%20laser%20projection%2C%20precision%20measurement%20in%20action%2C%20professional%20photography&width=300&height=200&seq=32&orientation=landscape',
+                    'https://readdy.ai/api/search-image?query=EinScan%20Pro%202X%20Plus%20scan%20results%20on%20computer%20screen%2C%203D%20model%20reconstruction%2C%20professional%20software%20interface%2C%20detailed%20output&width=300&height=200&seq=33&orientation=landscape'
+                ],
+                videos: [
+                    'Multi-mode Scanning - Different scanning techniques',
+                    'Industrial Applications - Real-world use cases',
+                    'Software Tutorial - Processing scan data'
+                ]
+            },
+            artec: {
+                title: 'Artec Eva',
+                image: 'https://readdy.ai/api/search-image?query=Artec%20Eva%20professional%203D%20scanner%2C%20ergonomic%20handheld%20design%20with%20structured%20light%20technology%2C%20clean%20white%20background%2C%20precision%20measurement%20device&width=400&height=300&seq=34&orientation=landscape',
+                specs: {
+                    'Scanning Volume': 'up to several meters',
+                    'Accuracy': 'up to 0.1 mm',
+                    'Resolution': 'up to 0.2 mm',
+                    'Capture Rate': '16 fps',
+                    'Light Source': 'Structured light',
+                    'Output Formats': 'OBJ, STL, PLY, AOP'
+                },
+                description: 'The Artec Eva is a professional structured light 3D scanner ideal for medium-sized objects and human body scanning. With its high-speed capture and exceptional accuracy, it\'s perfect for healthcare, heritage, and manufacturing applications.',
+                technical: {
+                    'Weight': '0.9 kg',
+                    'Connectivity': 'USB 2.0',
+                    'Power Supply': 'External adapter',
+                    'Operating System': 'Windows 8/10/11',
+                    'Memory': '8GB RAM minimum'
+                },
+                images: [
+                    'https://readdy.ai/api/search-image?query=Artec%20Eva%20professional%203D%20scanner%2C%20ergonomic%20handheld%20design%20with%20structured%20light%20technology%2C%20clean%20white%20background%2C%20precision%20measurement%20device&width=300&height=200&seq=34&orientation=landscape',
+                    'https://readdy.ai/api/search-image?query=Artec%20Eva%203D%20scanning%20human%20face%2C%20structured%20light%20projection%2C%20professional%20measurement%20application%2C%20real-world%20usage%20demonstration&width=300&height=200&seq=35&orientation=landscape',
+                    'https://readdy.ai/api/search-image?query=Artec%20Eva%20scan%20data%20processing%2C%203D%20reconstruction%20software%2C%20professional%20workflow%2C%20detailed%20digital%20model%20creation&width=300&height=200&seq=36&orientation=landscape'
+                ],
+                videos: [
+                    'Human Body Scanning - Healthcare applications',
+                    'Heritage Preservation - Cultural artifact scanning',
+                    'Manufacturing QC - Quality control processes'
+                ]
+            }
+        };
+        function openProductModal(productId) {
+            const modal = document.getElementById('product-modal');
+            const data = productData[productId];
+            if (data) {
+                document.getElementById('modal-title').textContent = data.title;
+                document.getElementById('modal-image').src = data.image;
+                const specsContent = document.getElementById('specs-content');
+                specsContent.innerHTML = '';
+                Object.entries(data.specs).forEach(([key, value]) => {
+                    const div = document.createElement('div');
+                    div.className = 'flex justify-between border-b border-gray-600 pb-2 mb-2';
+                    div.innerHTML = `<span class="text-gray-300">${key}:</span> <span class="font-medium">${value}</span>`;
+                    specsContent.appendChild(div);
+                });
+                document.getElementById('description-content').innerHTML = `<p class="leading-relaxed">${data.description}</p>`;
+                const technicalContent = document.getElementById('technical-content');
+                technicalContent.innerHTML = '';
+                Object.entries(data.technical).forEach(([key, value]) => {
+                    const div = document.createElement('div');
+                    div.className = 'flex justify-between border-b border-gray-600 pb-2 mb-2';
+                    div.innerHTML = `<span class="text-gray-300">${key}:</span> <span class="font-medium">${value}</span>`;
+                    technicalContent.appendChild(div);
+                });
+                const imagesContent = document.getElementById('images-content');
+                imagesContent.innerHTML = '';
+                if (data.images) {
+                    data.images.forEach((imageSrc, index) => {
+                        const imgDiv = document.createElement('div');
+                        imgDiv.className = 'relative overflow-hidden rounded-lg cursor-pointer hover:opacity-80 transition-opacity';
+                        imgDiv.innerHTML = `<img src="${imageSrc}" alt="Product Image ${index + 1}" class="w-full h-24 object-cover">`;
+                        imagesContent.appendChild(imgDiv);
+                    });
+                }
+                const videosContent = document.getElementById('videos-content');
+                videosContent.innerHTML = '';
+                if (data.videos) {
+                    data.videos.forEach((video, index) => {
+                        const videoDiv = document.createElement('div');
+                        videoDiv.className = 'flex items-center space-x-3 p-3 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors cursor-pointer';
+                        videoDiv.innerHTML = `
+<div class="w-10 h-10 flex items-center justify-center bg-primary/20 rounded-lg">
+<i class="ri-play-line text-primary"></i>
+</div>
+<div>
+<span class="block font-medium">${video}</span>
+<span class="text-xs text-gray-400">Video Tutorial</span>
+</div>
+`;
+                        videosContent.appendChild(videoDiv);
+                    });
+                }
+                switchTab('specs');
+                modal.classList.add('active');
+            }
+        }
+        function closeProductModal() {
+            document.getElementById('product-modal').classList.remove('active');
+        }
+        function switchTab(tabName) {
+            const tabs = document.querySelectorAll('.modal-tab');
+            const panels = document.querySelectorAll('.tab-panel');
+            tabs.forEach(tab => {
+                tab.classList.remove('active', 'bg-primary', 'text-white');
+                tab.classList.add('bg-gray-700');
+            });
+            panels.forEach(panel => {
+                panel.classList.add('hidden');
+            });
+            document.querySelector(`[onclick="switchTab('${tabName}')"]`).classList.add('active', 'bg-primary', 'text-white');
+            document.querySelector(`[onclick="switchTab('${tabName}')"]`).classList.remove('bg-gray-700');
+            document.getElementById(`${tabName}-panel`).classList.remove('hidden');
+        }
+    </script>
+    <script id="scroll-to-top-script">
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+</body>
+
+</html>
