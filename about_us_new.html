@@ -507,8 +507,6 @@
       </div>
 
 
-
-
       <!-- Card 4: Industrial Clients -->
       <div class="bg-gray-100 dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
         <h3 class="text-xl font-semibold mb-6 text-gray-900 dark:text-white">Industrial Clients</h3>
@@ -531,34 +529,43 @@
 </section>
 
 <style>
-/* Infinite scrolling animation */
-@keyframes seamless-marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
 .scroll-content {
   display: flex;
   gap: 2rem;
-}
-.scroll-content.animate {
-  animation: seamless-marquee 5s linear infinite;
+  will-change: transform;
 }
 </style>
 
+
 <script>
-document.querySelectorAll('.scroll-container').forEach(container => {
+document.querySelectorAll('.scroll-container').forEach((container, index) => {
   const flexDiv = container.querySelector('.scroll-content');
-  const totalWidth = Array.from(flexDiv.children).reduce((acc, child) => acc + child.offsetWidth + 32, 0);
-  if (totalWidth > container.offsetWidth) {
-    // Duplicate logos for seamless scroll
-    flexDiv.innerHTML += flexDiv.innerHTML;
-    flexDiv.classList.add('animate');
-  } else {
-    // Center static logos
-    flexDiv.classList.add('justify-center');
-  }
+  const children = Array.from(flexDiv.children);
+  const gap = 32; // 2rem gap
+
+  // Calculate total width of all logos
+  const totalWidth = children.reduce((acc, child) => acc + child.offsetWidth + gap, 0);
+
+  // Duplicate content for seamless scroll
+  flexDiv.innerHTML += flexDiv.innerHTML;
+
+  // Assign a unique animation duration based on total width (larger width → longer duration)
+  const duration = Math.max(15, Math.floor(totalWidth / 120)); // Adjust divisor for speed control
+
+  // Assign a unique animation name to each section (to avoid shared timing)
+  const animationName = `seamless-marquee-${index}`;
+  const styleSheet = document.styleSheets[0];
+  styleSheet.insertRule(`
+    @keyframes ${animationName} {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+  `, styleSheet.cssRules.length);
+
+  flexDiv.style.animation = `${animationName} ${duration}s linear infinite`;
 });
 </script>
+
 
 
 
