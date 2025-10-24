@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="js/e.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Policy</title>
+
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#1e40af'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider-item {
+            min-width: 100%;
+            flex-shrink: 0;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="static/favicon/favicon.png">
+</head>
+
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 shadow-lg transition-colors duration-300">
+        <div class="w-full px-4 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#" class="flex items-center">
+                    <!-- Dark theme logo (shown only in dark mode) -->
+                    <img src="static/logo/logo-dark.png" alt="Logo Light" class="w-20 h-20 hidden dark:inline-block">
+                    <img src="static/logo/logo-white.png" alt="Logo Dark" class="w-20 h-20 inline-block dark:hidden">
+                </a>
+
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Home</a>
+                    <a href="about_us.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">About Us</a>
+
+                    <!-- Dropdown for Services -->
+                    <div class="relative group">
+                        <button
+                            class="text-gray-900 dark:text-white hover:text-primary transition-colors flex items-center space-x-2">
+                            <i class="ri-service-line"></i> <!-- Service Icon -->
+                            <span>Services</span>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div
+                            class="absolute left-0 mt-2 w-64 bg-white dark:bg-gray-800 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 group-hover:block transition-opacity duration-300 p-4 space-y-3">
+                            <!-- AI & Robotics -->
+                            <a href="index.html#ai-robotics"
+                                class="flex items-center space-x-3 py-2 px-4 text-gray-900 dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                <i class="ri-robot-line text-xl"></i>
+                                <span>AI & Robotics</span>
+                            </a>
+                            <!-- Eduverse -->
+                            <a href="index.html#eduverse"
+                                class="flex items-center space-x-3 py-2 px-4 text-gray-900 dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                <i class="ri-earth-line text-xl"></i>
+                                <span>Eduverse</span>
+                            </a>
+                            <!-- Skill Labs -->
+                            <a href="index.html#skill-labs"
+                                class="flex items-center space-x-3 py-2 px-4 text-gray-900 dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                <i class="ri-laptop-line text-xl"></i>
+                                <span>Skill Labs</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="Products.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Products</a>
+                    <a href="index.html#contact"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Contact</a>
+                </nav>
+
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle"
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                        <i class="ri-sun-line dark:hidden ri-lg"></i>
+                        <i class="ri-moon-line hidden dark:block ri-lg"></i>
+                    </button>
+                    <button id="mobile-menu-toggle"
+                        class="md:hidden w-10 h-10 flex items-center justify-center text-gray-900 dark:text-white">
+                        <i class="ri-menu-line ri-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="md:hidden hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-900 dark:text-white hover:text-primary">Home</a>
+                <a href="about_us.html" class="block py-2 text-gray-900 dark:text-white hover:text-primary">About Us</a>
+
+                <!-- Mobile dropdown for Services -->
+                <div class="space-y-2">
+                    <button class="w-full text-left text-gray-900 dark:text-white hover:text-primary">
+                        Services
+                    </button>
+                    <div class="space-y-2 pl-4">
+                        <a href="index.html#ai-robotics"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">AI & Robotics</a>
+                        <a href="index.html#eduverse"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">Eduverse</a>
+                        <a href="index.html#skill-labs"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">Skill Labs</a>
+                    </div>
+                </div>
+
+                <a href="Products.html" class="block py-2 text-gray-900 dark:text-white hover:text-primary">Products</a>
+                <a href="index.html#contact"
+                    class="block py-2 text-gray-900 dark:text-white hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+    <!-- =============================
+     About PixelBotix Dynamics Section
+     ============================= -->
+<section class="relative py-20 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
+  <div class="container mx-auto px-6 lg:px-12">
+    <div class="flex flex-col lg:flex-row items-center gap-12">
+      
+      <!-- Left: Image -->
+      <div class="w-full lg:w-1/2">
+        <img src="templates/about_us_layout/Hero_1.jpg"
+             alt="Spot in front of the Boston Dynamics headquarters"
+             class="w-full rounded-2xl shadow-lg object-cover">
+      </div>
+
+      <!-- Right: Content -->
+      <div class="w-full lg:w-1/2 space-y-6">
+        <h1 class="text-4xl font-bold text-gray-900 dark:text-white">
+          About PixelBotix
+        </h1>
+
+        <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+                PixelBotix Technologies Pvt. Ltd. is a future-driven product innovation and EdTech company pioneering the convergence of Robotics, Artificial Intelligence, Smart Manufacturing, and Emerging Technologies. Founded by a passionate team of researchers, inventors, and educators, we are on a mission to transform cutting-edge research into accessible, real-world solutions while empowering minds through immersive, hands-on learning. At the heart of PixelBotix is a leadership team with deep expertise across Robotics, Computer Vision, AI and ML, Healthcare Technologies, Additive Manufacturing, Smart Manufacturing, UAV, AMR, Intelligent Assistive Devices, and STEM education. With multiple patents, groundbreaking innovations, and years of mentoring experience, our founders blend academic excellence with practical impact.
+        </p>
+
+        <!-- Button -->
+        <!-- <a href="/careers"
+           class="inline-block bg-primary hover:bg-blue-600 text-white font-medium px-6 py-3 rounded-button shadow-md transition-transform duration-300 hover:scale-105">
+          Join Our Team
+        </a> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional subtle background shape -->
+  <div class="absolute inset-0 -z-10 bg-gradient-to-br from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 opacity-50"></div>
+</section>
+
+
+
+
+
+<!-- =============================
+     Innovation in Motion Section
+     ============================= -->
+    <section class="relative py-20 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
+    <div class="container mx-auto px-6 lg:px-12">
+        <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
+        
+        <!-- Right: Image -->
+        <div class="w-full lg:w-1/2">
+            <img src="templates/about_us_layout/Hero_2.jpg"
+                alt="Boston Dynamics Robot in Action"
+                class="w-full rounded-2xl shadow-lg object-cover">
+        </div>
+
+        <!-- Left: Content -->
+        <div class="w-full lg:w-1/2 space-y-6">
+            <h1 class="text-4xl font-bold text-gray-900 dark:text-white">
+            Innovation in Motion
+            </h1>
+
+            <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+                    PixelBotix Brainy Babies, Little Techies, Maker School, and Future Innovators form our Edverse ecosystem, while PixelBotix Skill Labs serves as our hands-on learning platform. The PixelBotix AI & Robotics Hub stands as our state-of-the-art research and development center, hosting a series of specialized labs dedicated to exploring the frontiers of robotics, AI, and emerging technologies.
+            </p>
+        </div>
+        </div>
+    </div>
+
+    <!-- Optional subtle background gradient -->
+    <div class="absolute inset-0 -z-10 bg-gradient-to-bl from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 opacity-50"></div>
+    </section>
+
+
+
+
+
+<!-- =============================
+     Mission & Vision Section
+     ============================= -->
+<section class="relative py-20 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
+  <div class="container mx-auto px-6 lg:px-12">
+    
+    <!-- Section Heading -->
+    <div class="text-center mb-16">
+      <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Changing Your Idea of What We Can Do
+      </h1>
+      <p class="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+        Driving innovation and inspiration through education, technology, and human imagination.
+      </p>
+    </div>
+
+    <!-- Mission and Vision Cards -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+      
+      <!-- Mission Card -->
+      <div class="bg-gradient-to-br from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 shadow-lg rounded-2xl p-8 border border-gray-200 dark:border-gray-700 hover:shadow-2xl transition-all duration-300">
+        <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+          Our Mission
+        </h2>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+          To empower learners, innovators, and industries through cutting-edge research, accessible education, 
+          and practical solutions in Robotics, AI, and Emerging Technologies — bridging the gap between imagination 
+          and real-world impact.
+        </p>
+      </div>
+
+      <!-- Vision Card -->
+      <div class="bg-gradient-to-br from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 shadow-lg rounded-2xl p-8 border border-gray-200 dark:border-gray-700 hover:shadow-2xl transition-all duration-300">
+        <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+          Our Vision
+        </h2>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+          To become a global leader in deep-tech innovation and education by transforming the way people learn, 
+          build, and interact with intelligent systems — shaping a smarter, inclusive, and future-ready world.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Decorative Background -->
+  <div class="absolute inset-0 -z-10 bg-gradient-to-br from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 opacity-40"></div>
+</section>
+
+
+
+
+
+<!-- =============================
+     Trusted By Section with Hover Captions
+     ============================= -->
+<section class="relative py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
+  <div class="container mx-auto px-6 lg:px-12 text-center">
+
+    <!-- Section Title -->
+    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-12">
+      Trusted by industry-leading organizations around the world
+    </h2>
+
+    <!-- 2x2 Grid Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+
+      <!-- Card 1: Academic Collaborations -->
+      <div class="bg-gray-100 dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+        <h3 class="text-xl font-semibold mb-6 text-gray-900 dark:text-white">Academic Collaborations (MOUs)</h3>
+        <div class="overflow-hidden relative scroll-container">
+          <div class="flex flex-row gap-8 scroll-content">
+            <div class="relative group flex-shrink-0">
+              <img src="static/images/academic_colab/Saveetha_1.png" alt="Saveetha Engineering College"
+                   class="h-16 w-36 object-contain rounded transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded transition-opacity duration-300">
+                <span class="text-white text-sm text-center px-2">Saveetha Engineering College</span>
+              </div>
+            </div>
+            <div class="relative group flex-shrink-0">
+              <img src="static/images/academic_colab/KIT_2.svg.png" alt="KIT Engineering College"
+                   class="h-16 w-36 object-contain rounded transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded transition-opacity duration-300">
+                <span class="text-white text-sm text-center px-2">KIT Engineering College, Coimbatore</span>
+              </div>
+            </div>
+            <!-- Add other academic collaboration logos here -->
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Card 2: Industrial Collaborations -->
+      <div class="bg-gray-100 dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+        <h3 class="text-xl font-semibold mb-6 text-gray-900 dark:text-white">Industrial Collaborations (MOUs)</h3>
+        <div class="overflow-hidden relative scroll-container">
+          <div class="flex flex-row gap-8 scroll-content">
+            <div class="relative group flex-shrink-0">
+              <img src="static/images/industrial_colab/perfin_health_care_1.png" alt="Perfinent" class="h-16 w-36 object-contain rounded transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded">
+                <span class="text-white text-sm text-center px-2">Perfinent</span>
+              </div>
+            </div>
+            <div class="relative group flex-shrink-0">
+              <img src="static/images/industrial_colab/Airobo_infinity_2.png" alt="AiRobo Infinite" class="h-16 w-36 object-contain rounded transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded">
+                <span class="text-white text-sm text-center px-2">AiRobo Infinite</span>
+              </div>
+            </div>
+            <div class="relative group flex-shrink-0">
+              <img src="static/images/industrial_colab/Bigzero-logo_3.jpg" alt="Big Zero Technologies" class="h-16 w-36 object-contain rounded transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded">
+                <span class="text-white text-sm text-center px-2">Big Zero Technologies</span>
+              </div>
+            </div>
+            <div class="relative group flex-shrink-0">
+              <img src="static/images/industrial_colab/3devok-logo_4.png" alt="3DeVOK" class="h-16 w-36 object-contain rounded transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded">
+                <span class="text-white text-sm text-center px-2">3DeVOK</span>      <!-- Card 3: Academic Clients -->
+      <div class="bg-gray-100 dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+        <h3 class="text-xl font-semibold mb-6 text-gray-900 dark:text-white">Academic Clients</h3>
+        <div class="overflow-hidden relative scroll-container">
+          <div class="flex flex-row gap-8 scroll-content">
+            <div class="relative group flex-shrink-0">
+              <img src="static/images/academic_clients/mit_logo_1.png" alt="MIT" class="h-16 w-36 object-contain rounded transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded">
+                <span class="text-white text-sm text-center px-2">Madras Institute of Technology</span>
+              </div>
+            </div>
+            <!-- Add remaining academic client logos here -->
+          </div>
+        </div>
+      </div>
+              </div>
+            </div>
+            <div class="relative group flex-shrink-0">
+              <img src="static/images/industrial_colab/Mithra_3d_tech_5.jpg" alt="Mithra 3D Tech" class="h-16 w-36 object-contain rounded transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded">
+                <span class="text-white text-sm text-center px-2">Mithra 3D Tech</span>
+              </div>
+            </div>
+            <div class="relative group flex-shrink-0">
+              <img src="static/images/industrial_colab/make3d_6.png" alt="Make3d" class="h-16 w-36 object-contain rounded transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded">
+                <span class="text-white text-sm text-center px-2">Make3d</span>
+              </div>
+            </div>
+            <div class="relative group flex-shrink-0">
+              <img src="https://via.placeholder.com/120x60?text=DS+Square+Technologies" alt="DS Square Technologies" class="h-16 w-36 object-contain rounded transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded">
+                <span class="text-white text-sm text-center px-2">DS Square Technologies</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Card 3: Academic Clients -->
+      <div class="bg-gray-100 dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+        <h3 class="text-xl font-semibold mb-6 text-gray-900 dark:text-white">Academic Clients</h3>
+        <div class="overflow-hidden relative scroll-container">
+          <div class="flex flex-row gap-8 scroll-content">
+            <!-- 1 -->
+            <div class="relative group flex-shrink-0">
+              <img src="static/images/academic_clients/mit_logo_1.png" alt="MIT" class="h-16 w-36 object-contain rounded transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded">
+                <span class="text-white text-sm text-center px-2">Madras Institute of Technology</span>
+              </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="relative group flex-shrink-0">
+              <img src="static/images/academic_clients/CEG_col_2.png" alt="CEG" class="h-16 w-36 object-contain rounded transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded">
+                <span class="text-white text-sm text-center px-2">College of Engineering, Guindy</span>
+              </div>
+            </div>
+            
+            <!-- 3 -->            
+            <div class="relative group flex-shrink-0">
+              <img src="static/images/academic_clients/SRM_Institute_of_Science_and_Technology_Logo.svg_3.png" alt="SRM" class="h-16 w-36 object-contain rounded transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded">
+                <span class="text-white text-sm text-center px-2">SRM University</span>
+              </div>
+            </div>
+            <!-- 4 -->
+            <div class="relative group flex-shrink-0">
+              <img src="static/images/academic_clients/Vellore_Institute_of_Technology_seal_4.svg.png" alt="MIT" class="h-16 w-36 object-contain rounded transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded">
+                <span class="text-white text-sm text-center px-2">Vellor Instituge of Technology, Vellore</span>
+              </div>
+            </div>
+            <!-- 5 -->
+            <div class="relative group flex-shrink-0">
+              <img src="static/images/academic_clients/DMI_5.png" alt="MIT" class="h-16 w-36 object-contain rounded transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded">
+                <span class="text-white text-sm text-center px-2">DMI College of Engineering, Chennai</span>
+              </div>
+            </div>
+            <!-- 6 -->
+            <div class="relative group flex-shrink-0">
+              <img src="static/images/academic_clients/Loyola_6.png" alt="MIT" class="h-16 w-36 object-contain rounded transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded">
+                <span class="text-white text-sm text-center px-2">Madras Institute of Technology</span>
+              </div>
+            </div>
+            <!-- 7 -->
+            <div class="relative group flex-shrink-0">
+              <img src="static/images/academic_clients/LMEC_7.webp" alt="MIT" class="h-16 w-36 object-contain rounded transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded">
+                <span class="text-white text-sm text-center px-2">Latha Mathavan Engineering College, Madurai</span>
+              </div>
+            </div>
+            <!-- 8 -->
+            <div class="relative group flex-shrink-0">
+              <img src="static/images/academic_clients/sairam_8.gif" alt="MIT" class="h-16 w-36 object-contain rounded transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded">
+                <span class="text-white text-sm text-center px-2">Sri Sairam Engineering College, Chennai</span>
+              </div>
+            </div>
+            <!-- 9 -->
+            <div class="relative group flex-shrink-0">
+              <img src="static/images/academic_clients/Rajeshwari_engg_college_9.png" alt="MIT" class="h-16 w-36 object-contain rounded transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded">
+                <span class="text-white text-sm text-center px-2">Rajarajeswari College of Engineering, Chennai</span>
+              </div>
+            </div>
+            <!-- 10 -->
+            <div class="relative group flex-shrink-0">
+              <img src="static/images/academic_clients/actlogo_10.jpg" alt="MIT" class="h-16 w-36 object-contain rounded transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded">
+                <span class="text-white text-sm text-center px-2">Alagappa College of Technology, Chennai</span>
+              </div>
+            </div>
+            <!-- 11 -->
+            <div class="relative group flex-shrink-0">
+              <img src="static/images/academic_clients/remo_11.webp" alt="MIT" class="h-16 w-36 object-contain rounded transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded">
+                <span class="text-white text-sm text-center px-2">Remo International College of Aviation, Chennai</span>
+              </div>
+            </div>
+            <!-- 12 -->
+            <div class="relative group flex-shrink-0">
+              <img src="static/images/academic_clients/iitm_logo.png" alt="MIT" class="h-16 w-36 object-contain rounded transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded">
+                <span class="text-white text-sm text-center px-2">Indian Institute Of Technology–Madras, Chennai</span>
+              </div>
+            </div>
+            <!-- 13 -->
+            <div class="relative group flex-shrink-0">
+              <img src="static/images/academic_clients/nitt_13.png" alt="MIT" class="h-16 w-36 object-contain rounded transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded">
+                <span class="text-white text-sm text-center px-2">National Institute of Technology, Trichy</span>
+              </div>
+            </div>
+
+            <div class="relative group flex-shrink-0">
+              <img src="static/images/academic_clients/sri_balaji_14.png" alt="MIT" class="h-16 w-36 object-contain rounded transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded">
+                <span class="text-white text-sm text-center px-2">Sri Balaji Vidyapeeth, Pondycherry</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- Card 4: Industrial Clients -->
+      <div class="bg-gray-100 dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+        <h3 class="text-xl font-semibold mb-6 text-gray-900 dark:text-white">Industrial Clients</h3>
+        <div class="overflow-hidden relative scroll-container">
+          <div class="flex flex-row gap-8 scroll-content">
+            <div class="relative group flex-shrink-0">
+              <img src="static/images/industrial_clients/medical_spectra.jpeg" alt="MAKE 3D" class="h-16 w-36 object-contain rounded transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded">
+                <span class="text-white text-sm text-center px-2">MAKE 3D</span>
+              </div>
+            </div>
+            <!-- Add remaining industrial client logos here -->
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<style>
+/* Infinite scrolling animation */
+@keyframes seamless-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.scroll-content {
+  display: flex;
+  gap: 2rem;
+}
+.scroll-content.animate {
+  animation: seamless-marquee 20s linear infinite;
+}
+</style>
+
+<script>
+document.querySelectorAll('.scroll-container').forEach(container => {
+  const flexDiv = container.querySelector('.scroll-content');
+  const totalWidth = Array.from(flexDiv.children).reduce((acc, child) => acc + child.offsetWidth + 32, 0);
+  if (totalWidth > container.offsetWidth) {
+    // Duplicate logos for seamless scroll
+    flexDiv.innerHTML += flexDiv.innerHTML;
+    flexDiv.classList.add('animate');
+  } else {
+    // Center static logos
+    flexDiv.classList.add('justify-center');
+  }
+});
+</script>
+
+
+
+
+
+<!-- =============================
+     Our Impact Section
+     ============================= -->
+<section class="relative py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+  <div class="container mx-auto px-6 lg:px-12 text-center">
+    
+    <!-- Section Title -->
+    <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-12">
+      Our Impact
+    </h2>
+
+    <!-- Rolling Client Projects -->
+    <div class="overflow-hidden relative">
+      <div class="flex animate-impact-marquee gap-12">
+
+        <!-- Card 1 -->
+        <div class="group relative w-80 h-80 flex-shrink-0">
+          <img src="static/images/impact/1.jpeg" 
+               alt="3D Printer Installation" 
+               class="w-full h-full object-cover rounded-2xl shadow-xl transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute bottom-4 left-4 right-4 bg-black bg-opacity-60 text-white text-lg font-medium py-2 px-4 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            3D Printer Installation
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="group relative w-80 h-80 flex-shrink-0">
+          <img src="static/images/impact/2.jpeg" 
+               alt="MOU Ceremony" 
+               class="w-full h-full object-cover rounded-2xl shadow-xl transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute bottom-4 left-4 right-4 bg-black bg-opacity-60 text-white text-lg font-medium py-2 px-4 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            MOU Ceremony KIT
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group relative w-80 h-80 flex-shrink-0">
+          <img src="static/images/impact/3.jpg" 
+               alt="Project 3" 
+               class="w-full h-full object-cover rounded-2xl shadow-xl transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute bottom-4 left-4 right-4 bg-black bg-opacity-60 text-white text-lg font-medium py-2 px-4 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            LMN Enterprises
+          </div>
+        </div>
+
+        <!-- Add more project cards here -->
+
+
+        <!-- Card 1 -->
+        <div class="group relative w-80 h-80 flex-shrink-0">
+          <img src="static/images/impact/1.jpeg" 
+               alt="3D Printer Installation" 
+               class="w-full h-full object-cover rounded-2xl shadow-xl transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute bottom-4 left-4 right-4 bg-black bg-opacity-60 text-white text-lg font-medium py-2 px-4 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            3D Printer Installation
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="group relative w-80 h-80 flex-shrink-0">
+          <img src="static/images/impact/2.jpeg" 
+               alt="MOU Ceremony" 
+               class="w-full h-full object-cover rounded-2xl shadow-xl transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute bottom-4 left-4 right-4 bg-black bg-opacity-60 text-white text-lg font-medium py-2 px-4 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            MOU Ceremony KIT
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group relative w-80 h-80 flex-shrink-0">
+          <img src="static/images/impact/3.jpg" 
+               alt="Project 3" 
+               class="w-full h-full object-cover rounded-2xl shadow-xl transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute bottom-4 left-4 right-4 bg-black bg-opacity-60 text-white text-lg font-medium py-2 px-4 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            LMN Enterprises
+          </div>
+        </div>
+
+
+        <!-- Card 1 -->
+        <div class="group relative w-80 h-80 flex-shrink-0">
+          <img src="static/images/impact/1.jpeg" 
+               alt="3D Printer Installation" 
+               class="w-full h-full object-cover rounded-2xl shadow-xl transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute bottom-4 left-4 right-4 bg-black bg-opacity-60 text-white text-lg font-medium py-2 px-4 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            3D Printer Installation
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="group relative w-80 h-80 flex-shrink-0">
+          <img src="static/images/impact/2.jpeg" 
+               alt="MOU Ceremony" 
+               class="w-full h-full object-cover rounded-2xl shadow-xl transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute bottom-4 left-4 right-4 bg-black bg-opacity-60 text-white text-lg font-medium py-2 px-4 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            MOU Ceremony KIT
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group relative w-80 h-80 flex-shrink-0">
+          <img src="static/images/impact/3.jpg" 
+               alt="Project 3" 
+               class="w-full h-full object-cover rounded-2xl shadow-xl transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute bottom-4 left-4 right-4 bg-black bg-opacity-60 text-white text-lg font-medium py-2 px-4 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            LMN Enterprises
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================
+     Tailwind CSS Animation
+     ============================= -->
+<style>
+  @keyframes impact-marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-impact-marquee {
+    display: flex;
+    animation: impact-marquee 30s linear infinite;
+  }
+</style>
+
+
+
+
+
+
+<!-- =============================
+     Our Leadership Team Section
+     ============================= -->
+<section class="relative py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+  <div class="container mx-auto px-6 lg:px-12">
+    
+    <!-- Section Title -->
+    <div class="text-center mb-16">
+      <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Our Leadership Team
+      </h1>
+      <p class="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+        Meet the visionary minds driving innovation, excellence, and impact at PixelBotix Technologies.
+      </p>
+    </div>
+
+    <!-- Team Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
+
+      <!-- Card 1 -->
+      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 w-80">
+        <div class="flex justify-center mt-6">
+          <img 
+            src="templates/Director_photo/Sabique.jpeg" 
+            alt="Dr. Sabique P V" 
+            class="w-80 h-80 object-cover object-top rounded-xl shadow-md transition-transform duration-500 hover:scale-105">
+        </div>
+        <div class="p-6 text-center space-y-3">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Dr. Sabique P V</h3>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Founder and Chief Executive Officer</p>
+          <div class="flex justify-center gap-4 mt-4">
+            <a href="https://www.linkedin.com/in/dr-sabique-pv-23740a8a" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm transition">LinkedIn</a>
+            <button onclick="openModal('leader1')" class="border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition">Read More</button>
+          </div>
+        </div>
+      </div>
+
+    <!-- Card 2 -->
+      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 w-80">
+        <div class="flex justify-center mt-6">
+          <img 
+            src="templates/Director_photo/Ananda.png" 
+            alt="Elangovan Anand" 
+            class="w-80 h-80 object-cover object-top rounded-xl shadow-md transition-transform duration-500 hover:scale-105">
+        </div>
+        <div class="p-6 text-center space-y-3">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Elangovan Anand</h3>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Co-Founder and Chief Technology Officer</p>
+          <div class="flex justify-center gap-4 mt-4">
+            <a href="https://www.linkedin.com/in/dr-sabique-pv-23740a8a" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm transition">LinkedIn</a>
+            <button onclick="openModal('leader2')" class="border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition">Read More</button>
+          </div>
+        </div>
+      </div>
+
+    <!-- Card 3 -->
+      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 w-80">
+        <div class="flex justify-center mt-6">
+          <img 
+            src="templates/Director_photo/Siva.jpeg" 
+            alt="Dr. Sivaperumal R." 
+            class="w-80 h-80 object-cover object-top rounded-xl shadow-md transition-transform duration-500 hover:scale-105">
+        </div>
+        <div class="p-6 text-center space-y-3">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Dr. Sivaperumal R</h3>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Co-Founder & Chief Development Officer</p>
+          <div class="flex justify-center gap-4 mt-4">
+            <a href="https://www.linkedin.com/in/r-sivaperumal/" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm transition">LinkedIn</a>
+            <button onclick="openModal('leader3')" class="border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition">Read More</button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- =============================
+     Popup Modals
+     ============================= -->
+
+<!-- Modal 1 -->
+<div id="leader1" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50 transition-opacity">
+  <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl w-11/12 lg:w-3/4 xl:w-2/3 max-h-[90vh] overflow-y-auto p-6 relative flex flex-col lg:flex-row gap-6">
+    
+    <!-- Close Button -->
+    <button onclick="closeModal('leader1')" class="absolute top-4 right-4 text-gray-600 dark:text-gray-300 hover:text-red-500 text-2xl">&times;</button>
+
+    <!-- Left Image -->
+    <img src="templates/Director_photo/Sabique.jpeg" alt="Leader 1" class="w-full lg:w-1/3 rounded-xl object-cover">
+
+    <!-- Right Content -->
+    <div class="lg:w-2/3 space-y-4">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Dr. Sabique P V</h2>
+      <p class="text-gray-600 dark:text-gray-400">Founder & Chief Executive Officer</p>
+
+      <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+        Dr. Sabique P.V. is a trailblazer in the fields of Robotics, AI&ML, Computer Vision, and Robotic-assisted surgery, with over a decade of experience in cutting-edge research, innovation, and product development. As the Founder and CEO of PixelBotix, he has transformed his passion for robotics into a mission to make innovative products and STEM and AI education accessible for learners of all ages.
+      </p>
+
+      <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+        Holding a Ph.D. in Robotics from MIT, Dr. Sabique has spearheaded numerous high-impact R&D projects, published several influential journal papers, and is a prolific inventor with five patents. His innovations include the Automatic Coconut Harvester, Intelligent Assistive devices, an automated system for monitoring biological activities of mice, and vision-based pathogen detection devices, which have been successfully transferred to industry.
+      </p>
+
+      <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+       Under his leadership, PixelBotix is not just a company, it is a movement to empower the next generation of thinkers, creators, and problem-solvers in the realm of intelligent technologies.
+      </p>
+
+    </div>
+  </div>
+</div>
+
+<!-- Duplicate and customize for leader2 and leader3 -->
+<div id="leader2" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50 transition-opacity">
+  <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl w-11/12 lg:w-3/4 xl:w-2/3 max-h-[90vh] overflow-y-auto p-6 relative flex flex-col lg:flex-row gap-6">
+    <button onclick="closeModal('leader2')" class="absolute top-4 right-4 text-gray-600 dark:text-gray-300 hover:text-red-500 text-2xl">&times;</button>
+    <img src="templates/Director_photo/Anand.png" alt="Leader 2" class="w-full lg:w-1/3 rounded-xl object-cover">
+    <div class="lg:w-2/3 space-y-4">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Mr . Elangovan Anand/h2>
+      <p class="text-gray-600 dark:text-gray-400">Co-Founder & Chief Technology Officer</p>
+
+      <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+        Anand Elangovan is a multidisciplinary engineer and data enthusiast with a strong background in machine learning, computer vision, and algorithmic systems. He has worked on cutting-edge AI projects, building intelligent solutions that optimize processes and enhance automation across industries.
+      </p>
+
+      <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+        At PixelBotix, Anand drives the R&D of next-generation robotics technologies, focusing on innovation, prototyping, and intelligent system design. He leads the development of robotics products that combine AI, automation, and engineering excellence to solve real-world challenges.
+      </p>
+
+      <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+         With a blend of academic knowledge, industry experience, and a passion for hands-on innovation, Anand is committed to advancing PixelBotix’s mission to empower the next generation of creators, engineers, and thinkers through cutting-edge robotics and research.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="leader3" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50 transition-opacity">
+  <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl w-11/12 lg:w-3/4 xl:w-2/3 max-h-[90vh] overflow-y-auto p-6 relative flex flex-col lg:flex-row gap-6">
+    <button onclick="closeModal('leader3')" class="absolute top-4 right-4 text-gray-600 dark:text-gray-300 hover:text-red-500 text-2xl">&times;</button>
+    <img src="templates/Director_photo/Siva.jpeg" alt="Leader 3" class="w-full lg:w-1/3 rounded-xl object-cover">
+    <div class="lg:w-2/3 space-y-4">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Dr. Sivaperumal R</h2>
+      <p class="text-gray-600 dark:text-gray-400">Co-Founder & Chief Development Officer</p>
+
+      <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+Dr. Sivaperumal R is a passionate innovator and technologist specializing in Additive Manufacturing, Robotics, and Advanced Materials. With a Ph.D. in Mechanical Engineering from Anna University – MIT Campus, he brings a decade of research, product development, and educational experience to the forefront of technological transformation.
+      </p>
+
+      <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+Beyond engineering, Dr. Sivaperumal is a mentor, educator, and speaker who has inspired students and professionals through hands-on workshops and industry collaborations. His vision is to make emerging technologies accessible, affordable, and impactful for the next generation of innovators.
+      </p>
+
+      <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+As Co-Founder and CDO of PixelBotix, he leads R&D initiatives and the design of intelligent, real-world solutions from crashworthy automotive structures to biomedical devices and heritage preservation using 3D printing. He is also the founder of Mithra 3D Tech, a leading 3D printing and prototyping venture.
+      </p>
+
+
+    </div>
+  </div>
+</div>
+
+<!-- =============================
+     Modal Script For Leadership 
+     ============================= -->
+<script>
+  function openModal(id) {
+    const modal = document.getElementById(id);
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeModal(id) {
+    const modal = document.getElementById(id);
+    modal.classList.remove('flex');
+    modal.classList.add('hidden');
+  }
+</script>
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">PixelBotix Technologies</h3>
+                    <p class="text-gray-400 mb-6">Future-driven product innovation and EdTech company pioneering the
+                        convergence of Robotics, AI, Smart Manufacturing, and Emerging Technologies.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=61575683369348" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-facebook-fill ri-lg"></i>
+                        </a>
+                        <a href="https://x.com/PixelBotix" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-twitter-fill ri-lg"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/pixelbotix/" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-linkedin-fill ri-lg"></i>
+                        </a>
+                        <a href="https://www.instagram.com/pixel_botix/" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-instagram-fill ri-lg"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@PixelBotix" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-youtube-fill ri-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about_us.html" class="text-gray-400 hover:text-white transition-colors">About
+                                Us</a></li>
+                        <li><a href="#ai-robotics" class="text-gray-400 hover:text-white transition-colors">AI &
+                                Robotics</a></li>
+                        <li><a href="#eduverse" class="text-gray-400 hover:text-white transition-colors">Eduverse</a>
+                        </li>
+                        <li><a href="#skill-labs" class="text-gray-400 hover:text-white transition-colors">Skill
+                                Labs</a></li>
+                        <li><a href="product.html" class="text-gray-400 hover:text-white transition-colors">Products</a>
+                        </li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Programs -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Our Programs</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#brainy-babies" class="text-gray-400 hover:text-white transition-colors">Brainy
+                                Babies (0-5 years)</a></li>
+                        <li><a href="#little-techies" class="text-gray-400 hover:text-white transition-colors">Little
+                                Techies (5-9 years)</a></li>
+                        <li><a href="#maker-school" class="text-gray-400 hover:text-white transition-colors">Maker
+                                School (9-17 years)</a></li>
+                        <li><a href="#future-innovators" class="text-gray-400 hover:text-white transition-colors">Future
+                                Innovators (16-25 years)</a></li>
+                        <li><a href="#school-lab-setup" class="text-gray-400 hover:text-white transition-colors">School
+                                Lab Setup</a></li>
+                        <li><a href="#faculty-development"
+                                class="text-gray-400 hover:text-white transition-colors">Faculty Development</a></li>
+                    </ul>
+                </div>
+
+                <!-- Policies -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Policies</h3>
+                    <ul class="space-y-3">
+                        <li><a href="privacy_policy.html"
+                                class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms &
+                                Conditions</a></li>
+                        <li><a href="refund_cancellation.html"
+                                class="text-gray-400 hover:text-white transition-colors">Refund & Cancellation</a></li>
+                        <li><a href="shipping_policy.html"
+                                class="text-gray-400 hover:text-white transition-colors">Shipping Policy</a></li>
+                        <li><a href="disclaimer.html"
+                                class="text-gray-400 hover:text-white transition-colors">Disclaimer</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Subscribe to Our Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Stay updated with our latest news, programs, and innovations.</p>
+                    <form class="mb-4">
+                        <div class="flex">
+                            <input type="email" placeholder="Your email address"
+                                class="px-4 py-3 bg-gray-800 text-white rounded-l focus:outline-none focus:ring-2 focus:ring-primary border-none flex-grow">
+                            <button type="submit"
+                                class="bg-primary text-white px-4 py-3 rounded-r hover:bg-blue-600 transition-colors whitespace-nowrap">Subscribe</button>
+                        </div>
+                    </form>
+                    <p class="text-gray-500 text-sm">By subscribing, you agree to our Privacy Policy and consent to
+                        receive updates from our company.</p>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2025 PixelBotix Technologies Pvt. Ltd. All
+                        rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Terms of
+                            Service</a>
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Buttons Container -->
+            <div class="fixed bottom-8 right-8 z-50 flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
+                <!-- Back to Top Button -->
+                <button id="back-to-top"
+                    class="bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+                    <i class="ri-arrow-up-line ri-lg"></i>
+                </button>
+
+                <!-- WhatsApp Button -->
+                <a href="https://wa.me/917200445335?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20PixelBotix%20and%20your%20programs.%20Can%20you%20help%20me?"
+                    target="_blank"
+                    class="bg-green-500 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-green-600 transition-all transform hover:scale-105">
+                    <i class="ri-whatsapp-line text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Theme -->
+    <script id="theme-toggle-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const themeToggle = document.getElementById('theme-toggle');
+            const html = document.documentElement;
+            themeToggle.addEventListener('click', function () {
+                html.classList.toggle('dark');
+                localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+            });
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                if (savedTheme === 'dark') {
+                    html.classList.add('dark');
+                } else {
+                    html.classList.remove('dark');
+                }
+            }
+        });
+    </script>
+
+    <!-- Mobile Menu -->
+    <script id="mobile-menu-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuToggle.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+    <!-- Back to top -->
+    <script id="back-to-top-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const backToTopButton = document.getElementById('back-to-top');
+            function toggleBackToTopButton() {
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.remove('opacity-0', 'invisible');
+                    backToTopButton.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopButton.classList.remove('opacity-100', 'visible');
+                    backToTopButton.classList.add('opacity-0', 'invisible');
+                }
+            }
+            window.addEventListener('scroll', toggleBackToTopButton);
+            backToTopButton.addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
