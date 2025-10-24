@@ -1,10 +1,20 @@
-<!DOCTYPE html><html lang="en"><head><script src="js/e.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="js/e.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms and Conditions - TechPrint Solutions</title>
+    <title> Terms & Conditions</title>
+
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -27,90 +37,126 @@
             }
         }
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <style>
-        :where([class^="ri-"])::before { 
-            content: "\f3c2"; 
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
         }
-        .dark-mode {
-            --bg-primary: #1f2937;
-            --bg-secondary: #111827;
-            --text-primary: #f9fafb;
-            --text-secondary: #d1d5db;
-            --border-color: #374151;
+
+        .slider-container {
+            position: relative;
+            overflow: hidden;
         }
-        .light-mode {
-            --bg-primary: #ffffff;
-            --bg-secondary: #f9fafb;
-            --text-primary: #1f2937;
-            --text-secondary: #6b7280;
-            --border-color: #e5e7eb;
+
+        .slider-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
         }
-        body.dark-mode {
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-        }
-        body.light-mode {
-            background-color: var(--bg-secondary);
-            color: var(--text-primary);
-        }
-        .header-bg {
-            background-color: var(--bg-primary);
-            border-bottom: 1px solid var(--border-color);
-        }
-        .content-bg {
-            background-color: var(--bg-primary);
+
+        .slider-item {
+            min-width: 100%;
+            flex-shrink: 0;
         }
     </style>
+    <link rel="icon" type="image/png" href="static/favicon/favicon.png">
 </head>
-<body class="dark-mode min-h-screen">
-    <header class="fixed top-0 left-0 right-0 z-50 header-bg shadow-lg">
-        <div class="w-full px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center">
 
-                    <a href="#" class="flex items-center">
-                        <!-- Dark theme logo (shown only in dark mode) -->
-                        <img src="static/logo/logo-dark.png" alt="Logo Light" class="w-20 h-20 hidden dark:inline-block">
-                        <img src="static/logo/logo-white.png" alt="Logo Dark" class="w-20 h-20 inline-block dark:hidden">
-                    </a>
-                </div>
-                
-                <nav class="hidden lg:flex items-center space-x-8">
-                    <a href="#" class="text-sm font-medium hover:text-primary transition-colors">Home</a>
-                    <a href="#" class="text-sm font-medium hover:text-primary transition-colors">About Us</a>
-                    <a href="#" class="text-sm font-medium hover:text-primary transition-colors">AI & Robotics</a>
-                    <a href="#" class="text-sm font-medium hover:text-primary transition-colors">Eduverse</a>
-                    <a href="#" class="text-sm font-medium hover:text-primary transition-colors">Skill Labs</a>
-                    <a href="#" class="text-sm font-medium hover:text-primary transition-colors">Contact</a>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 shadow-lg transition-colors duration-300">
+        <div class="w-full px-4 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#" class="flex items-center">
+                    <!-- Dark theme logo (shown only in dark mode) -->
+                    <img src="static/logo/logo-dark.png" alt="Logo Light" class="w-20 h-20 hidden dark:inline-block">
+                    <img src="static/logo/logo-white.png" alt="Logo Dark" class="w-20 h-20 inline-block dark:hidden">
+                </a>
+
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Home</a>
+                    <a href="about_us.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">About Us</a>
+
+                    <!-- Dropdown for Services -->
+                    <div class="relative group">
+                        <button
+                            class="text-gray-900 dark:text-white hover:text-primary transition-colors flex items-center space-x-2">
+                            <i class="ri-service-line"></i> <!-- Service Icon -->
+                            <span>Services</span>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div
+                            class="absolute left-0 mt-2 w-64 bg-white dark:bg-gray-800 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 group-hover:block transition-opacity duration-300 p-4 space-y-3">
+                            <!-- AI & Robotics -->
+                            <a href="index.html#ai-robotics"
+                                class="flex items-center space-x-3 py-2 px-4 text-gray-900 dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                <i class="ri-robot-line text-xl"></i>
+                                <span>AI & Robotics</span>
+                            </a>
+                            <!-- Eduverse -->
+                            <a href="index.html#eduverse"
+                                class="flex items-center space-x-3 py-2 px-4 text-gray-900 dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                <i class="ri-earth-line text-xl"></i>
+                                <span>Eduverse</span>
+                            </a>
+                            <!-- Skill Labs -->
+                            <a href="index.html#skill-labs"
+                                class="flex items-center space-x-3 py-2 px-4 text-gray-900 dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                <i class="ri-laptop-line text-xl"></i>
+                                <span>Skill Labs</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="Products.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Products</a>
+                    <a href="index.html#contact"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Contact</a>
                 </nav>
 
                 <div class="flex items-center space-x-4">
-                    <button id="themeToggle" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
-                        <i class="ri-sun-line text-lg"></i>
+                    <button id="theme-toggle"
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                        <i class="ri-sun-line dark:hidden ri-lg"></i>
+                        <i class="ri-moon-line hidden dark:block ri-lg"></i>
                     </button>
-                    
-                    <button id="mobileMenuToggle" class="lg:hidden w-8 h-8 flex items-center justify-center">
-                        <i class="ri-menu-line text-xl"></i>
+                    <button id="mobile-menu-toggle"
+                        class="md:hidden w-10 h-10 flex items-center justify-center text-gray-900 dark:text-white">
+                        <i class="ri-menu-line ri-lg"></i>
                     </button>
                 </div>
             </div>
         </div>
 
-        <div id="mobileMenu" class="lg:hidden hidden border-t border-gray-200 dark:border-gray-700">
-            <div class="px-4 py-2 space-y-1">
-                <a href="index.html" class="block px-3 py-2 text-sm font-medium hover:text-primary transition-colors">Home</a>
-                <a href="#" class="block px-3 py-2 text-sm font-medium hover:text-primary transition-colors">About Us</a>
-                <a href="#" class="block px-3 py-2 text-sm font-medium hover:text-primary transition-colors">AI & Robotics</a>
-                <a href="#" class="block px-3 py-2 text-sm font-medium hover:text-primary transition-colors">Eduverse</a>
-                <a href="#" class="block px-3 py-2 text-sm font-medium hover:text-primary transition-colors">Skill Labs</a>
-                <a href="#" class="block px-3 py-2 text-sm font-medium hover:text-primary transition-colors">Contact</a>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="md:hidden hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-900 dark:text-white hover:text-primary">Home</a>
+                <a href="about_us.html" class="block py-2 text-gray-900 dark:text-white hover:text-primary">About Us</a>
+
+                <!-- Mobile dropdown for Services -->
+                <div class="space-y-2">
+                    <button class="w-full text-left text-gray-900 dark:text-white hover:text-primary">
+                        Services
+                    </button>
+                    <div class="space-y-2 pl-4">
+                        <a href="index.html#ai-robotics"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">AI & Robotics</a>
+                        <a href="index.html#eduverse"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">Eduverse</a>
+                        <a href="index.html#skill-labs"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">Skill Labs</a>
+                    </div>
+                </div>
+
+                <a href="Products.html" class="block py-2 text-gray-900 dark:text-white hover:text-primary">Products</a>
+                <a href="index.html#contact"
+                    class="block py-2 text-gray-900 dark:text-white hover:text-primary">Contact</a>
             </div>
         </div>
     </header>
+
 
     <main class="pt-16 min-h-screen">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -190,6 +236,8 @@
     </main>
 
 
+
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-white pt-16 pb-8">
         <div class="container mx-auto px-4">
@@ -200,19 +248,24 @@
                     <p class="text-gray-400 mb-6">Future-driven product innovation and EdTech company pioneering the
                         convergence of Robotics, AI, Smart Manufacturing, and Emerging Technologies.</p>
                     <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/profile.php?id=61575683369348" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="https://www.facebook.com/profile.php?id=61575683369348" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors">
                             <i class="ri-facebook-fill ri-lg"></i>
                         </a>
-                        <a href="https://x.com/PixelBotix" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="https://x.com/PixelBotix" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors">
                             <i class="ri-twitter-fill ri-lg"></i>
                         </a>
-                        <a href="https://www.linkedin.com/company/pixelbotix/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="https://www.linkedin.com/company/pixelbotix/" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors">
                             <i class="ri-linkedin-fill ri-lg"></i>
                         </a>
-                        <a href="https://www.instagram.com/pixel_botix/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="https://www.instagram.com/pixel_botix/" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors">
                             <i class="ri-instagram-fill ri-lg"></i>
                         </a>
-                        <a href="https://www.youtube.com/@PixelBotix" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="https://www.youtube.com/@PixelBotix" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors">
                             <i class="ri-youtube-fill ri-lg"></i>
                         </a>
                     </div>
@@ -223,11 +276,16 @@
                     <h3 class="text-xl font-bold mb-6">Quick Links</h3>
                     <ul class="space-y-3">
                         <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
-                        <li><a href="about_us.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="#ai-robotics" class="text-gray-400 hover:text-white transition-colors">AI & Robotics</a></li>
-                        <li><a href="#eduverse" class="text-gray-400 hover:text-white transition-colors">Eduverse</a></li>
-                        <li><a href="#skill-labs" class="text-gray-400 hover:text-white transition-colors">Skill Labs</a></li>
-                        <li><a href="product.html" class="text-gray-400 hover:text-white transition-colors">Products</a></li>
+                        <li><a href="about_us.html" class="text-gray-400 hover:text-white transition-colors">About
+                                Us</a></li>
+                        <li><a href="#ai-robotics" class="text-gray-400 hover:text-white transition-colors">AI &
+                                Robotics</a></li>
+                        <li><a href="#eduverse" class="text-gray-400 hover:text-white transition-colors">Eduverse</a>
+                        </li>
+                        <li><a href="#skill-labs" class="text-gray-400 hover:text-white transition-colors">Skill
+                                Labs</a></li>
+                        <li><a href="product.html" class="text-gray-400 hover:text-white transition-colors">Products</a>
+                        </li>
                         <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
                     </ul>
                 </div>
@@ -236,12 +294,18 @@
                 <div>
                     <h3 class="text-xl font-bold mb-6">Our Programs</h3>
                     <ul class="space-y-3">
-                        <li><a href="#brainy-babies" class="text-gray-400 hover:text-white transition-colors">Brainy Babies (0-5 years)</a></li>
-                        <li><a href="#little-techies" class="text-gray-400 hover:text-white transition-colors">Little Techies (5-9 years)</a></li>
-                        <li><a href="#maker-school" class="text-gray-400 hover:text-white transition-colors">Maker School (9-17 years)</a></li>
-                        <li><a href="#future-innovators" class="text-gray-400 hover:text-white transition-colors">Future Innovators (16-25 years)</a></li>
-                        <li><a href="#school-lab-setup" class="text-gray-400 hover:text-white transition-colors">School Lab Setup</a></li>
-                        <li><a href="#faculty-development" class="text-gray-400 hover:text-white transition-colors">Faculty Development</a></li>
+                        <li><a href="#brainy-babies" class="text-gray-400 hover:text-white transition-colors">Brainy
+                                Babies (0-5 years)</a></li>
+                        <li><a href="#little-techies" class="text-gray-400 hover:text-white transition-colors">Little
+                                Techies (5-9 years)</a></li>
+                        <li><a href="#maker-school" class="text-gray-400 hover:text-white transition-colors">Maker
+                                School (9-17 years)</a></li>
+                        <li><a href="#future-innovators" class="text-gray-400 hover:text-white transition-colors">Future
+                                Innovators (16-25 years)</a></li>
+                        <li><a href="#school-lab-setup" class="text-gray-400 hover:text-white transition-colors">School
+                                Lab Setup</a></li>
+                        <li><a href="#faculty-development"
+                                class="text-gray-400 hover:text-white transition-colors">Faculty Development</a></li>
                     </ul>
                 </div>
 
@@ -249,11 +313,16 @@
                 <div>
                     <h3 class="text-xl font-bold mb-6">Policies</h3>
                     <ul class="space-y-3">
-                        <li><a href="privacy_policy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms & Conditions</a></li>
-                        <li><a href="refund_cancellation.html" class="text-gray-400 hover:text-white transition-colors">Refund & Cancellation</a></li>
-                        <li><a href="shipping_policy.html" class="text-gray-400 hover:text-white transition-colors">Shipping Policy</a></li>
-                        <li><a href="disclaimer.html" class="text-gray-400 hover:text-white transition-colors">Disclaimer</a></li>
+                        <li><a href="privacy_policy.html"
+                                class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms &
+                                Conditions</a></li>
+                        <li><a href="refund_cancellation.html"
+                                class="text-gray-400 hover:text-white transition-colors">Refund & Cancellation</a></li>
+                        <li><a href="shipping_policy.html"
+                                class="text-gray-400 hover:text-white transition-colors">Shipping Policy</a></li>
+                        <li><a href="disclaimer.html"
+                                class="text-gray-400 hover:text-white transition-colors">Disclaimer</a></li>
                     </ul>
                 </div>
 
@@ -276,10 +345,12 @@
 
             <div class="border-t border-gray-800 pt-8">
                 <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2025 PixelBotix Technologies Pvt. Ltd. All rights reserved.</p>
+                    <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2025 PixelBotix Technologies Pvt. Ltd. All
+                        rights reserved.</p>
                     <div class="flex space-x-6">
                         <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
-                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Terms of
+                            Service</a>
                         <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Cookie Policy</a>
                     </div>
                 </div>
@@ -294,7 +365,8 @@
                 </button>
 
                 <!-- WhatsApp Button -->
-                <a href="https://wa.me/917200445335?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20PixelBotix%20and%20your%20programs.%20Can%20you%20help%20me?" target="_blank"
+                <a href="https://wa.me/917200445335?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20PixelBotix%20and%20your%20programs.%20Can%20you%20help%20me?"
+                    target="_blank"
                     class="bg-green-500 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-green-600 transition-all transform hover:scale-105">
                     <i class="ri-whatsapp-line text-xl"></i>
                 </a>
@@ -302,62 +374,49 @@
         </div>
     </footer>
 
-    <script id="theme-toggle">
-        document.addEventListener('DOMContentLoaded', function() {
-            const themeToggle = document.getElementById('themeToggle');
-            const body = document.body;
-            const themeIcon = themeToggle.querySelector('i');
-            
-            let isDarkMode = true;
-            
-            function updateTheme() {
-                if (isDarkMode) {
-                    body.classList.remove('light-mode');
-                    body.classList.add('dark-mode');
-                    themeIcon.className = 'ri-sun-line text-lg';
+    <script id="theme-toggle-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const themeToggle = document.getElementById('theme-toggle');
+            const html = document.documentElement;
+            themeToggle.addEventListener('click', function () {
+                html.classList.toggle('dark');
+                localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+            });
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                if (savedTheme === 'dark') {
+                    html.classList.add('dark');
                 } else {
-                    body.classList.remove('dark-mode');
-                    body.classList.add('light-mode');
-                    themeIcon.className = 'ri-moon-line text-lg';
+                    html.classList.remove('dark');
                 }
             }
-            
-            themeToggle.addEventListener('click', function() {
-                isDarkMode = !isDarkMode;
-                updateTheme();
-            });
-            
-            updateTheme();
         });
     </script>
 
-    <script id="mobile-menu">
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-            const mobileMenu = document.getElementById('mobileMenu');
-            const menuIcon = mobileMenuToggle.querySelector('i');
-            
-            let isMenuOpen = false;
-            
-            mobileMenuToggle.addEventListener('click', function() {
-                isMenuOpen = !isMenuOpen;
-                
-                if (isMenuOpen) {
-                    mobileMenu.classList.remove('hidden');
-                    menuIcon.className = 'ri-close-line text-xl';
+    <script id="mobile-menu-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuToggle.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+    <script id="back-to-top-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const backToTopButton = document.getElementById('back-to-top');
+            function toggleBackToTopButton() {
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.remove('opacity-0', 'invisible');
+                    backToTopButton.classList.add('opacity-100', 'visible');
                 } else {
-                    mobileMenu.classList.add('hidden');
-                    menuIcon.className = 'ri-menu-line text-xl';
+                    backToTopButton.classList.remove('opacity-100', 'visible');
+                    backToTopButton.classList.add('opacity-0', 'invisible');
                 }
-            });
-        });
-    </script>
-
-    <script id="back-to-top">
-        document.addEventListener('DOMContentLoaded', function() {
-            const backToTopBtn = document.getElementById('backToTop');
-            
-            backToTopBtn.addEventListener('click', function() {
+            }
+            window.addEventListener('scroll', toggleBackToTopButton);
+            backToTopButton.addEventListener('click', function () {
                 window.scrollTo({
                     top: 0,
                     behavior: 'smooth'
