@@ -2115,6 +2115,8 @@ Light Source: COB + Refractive Light (405 nm)
 
 218.88 × 122.88 × 260 mm³
 
+4172
+
 🔹 System & Software
 
 Firmware/System: EL3D-4.0
@@ -2221,4 +2223,108 @@ Gross Weight: 18.3 kg
 
 "Title","Go3D Innovation LLP - 3d printer Manufacturer"
 "Categories","Manufacturer, 3D printing service"
+U85499TN2025PTC179042
+179042
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Academic Clients
+
+
+
+
+came to the office on that day 
+
+
+
+C
+
+
+Django need 3 things
+1. view
+2. urls
+3. template
+
+for view it require models
+E-Commerce Backend Logic and Steps
+
+1. Setup Projects
+	Create new dir *
+	create virtual env
+	install packages
+	Create new project 
+	Create new app
+	Add app to Installed Apps in settings.py
+	Include import and include the path of app in urlpatter
+n inside urls.py
+	Inside app configure urls.py and views.py for products
+	create templates folder 
+	create products.html 
+	make migration 
+	migrate
+	run manage.py and check 127.0.0.1:8000
+
+2. Configure Admin Page, Superuser
+	Create super user
+	username admin
+	email admin@admin.com
+	password admin
+	password admin
+	yes
+	Check for /admin working
+	
+3. Create models for products
+	Add Media url and Media Root in settings.py 
+	Do changes in project urls.py for media
+	Add model which is required
+		Category
+		Customer
+		Product
+		Order
+	makemigration and migrate
+	run server
+	Add the models section to admin section inside app
+	
+	
+4. Template for Products 
+	download from startboot strap and add % static everywhere
+	import Product model in views.py
+	find the parts and change the product image , name, price and discription.
+	
+5. Sale price and strike original price 
+	Add sale variable and sale boolean in models
+	Change in products.html page with if conditions
+	
+	
+6. Templating on website 
+	Split template
+	create base.html, navbar.html
+	remove unnecessary parts from products.html page
+	
+7. Login and Logout
+	
 

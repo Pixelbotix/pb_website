@@ -1,8 +1,12 @@
-<!DOCTYPE html><html lang="en"><head><script src="js/e.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="js/e.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy_Policy -PixelBotix</title>
-    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <title> Policy</title>
+
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -53,6 +57,7 @@
             flex-shrink: 0;
         }
     </style>
+    <link rel="icon" type="image/png" href="static/favicon/favicon.png">
 </head>
 
 <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
@@ -60,8 +65,6 @@
     <header class="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 shadow-lg transition-colors duration-300">
         <div class="w-full px-4 lg:px-8">
             <div class="flex items-center justify-between h-16">
-
-
                 <a href="#" class="flex items-center">
                     <!-- Dark theme logo (shown only in dark mode) -->
                     <img src="static/logo/logo-dark.png" alt="Logo Light" class="w-20 h-20 hidden dark:inline-block">
@@ -69,15 +72,48 @@
                 </a>
 
                 <nav class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-900 dark:text-white hover:text-primary transition-colors">Home</a>
-                    <a href="about_us.html" class="text-gray-900 dark:text-white hover:text-primary transition-colors">About Us</a>
-                    <a href="index.html#ai-robotics" class="text-gray-900 dark:text-white hover:text-primary transition-colors">AI &
-                        Robotics</a>
-                    <a href="index.html#eduverse" class="text-gray-900 dark:text-white hover:text-primary transition-colors">Eduverse</a>
-                    <a href="index.html#skill-labs" class="text-gray-900 dark:text-white hover:text-primary transition-colors">Skill
-                        Labs</a>
-                    <a href="index.html#contact" class="text-gray-900 dark:text-white hover:text-primary transition-colors">Contact</a>
+                    <a href="index.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Home</a>
+                    <a href="about_us.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">About Us</a>
+
+                    <!-- Dropdown for Services -->
+                    <div class="relative group">
+                        <button
+                            class="text-gray-900 dark:text-white hover:text-primary transition-colors flex items-center space-x-2">
+                            <i class="ri-service-line"></i> <!-- Service Icon -->
+                            <span>Services</span>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div
+                            class="absolute left-0 mt-2 w-64 bg-white dark:bg-gray-800 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 group-hover:block transition-opacity duration-300 p-4 space-y-3">
+                            <!-- AI & Robotics -->
+                            <a href="index.html#ai-robotics"
+                                class="flex items-center space-x-3 py-2 px-4 text-gray-900 dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                <i class="ri-robot-line text-xl"></i>
+                                <span>AI & Robotics</span>
+                            </a>
+                            <!-- Eduverse -->
+                            <a href="index.html#eduverse"
+                                class="flex items-center space-x-3 py-2 px-4 text-gray-900 dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                <i class="ri-earth-line text-xl"></i>
+                                <span>Eduverse</span>
+                            </a>
+                            <!-- Skill Labs -->
+                            <a href="index.html#skill-labs"
+                                class="flex items-center space-x-3 py-2 px-4 text-gray-900 dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                <i class="ri-laptop-line text-xl"></i>
+                                <span>Skill Labs</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="Products.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Products</a>
+                    <a href="index.html#contact"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Contact</a>
                 </nav>
+
                 <div class="flex items-center space-x-4">
                     <button id="theme-toggle"
                         class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
@@ -91,70 +127,42 @@
                 </div>
             </div>
         </div>
+
+        <!-- Mobile Menu -->
         <div id="mobile-menu"
             class="md:hidden hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
             <div class="px-4 py-2 space-y-2">
                 <a href="index.html" class="block py-2 text-gray-900 dark:text-white hover:text-primary">Home</a>
                 <a href="about_us.html" class="block py-2 text-gray-900 dark:text-white hover:text-primary">About Us</a>
-                <a href="index.html#ai-robotics" class="block py-2 text-gray-900 dark:text-white hover:text-primary">AI & Robotics</a>
-                <a href="index.html#eduverse" class="block py-2 text-gray-900 dark:text-white hover:text-primary">Eduverse</a>
-                <a href="index.html#skill-labs" class="block py-2 text-gray-900 dark:text-white hover:text-primary">Skill Labs</a>
-                <a href="index.html#contact" class="block py-2 text-gray-900 dark:text-white hover:text-primary">Contact</a>
+
+                <!-- Mobile dropdown for Services -->
+                <div class="space-y-2">
+                    <button class="w-full text-left text-gray-900 dark:text-white hover:text-primary">
+                        Services
+                    </button>
+                    <div class="space-y-2 pl-4">
+                        <a href="index.html#ai-robotics"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">AI & Robotics</a>
+                        <a href="index.html#eduverse"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">Eduverse</a>
+                        <a href="index.html#skill-labs"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">Skill Labs</a>
+                    </div>
+                </div>
+
+                <a href="Products.html" class="block py-2 text-gray-900 dark:text-white hover:text-primary">Products</a>
+                <a href="index.html#contact"
+                    class="block py-2 text-gray-900 dark:text-white hover:text-primary">Contact</a>
             </div>
         </div>
     </header>
 
-    <main class="pt-16 min-h-screen">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="rounded-xl p-8 shadow-lg bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
-        <h1 class="text-4xl font-bold mb-8 text-center">Disclaimer</h1>
 
-        <div class="prose prose-lg max-w-none">
-            <p class="text-lg mb-6 opacity-80">Last updated: October 09, 2025</p>
 
-            <section class="mb-8">
-            <h2 class="text-2xl font-semibold mb-4">1. General Information</h2>
-            <p class="mb-4">
-                The following is published in accordance with the Information Technology Act, 2000, and applicable Rules made thereunder.
-                This electronic record is generated by a computer system and does not require any physical or digital signatures.
-            </p>
-            </section>
 
-            <section class="mb-8">
-            <h2 class="text-2xl font-semibold mb-4">2. Compliance</h2>
-            <p class="mb-4">
-                This document is published in compliance with Rule 3(1) of the Information Technology (Intermediaries Guidelines) Rules, 2011,
-                which requires the publication of rules, regulations, privacy policy, and user agreement for access or usage of a website.
-                Here, the term <strong>“Website”</strong> refers to <a href="https://www.pixelbotix.com" class="text-blue-600 dark:text-blue-400 hover:underline">www.pixelbotix.com</a>.
-            </p>
-            </section>
 
-            <section class="mb-8">
-            <h2 class="text-2xl font-semibold mb-4">3. Purpose</h2>
-            <p class="mb-4">
-                PixelBotix (Website) strives to provide the best possible products, services, resources, and guidance based on the user’s interests.
-            </p>
-            </section>
 
-            <section class="mb-8">
-            <h2 class="text-2xl font-semibold mb-4">4. Limitation of Liability</h2>
-            <p class="mb-4">
-                However, PixelBotix shall not be held responsible or liable for any claims, losses, or damages of any kind, whether direct or indirect,
-                arising out of the use of, or reliance on, any information, results, or services provided on the Website/Application.
-            </p>
-            </section>
 
-            <section class="mb-8">
-            <h2 class="text-2xl font-semibold mb-4">5. No Warranties</h2>
-            <p class="mb-4">
-                PixelBotix does not provide any guarantee or warranty of any kind, including (but not limited to) non-infringement of third-party rights,
-                accuracy, reliability, or fitness for a particular purpose with respect to the information or services offered on the Website/Application.
-            </p>
-            </section>
-        </div>
-        </div>
-    </div>
-    </main>
 
 
 
@@ -168,19 +176,24 @@
                     <p class="text-gray-400 mb-6">Future-driven product innovation and EdTech company pioneering the
                         convergence of Robotics, AI, Smart Manufacturing, and Emerging Technologies.</p>
                     <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/profile.php?id=61575683369348" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="https://www.facebook.com/profile.php?id=61575683369348" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors">
                             <i class="ri-facebook-fill ri-lg"></i>
                         </a>
-                        <a href="https://x.com/PixelBotix" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="https://x.com/PixelBotix" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors">
                             <i class="ri-twitter-fill ri-lg"></i>
                         </a>
-                        <a href="https://www.linkedin.com/company/pixelbotix/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="https://www.linkedin.com/company/pixelbotix/" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors">
                             <i class="ri-linkedin-fill ri-lg"></i>
                         </a>
-                        <a href="https://www.instagram.com/pixel_botix/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="https://www.instagram.com/pixel_botix/" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors">
                             <i class="ri-instagram-fill ri-lg"></i>
                         </a>
-                        <a href="https://www.youtube.com/@PixelBotix" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="https://www.youtube.com/@PixelBotix" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors">
                             <i class="ri-youtube-fill ri-lg"></i>
                         </a>
                     </div>
@@ -191,11 +204,16 @@
                     <h3 class="text-xl font-bold mb-6">Quick Links</h3>
                     <ul class="space-y-3">
                         <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
-                        <li><a href="about_us.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="#ai-robotics" class="text-gray-400 hover:text-white transition-colors">AI & Robotics</a></li>
-                        <li><a href="#eduverse" class="text-gray-400 hover:text-white transition-colors">Eduverse</a></li>
-                        <li><a href="#skill-labs" class="text-gray-400 hover:text-white transition-colors">Skill Labs</a></li>
-                        <li><a href="product.html" class="text-gray-400 hover:text-white transition-colors">Products</a></li>
+                        <li><a href="about_us.html" class="text-gray-400 hover:text-white transition-colors">About
+                                Us</a></li>
+                        <li><a href="#ai-robotics" class="text-gray-400 hover:text-white transition-colors">AI &
+                                Robotics</a></li>
+                        <li><a href="#eduverse" class="text-gray-400 hover:text-white transition-colors">Eduverse</a>
+                        </li>
+                        <li><a href="#skill-labs" class="text-gray-400 hover:text-white transition-colors">Skill
+                                Labs</a></li>
+                        <li><a href="product.html" class="text-gray-400 hover:text-white transition-colors">Products</a>
+                        </li>
                         <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
                     </ul>
                 </div>
@@ -204,12 +222,18 @@
                 <div>
                     <h3 class="text-xl font-bold mb-6">Our Programs</h3>
                     <ul class="space-y-3">
-                        <li><a href="#brainy-babies" class="text-gray-400 hover:text-white transition-colors">Brainy Babies (0-5 years)</a></li>
-                        <li><a href="#little-techies" class="text-gray-400 hover:text-white transition-colors">Little Techies (5-9 years)</a></li>
-                        <li><a href="#maker-school" class="text-gray-400 hover:text-white transition-colors">Maker School (9-17 years)</a></li>
-                        <li><a href="#future-innovators" class="text-gray-400 hover:text-white transition-colors">Future Innovators (16-25 years)</a></li>
-                        <li><a href="#school-lab-setup" class="text-gray-400 hover:text-white transition-colors">School Lab Setup</a></li>
-                        <li><a href="#faculty-development" class="text-gray-400 hover:text-white transition-colors">Faculty Development</a></li>
+                        <li><a href="#brainy-babies" class="text-gray-400 hover:text-white transition-colors">Brainy
+                                Babies (0-5 years)</a></li>
+                        <li><a href="#little-techies" class="text-gray-400 hover:text-white transition-colors">Little
+                                Techies (5-9 years)</a></li>
+                        <li><a href="#maker-school" class="text-gray-400 hover:text-white transition-colors">Maker
+                                School (9-17 years)</a></li>
+                        <li><a href="#future-innovators" class="text-gray-400 hover:text-white transition-colors">Future
+                                Innovators (16-25 years)</a></li>
+                        <li><a href="#school-lab-setup" class="text-gray-400 hover:text-white transition-colors">School
+                                Lab Setup</a></li>
+                        <li><a href="#faculty-development"
+                                class="text-gray-400 hover:text-white transition-colors">Faculty Development</a></li>
                     </ul>
                 </div>
 
@@ -217,11 +241,16 @@
                 <div>
                     <h3 class="text-xl font-bold mb-6">Policies</h3>
                     <ul class="space-y-3">
-                        <li><a href="privacy_policy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms & Conditions</a></li>
-                        <li><a href="refund_cancellation.html" class="text-gray-400 hover:text-white transition-colors">Refund & Cancellation</a></li>
-                        <li><a href="shipping_policy.html" class="text-gray-400 hover:text-white transition-colors">Shipping Policy</a></li>
-                        <li><a href="disclaimer.html" class="text-gray-400 hover:text-white transition-colors">Disclaimer</a></li>
+                        <li><a href="privacy_policy.html"
+                                class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms &
+                                Conditions</a></li>
+                        <li><a href="refund_cancellation.html"
+                                class="text-gray-400 hover:text-white transition-colors">Refund & Cancellation</a></li>
+                        <li><a href="shipping_policy.html"
+                                class="text-gray-400 hover:text-white transition-colors">Shipping Policy</a></li>
+                        <li><a href="disclaimer.html"
+                                class="text-gray-400 hover:text-white transition-colors">Disclaimer</a></li>
                     </ul>
                 </div>
 
@@ -244,10 +273,12 @@
 
             <div class="border-t border-gray-800 pt-8">
                 <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2025 PixelBotix Technologies Pvt. Ltd. All rights reserved.</p>
+                    <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2025 PixelBotix Technologies Pvt. Ltd. All
+                        rights reserved.</p>
                     <div class="flex space-x-6">
                         <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
-                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Terms of
+                            Service</a>
                         <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Cookie Policy</a>
                     </div>
                 </div>
@@ -262,7 +293,8 @@
                 </button>
 
                 <!-- WhatsApp Button -->
-                <a href="https://wa.me/917200445335?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20PixelBotix%20and%20your%20programs.%20Can%20you%20help%20me?" target="_blank"
+                <a href="https://wa.me/917200445335?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20PixelBotix%20and%20your%20programs.%20Can%20you%20help%20me?"
+                    target="_blank"
                     class="bg-green-500 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-green-600 transition-all transform hover:scale-105">
                     <i class="ri-whatsapp-line text-xl"></i>
                 </a>
@@ -288,7 +320,6 @@
             }
         });
     </script>
-
 
     <script id="mobile-menu-script">
         document.addEventListener('DOMContentLoaded', function () {
@@ -322,4 +353,6 @@
         });
     </script>
 
-</body></html>
+</body>
+
+</html>

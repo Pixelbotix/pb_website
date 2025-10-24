@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PixelBotix Technologies</title>
+
     <meta name="description"
         content="PixelBotix Technologies Pvt. Ltd. is a future-driven EdTech and product innovation company at the forefront of Robotics, AI, Smart Manufacturing, and Emerging Technologies. Founded by a team of researchers, inventors, and educators, PixelBotix transforms cutting-edge research into practical solutions while fostering immersive, hands-on learning experiences.
 
@@ -14,8 +15,10 @@
     PixelBotix offers a diverse ecosystem: Brainy Babies, Little Techies, Maker School, and Future Innovators are part of our Edverse platform for future-ready learners; PixelBotix Skill Labs delivers hands-on technical training; and the AI & Robotics Hub powers research through advanced, domain-specific labs.
     
     We aim to empower the next generation of innovators by bridging the gap between academic research and real-world applications in technology and education." />
+
     <meta name="keywords"
         content="PixelBotix, PIXELBOTIX, pixelbotix, pixel, botix, Robotics, Artificial Intelligence, AI, Machine Learning, Smart Manufacturing, EdTech, STEM , UAV, AMR, AI and Robotics Hub, Skill Labs, Maker School, Brainy Babies, Little Techies, Future Innovators, Emerging Technologies, Additive Manufacturing, Computer Vision, Assistive Devices, Research and Development, Hands-on Learning, Innovation, Educational Technology, AI Training, Robotics Training, Future Skills, STEM Learning, Tech Education for Kids" />
+
     <meta name="author" content="PixelBotix Technologies Pvt. Ltd." />
     <link rel="canonical" href="https://pixelbotix.com/" />
     <link rel="manifest" href="/site.webmanifest" />
@@ -48,11 +51,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
                         primary: '#3b82f6',
-                        secondary: '#10b981'
+                        secondary: '#1e40af'
                     },
                     borderRadius: {
                         'none': '0px',
@@ -70,11 +74,30 @@
             }
         }
     </script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
 
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider-item {
+            min-width: 100%;
+            flex-shrink: 0;
+        }
+    </style>
     <link rel="icon" type="image/png" href="static/favicon/favicon.png">
 </head>
 
-<body class="bg-gray-50">
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
 
     <!-- Loader -->
     <div id="page-loader" class="fixed inset-0 bg-white z-[9999] flex items-center justify-center">
@@ -83,75 +106,101 @@
 
 
     <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50 transition-colors duration-300">
-        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 shadow-lg transition-colors duration-300">
+        <div class="w-full px-4 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#" class="flex items-center">
+                    <!-- Dark theme logo (shown only in dark mode) -->
+                    <img src="static/logo/logo-dark.png" alt="Logo Light" class="w-20 h-20 hidden dark:inline-block">
+                    <img src="static/logo/logo-white.png" alt="Logo Dark" class="w-20 h-20 inline-block dark:hidden">
+                </a>
 
-            <a href="#" class="text-2xl font-['Pacifico'] text-primary">
-                <!-- For Dark Logo -->
-                <img src="static/logo/logo-white.png" alt="Logo Light" class="w-20 h-20 logo-light">
-                <!-- For Light Logo -->
-                <img src="static/logo/logo-dark.png" alt="Logo Dark" class="w-20 h-20 logo-dark">
-            </a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Home</a>
+                    <a href="about_us.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">About Us</a>
 
+                    <!-- Dropdown for Services -->
+                    <div class="relative group">
+                        <button
+                            class="text-gray-900 dark:text-white hover:text-primary transition-colors flex items-center space-x-2">
+                            <i class="ri-service-line"></i> <!-- Service Icon -->
+                            <span>Services</span>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div
+                            class="absolute left-0 mt-2 w-64 bg-white dark:bg-gray-800 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 group-hover:block transition-opacity duration-300 p-4 space-y-3">
+                            <!-- AI & Robotics -->
+                            <a href="index.html#ai-robotics"
+                                class="flex items-center space-x-3 py-2 px-4 text-gray-900 dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                <i class="ri-robot-line text-xl"></i>
+                                <span>AI & Robotics</span>
+                            </a>
+                            <!-- Eduverse -->
+                            <a href="index.html#eduverse"
+                                class="flex items-center space-x-3 py-2 px-4 text-gray-900 dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                <i class="ri-earth-line text-xl"></i>
+                                <span>Eduverse</span>
+                            </a>
+                            <!-- Skill Labs -->
+                            <a href="index.html#skill-labs"
+                                class="flex items-center space-x-3 py-2 px-4 text-gray-900 dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                <i class="ri-laptop-line text-xl"></i>
+                                <span>Skill Labs</span>
+                            </a>
+                        </div>
+                    </div>
 
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex items-center space-x-6">
-                <a href="#home" class="text-gray-800 hover:text-primary transition-colors">Home</a>
-                <a href="About_Us.html" class="text-gray-800 hover:text-primary transition-colors">About Us</a>
-                <a href="#ai-robotics" class="text-gray-800 hover:text-primary transition-colors">AI & Robotics</a>
-                <a href="#eduverse" class="text-gray-800 hover:text-primary transition-colors">Eduverse</a>
-                <a href="#skill-labs" class="text-gray-800 hover:text-primary transition-colors">Skill Labs</a>
-                <!-- <a href="workshop_register.html" class="text-gray-800 hover:text-primary transition-colors">Workshops</a> -->
-                <a href="product.html" class="text-gray-800 hover:text-primary transition-colors">Products</a>
-                <a href="#contact" class="text-gray-800 hover:text-primary transition-colors">Contact</a>
-            </nav>
-            <div class="flex items-center space-x-4">
+                    <a href="#"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Products</a>
+                    <a href="index.html#contact"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Contact</a>
+                </nav>
 
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button"
-                    class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
-                    <i class="ri-menu-line ri-lg"></i>
-                </button>
-                <!-- Theme Toggle -->
-                <div class="flex items-center">
-                    <span class="mr-2 text-gray-600 hidden sm:inline">
-                        <i class="ri-sun-line ri-lg"></i>
-                    </span>
-                    <label class="switch">
-                        <input type="checkbox" id="theme-toggle">
-                        <span class="slider"></span>
-                    </label>
-                    <span class="ml-2 text-gray-600 hidden sm:inline">
-                        <i class="ri-moon-line ri-lg"></i>
-                    </span>
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle"
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                        <i class="ri-sun-line dark:hidden ri-lg"></i>
+                        <i class="ri-moon-line hidden dark:block ri-lg"></i>
+                    </button>
+                    <button id="mobile-menu-toggle"
+                        class="md:hidden w-10 h-10 flex items-center justify-center text-gray-900 dark:text-white">
+                        <i class="ri-menu-line ri-lg"></i>
+                    </button>
                 </div>
-
             </div>
         </div>
-        <!-- Mobile Navigation -->
+
+        <!-- Mobile Menu -->
         <div id="mobile-menu"
-            class="md:hidden bg-white shadow-lg absolute w-full left-0 top-full hidden transition-all duration-300 transform origin-top">
-            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
-                <a href="#home"
-                    class="text-gray-800 hover:text-primary transition-colors py-2 border-b border-gray-100">Home</a>
-                <a href="About_Us.html"
-                    class="text-gray-800 hover:text-primary transition-colors py-2 border-b border-gray-100">About
-                    Us</a>
-                <a href="#ai-robotics"
-                    class="text-gray-800 hover:text-primary transition-colors py-2 border-b border-gray-100">AI &
-                    Robotics</a>
-                <a href="#eduverse"
-                    class="text-gray-800 hover:text-primary transition-colors py-2 border-b border-gray-100">Eduverse</a>
-                <a href="#skill-labs"
-                    class="text-gray-800 hover:text-primary transition-colors py-2 border-b border-gray-100">Skill
-                    Labs</a>
-                <!-- <a href="workshop_register.html" class="text-gray-800 hover:text-primary transition-colors py-2 border-b border-gray-100">Workshops</a> -->
-                <a href="product.html"
-                    class="text-gray-800 hover:text-primary transition-colors py-2 border-b border-gray-100">Products</a>
-                <a href="#contact" class="text-gray-800 hover:text-primary transition-colors py-2">Contact</a>
+            class="md:hidden hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-900 dark:text-white hover:text-primary">Home</a>
+                <a href="about_us.html" class="block py-2 text-gray-900 dark:text-white hover:text-primary">About Us</a>
+
+                <!-- Mobile dropdown for Services -->
+                <div class="space-y-2">
+                    <button class="w-full text-left text-gray-900 dark:text-white hover:text-primary">
+                        Services
+                    </button>
+                    <div class="space-y-2 pl-4">
+                        <a href="index.html#ai-robotics"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">AI & Robotics</a>
+                        <a href="index.html#eduverse"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">Eduverse</a>
+                        <a href="index.html#skill-labs"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">Skill Labs</a>
+                    </div>
+                </div>
+
+                <a href="#" class="block py-2 text-gray-900 dark:text-white hover:text-primary">Products</a>
+                <a href="index.html#contact"
+                    class="block py-2 text-gray-900 dark:text-white hover:text-primary">Contact</a>
             </div>
         </div>
     </header>
+
     <!-- Hero Section -->
 
     <section id="home" class="relative hero-slider mt-16">
@@ -168,7 +217,7 @@
                         Transforming ideas into innovations through robotics, AI, and smart manufacturing
                     </p>
                     <div class="flex flex-wrap gap-4">
-                        <a href="About_Us.html"
+                        <a href="about_us.html"
                             class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-blue-600 transition-colors shadow-lg whitespace-nowrap">Discover
                             More</a>
                         <a href="https://forms.gle/x1cMZfPsmMgJp6T56" target="_blank"
@@ -1967,7 +2016,7 @@
                     <h3 class="text-xl font-bold mb-6">Quick Links</h3>
                     <ul class="space-y-3">
                         <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
-                        <li><a href="About_Us.html" class="text-gray-400 hover:text-white transition-colors">About
+                        <li><a href="about_us.html" class="text-gray-400 hover:text-white transition-colors">About
                                 Us</a></li>
                         <li><a href="#ai-robotics" class="text-gray-400 hover:text-white transition-colors">AI &
                                 Robotics</a></li>
@@ -2070,46 +2119,49 @@
     <script id="theme-toggle-script">
         document.addEventListener('DOMContentLoaded', function () {
             const themeToggle = document.getElementById('theme-toggle');
-            const body = document.body;
-            // Check for saved theme preference or use preferred color scheme
-            const savedTheme = localStorage.getItem('theme');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-                body.classList.add('dark');
-                themeToggle.checked = true;
-            }
-            // Toggle theme on change
-            themeToggle.addEventListener('change', function () {
-                if (this.checked) {
-                    body.classList.add('dark');
-                    localStorage.setItem('theme', 'dark');
-                } else {
-                    body.classList.remove('dark');
-                    localStorage.setItem('theme', 'light');
-                }
+            const html = document.documentElement;
+            themeToggle.addEventListener('click', function () {
+                html.classList.toggle('dark');
+                localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
             });
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                if (savedTheme === 'dark') {
+                    html.classList.add('dark');
+                } else {
+                    html.classList.remove('dark');
+                }
+            }
         });
     </script>
 
     <script id="mobile-menu-script">
         document.addEventListener('DOMContentLoaded', function () {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
             const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuButton.addEventListener('click', function () {
-                if (mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.remove('hidden');
-                    mobileMenuButton.innerHTML = '<i class="ri-close-line ri-lg"></i>';
-                } else {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenuButton.innerHTML = '<i class="ri-menu-line ri-lg"></i>';
-                }
+            mobileMenuToggle.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
             });
-            // Close mobile menu when clicking on a link
-            const mobileLinks = mobileMenu.querySelectorAll('a');
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', function () {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenuButton.innerHTML = '<i class="ri-menu-line ri-lg"></i>';
+        });
+    </script>
+
+    <script id="back-to-top-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const backToTopButton = document.getElementById('back-to-top');
+            function toggleBackToTopButton() {
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.remove('opacity-0', 'invisible');
+                    backToTopButton.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopButton.classList.remove('opacity-100', 'visible');
+                    backToTopButton.classList.add('opacity-0', 'invisible');
+                }
+            }
+            window.addEventListener('scroll', toggleBackToTopButton);
+            backToTopButton.addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
                 });
             });
         });
@@ -2332,28 +2384,6 @@
                     } else {
                         item.style.display = 'none';
                     }
-                });
-            });
-        });
-    </script>
-
-    <script id="back-to-top-script">
-        document.addEventListener('DOMContentLoaded', function () {
-            const backToTopButton = document.getElementById('back-to-top');
-            function toggleBackToTopButton() {
-                if (window.scrollY > 300) {
-                    backToTopButton.classList.remove('opacity-0', 'invisible');
-                    backToTopButton.classList.add('opacity-100', 'visible');
-                } else {
-                    backToTopButton.classList.remove('opacity-100', 'visible');
-                    backToTopButton.classList.add('opacity-0', 'invisible');
-                }
-            }
-            window.addEventListener('scroll', toggleBackToTopButton);
-            backToTopButton.addEventListener('click', function () {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
                 });
             });
         });

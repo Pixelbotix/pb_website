@@ -6,15 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PixelBotix Pvt About Us</title>
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!-- Remix Icon CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
     <!-- Tailwind CSS CDN -->
+
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
                         primary: '#3b82f6',
-                        secondary: '#94a3b8'
+                        secondary: '#1e40af'
                     },
                     borderRadius: {
                         'none': '0px',
@@ -32,60 +44,128 @@
             }
         }
     </script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="static/css/style.css">
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+        }
 
-    <!-- Remix Icon CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+        .slider-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
 
-<style>
-#page-loader {
-  transition: opacity 0.6s ease;
-}
-</style>
-
+        .slider-item {
+            min-width: 100%;
+            flex-shrink: 0;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="static/favicon/favicon.png">
 </head>
 
-<body class="bg-gray-900">
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
 
     <!-- Loader -->
     <div id="page-loader" class="fixed inset-0 bg-white z-[9999] flex items-center justify-center">
         <div class="w-16 h-16 border-4 border-gray-300 border-t-blue-600 rounded-full animate-spin"></div>
     </div>
-    <!-- Header -->
-    <header class="fixed w-full bg-gray-800/80 backdrop-blur-sm shadow-lg shadow-black/10 z-40">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
 
-            <a href="#" class="text-3xl font-['Pacifico'] text-primary">
-                <img src="static/logo/logo-dark.png" alt="Logo" class="w-20 h-20">
-            </a>
-            <div class="hidden md:flex space-x-8">
-                <a href="index.html" class="text-gray-300 hover:text-primary font-medium transition-colors">Home</a>
-                <a href="#" class="text-primary font-medium border-b-2 border-primary">About Us</a>
-                <!-- <a href="#" class="text-gray-300 hover:text-primary font-medium transition-colors">Pricing</a> -->
-                <!-- <a href = "workshop_register.html" class="text-gray-300 hover:text-primary font-medium transition-colors">Workshops</a> -->
-                <a href="index.html#contact"
-                    class="text-gray-300 hover:text-primary font-medium transition-colors">Contact</a>
-            </div>
-            <div class="md:hidden flex items-center">
-                <button id="mobile-menu-button" class="w-10 h-10 flex items-center justify-center text-gray-300">
-                    <i class="ri-menu-line ri-lg"></i>
-                </button>
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 shadow-lg transition-colors duration-300">
+        <div class="w-full px-4 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#" class="flex items-center">
+                    <!-- Dark theme logo (shown only in dark mode) -->
+                    <img src="static/logo/logo-dark.png" alt="Logo Light" class="w-20 h-20 hidden dark:inline-block">
+                    <img src="static/logo/logo-white.png" alt="Logo Dark" class="w-20 h-20 inline-block dark:hidden">
+                </a>
+
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Home</a>
+                    <a href="about_us.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">About Us</a>
+
+                    <!-- Dropdown for Services -->
+                    <div class="relative group">
+                        <button
+                            class="text-gray-900 dark:text-white hover:text-primary transition-colors flex items-center space-x-2">
+                            <i class="ri-service-line"></i> <!-- Service Icon -->
+                            <span>Services</span>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div
+                            class="absolute left-0 mt-2 w-64 bg-white dark:bg-gray-800 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 group-hover:block transition-opacity duration-300 p-4 space-y-3">
+                            <!-- AI & Robotics -->
+                            <a href="index.html#ai-robotics"
+                                class="flex items-center space-x-3 py-2 px-4 text-gray-900 dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                <i class="ri-robot-line text-xl"></i>
+                                <span>AI & Robotics</span>
+                            </a>
+                            <!-- Eduverse -->
+                            <a href="index.html#eduverse"
+                                class="flex items-center space-x-3 py-2 px-4 text-gray-900 dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                <i class="ri-earth-line text-xl"></i>
+                                <span>Eduverse</span>
+                            </a>
+                            <!-- Skill Labs -->
+                            <a href="index.html#skill-labs"
+                                class="flex items-center space-x-3 py-2 px-4 text-gray-900 dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                <i class="ri-laptop-line text-xl"></i>
+                                <span>Skill Labs</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="#"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Products</a>
+                    <a href="index.html#contact"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Contact</a>
+                </nav>
+
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle"
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                        <i class="ri-sun-line dark:hidden ri-lg"></i>
+                        <i class="ri-moon-line hidden dark:block ri-lg"></i>
+                    </button>
+                    <button id="mobile-menu-toggle"
+                        class="md:hidden w-10 h-10 flex items-center justify-center text-gray-900 dark:text-white">
+                        <i class="ri-menu-line ri-lg"></i>
+                    </button>
+                </div>
             </div>
         </div>
+
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-800/95 backdrop-blur-sm w-full border-t border-gray-700">
-            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
-                <a href="index.html" class="text-gray-300 py-2 hover:text-primary font-medium">Home</a>
-                <a href="#" class="text-primary py-2 font-medium">About Us</a>
-                <!-- <a href="#" class="text-gray-300 py-2 hover:text-primary font-medium">Pricing</a> -->
-                <!-- <a href = "workshop_register.html" class="text-gray-300 py-2 hover:text-primary font-medium">Workshops</a> -->
-                <a href="index.html#contact_us" class="text-gray-300 py-2 hover:text-primary font-medium">Contact</a>
+        <div id="mobile-menu"
+            class="md:hidden hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-900 dark:text-white hover:text-primary">Home</a>
+                <a href="about_us.html" class="block py-2 text-gray-900 dark:text-white hover:text-primary">About Us</a>
+
+                <!-- Mobile dropdown for Services -->
+                <div class="space-y-2">
+                    <button class="w-full text-left text-gray-900 dark:text-white hover:text-primary">
+                        Services
+                    </button>
+                    <div class="space-y-2 pl-4">
+                        <a href="index.html#ai-robotics"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">AI & Robotics</a>
+                        <a href="index.html#eduverse"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">Eduverse</a>
+                        <a href="index.html#skill-labs"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">Skill Labs</a>
+                    </div>
+                </div>
+
+                <a href="#" class="block py-2 text-gray-900 dark:text-white hover:text-primary">Products</a>
+                <a href="index.html#contact"
+                    class="block py-2 text-gray-900 dark:text-white hover:text-primary">Contact</a>
             </div>
         </div>
     </header>
@@ -174,6 +254,8 @@
             </div>
         </div>
     </section>
+
+
     <!-- Mission and Vision Section -->
     <section class="py-20 bg-gray-900">
         <div class="container mx-auto px-4">
@@ -203,6 +285,8 @@
             </div>
         </div>
     </section>
+
+
     <!-- Founders and Partners Section -->
     <section class="py-20 bg-gray-800">
         <div class="container mx-auto px-4">
@@ -272,6 +356,7 @@
 
     </section>
 
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-white pt-16 pb-8">
         <div class="container mx-auto px-4">
@@ -310,7 +395,7 @@
                     <h3 class="text-xl font-bold mb-6">Quick Links</h3>
                     <ul class="space-y-3">
                         <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
-                        <li><a href="About_Us.html" class="text-gray-400 hover:text-white transition-colors">About
+                        <li><a href="about_us.html" class="text-gray-400 hover:text-white transition-colors">About
                                 Us</a></li>
                         <li><a href="#ai-robotics" class="text-gray-400 hover:text-white transition-colors">AI &
                                 Robotics</a></li>
@@ -408,8 +493,60 @@
         </div>
     </footer>
 
-    <!-- Modals -->
+    <script id="theme-toggle-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const themeToggle = document.getElementById('theme-toggle');
+            const html = document.documentElement;
+            
+            // Check and apply the saved theme from localStorage
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                html.classList.add('dark');  // Set to dark theme
+            } else {
+                html.classList.remove('dark');  // Set to light theme
+            }
 
+            themeToggle.addEventListener('click', function () {
+                html.classList.toggle('dark');  // Toggle dark mode on <html> element
+                localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+            });
+        });
+
+    </script>
+
+    <script id="mobile-menu-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuToggle.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+    <script id="back-to-top-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const backToTopButton = document.getElementById('back-to-top');
+            function toggleBackToTopButton() {
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.remove('opacity-0', 'invisible');
+                    backToTopButton.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopButton.classList.remove('opacity-100', 'visible');
+                    backToTopButton.classList.add('opacity-0', 'invisible');
+                }
+            }
+            window.addEventListener('scroll', toggleBackToTopButton);
+            backToTopButton.addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- Modals -->
     <div id="founder-modal" class="modal fixed inset-0 bg-black/70 z-50 hidden flex items-center justify-center">
         <div class="bg-gray-800 rounded-lg max-w-2xl w-full mx-4 md:mx-auto p-6 relative border border-gray-700/50 shadow-xl shadow-black/20 
                 overflow-y-auto max-h-[90vh]">
@@ -431,6 +568,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- Hero Slider Script -->
     <script>
@@ -489,7 +627,7 @@
         });
     </script>
 
-
+    <!-- Founder script  -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Founder modal elements
@@ -593,6 +731,7 @@
             });
         });
     </script>
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
