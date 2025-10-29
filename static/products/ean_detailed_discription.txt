@@ -2348,16 +2348,19 @@ n inside urls.py
 Ideal 3d
 
 fdm
-1.  Bambu Lab A1 Mini 3D Printer ideal3d 22500 Sale Price 19999
-2.  Bambu Lab A1 Mini Combo 3D Printer 40000 / 35999
-3.  Bambu Lab A1 3D Printer 32500 / 30000 
-4.  Bambu Lab A1 Combo 3D Printer 50000 / 45999 
-5.  Bambu Lab P1S 3D Printer 63000 / 53999 
-6.  Bambu Lab P1S Combo 3D Printer 85000 / 74999 
-7.  Bambu Lab P1S With AMS 2 Pro 3D Printer not in ideal 3d
-8.  Bambu Lab X1 Carbon 3D Printer 129000 / 107100 
-9.  Bambu Lab X1 Carbon Combo 3D Printer / Bambu Lab X1 – Carbon Combo 3D Printer 150000 / 124500
-10. Bambu Lab H2D 3D Printer 225000 / 186800
+1.  Bambu Lab A1 Mini 3D Printer ideal3d 22500 Sale Price 19999 *
+2.  Bambu Lab A1 Mini Combo 3D Printer 40000 / 35999 *
+3.  Bambu Lab A1 3D Printer 32500 / 30000 *
+4.  Bambu Lab A1 Combo 3D Printer 50000 / 45999 *
+5.  Bambu Lab P1S 3D Printer 63000 / 53999 *
+6.  Bambu Lab P1S Combo 3D Printer 85000 / 74999 *
+7.  Bambu Lab P1S With AMS 2 Pro 3D Printer *
+7.2 Bambu Lab P2S With AMS 2 PRO 3D Printer *
+Bambu Lab P2S With AMS 2 PRO 3D Printer Combo ( PRE ORDER ) *
+8.  Bambu Lab X1 Carbon 3D Printer 129000 / 107100 *
+9.  Bambu Lab X1 Carbon Combo 3D Printer / Bambu Lab X1 – Carbon Combo 3D Printer 150000 / 124500 *
+10. Bambu Lab H2D 3D Printer 225000 / 186800 *
+Bambu Lab H2D 3D Printer 2 not added to db
 11. BAMBULAB - H2D AMS Combo not in robu 259999
 12. Bambu Lab H2S AMS Combo 3D Printer 170000
 13. Bambu Lab H2S 10W Full Laser Combo 3D Printer
@@ -2380,7 +2383,7 @@ Elegoo
 
 Pratham
 
-1.  Pratham Mini - Compact FDM 3d Printer On request 
+1.  Pratham Mini - Compact FDM 3d Printer On request *
 2.  Pratham Desktop - Compact FDM 3D Printer On request
 3.  Pratham 3.0 - Large Prototype On request
 4.  Pratham 5.0 - Industrial Prototyping On request
@@ -2390,7 +2393,7 @@ Pratham
 
 Resin
 
-1.  Elegoo Saturn 4 Ultra 16K 
+1.  Elegoo Saturn 4 Ultra 16K *
 2.  Elegoo Jupiter SE 69000 / 65000
 3.  Elegoo Mars 5 Ultra 35000 / 32500
 4.  Elegoo Saturn 3 Ultra 50000 / 43000
@@ -2407,6 +2410,11 @@ Uniformation
 
 
 
+dlp
+
+EKA XL *
+EKA hT *
+EKA XLE *
 
 
 
