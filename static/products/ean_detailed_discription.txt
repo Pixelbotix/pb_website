@@ -2421,4 +2421,6 @@ EKA XLE *
 
 
 
-
+navbar, footer part completed
+1. privacy_policy
+2. shipping_policy

@@ -144,45 +144,9 @@
 </head>
 
 <body class="dark bg-gray-900 text-white transition-colors duration-300">
-    <header class="fixed top-0 left-0 right-0 z-50 bg-gray-900 shadow-lg transition-colors duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <h1 class="text-2xl font-['Pacifico'] text-primary">TechPrint</h1>
-                </div>
-                <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Home</a>
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors">About Us</a>
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors">AI & Robotics</a>
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Eduverse</a>
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Skill Labs</a>
-                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Contact</a>
-                    <button id="theme-toggle"
-                        class="p-2 rounded-button bg-gray-700 hover:bg-gray-600 transition-colors">
-                        <div class="w-5 h-5 flex items-center justify-center">
-                            <i class="ri-sun-line text-yellow-400"></i>
-                        </div>
-                    </button>
-                </nav>
-                <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-button bg-gray-700 hover:bg-gray-600">
-                    <div class="w-6 h-6 flex items-center justify-center">
-                        <i class="ri-menu-line"></i>
-                    </div>
-                </button>
-            </div>
-        </div>
-        <div id="mobile-menu" class="md:hidden hidden bg-gray-800 border-t border-gray-700">
-            <div class="px-4 py-2 space-y-2">
-                <a href="#" class="block py-2 text-gray-300 hover:text-white">Home</a>
-                <a href="#" class="block py-2 text-gray-300 hover:text-white">About Us</a>
-                <a href="#" class="block py-2 text-gray-300 hover:text-white">AI & Robotics</a>
-                <a href="#" class="block py-2 text-gray-300 hover:text-white">Eduverse</a>
-                <a href="#" class="block py-2 text-gray-300 hover:text-white">Skill Labs</a>
-                <a href="#" class="block py-2 text-gray-300 hover:text-white">Contact</a>
-            </div>
-        </div>
-    </header>
 
+    <!-- Navbar -->
+    <div id="navbar"></div>
     
     <main class="pt-16">
         <section class="py-16 bg-gray-800 transition-colors duration-300">
@@ -1306,253 +1270,33 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white pt-16 pb-8">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
-                <!-- Company Info -->
-                <div>
-                    <h3 class="text-xl font-bold mb-6">PixelBotix Technologies</h3>
-                    <p class="text-gray-400 mb-6">Future-driven product innovation and EdTech company pioneering the
-                        convergence of Robotics, AI, Smart Manufacturing, and Emerging Technologies.</p>
-                    <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/profile.php?id=61575683369348" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="ri-facebook-fill ri-lg"></i>
-                        </a>
-                        <a href="https://x.com/PixelBotix" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="ri-twitter-fill ri-lg"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/company/pixelbotix/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="ri-linkedin-fill ri-lg"></i>
-                        </a>
-                        <a href="https://www.instagram.com/pixel_botix/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="ri-instagram-fill ri-lg"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@PixelBotix" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="ri-youtube-fill ri-lg"></i>
-                        </a>
-                    </div>
-                </div>
+    <div id="footer"></div>
 
-                <!-- Quick Links -->
-                <div>
-                    <h3 class="text-xl font-bold mb-6">Quick Links</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
-                        <li><a href="about_us.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="#ai-robotics" class="text-gray-400 hover:text-white transition-colors">AI & Robotics</a></li>
-                        <li><a href="#eduverse" class="text-gray-400 hover:text-white transition-colors">Eduverse</a></li>
-                        <li><a href="#skill-labs" class="text-gray-400 hover:text-white transition-colors">Skill Labs</a></li>
-                        <li><a href="https://shop.pixelbotix.com/" class="text-gray-400 hover:text-white transition-colors">Products</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
-                    </ul>
-                </div>
+    <!-- Dynamically update page -->
+    <script>
+        // Dynamically load HTML partials
+        async function loadHTML(id, file) {
+            const el = document.getElementById(id);
+            try {
+                const response = await fetch(file);
+                if (!response.ok) throw new Error('Failed to load ' + file);
+                el.innerHTML = await response.text();
+            } catch (err) {
+                el.innerHTML = "<p style='color:red'>Error loading " + file + "</p>";
+            }
+        }
 
-                <!-- Our Programs -->
-                <div>
-                    <h3 class="text-xl font-bold mb-6">Our Programs</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#brainy-babies" class="text-gray-400 hover:text-white transition-colors">Brainy Babies (0-5 years)</a></li>
-                        <li><a href="#little-techies" class="text-gray-400 hover:text-white transition-colors">Little Techies (5-9 years)</a></li>
-                        <li><a href="#maker-school" class="text-gray-400 hover:text-white transition-colors">Maker School (9-17 years)</a></li>
-                        <li><a href="#future-innovators" class="text-gray-400 hover:text-white transition-colors">Future Innovators (16-25 years)</a></li>
-                        <li><a href="#school-lab-setup" class="text-gray-400 hover:text-white transition-colors">School Lab Setup</a></li>
-                        <li><a href="#faculty-development" class="text-gray-400 hover:text-white transition-colors">Faculty Development</a></li>
-                    </ul>
-                </div>
-
-                <!-- Policies -->
-                <div>
-                    <h3 class="text-xl font-bold mb-6">Policies</h3>
-                    <ul class="space-y-3">
-                        <li><a href="privacy_policy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms & Conditions</a></li>
-                        <li><a href="refund_cancellation.html" class="text-gray-400 hover:text-white transition-colors">Refund & Cancellation</a></li>
-                        <li><a href="shipping_policy.html" class="text-gray-400 hover:text-white transition-colors">Shipping Policy</a></li>
-                        <li><a href="disclaimer.html" class="text-gray-400 hover:text-white transition-colors">Disclaimer</a></li>
-                    </ul>
-                </div>
-
-                <!-- Newsletter -->
-                <div>
-                    <h3 class="text-xl font-bold mb-6">Subscribe to Our Newsletter</h3>
-                    <p class="text-gray-400 mb-4">Stay updated with our latest news, programs, and innovations.</p>
-                    <form class="mb-4">
-                        <div class="flex">
-                            <input type="email" placeholder="Your email address"
-                                class="px-4 py-3 bg-gray-800 text-white rounded-l focus:outline-none focus:ring-2 focus:ring-primary border-none flex-grow">
-                            <button type="submit"
-                                class="bg-primary text-white px-4 py-3 rounded-r hover:bg-blue-600 transition-colors whitespace-nowrap">Subscribe</button>
-                        </div>
-                    </form>
-                    <p class="text-gray-500 text-sm">By subscribing, you agree to our Privacy Policy and consent to
-                        receive updates from our company.</p>
-                </div>
-            </div>
-
-            <div class="border-t border-gray-800 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2025 PixelBotix Technologies Pvt. Ltd. All rights reserved.</p>
-                    <div class="flex space-x-6">
-                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
-                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Terms of Service</a>
-                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Cookie Policy</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Floating Buttons Container -->
-            <div class="fixed bottom-8 right-8 z-50 flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
-                <!-- Back to Top Button -->
-                <button id="back-to-top"
-                    class="bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
-                    <i class="ri-arrow-up-line ri-lg"></i>
-                </button>
-
-                <!-- WhatsApp Button -->
-                <a href="https://wa.me/917200445335?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20PixelBotix%20and%20your%20programs.%20Can%20you%20help%20me?" target="_blank"
-                    class="bg-green-500 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-green-600 transition-all transform hover:scale-105">
-                    <i class="ri-whatsapp-line text-xl"></i>
-                </a>
-            </div>
-        </div>
-    </footer>
-
-    <script id="theme-toggle-script">
-        document.addEventListener('DOMContentLoaded', function () {
-            const themeToggle = document.getElementById('theme-toggle');
-            const body = document.body;
-            const themeIcon = themeToggle.querySelector('i');
-            const header = document.querySelector('header');
-            const heroSection = document.querySelector('main section:first-child');
-            const productSection = document.querySelector('section.py-16');
-            const footer = document.querySelector('footer');
-            const modal = document.getElementById('product-modal');
-            themeToggle.addEventListener('click', function () {
-                body.classList.toggle('dark');
-                if (body.classList.contains('dark')) {
-                    themeIcon.className = 'ri-sun-line text-yellow-400';
-                    body.classList.remove('bg-white', 'text-gray-900');
-                    body.classList.add('bg-gray-900', 'text-white');
-                    header.classList.remove('bg-white', 'shadow-gray-200');
-                    header.classList.add('bg-gray-900', 'shadow-gray-700');
-                    productSection.classList.remove('bg-gray-100');
-                    productSection.classList.add('bg-gray-800');
-                } else {
-                    themeIcon.className = 'ri-moon-line text-blue-400';
-                    body.classList.remove('bg-gray-900', 'text-white');
-                    body.classList.add('bg-white', 'text-gray-900');
-                    header.classList.remove('bg-gray-900', 'shadow-gray-700');
-                    header.classList.add('bg-white', 'shadow-gray-200');
-                    productSection.classList.remove('bg-gray-800');
-                    productSection.classList.add('bg-gray-100');
-                }
-                // Update all product cards
-                const productCards = document.querySelectorAll('.product-card');
-                productCards.forEach(card => {
-                    if (body.classList.contains('dark')) {
-                        card.classList.remove('bg-white', 'text-gray-900');
-                        card.classList.add('bg-gray-700', 'text-white');
-                    } else {
-                        card.classList.remove('bg-gray-700', 'text-white');
-                        card.classList.add('bg-white', 'text-gray-900');
-                    }
-                });
-                // Update filter buttons
-                const filterContainer = document.querySelector('.bg-gray-700');
-                const filterBtns = document.querySelectorAll('.filter-btn');
-                if (body.classList.contains('dark')) {
-                    if (filterContainer) {
-                        filterContainer.classList.remove('bg-gray-200');
-                        filterContainer.classList.add('bg-gray-700');
-                    }
-                    filterBtns.forEach(btn => {
-                        if (!btn.classList.contains('active')) {
-                            btn.classList.remove('text-gray-600', 'hover:bg-gray-300');
-                            btn.classList.add('text-gray-300', 'hover:bg-gray-600');
-                        }
-                    });
-                } else {
-                    if (filterContainer) {
-                        filterContainer.classList.remove('bg-gray-700');
-                        filterContainer.classList.add('bg-gray-200');
-                    }
-                    filterBtns.forEach(btn => {
-                        if (!btn.classList.contains('active')) {
-                            btn.classList.remove('text-gray-300', 'hover:bg-gray-600');
-                            btn.classList.add('text-gray-600', 'hover:bg-gray-300');
-                        }
-                    });
-                }
-                // Update modal
-                const modalContent = modal.querySelector('.bg-gray-800');
-                if (body.classList.contains('dark')) {
-                    modalContent.classList.remove('bg-white', 'text-gray-900');
-                    modalContent.classList.add('bg-gray-800', 'text-white');
-                } else {
-                    modalContent.classList.remove('bg-gray-800', 'text-white');
-                    modalContent.classList.add('bg-white', 'text-gray-900');
-                }
-                // Update navigation links
-                const navLinks = document.querySelectorAll('nav a, #mobile-menu a');
-                navLinks.forEach(link => {
-                    if (body.classList.contains('dark')) {
-                        link.classList.remove('text-gray-600', 'hover:text-gray-900');
-                        link.classList.add('text-gray-300', 'hover:text-white');
-                    } else {
-                        link.classList.remove('text-gray-300', 'hover:text-white');
-                        link.classList.add('text-gray-600', 'hover:text-gray-900');
-                    }
-                });
-            });
-        });
+        // Load components
+        loadHTML("navbar", "navbar.html");
+        loadHTML("footer", "footer.html");
+        loadHTML("main-content", "privacy_content.html");
     </script>
+    
+    <script src="js/common.js"></script>
 
-    <script id="mobile-menu-script">
-        document.addEventListener('DOMContentLoaded', function () {
-            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuToggle.addEventListener('click', function () {
-                mobileMenu.classList.toggle('hidden');
-            });
-        });
-    </script>
-
-    <!-- <script id="hero-slider-script">
-        document.addEventListener('DOMContentLoaded', function () {
-            const slider = document.getElementById('hero-slider');
-            const prevBtn = document.getElementById('prev-slide');
-            const nextBtn = document.getElementById('next-slide');
-            const indicators = document.querySelectorAll('.slide-indicator');
-            let currentSlide = 0;
-            const totalSlides = 5;
-            function updateSlider() {
-                slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-                indicators.forEach((indicator, index) => {
-                    indicator.classList.toggle('bg-opacity-100', index === currentSlide);
-                    indicator.classList.toggle('bg-opacity-50', index !== currentSlide);
-                });
-            }
-            function nextSlide() {
-                currentSlide = (currentSlide + 1) % totalSlides;
-                updateSlider();
-            }
-            function prevSlide() {
-                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-                updateSlider();
-            }
-            nextBtn.addEventListener('click', nextSlide);
-            prevBtn.addEventListener('click', prevSlide);
-            indicators.forEach((indicator, index) => {
-                indicator.addEventListener('click', () => {
-                    currentSlide = index;
-                    updateSlider();
-                });
-            });
-            setInterval(nextSlide, 5000);
-            updateSlider();
-        });
-    </script> -->
-
+    <!-- Your other JS (like theme toggle, back-to-top, etc.) -->
+    <script src="js/e.js"></script>
+    
     <script id="product-image-carousel-script">
         document.addEventListener('DOMContentLoaded', function () {
             const productCards = document.querySelectorAll('.product-card');

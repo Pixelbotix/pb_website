@@ -87,44 +87,10 @@
 </head>
 
 <body class="bg-gray-900 text-white transition-colors duration-300">
-    <!-- Navigation Header -->
-    <header
-        class="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-sm shadow-lg transition-colors duration-300">
-        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
-            <div class="flex items-center">
-                <span class="font-['Pacifico'] text-2xl text-primary">TechPrint Pro</span>
-            </div>
-            <div class="hidden lg:flex items-center space-x-8">
-                <a href="#" class="hover:text-primary transition-colors">Home</a>
-                <a href="#" class="hover:text-primary transition-colors">About Us</a>
-                <a href="#" class="hover:text-primary transition-colors">AI & Robotics</a>
-                <a href="#" class="hover:text-primary transition-colors">Eduverse</a>
-                <a href="#" class="hover:text-primary transition-colors">Skill Labs</a>
-                <a href="#" class="hover:text-primary transition-colors">Contact</a>
-            </div>
-            <div class="flex items-center space-x-4">
-                <button id="theme-toggle"
-                    class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-gray-700 !rounded-button transition-colors">
-                    <i class="ri-sun-line text-lg"></i>
-                </button>
-                <button id="mobile-menu-toggle"
-                    class="lg:hidden w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-gray-700 !rounded-button">
-                    <i class="ri-menu-line text-lg"></i>
-                </button>
-            </div>
-        </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="lg:hidden hidden bg-gray-900 border-t border-gray-700">
-            <div class="container mx-auto px-4 py-4 space-y-4">
-                <a href="#" class="block hover:text-primary transition-colors">Home</a>
-                <a href="#" class="block hover:text-primary transition-colors">About Us</a>
-                <a href="#" class="block hover:text-primary transition-colors">AI & Robotics</a>
-                <a href="#" class="block hover:text-primary transition-colors">Eduverse</a>
-                <a href="#" class="block hover:text-primary transition-colors">Skill Labs</a>
-                <a href="#" class="block hover:text-primary transition-colors">Contact</a>
-            </div>
-        </div>
-    </header>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
     <!-- Main Content -->
     <main class="pt-20">
         <!-- Filter Section -->
@@ -1021,6 +987,8 @@
             </div>
         </div>
     </div>
+
+
     <!-- Footer -->
     <footer class="bg-gray-900 border-t border-gray-700 mt-16">
         <div class="container mx-auto px-4 py-12">
@@ -1133,121 +1101,36 @@
             </div>
         </div>
     </footer>
-    <script id="theme-toggle-script">
-        document.addEventListener('DOMContentLoaded', function () {
-            const themeToggle = document.getElementById('theme-toggle');
-            const body = document.body;
-            const themeIcon = themeToggle.querySelector('i');
-            // Set initial dark mode
-            body.classList.add('dark');
-            themeToggle.addEventListener('click', function () {
-                if (body.classList.contains('dark')) {
-                    // Switch to light mode
-                    body.classList.remove('dark');
-                    body.classList.remove('bg-gray-900', 'text-white');
-                    body.classList.add('bg-white', 'text-gray-900');
-                    themeIcon.className = 'ri-moon-line text-lg';
-                    // Update header
-                    const header = document.querySelector('header');
-                    header.classList.remove('bg-gray-900/95');
-                    header.classList.add('bg-white/95', 'shadow-lg', 'border-b', 'border-gray-200');
-                    // Update all dark elements
-                    const darkElements = document.querySelectorAll('.bg-gray-800');
-                    darkElements.forEach(el => {
-                        if (!el.classList.contains('fixed') && !el.closest('header')) {
-                            el.classList.remove('bg-gray-800');
-                            el.classList.add('bg-white', 'border', 'border-gray-200');
-                        }
-                    });
-                    // Update quantity controls specifically
-                    const quantityButtons = document.querySelectorAll('.bg-gray-700');
-                    quantityButtons.forEach(btn => {
-                        btn.classList.remove('bg-gray-700', 'hover:bg-gray-600');
-                        btn.classList.add('bg-gray-100', 'hover:bg-gray-200', 'border', 'border-gray-300');
-                    });
-                    // Update quantity inputs
-                    const quantityInputs = document.querySelectorAll('.quantity-input');
-                    quantityInputs.forEach(input => {
-                        input.classList.remove('bg-gray-700');
-                        input.classList.add('bg-gray-50', 'border', 'border-gray-300', 'text-gray-900');
-                    });
-                    // Update text colors
-                    const whiteTextElements = document.querySelectorAll('.text-white');
-                    whiteTextElements.forEach(el => {
-                        if (!el.closest('button') || !el.closest('button').classList.contains('bg-primary')) {
-                            el.classList.remove('text-white');
-                            el.classList.add('text-gray-900');
-                        }
-                    });
-                    const grayTextElements = document.querySelectorAll('.text-gray-400');
-                    grayTextElements.forEach(el => {
-                        el.classList.remove('text-gray-400');
-                        el.classList.add('text-gray-600');
-                    });
-                    // Update footer
-                    const footer = document.querySelector('footer');
-                    footer.classList.remove('bg-gray-900');
-                    footer.classList.add('bg-gray-50', 'border-t', 'border-gray-200');
-                } else {
-                    // Switch to dark mode
-                    body.classList.add('dark');
-                    body.classList.remove('bg-white', 'text-gray-900');
-                    body.classList.add('bg-gray-900', 'text-white');
-                    themeIcon.className = 'ri-sun-line text-lg';
-                    // Update header
-                    const header = document.querySelector('header');
-                    header.classList.remove('bg-white/95', 'border-b', 'border-gray-200');
-                    header.classList.add('bg-gray-900/95');
-                    // Update all light elements back to dark
-                    const lightElements = document.querySelectorAll('.bg-white');
-                    lightElements.forEach(el => {
-                        if (!el.closest('body') && el.classList.contains('border')) {
-                            el.classList.remove('bg-white', 'border', 'border-gray-200');
-                            el.classList.add('bg-gray-800');
-                        }
-                    });
-                    // Update quantity controls back to dark
-                    const quantityButtons = document.querySelectorAll('.bg-gray-100');
-                    quantityButtons.forEach(btn => {
-                        btn.classList.remove('bg-gray-100', 'hover:bg-gray-200', 'border', 'border-gray-300');
-                        btn.classList.add('bg-gray-700', 'hover:bg-gray-600');
-                    });
-                    // Update quantity inputs back to dark
-                    const quantityInputs = document.querySelectorAll('.quantity-input');
-                    quantityInputs.forEach(input => {
-                        input.classList.remove('bg-gray-50', 'border', 'border-gray-300', 'text-gray-900');
-                        input.classList.add('bg-gray-700', 'text-white');
-                    });
-                    // Update text colors back to dark theme
-                    const darkTextElements = document.querySelectorAll('.text-gray-900');
-                    darkTextElements.forEach(el => {
-                        if (!el.closest('button') || !el.closest('button').classList.contains('bg-primary')) {
-                            el.classList.remove('text-gray-900');
-                            el.classList.add('text-white');
-                        }
-                    });
-                    const grayTextElements = document.querySelectorAll('.text-gray-600');
-                    grayTextElements.forEach(el => {
-                        el.classList.remove('text-gray-600');
-                        el.classList.add('text-gray-400');
-                    });
-                    // Update footer
-                    const footer = document.querySelector('footer');
-                    footer.classList.remove('bg-gray-50', 'border-t', 'border-gray-200');
-                    footer.classList.add('bg-gray-900');
-                }
-            });
-        });
+
+        <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Dynamically update page -->
+    <script>
+        // Dynamically load HTML partials
+        async function loadHTML(id, file) {
+            const el = document.getElementById(id);
+            try {
+                const response = await fetch(file);
+                if (!response.ok) throw new Error('Failed to load ' + file);
+                el.innerHTML = await response.text();
+            } catch (err) {
+                el.innerHTML = "<p style='color:red'>Error loading " + file + "</p>";
+            }
+        }
+
+        // Load components
+        loadHTML("navbar", "navbar.html");
+        loadHTML("footer", "footer.html");
+        loadHTML("main-content", "privacy_content.html");
     </script>
-    <script id="mobile-menu-script">
-        document.addEventListener('DOMContentLoaded', function () {
-            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuToggle.addEventListener('click', function () {
-                mobileMenu.classList.toggle('hidden');
-            });
-        });
-    </script>
+    
+    <script src="js/common.js"></script>
+
+    <!-- Your other JS (like theme toggle, back-to-top, etc.) -->
+    <script src="js/e.js"></script>
+
+
     <script id="filter-sidebar-script">
         document.addEventListener('DOMContentLoaded', function () {
             const filterToggle = document.getElementById('filter-toggle');
