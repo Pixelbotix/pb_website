@@ -86,6 +86,36 @@
     .dark .dropdown {
       background-color: #1f2937;
     }
+
+    /* Smooth hover highlight */
+    nav a,
+    .menu-group > button {
+        transition: color 0.25s ease, background-color 0.25s ease;
+    }
+
+    /* Dropdown link hover highlight */
+    .dropdown a:hover {
+        background-color: rgba(59, 130, 246, 0.1);
+        color: #3b82f6;
+        border-radius: 6px;
+        padding-left: 8px;
+    }
+
+    /* Light/Dark hover states */
+    .dark nav a:hover,
+    .dark .menu-group > button:hover {
+        color: #60a5fa;
+    }
+
+    /* Add Suble background highlight on hover */
+    .menu-group:hover > button {
+        background-color: rgba(59, 130, 246, 0.05);
+        border-radius: 6px;
+    }
+
+    .dark .menu-group:hover > button {
+        background-color: rgba(96, 165, 250, 0.15);
+    }
   </style>
 
   <!-- Favicon -->
@@ -142,30 +172,37 @@
 
 
     <!-- ===================== HEADER (NAVIGATION) ===================== -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 shadow-md transition-all duration-300">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 shadow-md transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 lg:px-8">
         <div class="flex items-center justify-between h-16">
-        <!-- Logo -->
+
+        <!-- Left: Logo -->
         <a href="index.html" class="flex items-center space-x-2">
             <img src="/static/logo/logo-dark.png" alt="PixelBotix Technologies" class="h-12 hidden dark:block" />
             <img src="/static/logo/logo-white.png" alt="PixelBotix Technologies" class="h-12 block dark:hidden" />
         </a>
 
-        <!-- Desktop Nav -->
+        <!-- Center: Navigation Links -->
         <nav class="hidden md:flex items-center space-x-8 text-gray-800 dark:text-gray-100 font-medium">
-            <a href="index.html" class="hover:text-primary">Home</a>
-            <a href="/about/about-us.html" class="hover:text-primary">About Us</a>
 
-            <!-- Solutions -->
-            <div class="relative menu-group">
-            <button class="flex items-center space-x-2 hover:text-primary">
+            <a href="index.html" class="hover:text-primary transition">Home</a>
+            <a href="/about/about-us.html" class="hover:text-primary transition">About Us</a>
+
+            <!-- Solutions Dropdown -->
+            <div class="relative group">
+            <button class="flex items-center space-x-2 hover:text-primary transition">
                 <i class="ri-flask-line"></i><span>Solutions</span>
+                <i class="ri-arrow-down-s-line ml-1 transition-transform duration-200 group-hover:rotate-180"></i>
             </button>
-            <div class="dropdown absolute left-0 mt-2 bg-white dark:bg-gray-800 shadow-lg rounded-lg mega-menu">
-                <!-- R&D Division -->
+
+            <div
+                class="absolute left-1/2 transform -translate-x-1/2 mt-3 bg-white dark:bg-gray-800 shadow-2xl rounded-2xl p-8 hidden group-hover:grid grid-cols-3 gap-10 w-[900px] border border-gray-100 dark:border-gray-700 transition-all duration-300 z-50">
+
+                <!-- Column 1: R&D Division -->
                 <div>
-                <h4 class="font-semibold mb-2">R&D Division</h4>
-                <ul class="space-y-2">
+                <h4 class="font-bold text-lg mb-3 text-primary">R&D Division</h4>
+                <ul class="space-y-2 text-gray-700 dark:text-gray-300">
                     <li><a href="ai-robotics.html" class="hover:text-primary">AI & Robotics</a></li>
                     <li><a href="uav-drones.html" class="hover:text-primary">UAV / Drones</a></li>
                     <li><a href="3d-printing-lab.html" class="hover:text-primary">3D Printing Lab</a></li>
@@ -175,10 +212,10 @@
                 </ul>
                 </div>
 
-                <!-- Eduverse -->
+                <!-- Column 2: Eduverse -->
                 <div>
-                <h4 class="font-semibold mb-2">Eduverse</h4>
-                <ul class="space-y-2">
+                <h4 class="font-bold text-lg mb-3 text-primary">Eduverse</h4>
+                <ul class="space-y-2 text-gray-700 dark:text-gray-300">
                     <li><a href="brainy-babies.html" class="hover:text-primary">Brainy Babies</a></li>
                     <li><a href="little-techies.html" class="hover:text-primary">Little Techies</a></li>
                     <li><a href="maker-school.html" class="hover:text-primary">Maker School</a></li>
@@ -186,10 +223,10 @@
                 </ul>
                 </div>
 
-                <!-- Skill Labs -->
+                <!-- Column 3: Skill Labs -->
                 <div>
-                <h4 class="font-semibold mb-2">Skill Labs</h4>
-                <ul class="space-y-2">
+                <h4 class="font-bold text-lg mb-3 text-primary">Skill Labs</h4>
+                <ul class="space-y-2 text-gray-700 dark:text-gray-300">
                     <li><a href="school-lab-setup.html" class="hover:text-primary">School Lab Setup</a></li>
                     <li><a href="college-lab-setup.html" class="hover:text-primary">College Lab Setup</a></li>
                     <li><a href="workshops.html" class="hover:text-primary">Workshops</a></li>
@@ -199,53 +236,90 @@
             </div>
             </div>
 
-            <!-- 3D Products -->
-            <div class="relative menu-group">
-            <button class="flex items-center space-x-2 hover:text-primary">
-                <i class="ri-cube-line"></i><span>3D Products</span>
+            <!-- Shop Dropdown -->
+            <div class="relative group">
+            <button class="flex items-center space-x-2 hover:text-primary transition">
+                <i class="ri-store-2-line"></i><span>Shop</span>
+                <i class="ri-arrow-down-s-line ml-1 transition-transform duration-200 group-hover:rotate-180"></i>
             </button>
-            <div class="dropdown absolute left-0 mt-2 w-64 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 space-y-2">
-                <a href="3d-printers.html" class="block hover:text-primary">3D Printers</a>
-                <a href="3d-scanners.html" class="block hover:text-primary">3D Scanners</a>
-                <a href="robotics-kits.html" class="block hover:text-primary">Robotics Kits</a>
+            <div
+                class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-64 bg-white dark:bg-gray-800 shadow-xl rounded-xl p-4 hidden group-hover:block z-50">
+                <a href="3d-printers.html" class="block py-1 hover:text-primary">3D Printers</a>
+                <a href="3d-scanners.html" class="block py-1 hover:text-primary">3D Scanners</a>
+                <a href="robotics-kits.html" class="block py-1 hover:text-primary">Robotics Kits</a>
             </div>
             </div>
 
-            <!-- Services -->
-            <div class="relative menu-group">
-            <button class="flex items-center space-x-2 hover:text-primary">
-                <i class="ri-settings-3-line"></i><span>Services</span>
+            <!-- Services Dropdown -->
+            <div class="relative group">
+            <button class="flex items-center space-x-2 hover:text-primary transition">
+                <i class="ri-tools-line"></i><span>Services</span>
+                <i class="ri-arrow-down-s-line ml-1 transition-transform duration-200 group-hover:rotate-180"></i>
             </button>
-            <div class="dropdown absolute left-0 mt-2 w-64 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 space-y-2">
-                <a href="3d-printing-services.html" class="block hover:text-primary">3D Printing Services</a>
-                <a href="3d-scanning-services.html" class="block hover:text-primary">3D Scanning Services</a>
-                <a href="guest-lectures.html" class="block hover:text-primary">Industrial Project Consultancy</a>
+            <div
+                class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-64 bg-white dark:bg-gray-800 shadow-xl rounded-xl p-4 hidden group-hover:block z-50">
+                <a href="3d-printing-services.html" class="block py-1 hover:text-primary">3D Printing Services</a>
+                <a href="3d-scanning-services.html" class="block py-1 hover:text-primary">3D Scanning Services</a>
+                <a href="industrial-consultancy.html" class="block py-1 hover:text-primary">Industrial Consultancy</a>
             </div>
             </div>
 
-            <!-- Engagements -->
-            <div class="relative menu-group">
-            <button class="flex items-center space-x-2 hover:text-primary">
-                <i class="ri-hand-heart-line"></i><span>Engagements</span>
+            <!-- Engagements Dropdown -->
+            <div class="relative group">
+            <button class="flex items-center space-x-2 hover:text-primary transition">
+                <i class="ri-group-line"></i><span>Engagements</span>
+                <i class="ri-arrow-down-s-line ml-1 transition-transform duration-200 group-hover:rotate-180"></i>
             </button>
-            <div class="dropdown absolute left-0 mt-2 w-64 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 space-y-2">
-                <a href="workshops-engagement.html" class="block hover:text-primary">Workshops & Seminars</a>
-                <a href="mou-collaborations.html" class="block hover:text-primary">MoUs & Collaborations</a>
-                <a href="gallery.html" class="block hover:text-primary">Gallery</a>
-                <a href="press-media.html" class="block hover:text-primary">Press & Media</a>
+            <div
+                class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-64 bg-white dark:bg-gray-800 shadow-xl rounded-xl p-4 hidden group-hover:block z-50">
+                <a href="workshops-engagement.html" class="block py-1 hover:text-primary">Workshops & Seminars</a>
+                <a href="mou-collaborations.html" class="block py-1 hover:text-primary">MoUs & Collaborations</a>
+                <a href="gallery.html" class="block py-1 hover:text-primary">Gallery</a>
+                <a href="press-media.html" class="block py-1 hover:text-primary">Press & Media</a>
             </div>
             </div>
 
-            <a href="contact.html" class="hover:text-primary">Contact</a>
+            <a href="blog.html" class="hover:text-primary transition">Blog</a>
+            <a href="contact.html" class="hover:text-primary transition">Contact</a>
         </nav>
 
-        <!-- Right: Dark Mode + Mobile Menu -->
+        <!-- Right: Icons -->
         <div class="flex items-center space-x-4">
-            <button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+
+            <!-- Calendar Icon -->
+            <div class="relative group">
+            <button
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition">
+                <i class="ri-calendar-line text-gray-800 dark:text-white text-xl"></i>
+            </button>
+            <div
+                class="absolute right-0 mt-2 w-64 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 hidden group-hover:block z-50">
+                <h4 class="text-sm font-semibold text-primary mb-2">Upcoming Events</h4>
+                <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                <li class="flex justify-between"><span>Nov 5</span><span>3D Printing Workshop</span></li>
+                <li class="flex justify-between"><span>Nov 15</span><span>AI in Robotics</span></li>
+                <li class="flex justify-between"><span>Dec 2</span><span>Drone Assembly Seminar</span></li>
+                </ul>
+                <a href="/engagements/workshops.html"
+                class="block mt-3 text-center text-primary text-sm font-medium hover:underline">View All</a>
+            </div>
+            </div>
+
+            <!-- User Icon -->
+            <a href="/internal/login.html"
+            class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition">
+            <i class="ri-user-line text-gray-800 dark:text-white text-xl"></i>
+            </a>
+
+            <!-- Theme Toggle -->
+            <button id="theme-toggle"
+            class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition">
             <i class="ri-sun-line dark:hidden text-gray-800"></i>
             <i class="ri-moon-line hidden dark:block text-white"></i>
             </button>
-            <button id="mobile-menu-toggle" class="md:hidden text-gray-800 dark:text-white text-2xl">
+
+            <!-- Mobile Menu -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-800 dark:text-white text-2xl">
             <i class="ri-menu-line"></i>
             </button>
         </div>
@@ -253,6 +327,160 @@
     </div>
     </header>
 
+<header class="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 shadow-md transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+
+      <!-- Left: Logo -->
+      <div class="flex-shrink-0">
+        <a href="index.html" class="flex items-center space-x-2">
+          <img src="/static/logo/logo-dark.png" alt="PixelBotix Technologies" class="h-12 hidden dark:block" />
+          <img src="/static/logo/logo-white.png" alt="PixelBotix Technologies" class="h-12 block dark:hidden" />
+        </a>
+      </div>
+
+      <!-- Center: Navigation (flex-1 + justify-center) -->
+      <nav class="hidden md:flex flex-1 justify-center items-center space-x-8 text-gray-800 dark:text-gray-100 font-medium">
+
+        <a href="index.html" class="hover:text-primary transition">Home</a>
+        <a href="/about/about-us.html" class="hover:text-primary transition">About Us</a>
+
+        <!-- Solutions Mega Menu -->
+        <div class="relative group">
+          <button class="flex items-center space-x-2 hover:text-primary transition">
+            <i class="ri-flask-line"></i><span>Solutions</span>
+            <i class="ri-arrow-down-s-line ml-1 transition-transform duration-200 group-hover:rotate-180"></i>
+          </button>
+          <div
+            class="absolute left-1/2 transform -translate-x-1/2 mt-3 bg-white dark:bg-gray-800 shadow-2xl rounded-2xl p-8 hidden group-hover:grid grid-cols-3 gap-10 w-[900px] border border-gray-100 dark:border-gray-700 z-50">
+            
+            <!-- R&D Division -->
+            <div>
+              <h4 class="font-bold text-lg mb-3 text-primary">R&D Division</h4>
+              <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                <li><a href="ai-robotics.html" class="hover:text-primary">AI & Robotics</a></li>
+                <li><a href="uav-drones.html" class="hover:text-primary">UAV / Drones</a></li>
+                <li><a href="3d-printing-lab.html" class="hover:text-primary">3D Printing Lab</a></li>
+                <li><a href="iot-automation.html" class="hover:text-primary">IoT & Smart Automation</a></li>
+                <li><a href="digital-twin.html" class="hover:text-primary">Digital Twin</a></li>
+                <li><a href="smart-healthcare.html" class="hover:text-primary">Smart Healthcare</a></li>
+              </ul>
+            </div>
+
+            <!-- Eduverse -->
+            <div>
+              <h4 class="font-bold text-lg mb-3 text-primary">Eduverse</h4>
+              <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                <li><a href="brainy-babies.html" class="hover:text-primary">Brainy Babies</a></li>
+                <li><a href="little-techies.html" class="hover:text-primary">Little Techies</a></li>
+                <li><a href="maker-school.html" class="hover:text-primary">Maker School</a></li>
+                <li><a href="future-innovators.html" class="hover:text-primary">Future Innovators</a></li>
+              </ul>
+            </div>
+
+            <!-- Skill Labs -->
+            <div>
+              <h4 class="font-bold text-lg mb-3 text-primary">Skill Labs</h4>
+              <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                <li><a href="school-lab-setup.html" class="hover:text-primary">School Lab Setup</a></li>
+                <li><a href="college-lab-setup.html" class="hover:text-primary">College Lab Setup</a></li>
+                <li><a href="workshops.html" class="hover:text-primary">Workshops</a></li>
+                <li><a href="faculty-development.html" class="hover:text-primary">Faculty Development</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shop -->
+        <div class="relative group">
+          <button class="flex items-center space-x-2 hover:text-primary transition">
+            <i class="ri-store-2-line"></i><span>Shop</span>
+            <i class="ri-arrow-down-s-line ml-1 transition-transform duration-200 group-hover:rotate-180"></i>
+          </button>
+          <div
+            class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-64 bg-white dark:bg-gray-800 shadow-xl rounded-xl p-4 hidden group-hover:block z-50">
+            <a href="3d-printers.html" class="block py-1 hover:text-primary">3D Printers</a>
+            <a href="3d-scanners.html" class="block py-1 hover:text-primary">3D Scanners</a>
+            <a href="robotics-kits.html" class="block py-1 hover:text-primary">Robotics Kits</a>
+          </div>
+        </div>
+
+        <!-- Services -->
+        <div class="relative group">
+          <button class="flex items-center space-x-2 hover:text-primary transition">
+            <i class="ri-tools-line"></i><span>Services</span>
+            <i class="ri-arrow-down-s-line ml-1 transition-transform duration-200 group-hover:rotate-180"></i>
+          </button>
+          <div
+            class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-64 bg-white dark:bg-gray-800 shadow-xl rounded-xl p-4 hidden group-hover:block z-50">
+            <a href="3d-printing-services.html" class="block py-1 hover:text-primary">3D Printing Services</a>
+            <a href="3d-scanning-services.html" class="block py-1 hover:text-primary">3D Scanning Services</a>
+            <a href="industrial-consultancy.html" class="block py-1 hover:text-primary">Industrial Consultancy</a>
+          </div>
+        </div>
+
+        <!-- Engagements -->
+        <div class="relative group">
+          <button class="flex items-center space-x-2 hover:text-primary transition">
+            <i class="ri-group-line"></i><span>Engagements</span>
+            <i class="ri-arrow-down-s-line ml-1 transition-transform duration-200 group-hover:rotate-180"></i>
+          </button>
+          <div
+            class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-64 bg-white dark:bg-gray-800 shadow-xl rounded-xl p-4 hidden group-hover:block z-50">
+            <a href="workshops-engagement.html" class="block py-1 hover:text-primary">Workshops & Seminars</a>
+            <a href="mou-collaborations.html" class="block py-1 hover:text-primary">MoUs & Collaborations</a>
+            <a href="gallery.html" class="block py-1 hover:text-primary">Gallery</a>
+            <a href="press-media.html" class="block py-1 hover:text-primary">Press & Media</a>
+          </div>
+        </div>
+
+        <a href="blog.html" class="hover:text-primary transition">Blog</a>
+        <a href="contact.html" class="hover:text-primary transition">Contact</a>
+      </nav>
+
+      <!-- Right: Icons -->
+      <div class="flex items-center space-x-4">
+
+        <!-- Calendar -->
+        <div class="relative group">
+          <button
+            class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition">
+            <i class="ri-calendar-line text-gray-800 dark:text-white text-xl"></i>
+          </button>
+          <div
+            class="absolute right-0 mt-2 w-64 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 hidden group-hover:block z-50">
+            <h4 class="text-sm font-semibold text-primary mb-2">Upcoming Events</h4>
+            <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+              <li class="flex justify-between"><span>Nov 5</span><span>3D Printing Workshop</span></li>
+              <li class="flex justify-between"><span>Nov 15</span><span>AI in Robotics</span></li>
+              <li class="flex justify-between"><span>Dec 2</span><span>Drone Assembly Seminar</span></li>
+            </ul>
+            <a href="/engagements/workshops.html"
+              class="block mt-3 text-center text-primary text-sm font-medium hover:underline">View All</a>
+          </div>
+        </div>
+
+        <!-- User -->
+        <a href="/internal/login.html"
+          class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition">
+          <i class="ri-user-line text-gray-800 dark:text-white text-xl"></i>
+        </a>
+
+        <!-- Theme Toggle -->
+        <button id="theme-toggle"
+          class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition">
+          <i class="ri-sun-line dark:hidden text-gray-800"></i>
+          <i class="ri-moon-line hidden dark:block text-white"></i>
+        </button>
+
+        <!-- Mobile Menu -->
+        <button id="mobile-menu-btn" class="md:hidden text-gray-800 dark:text-white text-2xl">
+          <i class="ri-menu-line"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
 
 
     <!-- Hero Section -->
@@ -1365,7 +1593,6 @@
     <script id="theme-toggle-script">
         document.addEventListener('DOMContentLoaded', function () {
             const themeToggle = document.getElementById('theme-toggle');
-            const themeToggleMobile = document.getElementById('theme-toggle-mobile');
             const html = document.documentElement;
 
             function toggleTheme() {
@@ -1538,6 +1765,24 @@
                 });
             });
         });
+    </script>
+
+    <!-- Hover menu group with down arrow flip to up -->
+    <script>
+    document.querySelectorAll('.menu-group').forEach(group => {
+        const button = group.querySelector('button');
+        const arrow = button.querySelector('.ri-arrow-down-s-line');
+
+        group.addEventListener('mouseenter', () => {
+        arrow.classList.remove('ri-arrow-down-s-line');
+        arrow.classList.add('ri-arrow-up-s-line');
+        });
+
+        group.addEventListener('mouseleave', () => {
+        arrow.classList.remove('ri-arrow-up-s-line');
+        arrow.classList.add('ri-arrow-down-s-line');
+        });
+    });
     </script>
 
     <script src="js/share.js"></script>
