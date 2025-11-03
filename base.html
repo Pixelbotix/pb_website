@@ -233,15 +233,15 @@
                 <div>
                     <h3 class="text-xl font-bold mb-6">Policies</h3>
                     <ul class="space-y-3">
-                        <li><a href="privacy_policy.html"
+                        <li><a href="/policies/privacy_policy.html"
                                 class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
                         <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms &
                                 Conditions</a></li>
-                        <li><a href="refund_cancellation.html"
+                        <li><a href="/policies/refund_cancellation.html"
                                 class="text-gray-400 hover:text-white transition-colors">Refund & Cancellation</a></li>
-                        <li><a href="shipping_policy.html"
+                        <li><a href="/policies/shipping_policy.html"
                                 class="text-gray-400 hover:text-white transition-colors">Shipping Policy</a></li>
-                        <li><a href="disclaimer.html"
+                        <li><a href="/policies/disclaimer.html"
                                 class="text-gray-400 hover:text-white transition-colors">Disclaimer</a></li>
                     </ul>
                 </div>
@@ -351,3 +351,228 @@
 </body>
 
 </html>
+
+
+
+
+<!-- 3d-printing-services.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <!-- Title & Meta -->
+    <title>3D Printing Services in Tamil Nadu | On-Demand Rapid Prototyping | PixelBotix Technologies</title>
+    <meta name="description" content="Get high-quality 3D printing services in Tamil Nadu for prototypes, product design, and manufacturing. PixelBotix offers FDM, SLA, and resin 3D printing with precision and fast delivery. Request your quote today!">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.pixelbotix.com/3d-printing-services.html">
+
+    <!-- Open Graph (for better social sharing) -->
+    <meta property="og:title" content="3D Printing Services in Tamil Nadu | PixelBotix Technologies">
+    <meta property="og:description" content="Professional 3D printing and rapid prototyping with FDM, SLA & resin printing. Fast turnaround and precision guaranteed.">
+    <meta property="og:image" content="https://www.pixelbotix.com/static/images/3d-printing-service.jpg">
+    <meta property="og:url" content="https://www.pixelbotix.com/3d-printing-services.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="3D Printing Services | PixelBotix Technologies">
+    <meta name="twitter:description" content="Fast, precise, and affordable 3D printing for prototypes and manufacturing.">
+    <meta name="twitter:image" content="https://www.pixelbotix.com/static/images/3d-printing-service.jpg">
+
+
+
+
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#1e40af'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            },
+            darkMode: 'class'
+        }
+    </script>
+
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Styles -->    
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        .hero-slider {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+        }
+
+        .progress-dot {
+            transition: all 0.3s ease;
+        }
+
+        .progress-dot.active {
+            background-color: #3b82f6;
+            transform: scale(1.2);
+        }
+
+        .nav-arrow {
+            transition: all 0.3s ease;
+        }
+
+        .nav-arrow:hover {
+            background-color: rgba(59, 130, 246, 0.9);
+            transform: scale(1.1);
+        }
+
+        .dark .bg-white {
+            background-color: #1f2937;
+        }
+
+        .dark .text-gray-900 {
+            color: #f9fafb;
+        }
+
+        .dark .text-gray-600 {
+            color: #d1d5db;
+        }
+
+        .dark .text-gray-800 {
+            color: #e5e7eb;
+        }
+
+        .dark .bg-gray-50 {
+            background-color: #374151;
+        }
+
+        .dark .bg-gray-100 {
+            background-color: #4b5563;
+        }
+
+        .dark .border-gray-200 {
+            border-color: #4b5563;
+        }
+
+        .dark .shadow-lg {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
+        }
+
+        .faq-item {
+            transition: all 0.3s ease;
+        }
+
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-content.open {
+            max-height: 200px;
+        }
+
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+    </style>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="static/logo/favicon.png">
+
+    <!-- Structured Data (Product) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "3D Printing Services",
+      "image": "https://www.pixelbotix.com/static/images/3d-printing-service.jpg",
+      "description": "Professional 3D printing services by PixelBotix Technologies. Offering FDM, SLA, and resin-based 3D printing with fast delivery and precision quality.",
+      "brand": {
+        "@type": "Brand",
+        "name": "PixelBotix Technologies"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.pixelbotix.com/3d-printing-services.html",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "125"
+      }
+    }
+    </script>
+
+    <!-- Structured Data (Service) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "3D Printing Services",
+      "provider": {
+        "@type": "Organization",
+        "name": "PixelBotix Technologies",
+        "url": "https://www.pixelbotix.com"
+      },
+      "areaServed": "Tamil Nadu, India",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "3D Printing Options",
+        "itemListElement": [
+          {"@type": "Offer", "name": "FDM 3D Printing"},
+          {"@type": "Offer", "name": "SLA 3D Printing"},
+          {"@type": "Offer", "name": "Resin Printing"}
+        ]
+      }
+    }
+    </script>
+    <!-- Custom Script -->
+    <script src="js/e.js" defer></script>
+</head>

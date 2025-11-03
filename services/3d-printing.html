@@ -1,0 +1,1546 @@
+<!-- services/3d-printing.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ===================== HEAD SECTION ===================== -->
+<head>
+  <!-- Basic Setup -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Title & Meta -->
+  <title>3D Printing Services in Tamil Nadu | PixelBotix Technologies</title>
+  <meta name="description" content="Get high-quality 3D printing services in Tamil Nadu for prototypes, product design, and manufacturing. PixelBotix offers FDM, SLA, and resin 3D printing with precision and fast delivery. Request your quote today!" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.pixelbotix.com/3d-printing-services.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="3D Printing Services in Tamil Nadu | PixelBotix Technologies" />
+  <meta property="og:description" content="Professional 3D printing and rapid prototyping with FDM, SLA & resin printing. Fast turnaround and precision guaranteed." />
+  <meta property="og:image" content="https://www.pixelbotix.com/static/images/3d-printing-service.jpg" />
+  <meta property="og:url" content="https://www.pixelbotix.com/3d-printing-services.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="3D Printing Services | PixelBotix Technologies" />
+  <meta name="twitter:description" content="Fast, precise, and affordable 3D printing for prototypes and manufacturing." />
+  <meta name="twitter:image" content="https://www.pixelbotix.com/static/images/3d-printing-service.jpg" />
+
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#3b82f6",
+            secondary: "#1e40af",
+          },
+          borderRadius: {
+            button: "8px",
+          },
+        },
+      },
+      darkMode: "class",
+    };
+  </script>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- Styles -->
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+    }
+
+    /* Fix: dropdown not closing properly */
+    .menu-group:hover .dropdown,
+    .dropdown:hover {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .dropdown {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.25s ease-in-out;
+    }
+
+    /* Mega Menu Grid */
+    .mega-menu {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      padding: 1.5rem;
+      width: 800px;
+    }
+
+    /* Dark mode colors */
+    .dark .dropdown {
+      background-color: #1f2937;
+    }
+  </style>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="static/logo/favicon.png" />
+
+  <!-- Structured Data: Product -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "3D Printing Services",
+    "image": "https://www.pixelbotix.com/static/images/3d-printing-service.jpg",
+    "description": "Professional 3D printing services by PixelBotix Technologies. Offering FDM, SLA, and resin-based 3D printing with fast delivery and precision quality.",
+    "brand": { "@type": "Brand", "name": "PixelBotix Technologies" },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.pixelbotix.com/3d-printing-services.html",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "125" }
+  }
+  </script>
+
+  <!-- Structured Data: Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "3D Printing Services",
+    "provider": {
+      "@type": "Organization",
+      "name": "PixelBotix Technologies",
+      "url": "https://www.pixelbotix.com"
+    },
+    "areaServed": "Tamil Nadu, India",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "3D Printing Options",
+      "itemListElement": [
+        {"@type": "Offer", "name": "FDM 3D Printing"},
+        {"@type": "Offer", "name": "SLA 3D Printing"},
+        {"@type": "Offer", "name": "Resin Printing"}
+      ]
+    }
+  }
+  </script>
+
+  <!-- Custom Script -->
+  <script src="js/e.js" defer></script>
+</head>
+
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300">
+
+
+    <!-- ===================== HEADER (NAVIGATION) ===================== -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 shadow-md transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2">
+            <img src="/static/logo/logo-dark.png" alt="PixelBotix Technologies" class="h-12 hidden dark:block" />
+            <img src="/static/logo/logo-white.png" alt="PixelBotix Technologies" class="h-12 block dark:hidden" />
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center space-x-8 text-gray-800 dark:text-gray-100 font-medium">
+            <a href="index.html" class="hover:text-primary">Home</a>
+            <a href="about_us.html" class="hover:text-primary">About Us</a>
+
+            <!-- Solutions -->
+            <div class="relative menu-group">
+            <button class="flex items-center space-x-2 hover:text-primary">
+                <i class="ri-flask-line"></i><span>Solutions</span>
+            </button>
+            <div class="dropdown absolute left-0 mt-2 bg-white dark:bg-gray-800 shadow-lg rounded-lg mega-menu">
+                <!-- R&D Division -->
+                <div>
+                <h4 class="font-semibold mb-2">R&D Division</h4>
+                <ul class="space-y-2">
+                    <li><a href="ai-robotics.html" class="hover:text-primary">AI & Robotics</a></li>
+                    <li><a href="uav-drones.html" class="hover:text-primary">UAV / Drones</a></li>
+                    <li><a href="3d-printing-lab.html" class="hover:text-primary">3D Printing Lab</a></li>
+                    <li><a href="iot-automation.html" class="hover:text-primary">IoT & Smart Automation</a></li>
+                    <li><a href="digital-twin.html" class="hover:text-primary">Digital Twin</a></li>
+                    <li><a href="smart-healthcare.html" class="hover:text-primary">Smart Healthcare</a></li>
+                </ul>
+                </div>
+
+                <!-- Eduverse -->
+                <div>
+                <h4 class="font-semibold mb-2">Eduverse</h4>
+                <ul class="space-y-2">
+                    <li><a href="brainy-babies.html" class="hover:text-primary">Brainy Babies</a></li>
+                    <li><a href="little-techies.html" class="hover:text-primary">Little Techies</a></li>
+                    <li><a href="maker-school.html" class="hover:text-primary">Maker School</a></li>
+                    <li><a href="future-innovators.html" class="hover:text-primary">Future Innovators</a></li>
+                </ul>
+                </div>
+
+                <!-- Skill Labs -->
+                <div>
+                <h4 class="font-semibold mb-2">Skill Labs</h4>
+                <ul class="space-y-2">
+                    <li><a href="school-lab-setup.html" class="hover:text-primary">School Lab Setup</a></li>
+                    <li><a href="college-lab-setup.html" class="hover:text-primary">College Lab Setup</a></li>
+                    <li><a href="workshops.html" class="hover:text-primary">Workshops</a></li>
+                    <li><a href="faculty-development.html" class="hover:text-primary">Faculty Development</a></li>
+                </ul>
+                </div>
+            </div>
+            </div>
+
+            <!-- 3D Products -->
+            <div class="relative menu-group">
+            <button class="flex items-center space-x-2 hover:text-primary">
+                <i class="ri-cube-line"></i><span>3D Products</span>
+            </button>
+            <div class="dropdown absolute left-0 mt-2 w-64 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 space-y-2">
+                <a href="3d-printers.html" class="block hover:text-primary">3D Printers</a>
+                <a href="3d-scanners.html" class="block hover:text-primary">3D Scanners</a>
+                <a href="robotics-kits.html" class="block hover:text-primary">Robotics Kits</a>
+            </div>
+            </div>
+
+            <!-- Services -->
+            <div class="relative menu-group">
+            <button class="flex items-center space-x-2 hover:text-primary">
+                <i class="ri-settings-3-line"></i><span>Services</span>
+            </button>
+            <div class="dropdown absolute left-0 mt-2 w-64 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 space-y-2">
+                <a href="3d-printing-services.html" class="block hover:text-primary">3D Printing Services</a>
+                <a href="3d-scanning-services.html" class="block hover:text-primary">3D Scanning Services</a>
+                <a href="guest-lectures.html" class="block hover:text-primary">Industrial Project Consultancy</a>
+            </div>
+            </div>
+
+            <!-- Engagements -->
+            <div class="relative menu-group">
+            <button class="flex items-center space-x-2 hover:text-primary">
+                <i class="ri-hand-heart-line"></i><span>Engagements</span>
+            </button>
+            <div class="dropdown absolute left-0 mt-2 w-64 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 space-y-2">
+                <a href="workshops-engagement.html" class="block hover:text-primary">Workshops & Seminars</a>
+                <a href="mou-collaborations.html" class="block hover:text-primary">MoUs & Collaborations</a>
+                <a href="gallery.html" class="block hover:text-primary">Gallery</a>
+                <a href="press-media.html" class="block hover:text-primary">Press & Media</a>
+            </div>
+            </div>
+
+            <a href="contact.html" class="hover:text-primary">Contact</a>
+        </nav>
+
+        <!-- Right: Dark Mode + Mobile Menu -->
+        <div class="flex items-center space-x-4">
+            <button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+            <i class="ri-sun-line dark:hidden text-gray-800"></i>
+            <i class="ri-moon-line hidden dark:block text-white"></i>
+            </button>
+            <button id="mobile-menu-toggle" class="md:hidden text-gray-800 dark:text-white text-2xl">
+            <i class="ri-menu-line"></i>
+            </button>
+        </div>
+        </div>
+    </div>
+    </header>
+
+
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen overflow-hidden">
+        <div class="hero-slider h-full">
+            <!-- Slide 1 -->
+            <div class="hero-slide active">
+                <div class="absolute inset-0 bg-cover bg-center"
+                    style="background-image: url('https://readdy.ai/api/search-image?query=Modern%203D%20printer%20creating%20intricate%20mechanical%20parts%20in%20a%20clean%20white%20laboratory%20environment%20with%20soft%20blue%20lighting%20and%20minimal%20background%20elements%20showcasing%20precision%20engineering%20and%20advanced%20manufacturing%20technology&width=1920&height=1080&seq=hero1&orientation=landscape')">
+                </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                <div class="relative h-full flex items-center">
+                    <div class="w-full px-4 sm:px-6 lg:px-8">
+                        <div class="max-w-4xl">
+                            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                                Precision 3D Printing<br>
+                                <span class="text-primary">Redefined</span>
+                            </h1>
+                            <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl">
+                                Transform your ideas into reality with Chennai's most advanced 3D printing technology
+                                and expert craftsmanship.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <button
+                                    class="bg-primary hover:bg-secondary text-white px-8 py-4 !rounded-button font-semibold text-lg transition-colors duration-200 whitespace-nowrap">
+                                    Get Quote Now
+                                </button>
+                                <button
+                                    class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 !rounded-button font-semibold text-lg transition-all duration-200 whitespace-nowrap">
+                                    View Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="hero-slide">
+                <div class="absolute inset-0 bg-cover bg-center"
+                    style="background-image: url('https://readdy.ai/api/search-image?query=High-tech%20robotic%20arm%203D%20printing%20complex%20aerospace%20components%20in%20a%20futuristic%20manufacturing%20facility%20with%20clean%20white%20surfaces%20and%20blue%20accent%20lighting%20demonstrating%20industrial%20automation&width=1920&height=1080&seq=hero2&orientation=landscape')">
+                </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                <div class="relative h-full flex items-center">
+                    <div class="w-full px-4 sm:px-6 lg:px-8">
+                        <div class="max-w-4xl">
+                            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                                Industrial Grade<br>
+                                <span class="text-primary">Manufacturing</span>
+                            </h1>
+                            <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl">
+                                From prototypes to production runs, we deliver exceptional quality with cutting-edge
+                                additive manufacturing solutions.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <button
+                                    class="bg-primary hover:bg-secondary text-white px-8 py-4 !rounded-button font-semibold text-lg transition-colors duration-200 whitespace-nowrap">
+                                    Explore Services
+                                </button>
+                                <button
+                                    class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 !rounded-button font-semibold text-lg transition-all duration-200 whitespace-nowrap">
+                                    Learn More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="hero-slide">
+                <div class="absolute inset-0 bg-cover bg-center"
+                    style="background-image: url('https://readdy.ai/api/search-image?query=Medical%20device%20prototypes%20and%20biocompatible%203D%20printed%20implants%20displayed%20on%20a%20clean%20white%20laboratory%20table%20with%20professional%20lighting%20showcasing%20healthcare%20innovation%20and%20precision%20manufacturing&width=1920&height=1080&seq=hero3&orientation=landscape')">
+                </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                <div class="relative h-full flex items-center">
+                    <div class="w-full px-4 sm:px-6 lg:px-8">
+                        <div class="max-w-4xl">
+                            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                                Medical Innovation<br>
+                                <span class="text-primary">Excellence</span>
+                            </h1>
+                            <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl">
+                                Specialized in biocompatible materials and precision medical device manufacturing for
+                                healthcare advancement.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <button
+                                    class="bg-primary hover:bg-secondary text-white px-8 py-4 !rounded-button font-semibold text-lg transition-colors duration-200 whitespace-nowrap">
+                                    Medical Solutions
+                                </button>
+                                <button
+                                    class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 !rounded-button font-semibold text-lg transition-all duration-200 whitespace-nowrap">
+                                    Case Studies
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="hero-slide">
+                <div class="absolute inset-0 bg-cover bg-center"
+                    style="background-image: url('https://readdy.ai/api/search-image?query=Educational%203D%20printing%20workshop%20with%20students%20and%20teachers%20working%20on%20creative%20projects%20in%20a%20bright%20modern%20classroom%20with%20multiple%203D%20printers%20and%20colorful%20printed%20objects&width=1920&height=1080&seq=hero4&orientation=landscape')">
+                </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                <div class="relative h-full flex items-center">
+                    <div class="w-full px-4 sm:px-6 lg:px-8">
+                        <div class="max-w-4xl">
+                            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                                Educational<br>
+                                <span class="text-primary">Empowerment</span>
+                            </h1>
+                            <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl">
+                                Inspiring the next generation with hands-on 3D printing education and STEM learning
+                                experiences.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <button
+                                    class="bg-primary hover:bg-secondary text-white px-8 py-4 !rounded-button font-semibold text-lg transition-colors duration-200 whitespace-nowrap">
+                                    Education Programs
+                                </button>
+                                <button
+                                    class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 !rounded-button font-semibold text-lg transition-all duration-200 whitespace-nowrap">
+                                    School Partnerships
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="hero-slide">
+                <div class="absolute inset-0 bg-cover bg-center"
+                    style="background-image: url('https://readdy.ai/api/search-image?query=Automotive%20parts%20and%20components%20created%20through%20advanced%203D%20printing%20technology%20displayed%20in%20a%20professional%20automotive%20workshop%20with%20clean%20white%20background%20and%20blue%20lighting&width=1920&height=1080&seq=hero5&orientation=landscape')">
+                </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                <div class="relative h-full flex items-center">
+                    <div class="w-full px-4 sm:px-6 lg:px-8">
+                        <div class="max-w-4xl">
+                            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                                Automotive<br>
+                                <span class="text-primary">Innovation</span>
+                            </h1>
+                            <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl">
+                                Accelerating automotive development with rapid prototyping and custom component
+                                manufacturing solutions.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <button
+                                    class="bg-primary hover:bg-secondary text-white px-8 py-4 !rounded-button font-semibold text-lg transition-colors duration-200 whitespace-nowrap">
+                                    Automotive Solutions
+                                </button>
+                                <button
+                                    class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 !rounded-button font-semibold text-lg transition-all duration-200 whitespace-nowrap">
+                                    Portfolio
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button id="prev-slide"
+            class="nav-arrow absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition-all duration-300">
+            <div class="w-6 h-6 flex items-center justify-center">
+                <i class="ri-arrow-left-line"></i>
+            </div>
+        </button>
+        <button id="next-slide"
+            class="nav-arrow absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition-all duration-300">
+            <div class="w-6 h-6 flex items-center justify-center">
+                <i class="ri-arrow-right-line"></i>
+            </div>
+        </button>
+
+        <!-- Progress Indicators -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3">
+            <button class="progress-dot w-3 h-3 rounded-full bg-white bg-opacity-50 active" data-slide="0"></button>
+            <button class="progress-dot w-3 h-3 rounded-full bg-white bg-opacity-50" data-slide="1"></button>
+            <button class="progress-dot w-3 h-3 rounded-full bg-white bg-opacity-50" data-slide="2"></button>
+            <button class="progress-dot w-3 h-3 rounded-full bg-white bg-opacity-50" data-slide="3"></button>
+            <button class="progress-dot w-3 h-3 rounded-full bg-white bg-opacity-50" data-slide="4"></button>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="about" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Why Choose PixelBotix?</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    We combine cutting-edge technology with expert craftsmanship to deliver exceptional 3D printing
+                    solutions that exceed expectations.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div
+                    class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-6">
+                        <i class="ri-focus-3-line text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Precision Engineering</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Achieve micron-level accuracy with our state-of-the-art 3D printing technology and quality
+                        control processes.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-6">
+                        <i class="ri-time-line text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Rapid Turnaround</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Fast delivery without compromising quality. Most projects completed within 24-48 hours.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-6">
+                        <i class="ri-award-line text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Premium Materials</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Wide selection of high-grade materials including engineering plastics, metals, and biocompatible
+                        resins.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-6">
+                        <i class="ri-customer-service-2-line text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Expert Support</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Dedicated project managers and technical experts guide you from concept to completion.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Advanced Technologies</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Explore our comprehensive range of 3D printing technologies designed to meet diverse manufacturing
+                    needs.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-48 bg-cover bg-center"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=FDM%203D%20printer%20with%20filament%20spool%20creating%20detailed%20plastic%20parts%20in%20a%20clean%20white%20laboratory%20environment%20with%20professional%20lighting%20showcasing%20fused%20deposition%20modeling%20technology&width=400&height=300&seq=tech1&orientation=landscape')">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">FDM Technology</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Fused Deposition Modeling for rapid prototyping and functional parts using thermoplastic
+                            materials.
+                        </p>
+                        <ul class="text-sm text-gray-500 dark:text-gray-400 space-y-1">
+                            <li>• Cost-effective production</li>
+                            <li>• Large build volumes</li>
+                            <li>• Multiple material options</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-48 bg-cover bg-center"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=SLA%20resin%203D%20printer%20with%20UV%20light%20curing%20highly%20detailed%20miniature%20models%20in%20a%20professional%20laboratory%20setting%20with%20clean%20white%20background%20and%20blue%20lighting&width=400&height=300&seq=tech2&orientation=landscape')">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">SLA Technology</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Stereolithography for ultra-high resolution prints with smooth surface finishes and fine
+                            details.
+                        </p>
+                        <ul class="text-sm text-gray-500 dark:text-gray-400 space-y-1">
+                            <li>• Exceptional detail quality</li>
+                            <li>• Smooth surface finish</li>
+                            <li>• Biocompatible resins</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-48 bg-cover bg-center"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=SLS%20powder%20bed%20fusion%203D%20printer%20creating%20complex%20metal%20and%20nylon%20parts%20in%20an%20industrial%20manufacturing%20facility%20with%20clean%20white%20environment%20and%20professional%20lighting&width=400&height=300&seq=tech3&orientation=landscape')">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">SLS Technology</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Selective Laser Sintering for complex geometries and functional parts without support
+                            structures.
+                        </p>
+                        <ul class="text-sm text-gray-500 dark:text-gray-400 space-y-1">
+                            <li>• No support structures needed</li>
+                            <li>• Complex internal geometries</li>
+                            <li>• Production-grade materials</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materials Section -->
+    <section id="materials" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Premium Materials</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Choose from our extensive library of high-quality materials to bring your projects to life with the
+                    perfect properties.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg mb-4"></div>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">PLA Plastics</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 mb-3">
+                        Biodegradable thermoplastic ideal for prototypes and decorative items.
+                    </p>
+                    <div class="text-xs text-gray-500 dark:text-gray-400">
+                        <span class="block">• Easy to print</span>
+                        <span class="block">• Eco-friendly</span>
+                        <span class="block">• Multiple colors</span>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-br from-gray-400 to-gray-600 rounded-lg mb-4"></div>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">ABS Engineering</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 mb-3">
+                        Durable thermoplastic for functional parts requiring strength and flexibility.
+                    </p>
+                    <div class="text-xs text-gray-500 dark:text-gray-400">
+                        <span class="block">• High impact resistance</span>
+                        <span class="block">• Heat resistant</span>
+                        <span class="block">• Automotive grade</span>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg mb-4"></div>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Medical Resins</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 mb-3">
+                        Biocompatible materials certified for medical and dental applications.
+                    </p>
+                    <div class="text-xs text-gray-500 dark:text-gray-400">
+                        <span class="block">• FDA approved</span>
+                        <span class="block">• Sterilizable</span>
+                        <span class="block">• Biocompatible</span>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg mb-4"></div>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Metal Alloys</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 mb-3">
+                        Titanium, aluminum, and steel for aerospace and industrial applications.
+                    </p>
+                    <div class="text-xs text-gray-500 dark:text-gray-400">
+                        <span class="block">• Aerospace grade</span>
+                        <span class="block">• High strength</span>
+                        <span class="block">• Corrosion resistant</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section id="industries" class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Industries We Serve</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    From aerospace to healthcare, we provide specialized 3D printing solutions across diverse
+                    industries.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 bg-cover bg-center"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Aerospace%20components%20and%20aircraft%20parts%20created%20through%20advanced%203D%20printing%20technology%20displayed%20in%20a%20professional%20aviation%20facility%20with%20clean%20white%20background%20and%20blue%20lighting&width=400&height=300&seq=industry1&orientation=landscape')">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Aerospace</h3>
+                        <p class="text-gray-200">
+                            Lightweight components, prototypes, and tooling for aviation and space applications.
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 bg-cover bg-center"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Medical%20devices%20and%20surgical%20instruments%20created%20through%20precision%203D%20printing%20in%20a%20sterile%20healthcare%20facility%20with%20clean%20white%20surfaces%20and%20professional%20medical%20lighting&width=400&height=300&seq=industry2&orientation=landscape')">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Healthcare</h3>
+                        <p class="text-gray-200">
+                            Custom prosthetics, surgical guides, and biocompatible medical devices.
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 bg-cover bg-center"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Automotive%20parts%20and%20engine%20components%20manufactured%20using%20industrial%203D%20printing%20technology%20in%20a%20modern%20automotive%20workshop%20with%20clean%20white%20environment%20and%20blue%20accent%20lighting&width=400&height=300&seq=industry3&orientation=landscape')">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Automotive</h3>
+                        <p class="text-gray-200">
+                            Rapid prototyping, custom parts, and low-volume production components.
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 bg-cover bg-center"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Educational%203D%20printed%20models%20and%20learning%20materials%20displayed%20in%20a%20bright%20modern%20classroom%20with%20students%20and%20teachers%20exploring%20STEM%20concepts%20through%20hands-on%20activities&width=400&height=300&seq=industry4&orientation=landscape')">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Education</h3>
+                        <p class="text-gray-200">
+                            STEM learning tools, anatomical models, and hands-on educational materials.
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 bg-cover bg-center"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Consumer%20products%20and%20lifestyle%20accessories%20created%20through%203D%20printing%20technology%20displayed%20in%20a%20modern%20retail%20environment%20with%20clean%20white%20surfaces%20and%20contemporary%20design&width=400&height=300&seq=industry5&orientation=landscape')">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Consumer Goods</h3>
+                        <p class="text-gray-200">
+                            Custom accessories, home decor, and personalized consumer products.
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 bg-cover bg-center"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Architectural%20models%20and%20building%20components%20created%20through%20large-scale%203D%20printing%20in%20a%20professional%20architecture%20studio%20with%20clean%20white%20background%20and%20modern%20design%20elements&width=400&height=300&seq=industry6&orientation=landscape')">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Architecture</h3>
+                        <p class="text-gray-200">
+                            Scale models, building components, and innovative construction solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Project Gallery</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Explore our portfolio of successful projects showcasing the versatility and quality of our 3D
+                    printing services.
+                </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button
+                    class="gallery-filter active bg-primary text-white px-6 py-2 !rounded-button font-medium transition-colors duration-200 whitespace-nowrap"
+                    data-filter="all">
+                    All Projects
+                </button>
+                <button
+                    class="gallery-filter bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white px-6 py-2 !rounded-button font-medium transition-colors duration-200 whitespace-nowrap"
+                    data-filter="prototypes">
+                    Prototypes
+                </button>
+                <button
+                    class="gallery-filter bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white px-6 py-2 !rounded-button font-medium transition-colors duration-200 whitespace-nowrap"
+                    data-filter="medical">
+                    Medical
+                </button>
+                <button
+                    class="gallery-filter bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white px-6 py-2 !rounded-button font-medium transition-colors duration-200 whitespace-nowrap"
+                    data-filter="automotive">
+                    Automotive
+                </button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div
+                    class="gallery-item prototypes group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <div class="h-64 bg-cover bg-center"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Complex%20mechanical%20prototype%20with%20intricate%20gears%20and%20moving%20parts%20created%20through%20precision%203D%20printing%20displayed%20on%20a%20clean%20white%20surface%20with%20professional%20studio%20lighting&width=400&height=300&seq=gallery1&orientation=landscape')">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                        <div
+                            class="w-12 h-12 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="ri-eye-line text-gray-900 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="gallery-item medical group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <div class="h-64 bg-cover bg-center"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Medical%20prosthetic%20hand%20with%20detailed%20finger%20joints%20and%20realistic%20skin%20texture%20created%20using%20biocompatible%203D%20printing%20materials%20in%20a%20sterile%20laboratory%20environment&width=400&height=300&seq=gallery2&orientation=landscape')">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                        <div
+                            class="w-12 h-12 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="ri-eye-line text-gray-900 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="gallery-item automotive group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <div class="h-64 bg-cover bg-center"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Automotive%20brake%20caliper%20and%20suspension%20components%20manufactured%20through%20industrial%203D%20printing%20with%20high-strength%20materials%20displayed%20in%20a%20professional%20automotive%20workshop&width=400&height=300&seq=gallery3&orientation=landscape')">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                        <div
+                            class="w-12 h-12 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="ri-eye-line text-gray-900 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="gallery-item prototypes group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <div class="h-64 bg-cover bg-center"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Electronic%20device%20housing%20prototype%20with%20precise%20button%20placements%20and%20cable%20management%20created%20through%20high-resolution%203D%20printing%20on%20a%20clean%20white%20background&width=400&height=300&seq=gallery4&orientation=landscape')">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                        <div
+                            class="w-12 h-12 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="ri-eye-line text-gray-900 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="gallery-item medical group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <div class="h-64 bg-cover bg-center"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Dental%20implant%20and%20orthodontic%20models%20with%20precise%20anatomical%20details%20created%20using%20medical-grade%203D%20printing%20materials%20in%20a%20professional%20dental%20laboratory&width=400&height=300&seq=gallery5&orientation=landscape')">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                        <div
+                            class="w-12 h-12 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="ri-eye-line text-gray-900 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="gallery-item automotive group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    <div class="h-64 bg-cover bg-center"
+                        style="background-image: url('https://readdy.ai/api/search-image?query=Custom%20car%20dashboard%20components%20and%20interior%20trim%20pieces%20created%20through%20precision%203D%20printing%20with%20automotive-grade%20materials%20in%20a%20modern%20manufacturing%20facility&width=400&height=300&seq=gallery6&orientation=landscape')">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                        <div
+                            class="w-12 h-12 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="ri-eye-line text-gray-900 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Client Testimonials</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Hear what our satisfied clients have to say about their experience with PixelBotix Technologies.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg">
+                            R
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">Rajesh Kumar</h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">CEO, TechnoMed Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        "PixelBotix delivered exceptional quality medical prototypes that exceeded our expectations.
+                        Their attention to detail and biocompatible materials made all the difference in our product
+                        development."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg">
+                            P
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">Priya Sharma</h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">Design Director, AutoInnovate</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        "The rapid turnaround time and precision of their automotive prototypes helped us accelerate our
+                        product launch by months. Highly recommended for any automotive development project."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg">
+                            A
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white">Arjun Patel</h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">Principal, Chennai International School
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        "Their educational 3D printing program has transformed our STEM curriculum. Students are more
+                        engaged and learning complex concepts through hands-on experience."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300">
+                    Get answers to common questions about our 3D printing services and processes.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="faq-item bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden">
+                    <button
+                        class="faq-question w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors duration-200">
+                        <span class="text-lg font-semibold text-gray-900 dark:text-white">What file formats do you
+                            accept for 3D printing?</span>
+                        <div class="w-6 h-6 flex items-center justify-center">
+                            <i class="ri-add-line text-gray-600 dark:text-gray-300 faq-icon"></i>
+                        </div>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-600 dark:text-gray-300">
+                            We accept all standard 3D file formats including STL, OBJ, PLY, 3MF, and STEP files. Our
+                            team can also work with CAD files from SolidWorks, AutoCAD, Fusion 360, and other popular
+                            design software. If you have a different format, please contact us and we'll help you
+                            convert it.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden">
+                    <button
+                        class="faq-question w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors duration-200">
+                        <span class="text-lg font-semibold text-gray-900 dark:text-white">What is the typical turnaround
+                            time for projects?</span>
+                        <div class="w-6 h-6 flex items-center justify-center">
+                            <i class="ri-add-line text-gray-600 dark:text-gray-300 faq-icon"></i>
+                        </div>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Most standard projects are completed within 24-48 hours. Complex or large-scale projects may
+                            take 3-7 days depending on the size, material, and finishing requirements. Rush orders can
+                            often be accommodated for an additional fee. We'll provide you with an accurate timeline
+                            when you submit your project.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden">
+                    <button
+                        class="faq-question w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors duration-200">
+                        <span class="text-lg font-semibold text-gray-900 dark:text-white">Do you offer post-processing
+                            and finishing services?</span>
+                        <div class="w-6 h-6 flex items-center justify-center">
+                            <i class="ri-add-line text-gray-600 dark:text-gray-300 faq-icon"></i>
+                        </div>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Yes, we provide comprehensive post-processing services including sanding, polishing,
+                            painting, vapor smoothing, and assembly. We can also apply various surface treatments such
+                            as electroplating, anodizing, and custom color matching to meet your specific requirements.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden">
+                    <button
+                        class="faq-question w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors duration-200">
+                        <span class="text-lg font-semibold text-gray-900 dark:text-white">What are your minimum and
+                            maximum print sizes?</span>
+                        <div class="w-6 h-6 flex items-center justify-center">
+                            <i class="ri-add-line text-gray-600 dark:text-gray-300 faq-icon"></i>
+                        </div>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Our print sizes range from miniature parts as small as 1mm to large components up to 400mm x
+                            400mm x 500mm depending on the technology used. For larger projects, we can print in
+                            sections and provide assembly services. There's no minimum order quantity - we handle
+                            everything from single prototypes to production runs.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden">
+                    <button
+                        class="faq-question w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors duration-200">
+                        <span class="text-lg font-semibold text-gray-900 dark:text-white">How do you ensure quality and
+                            accuracy?</span>
+                        <div class="w-6 h-6 flex items-center justify-center">
+                            <i class="ri-add-line text-gray-600 dark:text-gray-300 faq-icon"></i>
+                        </div>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-600 dark:text-gray-300">
+                            We maintain strict quality control processes including pre-print file analysis, calibrated
+                            equipment, controlled environment conditions, and post-print inspection using precision
+                            measuring tools. All our technicians are certified and we follow ISO 9001 quality management
+                            standards to ensure consistent, high-quality results.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Form Section -->
+    <section id="contact" class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Get Your Quote</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300">
+                    Ready to bring your project to life? Fill out our detailed quote form and we'll get back to you
+                    within 24 hours.
+                </p>
+            </div>
+
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Full Name
+                                *</label>
+                            <input type="text" required=""
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200"
+                                placeholder="Enter your full name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email Address
+                                *</label>
+                            <input type="email" required=""
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200"
+                                placeholder="Enter your email">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Phone
+                                Number</label>
+                            <input type="tel"
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200"
+                                placeholder="Enter your phone number">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Company
+                                Name</label>
+                            <input type="text"
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200"
+                                placeholder="Enter your company name">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Technology
+                                Preference</label>
+                            <div class="relative">
+                                <select
+                                    class="w-full px-4 py-3 pr-8 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200 appearance-none">
+                                    <option>Select Technology</option>
+                                    <option>FDM (Fused Deposition Modeling)</option>
+                                    <option>SLA (Stereolithography)</option>
+                                    <option>SLS (Selective Laser Sintering)</option>
+                                    <option>Not Sure - Need Consultation</option>
+                                </select>
+                                <div
+                                    class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center pointer-events-none">
+                                    <i class="ri-arrow-down-s-line text-gray-500"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Material
+                                Preference</label>
+                            <div class="relative">
+                                <select
+                                    class="w-full px-4 py-3 pr-8 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200 appearance-none">
+                                    <option>Select Material</option>
+                                    <option>PLA Plastic</option>
+                                    <option>ABS Engineering Plastic</option>
+                                    <option>Medical Grade Resin</option>
+                                    <option>Metal Alloys</option>
+                                    <option>Other - Please Specify</option>
+                                </select>
+                                <div
+                                    class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center pointer-events-none">
+                                    <i class="ri-arrow-down-s-line text-gray-500"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Quantity
+                                Needed</label>
+                            <input type="number" min="1"
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200"
+                                placeholder="Enter quantity">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Timeline
+                                Required</label>
+                            <div class="relative">
+                                <select
+                                    class="w-full px-4 py-3 pr-8 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200 appearance-none">
+                                    <option>Select Timeline</option>
+                                    <option>Rush (24 hours)</option>
+                                    <option>Standard (2-3 days)</option>
+                                    <option>Extended (1 week)</option>
+                                    <option>Flexible</option>
+                                </select>
+                                <div
+                                    class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center pointer-events-none">
+                                    <i class="ri-arrow-down-s-line text-gray-500"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Project
+                            Description *</label>
+                        <textarea required="" rows="4"
+                            class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200 resize-none"
+                            placeholder="Please describe your project, including dimensions, specific requirements, and any special considerations..."></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Upload
+                            Files</label>
+                        <div
+                            class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center hover:border-primary transition-colors duration-200">
+                            <div
+                                class="w-12 h-12 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                <i class="ri-upload-cloud-2-line text-gray-500 dark:text-gray-400 text-2xl"></i>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300 mb-2">Drag and drop your files here, or click to
+                                browse</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Supported formats: STL, OBJ, PLY, 3MF,
+                                STEP (Max 50MB)</p>
+                            <input type="file" multiple="" accept=".stl,.obj,.ply,.3mf,.step,.stp" class="hidden">
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="flex items-center h-5">
+                            <input type="checkbox" required=""
+                                class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary">
+                        </div>
+                        <div class="ml-3">
+                            <label class="text-sm text-gray-700 dark:text-gray-300">
+                                I agree to the <a href="#" class="text-primary hover:underline">Terms of Service</a> and
+                                <a href="#" class="text-primary hover:underline">Privacy Policy</a> *
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit"
+                            class="bg-primary hover:bg-secondary text-white px-12 py-4 !rounded-button font-semibold text-lg transition-colors duration-200 whitespace-nowrap">
+                            Submit Quote Request
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">PixelBotix Technologies</h3>
+                    <p class="text-gray-400 mb-6">Future-driven product innovation and EdTech company pioneering the
+                        convergence of Robotics, AI, Smart Manufacturing, and Emerging Technologies.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=61575683369348" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-facebook-fill ri-lg"></i>
+                        </a>
+                        <a href="https://x.com/PixelBotix" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-twitter-fill ri-lg"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/pixelbotix/" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-linkedin-fill ri-lg"></i>
+                        </a>
+                        <a href="https://www.instagram.com/pixel_botix/" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-instagram-fill ri-lg"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@PixelBotix" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-youtube-fill ri-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about_us.html" class="text-gray-400 hover:text-white transition-colors">About
+                                Us</a></li>
+                        <li><a href="#ai-robotics" class="text-gray-400 hover:text-white transition-colors">AI &
+                                Robotics</a></li>
+                        <li><a href="#eduverse" class="text-gray-400 hover:text-white transition-colors">Eduverse</a>
+                        </li>
+                        <li><a href="#skill-labs" class="text-gray-400 hover:text-white transition-colors">Skill
+                                Labs</a></li>
+                        <li><a href="https://shop.pixelbotix.com/" class="text-gray-400 hover:text-white transition-colors">Products</a>
+                        </li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Programs -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Our Programs</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#brainy-babies" class="text-gray-400 hover:text-white transition-colors">Brainy
+                                Babies (0-5 years)</a></li>
+                        <li><a href="#little-techies" class="text-gray-400 hover:text-white transition-colors">Little
+                                Techies (5-9 years)</a></li>
+                        <li><a href="#maker-school" class="text-gray-400 hover:text-white transition-colors">Maker
+                                School (9-17 years)</a></li>
+                        <li><a href="#future-innovators" class="text-gray-400 hover:text-white transition-colors">Future
+                                Innovators (16-25 years)</a></li>
+                        <li><a href="#school-lab-setup" class="text-gray-400 hover:text-white transition-colors">School
+                                Lab Setup</a></li>
+                        <li><a href="#faculty-development"
+                                class="text-gray-400 hover:text-white transition-colors">Faculty Development</a></li>
+                    </ul>
+                </div>
+
+                <!-- Policies -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Policies</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/policies/privacy_policy.html"
+                                class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms &
+                                Conditions</a></li>
+                        <li><a href="/policies/refund_cancellation.html"
+                                class="text-gray-400 hover:text-white transition-colors">Refund & Cancellation</a></li>
+                        <li><a href="/policies/shipping_policy.html"
+                                class="text-gray-400 hover:text-white transition-colors">Shipping Policy</a></li>
+                        <li><a href="/policies/disclaimer.html"
+                                class="text-gray-400 hover:text-white transition-colors">Disclaimer</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Subscribe to Our Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Stay updated with our latest news, programs, and innovations.</p>
+                    <form class="mb-4">
+                        <div class="flex">
+                            <input type="email" placeholder="Your email address"
+                                class="px-4 py-3 bg-gray-800 text-white rounded-l focus:outline-none focus:ring-2 focus:ring-primary border-none flex-grow">
+                            <button type="submit"
+                                class="bg-primary text-white px-4 py-3 rounded-r hover:bg-blue-600 transition-colors whitespace-nowrap">Subscribe</button>
+                        </div>
+                    </form>
+                    <p class="text-gray-500 text-sm">By subscribing, you agree to our Privacy Policy and consent to
+                        receive updates from our company.</p>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2025 PixelBotix Technologies Pvt. Ltd. All
+                        rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Terms of
+                            Service</a>
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Buttons Container -->
+            <div class="fixed bottom-8 right-8 z-50 flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
+                <!-- Back to Top Button -->
+                <button id="back-to-top"
+                    class="bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+                    <i class="ri-arrow-up-line ri-lg"></i>
+                </button>
+
+                <!-- WhatsApp Button -->
+                <a href="https://wa.me/917200445335?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20PixelBotix%20and%20your%20programs.%20Can%20you%20help%20me?"
+                    target="_blank"
+                    class="bg-green-500 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-green-600 transition-all transform hover:scale-105">
+                    <i class="ri-whatsapp-line text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script id="theme-toggle-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+            const html = document.documentElement;
+
+            function toggleTheme() {
+                html.classList.toggle('dark');
+                localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+            }
+
+            themeToggle.addEventListener('click', toggleTheme);
+            themeToggleMobile.addEventListener('click', toggleTheme);
+
+            if (localStorage.getItem('theme') === 'dark') {
+                html.classList.add('dark');
+            }
+        });
+    </script>
+
+    <script id="mobile-menu-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuBtn.addEventListener('click', function () {
+                mobileMenu.classList.toggle('open');
+            });
+
+            mobileMenu.addEventListener('click', function (e) {
+                if (e.target.tagName === 'A') {
+                    mobileMenu.classList.remove('open');
+                }
+            });
+        });
+    </script>
+
+    <script id="hero-slider-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.hero-slide');
+            const dots = document.querySelectorAll('.progress-dot');
+            const prevBtn = document.getElementById('prev-slide');
+            const nextBtn = document.getElementById('next-slide');
+            let currentSlide = 0;
+            let slideInterval;
+
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+
+                slides[index].classList.add('active');
+                dots[index].classList.add('active');
+                currentSlide = index;
+            }
+
+            function nextSlide() {
+                const next = (currentSlide + 1) % slides.length;
+                showSlide(next);
+            }
+
+            function prevSlide() {
+                const prev = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(prev);
+            }
+
+            function startSlideShow() {
+                slideInterval = setInterval(nextSlide, 5000);
+            }
+
+            function stopSlideShow() {
+                clearInterval(slideInterval);
+            }
+
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                stopSlideShow();
+                startSlideShow();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                stopSlideShow();
+                startSlideShow();
+            });
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showSlide(index);
+                    stopSlideShow();
+                    startSlideShow();
+                });
+            });
+
+            startSlideShow();
+        });
+    </script>
+
+    <script id="gallery-filter-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterBtns = document.querySelectorAll('.gallery-filter');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const filter = this.dataset.filter;
+
+                    filterBtns.forEach(b => {
+                        b.classList.remove('active', 'bg-primary', 'text-white');
+                        b.classList.add('bg-gray-200', 'dark:bg-gray-600', 'text-gray-700', 'dark:text-gray-300');
+                    });
+
+                    this.classList.add('active', 'bg-primary', 'text-white');
+                    this.classList.remove('bg-gray-200', 'dark:bg-gray-600', 'text-gray-700', 'dark:text-gray-300');
+
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.classList.contains(filter)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+    <script id="faq-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function () {
+                    const faqItem = this.parentElement;
+                    const faqContent = faqItem.querySelector('.faq-content');
+                    const faqIcon = this.querySelector('.faq-icon');
+
+                    const isOpen = faqContent.classList.contains('open');
+
+                    document.querySelectorAll('.faq-content').forEach(content => {
+                        content.classList.remove('open');
+                    });
+
+                    document.querySelectorAll('.faq-icon').forEach(icon => {
+                        icon.className = 'ri-add-line text-gray-600 dark:text-gray-300 faq-icon';
+                    });
+
+                    if (!isOpen) {
+                        faqContent.classList.add('open');
+                        faqIcon.className = 'ri-subtract-line text-gray-600 dark:text-gray-300 faq-icon';
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Back to top -->
+    <script id="back-to-top-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const backToTopButton = document.getElementById('back-to-top');
+            function toggleBackToTopButton() {
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.remove('opacity-0', 'invisible');
+                    backToTopButton.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopButton.classList.remove('opacity-100', 'visible');
+                    backToTopButton.classList.add('opacity-0', 'invisible');
+                }
+            }
+            window.addEventListener('scroll', toggleBackToTopButton);
+            backToTopButton.addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <script src="js/share.js"></script>
+</body>
+
+</html>

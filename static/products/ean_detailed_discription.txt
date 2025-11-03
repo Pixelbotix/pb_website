@@ -2230,40 +2230,6 @@ U85499TN2025PTC179042
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Academic Clients
-
-
-
-
-came to the office on that day 
-
-
-
-C
-
-
 Django need 3 things
 1. view
 2. urls
@@ -2421,6 +2387,32 @@ EKA XLE *
 
 
 
-navbar, footer part completed
-1. privacy_policy
-2. shipping_policy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

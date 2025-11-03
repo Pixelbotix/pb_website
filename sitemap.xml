@@ -34,7 +34,7 @@
   
   <!-- Privacy Policy Page -->
   <url>
-    <loc>https://pixelbotix.com/privacy_policy.html</loc>
+    <loc>https://pixelbotix.com//policies/privacy_policy.html</loc>
     <lastmod>2025-10-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
@@ -50,7 +50,7 @@
   
   <!-- Refund & Cancellation Page -->
   <url>
-    <loc>https://pixelbotix.com/refund_cancellation.html</loc>
+    <loc>https://pixelbotix.com//policies/refund_cancellation.html</loc>
     <lastmod>2025-10-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
@@ -58,7 +58,7 @@
   
   <!-- Shipping Policy Page -->
   <url>
-    <loc>https://pixelbotix.com/shipping_policy.html</loc>
+    <loc>https://pixelbotix.com//policies/shipping_policy.html</loc>
     <lastmod>2025-10-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
@@ -66,7 +66,7 @@
 
   <!-- Disclaimer Page -->
   <url>
-    <loc>https://pixelbotix.com/disclaimer.html</loc>
+    <loc>https://pixelbotix.com//policies/disclaimer.html</loc>
     <lastmod>2025-10-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
@@ -79,5 +79,20 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
+  <!-- 3d printing services -->
+  <url>
+    <loc>https://www.pixelbotix.com/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.pixelbotix.com/3d-printing-services.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.pixelbotix.com/3d-scanning-services.html</loc>
+  </url>
+  <url>
+    <loc>https://www.pixelbotix.com/#contact</loc>
+  </url>
+
 </urlset>
