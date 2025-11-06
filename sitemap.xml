@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <!-- Home Page -->
   <url>
     <loc>https://pixelbotix.com/</loc>
@@ -16,7 +18,7 @@
     <priority>0.8</priority>
   </url>
   
-  <!-- Products Listing Page -->
+  <!-- Shop / Products Listing -->
   <url>
     <loc>https://shop.pixelbotix.com/</loc>
     <lastmod>2025-10-09</lastmod>
@@ -24,75 +26,63 @@
     <priority>0.9</priority>
   </url>
   
-  <!-- Product Detail Page -->
-  <url>
-    <loc>https://shop.pixelbotix.com/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Privacy Policy Page -->
-  <url>
-    <loc>https://pixelbotix.com//policies/privacy_policy.html</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- Terms & Conditions Page -->
-  <url>
-    <loc>https://pixelbotix.com/terms.html</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <!-- Refund & Cancellation Page -->
-  <url>
-    <loc>https://pixelbotix.com//policies/refund_cancellation.html</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <!-- Shipping Policy Page -->
-  <url>
-    <loc>https://pixelbotix.com//policies/shipping_policy.html</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- Disclaimer Page -->
-  <url>
-    <loc>https://pixelbotix.com//policies/disclaimer.html</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- Workshop Registration Page -->
+  <!-- Workshop Registration -->
   <url>
     <loc>https://pixelbotix.com/workshop_register.html</loc>
     <lastmod>2025-10-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <!-- 3d printing services -->
+
+  <!-- Services -->
   <url>
-    <loc>https://www.pixelbotix.com/</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.pixelbotix.com/3d-printing-services.html</loc>
+    <loc>https://pixelbotix.com/3d-printing-services.html</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.pixelbotix.com/3d-scanning-services.html</loc>
+    <loc>https://pixelbotix.com/3d-scanning-services.html</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.pixelbotix.com/#contact</loc>
+    <loc>https://pixelbotix.com/#contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Policies -->
+  <url>
+    <loc>https://pixelbotix.com/policies/privacy_policy.html</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pixelbotix.com/policies/terms.html</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pixelbotix.com/policies/refund_cancellation.html</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pixelbotix.com/policies/shipping_policy.html</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pixelbotix.com/policies/disclaimer.html</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
 
 </urlset>
