@@ -1,0 +1,618 @@
+<!-- ================================
+     HEADER — PART 1 (STRUCTURE)
+================================ -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 shadow transition duration-300">
+    <div class="max-w-[1400px] mx-auto px-4 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+    <div class="h-20"></div>
+
+            <!-- =============================
+                 LEFT — LOGO
+            ============================== -->
+            <a href="/" class="flex items-center gap-3 shrink-0">
+                <img src="/static/logo/logo-white.png" class="w-16 h-16 inline-block dark:hidden" />
+                <img src="/static/logo/logo-dark.png" class="w-16 h-16 hidden dark:inline-block" />
+
+                <div class="hidden sm:block">
+                    <div class="font-semibold text-lg leading-tight">PixelBotix</div>
+                    <div class="text-xs text-gray-500 dark:text-gray-300 -mt-1">
+                        R&D • Robotics • EduTech
+                    </div>
+                </div>
+            </a>
+
+            <!-- =============================
+                 CENTER — NAVIGATION
+            ============================== -->
+            <nav class="hidden md:flex items-center gap-8">
+
+                <a href="index.html" class="hover:text-primary transition">Home</a>
+                <a href="/about/about-us.html" class="hover:text-primary transition">About</a>
+
+                <!-- Products (Mega menu in Part 2) -->
+                <div class="relative group" data-menu="products">
+                    <button class="flex items-center gap-1 hover:text-primary transition">
+                        Products <i class="ri-arrow-down-s-line"></i>
+                    </button>
+
+                    <!-- PANEL comes in Part 2 -->
+                    <div class="hidden group-hover:block"></div>
+                </div>
+
+                <!-- Services (Mega menu in Part 2) -->
+                <div class="relative group" data-menu="services">
+                    <button class="flex items-center gap-1 hover:text-primary transition">
+                        Services <i class="ri-arrow-down-s-line"></i>
+                    </button>
+
+                    <!-- PANEL comes in Part 2 -->
+                    <div class="hidden group-hover:block"></div>
+                </div>
+
+                <!-- Innovation Hub (Full mega menu in Part 2) -->
+                <div class="relative group" data-menu="innovation">
+                    <button class="flex items-center gap-1 hover:text-primary transition">
+                        Innovation Hub <i class="ri-arrow-down-s-line"></i>
+                    </button>
+
+                    <!-- PANEL comes in Part 2 -->
+                    <div class="hidden group-hover:block"></div>
+                </div>
+
+                <a href="index.html#contact" class="hover:text-primary transition">Contact</a>
+
+            </nav>
+
+            <!-- =============================
+                 RIGHT — USER LOGIN, CART, THEME, SHOP
+            ============================== -->
+            <div class="flex items-center gap-5">
+
+                <!-- USER ICON -->
+                <div class="relative" id="user-dropdown-wrapper">
+                    <button id="user-btn"
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700">
+                        <i class="ri-user-line ri-lg"></i>
+                    </button>
+
+                    <!-- USER DROPDOWN -->
+                    <div id="user-dropdown"
+                        class="hidden absolute right-0 mt-3 w-48 bg-white dark:bg-gray-800 shadow-lg rounded-xl p-3">
+                        <a href="/user/profile.html"
+                            class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">
+                            Profile
+                        </a>
+
+                        <a href="/user/orders.html"
+                            class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">
+                            My Orders
+                        </a>
+
+                        <button
+                            class="block w-full text-left px-3 py-2 hover:bg-red-100 dark:hover:bg-red-600 rounded-lg">
+                            Logout
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CART ICON -->
+                <a href="/cart.html" class="relative w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+                    <i class="ri-shopping-cart-line ri-lg"></i>
+                    <span id="cart-count"
+                        class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full px-1 hidden">
+                        0
+                    </span>
+                </a>
+
+                <!-- THEME TOGGLE -->
+                <button id="theme-toggle"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700">
+                    <i class="ri-sun-line dark:hidden ri-lg"></i>
+                    <i class="ri-moon-line hidden dark:block ri-lg"></i>
+                </button>
+
+                <!-- SHOP BUTTON -->
+                <a href="https://shop.pixelbotix.com/"
+                    class="hidden md:inline-block px-5 py-2 bg-primary text-white rounded-full hover:bg-blue-600 transition">
+                    Shop
+                </a>
+
+                <!-- MOBILE MENU -->
+                <button id="mobile-menu-toggle"
+                    class="md:hidden w-10 h-10 flex items-center justify-center text-gray-900 dark:text-white">
+                    <i class="ri-menu-line ri-xl"></i>
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<!-- ================================
+     PRODUCTS MEGA MENU
+================================ -->
+<div class="megamenu-panel absolute left-1/2 transform -translate-x-1/2 mt-4 w-[900px]
+    bg-white dark:bg-gray-800 shadow-xl rounded-xl p-6 hidden group-hover:block z-40">
+
+    <div class="grid grid-cols-3 gap-6">
+
+        <!-- 3D Printers -->
+        <a href="/products/3d-printers.html"
+            class="bg-gray-100 dark:bg-gray-700 rounded-xl overflow-hidden hover:shadow-lg transition">
+            <img src="https://images.unsplash.com/photo-1581091870622-dea1b3e798d8?w=800" alt="">
+            <div class="p-4">
+                <h4 class="font-bold">3D Printers</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-300">Industrial & desktop printers.</p>
+            </div>
+        </a>
+
+        <!-- 3D Scanners -->
+        <a href="/products/3d-scanners.html"
+            class="bg-gray-100 dark:bg-gray-700 rounded-xl overflow-hidden hover:shadow-lg transition">
+            <img src="https://images.unsplash.com/photo-1527430253228-e93688616381?w=800" alt="">
+            <div class="p-4">
+                <h4 class="font-bold">3D Scanners</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-300">High precision scanning.</p>
+            </div>
+        </a>
+
+        <!-- Robotics Kits -->
+        <a href="/products/robotics-kits.html"
+            class="bg-gray-100 dark:bg-gray-700 rounded-xl overflow-hidden hover:shadow-lg transition">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800" alt="">
+            <div class="p-4">
+                <h4 class="font-bold">Robotics Kits</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-300">STEM & education kits.</p>
+            </div>
+        </a>
+
+    </div>
+</div>
+
+<!-- ================================
+     SERVICES MEGA MENU
+================================ -->
+<div class="megamenu-panel absolute left-1/2 transform -translate-x-1/2 mt-4 w-[700px]
+    bg-white dark:bg-gray-800 shadow-xl rounded-xl p-6 hidden group-hover:block z-40">
+
+    <div class="grid grid-cols-2 gap-6">
+
+        <!-- 3D Printing -->
+        <a href="/services/3d-printing.html"
+            class="bg-gray-100 dark:bg-gray-700 rounded-xl overflow-hidden hover:shadow-lg transition">
+            <img src="https://images.unsplash.com/photo-1581091870635-bb8c0c10a4e2?w=800" alt="">
+            <div class="p-4">
+                <h4 class="font-bold">3D Printing Service</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-300">
+                    FDM · SLA · SLS manufacturing
+                </p>
+            </div>
+        </a>
+
+        <!-- 3D Scanning -->
+        <a href="/services/3d-scanning.html"
+            class="bg-gray-100 dark:bg-gray-700 rounded-xl overflow-hidden hover:shadow-lg transition">
+            <img src="https://images.unsplash.com/photo-1527430253228-e93688616381?w=800" alt="">
+            <div class="p-4">
+                <h4 class="font-bold">3D Scanning Service</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-300">
+                    Reverse engineering · Inspection
+                </p>
+            </div>
+        </a>
+
+    </div>
+</div>
+
+
+<!-- ===========================================
+     INNOVATION HUB — FULL MEGA MENU
+=========================================== -->
+<div class="megamenu-panel absolute left-1/2 transform -translate-x-1/2 mt-4 w-[1200px]
+    bg-white dark:bg-gray-800 shadow-xl rounded-xl p-8 hidden group-hover:block z-40">
+
+    <!-- =======================
+         R&D DIVISIONS
+    ======================== -->
+    <h3 class="font-semibold text-lg mb-4">R&D Divisions</h3>
+
+    <div class="grid grid-cols-4 gap-6 mb-12">
+
+        <!-- Assistive Devices -->
+        <a href="/divisions/assistive-devices.html"
+            class="bg-gray-100 dark:bg-gray-700 rounded-xl overflow-hidden hover:shadow-xl transition">
+            <img src="https://images.unsplash.com/photo-1581091870622-dea1b3e798d8?w=800">
+            <div class="p-4">
+                <h4 class="font-bold">Assistive Devices</h4>
+                <p class="text-sm text-gray-500 dark:text-gray-300">
+                    Prosthetics · Exoskeletons
+                </p>
+            </div>
+        </a>
+
+        <!-- Smart Healthcare -->
+        <a href="/divisions/smart-healthcare.html"
+            class="bg-gray-100 dark:bg-gray-700 rounded-xl overflow-hidden hover:shadow-xl transition">
+            <img src="https://images.unsplash.com/photo-1581093448799-876a74394a91?w=800">
+            <div class="p-4">
+                <h4 class="font-bold">Smart Healthcare</h4>
+                <p class="text-sm">AI diagnostics & imaging</p>
+            </div>
+        </a>
+
+        <!-- Rapid Prototyping -->
+        <a href="/divisions/rapid-prototyping.html"
+            class="bg-gray-100 dark:bg-gray-700 rounded-xl overflow-hidden hover:shadow-xl transition">
+            <img src="https://images.unsplash.com/photo-1565372910-1e1b7e736d8d?w=800">
+            <div class="p-4">
+                <h4 class="font-bold">Rapid Prototyping</h4>
+                <p class="text-sm">CNC · 3D Printing · Machining</p>
+            </div>
+        </a>
+
+        <!-- UAV -->
+        <a href="/divisions/uav.html"
+            class="bg-gray-100 dark:bg-gray-700 rounded-xl overflow-hidden hover:shadow-xl transition">
+            <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=800">
+            <div class="p-4">
+                <h4 class="font-bold">UAV / Drones</h4>
+                <p class="text-sm">Autonomous flight systems</p>
+            </div>
+        </a>
+
+    </div>
+
+    <!-- =======================
+         R&D LABS
+    ======================== -->
+    <h3 class="font-semibold text-lg mb-4">R&D Labs</h3>
+
+    <div class="grid grid-cols-4 gap-6 mb-12">
+
+        <!-- IoT Lab -->
+        <a href="/divisions/iot-lab.html"
+            class="bg-gray-100 dark:bg-gray-700 rounded-xl overflow-hidden hover:shadow-xl transition">
+            <img src="https://images.unsplash.com/photo-1547407138-0c1d8dfeea1b?w=800">
+            <div class="p-4">
+                <h4 class="font-bold">IoT Lab</h4>
+                <p class="text-sm">Sensors & automation</p>
+            </div>
+        </a>
+
+        <!-- 3D Print Lab -->
+        <a href="/divisions/3d-print-lab.html"
+            class="bg-gray-100 dark:bg-gray-700 rounded-xl overflow-hidden hover:shadow-xl transition">
+            <img src="https://images.unsplash.com/photo-1565372910-1e1b7e736d8d?w=800">
+            <div class="p-4">
+                <h4 class="font-bold">3D Printing Lab</h4>
+                <p class="text-sm">Additive manufacturing</p>
+            </div>
+        </a>
+
+        <!-- Aero Lab -->
+        <a href="/divisions/aero-lab.html"
+            class="bg-gray-100 dark:bg-gray-700 rounded-xl overflow-hidden hover:shadow-xl transition">
+            <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=800">
+            <div class="p-4">
+                <h4 class="font-bold">Aero Lab</h4>
+                <p class="text-sm">Autonomous drones</p>
+            </div>
+        </a>
+
+        <!-- Biomedical Lab -->
+        <a href="/divisions/biomedical-lab.html"
+            class="bg-gray-100 dark:bg-gray-700 rounded-xl overflow-hidden hover:shadow-xl transition">
+            <img src="https://images.unsplash.com/photo-1579154204601-01588f351e63?w=800">
+            <div class="p-4">
+                <h4 class="font-bold">Biomedical Lab</h4>
+                <p class="text-sm">Medical device R&D</p>
+            </div>
+        </a>
+    </div>
+
+    <!-- =======================
+         EDUSERSE PROGRAMS
+    ======================== -->
+    <h3 class="font-semibold text-lg mb-4">Eduverse Programs</h3>
+
+    <div class="grid grid-cols-4 gap-6 mb-12">
+
+        <!-- Brainy Babies -->
+        <a href="/eduverse/brainy-babies.html"
+            class="bg-gray-100 dark:bg-gray-700 rounded-xl overflow-hidden hover:shadow-md transition">
+            <img src="https://images.unsplash.com/photo-1503455637927-730bce8583c0?w=800">
+            <div class="p-4">
+                <h4 class="font-bold">Brainy Babies</h4>
+                <p class="text-sm">Ages 0–5 fundamentals</p>
+            </div>
+        </a>
+
+        <!-- Little Techies -->
+        <a href="/eduverse/little-techies.html"
+            class="bg-gray-100 dark:bg-gray-700 rounded-xl overflow-hidden hover:shadow-md transition">
+            <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?w=800">
+            <div class="p-4">
+                <h4 class="font-bold">Little Techies</h4>
+                <p class="text-sm">Ages 5–9 robotics</p>
+            </div>
+        </a>
+
+        <!-- Maker School -->
+        <a href="/eduverse/maker-school.html"
+            class="bg-gray-100 dark:bg-gray-700 rounded-xl overflow-hidden hover:shadow-md transition">
+            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800">
+            <div class="p-4">
+                <h4 class="font-bold">Maker School</h4>
+                <p class="text-sm">Ages 9–17 robotics</p>
+            </div>
+        </a>
+
+        <!-- Future Innovators -->
+        <a href="/eduverse/future-innovators.html"
+            class="bg-gray-100 dark:bg-gray-700 rounded-xl overflow-hidden hover:shadow-md transition">
+            <img src="https://images.unsplash.com/photo-1542744095-291d1f67b221?w=800">
+            <div class="p-4">
+                <h4 class="font-bold">Future Innovators</h4>
+                <p class="text-sm">Ages 16–25 projects</p>
+            </div>
+        </a>
+
+    </div>
+
+    <!-- =======================
+         SKILL LABS
+    ======================== -->
+    <h3 class="font-semibold text-lg mb-4">Skill Labs</h3>
+
+    <div class="grid grid-cols-3 gap-6">
+
+        <!-- School Lab Setup -->
+        <a href="/skill-labs/school-lab-setup.html"
+            class="bg-gray-100 dark:bg-gray-700 rounded-xl overflow-hidden hover:shadow-md transition">
+            <img src="https://images.unsplash.com/photo-1581092587531-7a3ce3a1e99d?w=800">
+            <div class="p-4">
+                <h4 class="font-bold">School Lab Setup</h4>
+                <p class="text-sm">K–12 robotics labs</p>
+            </div>
+        </a>
+
+        <!-- College Lab setup -->
+        <a href="/skill-labs/college-lab-setup.html"
+            class="bg-gray-100 dark:bg-gray-700 rounded-xl overflow-hidden hover:shadow-md transition">
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800">
+            <div class="p-4">
+                <h4 class="font-bold">College Lab Setup</h4>
+                <p class="text-sm">Engineering R&D infra</p>
+            </div>
+        </a>
+
+        <!-- Workshops -->
+        <a href="/skill-labs/workshops.html"
+            class="bg-gray-100 dark:bg-gray-700 rounded-xl overflow-hidden hover:shadow-md transition">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800">
+            <div class="p-4">
+                <h4 class="font-bold">Workshops</h4>
+                <p class="text-sm">Technical training</p>
+            </div>
+        </a>
+
+        <!-- Training Programs -->
+        <a href="/skill-labs/training-programs.html"
+            class="bg-gray-100 dark:bg-gray-700 rounded-xl overflow-hidden hover:shadow-md transition">
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800">
+            <div class="p-4">
+                <h4 class="font-bold">Training Programs</h4>
+                <p class="text-sm">Certification tracks</p>
+            </div>
+        </a>
+
+        <!-- Faculty Development -->
+        <a href="/skill-labs/faculty-development.html"
+            class="bg-gray-100 dark:bg-gray-700 rounded-xl overflow-hidden hover:shadow-md transition">
+            <img src="https://images.unsplash.com/photo-1581092730861-9ec94d956225?w=800">
+            <div class="p-4">
+                <h4 class="font-bold">Faculty Development</h4>
+                <p class="text-sm">Teacher upskilling</p>
+            </div>
+        </a>
+
+        <!-- Testing & Simulation -->
+        <a href="/skill-labs/testing-simulation.html"
+            class="bg-gray-100 dark:bg-gray-700 rounded-xl overflow-hidden hover:shadow-md transition">
+            <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62c36?w=800">
+            <div class="p-4">
+                <h4 class="font-bold">Testing & Simulation</h4>
+                <p class="text-sm">Prototype validation</p>
+            </div>
+        </a>
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+     MOBILE MENU (Accordion System)
+========================================== -->
+<div id="mobile-menu"
+     class="md:hidden bg-white dark:bg-gray-800 border-t border-gray-300 dark:border-gray-700 
+            hidden px-4 py-4 space-y-4">
+
+    <!-- USER + CART -->
+    <div class="flex items-center gap-4 mb-3">
+        <a href="/user/profile.html"
+            class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+            <i class="ri-user-line ri-lg"></i>
+        </a>
+
+        <a href="/cart.html"
+            class="relative w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+            <i class="ri-shopping-cart-line ri-lg"></i>
+            <span id="cart-count-mobile"
+                  class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1 rounded-full hidden">0</span>
+        </a>
+    </div>
+
+    <a href="index.html" class="block py-2 border-b border-gray-300 dark:border-gray-700">Home</a>
+    <a href="/about/about-us.html" class="block py-2 border-b border-gray-300 dark:border-gray-700">About</a>
+
+    <!-- PRODUCTS -->
+    <details class="border-b border-gray-300 dark:border-gray-700">
+        <summary class="py-2 cursor-pointer">Products</summary>
+        <div class="pl-4 py-2 space-y-2">
+            <a href="/products/3d-printers.html">3D Printers</a>
+            <a href="/products/3d-scanners.html">3D Scanners</a>
+            <a href="/products/robotics-kits.html">Robotics Kits</a>
+        </div>
+    </details>
+
+    <!-- SERVICES -->
+    <details class="border-b border-gray-300 dark:border-gray-700">
+        <summary class="py-2 cursor-pointer">Services</summary>
+        <div class="pl-4 py-2 space-y-2">
+            <a href="/services/3d-printing.html">3D Printing</a>
+            <a href="/services/3d-scanning.html">3D Scanning</a>
+        </div>
+    </details>
+
+    <!-- INNOVATION HUB -->
+    <details class="border-b border-gray-300 dark:border-gray-700">
+        <summary class="py-2 cursor-pointer">Innovation Hub</summary>
+
+        <!-- Subcategories -->
+        <div class="pl-4 space-y-3 py-2">
+
+            <details>
+                <summary class="cursor-pointer py-1">R&D Divisions</summary>
+                <div class="pl-4 space-y-1 py-1">
+                    <a href="/divisions/assistive-devices.html">Assistive Devices</a>
+                    <a href="/divisions/smart-healthcare.html">Smart Healthcare</a>
+                    <a href="/divisions/rapid-prototyping.html">Rapid Prototyping</a>
+                    <a href="/divisions/uav.html">UAV / Drones</a>
+                </div>
+            </details>
+
+            <details>
+                <summary class="cursor-pointer py-1">R&D Labs</summary>
+                <div class="pl-4 space-y-1 py-1">
+                    <a href="/divisions/iot-lab.html">IoT Lab</a>
+                    <a href="/divisions/3d-print-lab.html">3D Printing Lab</a>
+                    <a href="/divisions/aero-lab.html">Aero Lab</a>
+                    <a href="/divisions/biomedical-lab.html">Biomedical Lab</a>
+                </div>
+            </details>
+
+            <details>
+                <summary class="cursor-pointer py-1">Eduverse</summary>
+                <div class="pl-4 space-y-1 py-1">
+                    <a href="/eduverse/brainy-babies.html">Brainy Babies</a>
+                    <a href="/eduverse/little-techies.html">Little Techies</a>
+                    <a href="/eduverse/maker-school.html">Maker School</a>
+                    <a href="/eduverse/future-innovators.html">Future Innovators</a>
+                </div>
+            </details>
+
+            <details>
+                <summary class="cursor-pointer py-1">Skill Labs</summary>
+                <div class="pl-4 space-y-1 py-1">
+                    <a href="/skill-labs/school-lab-setup.html">School Lab Setup</a>
+                    <a href="/skill-labs/college-lab-setup.html">College Lab Setup</a>
+                    <a href="/skill-labs/workshops.html">Workshops</a>
+                    <a href="/skill-labs/training-programs.html">Training Programs</a>
+                    <a href="/skill-labs/faculty-development.html">Faculty Development</a>
+                    <a href="/skill-labs/testing-simulation.html">Testing & Simulation</a>
+                </div>
+            </details>
+
+        </div>
+    </details>
+
+    <a href="index.html#contact" class="block py-2">Contact</a>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+        /* ======================
+           USER DROPDOWN
+        ====================== */
+        const userBtn = document.getElementById("user-btn");
+        const userDropdown = document.getElementById("user-dropdown");
+
+        userBtn?.addEventListener("click", (e) => {
+            e.stopPropagation();
+            userDropdown.classList.toggle("hidden");
+        });
+
+        document.addEventListener("click", (e) => {
+            if (!userDropdown.contains(e.target) && !userBtn.contains(e.target)) {
+                userDropdown.classList.add("hidden");
+            }
+        });
+
+
+        /* ======================
+           MOBILE MENU Toggle
+        ====================== */
+        const mobileToggle = document.getElementById("mobile-menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        mobileToggle?.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+
+
+        /* ======================
+           THEME TOGGLE
+        ====================== */
+        const themeBtn = document.getElementById("theme-toggle");
+        const html = document.documentElement;
+
+        themeBtn?.addEventListener("click", () => {
+            html.classList.toggle("dark");
+            localStorage.setItem("theme", html.classList.contains("dark") ? "dark" : "light");
+        });
+
+        // Load theme
+        if (localStorage.getItem("theme") === "dark") {
+            html.classList.add("dark");
+        }
+
+
+        /* ======================
+           CART COUNT (DYNAMIC UPDATE)
+        ====================== */
+        try {
+            const count = localStorage.getItem("cart_count") || 0;
+
+            if (count > 0) {
+                document.getElementById("cart-count").innerText = count;
+                document.getElementById("cart-count").classList.remove("hidden");
+
+                document.getElementById("cart-count-mobile").innerText = count;
+                document.getElementById("cart-count-mobile").classList.remove("hidden");
+            }
+        } catch (e) { }
+
+
+        /* ======================================================
+           DESKTOP MEGA MENU — REMOVE HOVER ON MOBILE DEVICES
+        ====================================================== */
+        const isMobile = window.matchMedia("(max-width: 768px)").matches;
+        if (isMobile) {
+            document.querySelectorAll(".megamenu-panel").forEach(panel => {
+                panel.classList.add("hidden");
+            });
+        }
+
+        /* Close mega menu when mouse leaves header */
+        const header = document.querySelector("header");
+
+        header?.addEventListener("mouseleave", () => {
+            document.querySelectorAll(".megamenu-panel").forEach(panel => {
+                panel.classList.add("hidden");
+            });
+        });
+
+    });
+</script>
