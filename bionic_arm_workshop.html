@@ -559,18 +559,8 @@
     </button>
 </a>
 
-        <div class="fixed bottom-8 right-8 flex flex-col gap-4">
-            <button id="backToTopFloat"
-                class="bg-primary text-white p-4 rounded-full hover:bg-blue-600 transition-all transform hover:scale-105 shadow-lg">
-                <div class="w-6 h-6 flex items-center justify-center">
-                    <i class="ri-arrow-up-line text-xl"></i>
-                </div>
-            </button>
-
-
-        </div>
     </div>
-    <!-- Footer -->
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-white pt-16 pb-8">
         <div class="container mx-auto px-4">
@@ -708,45 +698,55 @@
     </footer>
 
 
-    <script id="theme-toggle">
+    <!-- Scripts -->
+    <script id="theme-toggle-script">
         document.addEventListener('DOMContentLoaded', function () {
-            const themeToggle = document.getElementById('themeToggle');
-            const themeIcon = document.getElementById('themeIcon');
-            const body = document.body;
-            let isDark = false;
+            const themeToggle = document.getElementById('theme-toggle');
+            const html = document.documentElement;
             themeToggle.addEventListener('click', function () {
-                isDark = !isDark;
-                if (isDark) {
-                    body.classList.remove('light');
-                    body.classList.add('dark');
-                    themeIcon.className = 'ri-moon-line text-lg';
-                } else {
-                    body.classList.remove('dark');
-                    body.classList.add('light');
-                    themeIcon.className = 'ri-sun-line text-lg';
-                }
+                html.classList.toggle('dark');
+                localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
             });
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                if (savedTheme === 'dark') {
+                    html.classList.add('dark');
+                } else {
+                    html.classList.remove('dark');
+                }
+            }
         });
     </script>
-    <script id="mobile-menu">
+
+    <script id="mobile-menu-script">
         document.addEventListener('DOMContentLoaded', function () {
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const mobileMenu = document.getElementById('mobileMenu');
-            mobileMenuBtn.addEventListener('click', function () {
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuToggle.addEventListener('click', function () {
                 mobileMenu.classList.toggle('hidden');
             });
         });
     </script>
-    <script id="back-to-top">
+
+    <script id="back-to-top-script">
         document.addEventListener('DOMContentLoaded', function () {
-            const backToTopFloatBtn = document.getElementById('backToTopFloat');
-            const scrollToTop = () => {
+            const backToTopButton = document.getElementById('back-to-top');
+            function toggleBackToTopButton() {
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.remove('opacity-0', 'invisible');
+                    backToTopButton.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopButton.classList.remove('opacity-100', 'visible');
+                    backToTopButton.classList.add('opacity-0', 'invisible');
+                }
+            }
+            window.addEventListener('scroll', toggleBackToTopButton);
+            backToTopButton.addEventListener('click', function () {
                 window.scrollTo({
                     top: 0,
                     behavior: 'smooth'
                 });
-            };
-            backToTopFloatBtn.addEventListener('click', scrollToTop);
+            });
         });
     </script>
 
