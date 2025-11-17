@@ -99,14 +99,24 @@
 
 <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
 
+
+
     <!-- Loader -->
     <div id="page-loader" class="fixed inset-0 bg-white z-[9999] flex items-center justify-center">
         <div class="w-16 h-16 border-4 border-gray-300 border-t-blue-600 rounded-full animate-spin"></div>
     </div>
 
+    <!-- Announcement Bar -->
+    <div class="fixed top-0 left-0 w-full z-[60] text-center py-2 text-sm font-medium 
+                bg-blue-600 text-white dark:bg-blue-500 dark:text-white">
+        🚀 New Workshops Launched — 
+        <a href="ros_workshop.html" class="underline font-semibold">ROS Robotics</a> & 
+        <a href="bionic_arm_workshop.html" class="underline font-semibold">Bionic Arm</a> — Register Now!
+    </div>
 
     <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 shadow-lg transition-colors duration-300">
+    <header class="fixed top-8 left-0 right-0 z-50 bg-white dark:bg-gray-800 shadow-lg transition-colors duration-300">
+
         <div class="w-full px-4 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <a href="#" class="flex items-center">
@@ -160,29 +170,31 @@
                             <button
                                 class="text-gray-900 dark:text-white hover:text-primary transition-colors flex items-center space-x-2">
                                 <i class="ri-book-open-line"></i> <!-- Workshop Icon -->
-                                <span>Workshops</span>
+                                <!-- <span>Workshops</span> -->
+
+                                <span class="flex items-center gap-2">
+                                    Workshops
+                                    <span class="text-[10px] px-2 py-0.5 rounded-full bg-red-500 text-white font-semibold animate-pulse">
+                                        NEW
+                                    </span>
+                                </span>
+
                             </button>
 
-                            <!-- Dropdown Menu -->
-                            <div
-                                class="absolute left-0 mt-2 w-64 bg-white dark:bg-gray-800 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 group-hover:block transition-opacity duration-300 p-4 space-y-3">
-
-                                <!-- ROS Workshop -->
-                                <a href="ros_workshop.html"
-                                    class="flex items-center space-x-3 py-2 px-4 text-gray-900 dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
-                                    <i class="ri-route-line text-xl"></i>
-                                    <span>ROS & Autonomous Robotics Workshop</span>
-                                </a>
-
-                                <!-- Bionic Arm Workshop -->
-                                <a href="bionic_arm_workshop.html"
-                                    class="flex items-center space-x-3 py-2 px-4 text-gray-900 dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
-                                    <i class="ri-hand-heart-line text-xl"></i>
-                                    <span>Bionic Arm & Gesture Control Workshop</span>
-                                </a>
-
+                                <!-- Dropdown Menu -->
+                                <div
+                                    class="absolute left-0 mt-2 w-64 bg-white dark:bg-gray-800 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 group-hover:block transition-opacity duration-300 p-4 space-y-3">
+                                    <a href="ros_workshop.html" class="flex items-center space-x-3 py-2 px-4 hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                        <i class="ri-route-line text-xl"></i>
+                                        <span>ROS & Autonomous Robotics Workshop</span>
+                                    </a>
+                                    <a href="bionic_arm_workshop.html" class="flex items-center space-x-3 py-2 px-4 hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                        <i class="ri-hand-heart-line text-xl"></i>
+                                        <span>Bionic Arm & Gesture Control Workshop</span>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
+
 
                     <a href="index.html#contact"
                         class="text-gray-900 dark:text-white hover:text-primary transition-colors">Contact</a>
@@ -227,9 +239,15 @@
                 <a href="https://shop.pixelbotix.com/" class="block py-2 text-gray-900 dark:text-white hover:text-primary">Products</a>
 
                 <div class="space-y-2">
-                    <button class="w-full text-left text-gray-900 dark:text-white hover:text-primary">
+
+
+                    <button class="w-full text-left text-gray-900 dark:text-white hover:text-primary flex items-center gap-2">
                         Workshops
+                        <span class="text-[10px] px-2 py-0.5 rounded-full bg-red-500 text-white font-semibold animate-pulse">
+                            NEW
+                        </span>
                     </button>
+
                     <div class="space-y-2 pl-4">
                         <a href="ros_workshop.html"
                             class="block py-2 text-gray-900 dark:text-white hover:text-primary">
