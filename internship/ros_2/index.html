@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="js/e.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelBotix - Master ROS2 & Autonomous Mobile Robot Navigation</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#57B5E7', secondary: '#8DD3C7' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        .logo {
+            font-family: "Pacifico", serif;
+        }
+
+        .scroll-container {
+            animation: scroll 30s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .testimonial-scroll {
+            animation: testimonial 40s linear infinite;
+        }
+
+        @keyframes testimonial {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .dark {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        .dark .bg-white {
+            background-color: #2a2a2a;
+        }
+
+        .dark .text-gray-900 {
+            color: #ffffff;
+        }
+
+        .dark .text-gray-600 {
+            color: #d1d5db;
+        }
+
+        .dark .text-gray-700 {
+            color: #e5e7eb;
+        }
+
+        .dark .border-gray-200 {
+            border-color: #374151;
+        }
+
+        .dark .shadow-lg {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900 transition-colors duration-300">
+    
+    <!-- Announcement Bar -->
+    <div class="fixed top-0 left-0 w-full z-[60] text-center py-2 text-sm font-medium 
+                bg-blue-600 text-white dark:bg-blue-500 dark:text-white">
+        🚀 New Programme Launched — 
+        <a href="ros_internship.html" class="underline font-semibold">ROS Robotics</a> & 
+        <a href="bionic_arm_internship.html" class="underline font-semibold">Bionic Arm</a> — Register Now!
+    </div>
+
+
+
+    <!-- Header -->
+    <header class="fixed top-14 md:top-8 left-0 right-0 z-50 bg-white dark:bg-gray-800 shadow-lg transition-colors duration-300">
+
+
+        <div class="w-full px-4 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#" class="flex items-center">
+                    <!-- Dark theme logo (shown only in dark mode) -->
+                    <img src="/static/logo/logo-dark.png" alt="Logo Light" class="w-20 h-20 hidden dark:inline-block">
+                    <img src="/static/logo/logo-white.png" alt="Logo Dark" class="w-20 h-20 inline-block dark:hidden">
+                </a>
+
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Home</a>
+                    <a href="/about/about-us.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">About Us</a>
+
+                    <!-- Dropdown for Services -->
+                    <div class="relative group">
+                        <button
+                            class="text-gray-900 dark:text-white hover:text-primary transition-colors flex items-center space-x-2">
+                            <i class="ri-service-line"></i> <!-- Service Icon -->
+                            <span>Services</span>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div
+                            class="absolute left-0 mt-2 w-64 bg-white dark:bg-gray-800 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 group-hover:block transition-opacity duration-300 p-4 space-y-3">
+                            <!-- AI & Robotics -->
+                            <a href="index.html#ai-robotics"
+                                class="flex items-center space-x-3 py-2 px-4 text-gray-900 dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                <i class="ri-robot-line text-xl"></i>
+                                <span>AI & Robotics</span>
+                            </a>
+                            <!-- Eduverse -->
+                            <a href="index.html#eduverse"
+                                class="flex items-center space-x-3 py-2 px-4 text-gray-900 dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                <i class="ri-earth-line text-xl"></i>
+                                <span>Eduverse</span>
+                            </a>
+                            <!-- Skill Labs -->
+                            <a href="index.html#skill-labs"
+                                class="flex items-center space-x-3 py-2 px-4 text-gray-900 dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                <i class="ri-laptop-line text-xl"></i>
+                                <span>Skill Labs</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="https://shop.pixelbotix.com/"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Products</a>
+
+                        <!-- Dropdown for Workshops -->
+                        <div class="relative group">
+                            <button
+                                class="text-gray-900 dark:text-white hover:text-primary transition-colors flex items-center space-x-2">
+                                <i class="ri-book-open-line"></i> <!-- Workshop Icon -->
+                                <!-- <span>Workshops</span> -->
+
+                                <span class="flex items-center gap-2">
+                                    Programme
+                                    <span class="text-[10px] px-2 py-0.5 rounded-full bg-red-500 text-white font-semibold animate-pulse">
+                                        NEW
+                                    </span>
+                                </span>
+
+                            </button>
+
+                                <!-- Dropdown Menu -->
+                                <div
+                                    class="absolute left-0 mt-2 w-64 bg-white dark:bg-gray-800 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 group-hover:block transition-opacity duration-300 p-4 space-y-3">
+                                    <a href="ros_internship.html" class="flex items-center space-x-3 py-2 px-4 hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                        <i class="ri-route-line text-xl"></i>
+                                        <span>ROS & Autonomous Mobile Robot Internship Program</span>
+                                    </a>
+                                    <a href="bionic_arm_internship.html" class="flex items-center space-x-3 py-2 px-4 hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                        <i class="ri-hand-heart-line text-xl"></i>
+                                        <span>Bionic Arm & Gesture Control Internship Program</span>
+                                    </a>
+                                </div>
+                            </div>
+
+
+                    <a href="index.html#contact"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Contact</a>
+                </nav>
+
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle"
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                        <i class="ri-sun-line dark:hidden ri-lg"></i>
+                        <i class="ri-moon-line hidden dark:block ri-lg"></i>
+                    </button>
+                    <button id="mobile-menu-toggle"
+                        class="md:hidden w-10 h-10 flex items-center justify-center text-gray-900 dark:text-white">
+                        <i class="ri-menu-line ri-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="md:hidden hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-900 dark:text-white hover:text-primary">Home</a>
+                <a href="/about/about-us.html" class="block py-2 text-gray-900 dark:text-white hover:text-primary">About Us</a>
+
+                <!-- Mobile dropdown for Services -->
+                <div class="space-y-2">
+                    <button class="w-full text-left text-gray-900 dark:text-white hover:text-primary">
+                        Services
+                    </button>
+                    <div class="space-y-2 pl-4">
+                        <a href="index.html#ai-robotics"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">AI & Robotics</a>
+                        <a href="index.html#eduverse"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">Eduverse</a>
+                        <a href="index.html#skill-labs"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">Skill Labs</a>
+                    </div>
+                </div>
+
+                <a href="https://shop.pixelbotix.com/" class="block py-2 text-gray-900 dark:text-white hover:text-primary">Products</a>
+
+                <div class="space-y-2">
+
+
+                    <button class="w-full text-left text-gray-900 dark:text-white hover:text-primary flex items-center gap-2">
+                        Programme
+                        <span class="text-[10px] px-2 py-0.5 rounded-full bg-red-500 text-white font-semibold animate-pulse">
+                            NEW
+                        </span>
+                    </button>
+
+                    <div class="space-y-2 pl-4">
+                        <a href="ros_internship.html"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">
+                            ROS & Autonomous Mobile Robot Internship Program
+                        </a>
+                        <a href="bionic_arm_internship.html"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">
+                            Bionic Arm & Gesture Control Internship Program
+                        </a>
+                    </div>
+                </div>
+
+                <a href="index.html#contact"
+                    class="block py-2 text-gray-900 dark:text-white hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="pt-20">
+        <section class="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden"
+            style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20robotics%20laboratory%20with%20autonomous%20mobile%20robots%20and%20students%20working%20with%20ROS2%20systems%2C%20clean%20white%20background%20with%20subtle%20blue%20accents%2C%20professional%20lighting%2C%20high-tech%20environment%20with%20computers%20and%20robotic%20equipment%2C%20spacious%20and%20organized%20workspace&width=1920&height=1080&seq=hero-bg&orientation=landscape'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-white bg-opacity-80"></div>
+            <div class="relative w-full px-6 py-20">
+                <div class="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+                    <div class="space-y-8">
+                        <div
+                            class="inline-flex items-center px-4 py-2 bg-primary bg-opacity-10 rounded-full text-primary font-medium">
+                            <i class="ri-calendar-line w-4 h-4 flex items-center justify-center mr-2"></i>
+                            New Batch Starts: 08 December 2025
+                        </div>
+                        <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                            Master ROS2 & Autonomous Mobile Robot Navigation
+                        </h1>
+                        <p class="text-xl text-gray-600 leading-relaxed">
+                            Your one-stop program to learn ROS2 from beginner to advanced level and gain real-world
+                            robotics experience — taught by India's top robotics educator, Dr. P. V. Sabique.
+                        </p>
+                        <div class="flex items-center space-x-2 text-gray-700">
+                            <i class="ri-map-pin-line w-5 h-5 flex items-center justify-center text-primary"></i>
+                            <span>PixelBotix Robotics Lab — Chennai (Tambaram)</span>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button
+                                class="px-8 py-4 bg-primary text-white rounded-button font-semibold hover:bg-opacity-90 transition-colors whitespace-nowrap !rounded-button">
+                                Apply Now
+                            </button>
+                            <button
+                                class="px-8 py-4 border-2 border-primary text-primary rounded-button font-semibold hover:bg-primary hover:text-white transition-colors whitespace-nowrap !rounded-button">
+                                Download Brochure
+                            </button>
+                            <button
+                                class="px-8 py-4 bg-secondary text-white rounded-button font-semibold hover:bg-opacity-90 transition-colors whitespace-nowrap !rounded-button">
+                                Check Group Discount
+                            </button>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="rounded-2xl overflow-hidden shadow-xl">
+                            <img src="https://readdy.ai/api/search-image?query=Autonomous%20mobile%20robot%20with%20LiDAR%20sensor%20navigating%20in%20modern%20laboratory%20environment%2C%20sleek%20design%20with%20blue%20and%20white%20colors%2C%20professional%20robotics%20equipment%2C%20clean%20background%2C%20high-tech%20appearance&width=400&height=500&seq=robot-1&orientation=portrait"
+                                alt="Autonomous Robot" class="w-full h-full object-cover object-top">
+                        </div>
+                        <div class="rounded-2xl overflow-hidden shadow-xl">
+                            <img src="https://readdy.ai/api/search-image?query=Indian%20engineering%20students%20working%20with%20robotics%20systems%20in%20modern%20laboratory%20setting%2C%20diverse%20group%20of%20young%20Indian%20men%20and%20women%20collaborating%20on%20robot%20projects%2C%20high-tech%20environment%20with%20computers%20and%20robotic%20equipment%2C%20professional%20educational%20atmosphere%20with%20bright%20clean%20lighting%2C%20students%20wearing%20casual%20clothes%20working%20together%20on%20autonomous%20mobile%20robots&width=400&height=500&seq=indian-students-1&orientation=portrait"
+                                alt="Indian Students in Robotics Lab" class="w-full h-full object-cover object-top">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-16 bg-white">
+            <div class="w-full px-6">
+                <div class="text-center mb-12">
+                    <p class="text-gray-600 text-lg">Trusted by engineering colleges & robotics labs across India</p>
+                </div>
+                <div class="overflow-hidden">
+                    <div class="flex space-x-12 scroll-container">
+                        <div class="flex items-center space-x-2 min-w-max">
+                            <i class="ri-building-line w-8 h-8 flex items-center justify-center text-gray-400"></i>
+                            <span class="text-gray-600 font-medium">IIT Chennai</span>
+                        </div>
+                        <div class="flex items-center space-x-2 min-w-max">
+                            <i class="ri-building-line w-8 h-8 flex items-center justify-center text-gray-400"></i>
+                            <span class="text-gray-600 font-medium">Anna University</span>
+                        </div>
+                        <div class="flex items-center space-x-2 min-w-max">
+                            <i class="ri-building-line w-8 h-8 flex items-center justify-center text-gray-400"></i>
+                            <span class="text-gray-600 font-medium">VIT University</span>
+                        </div>
+                        <div class="flex items-center space-x-2 min-w-max">
+                            <i class="ri-building-line w-8 h-8 flex items-center justify-center text-gray-400"></i>
+                            <span class="text-gray-600 font-medium">SRM Institute</span>
+                        </div>
+                        <div class="flex items-center space-x-2 min-w-max">
+                            <i class="ri-building-line w-8 h-8 flex items-center justify-center text-gray-400"></i>
+                            <span class="text-gray-600 font-medium">MIT Chennai</span>
+                        </div>
+                        <div class="flex items-center space-x-2 min-w-max">
+                            <i class="ri-building-line w-8 h-8 flex items-center justify-center text-gray-400"></i>
+                            <span class="text-gray-600 font-medium">IIT Chennai</span>
+                        </div>
+                        <div class="flex items-center space-x-2 min-w-max">
+                            <i class="ri-building-line w-8 h-8 flex items-center justify-center text-gray-400"></i>
+                            <span class="text-gray-600 font-medium">Anna University</span>
+                        </div>
+                        <div class="flex items-center space-x-2 min-w-max">
+                            <i class="ri-building-line w-8 h-8 flex items-center justify-center text-gray-400"></i>
+                            <span class="text-gray-600 font-medium">VIT University</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20 bg-gray-50">
+            <div class="w-full px-6">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <div class="space-y-2">
+                        <div class="text-4xl font-bold text-primary">50+</div>
+                        <div class="text-gray-600">Workshops by PixelBotix</div>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="text-4xl font-bold text-primary">8,000+</div>
+                        <div class="text-gray-600">Students Trained</div>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="text-4xl font-bold text-primary">300+</div>
+                        <div class="text-gray-600">Colleges Reached</div>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="text-4xl font-bold text-primary">20+</div>
+                        <div class="text-gray-600">Partner Internship Companies</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20 bg-white">
+            <div class="w-full px-6">
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-8 rounded-2xl">
+                        <div
+                            class="w-16 h-16 bg-primary bg-opacity-10 rounded-2xl flex items-center justify-center mb-6">
+                            <i class="ri-robot-line w-8 h-8 flex items-center justify-center text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Real Lab, Real Robots, Real Learning</h3>
+                        <p class="text-gray-600">No virtual shortcuts — experience robotics in a live, high-tech lab
+                            environment.</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-2xl">
+                        <div
+                            class="w-16 h-16 bg-secondary bg-opacity-10 rounded-2xl flex items-center justify-center mb-6">
+                            <i
+                                class="ri-user-star-line w-8 h-8 flex items-center justify-center text-secondary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Mentorship from India's Leading Robotics Expert</h3>
+                        <p class="text-gray-600">Dr. Sabique's teaching transforms beginners into confident robotics
+                            engineers.</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-2xl">
+                        <div
+                            class="w-16 h-16 bg-primary bg-opacity-10 rounded-2xl flex items-center justify-center mb-6">
+                            <i
+                                class="ri-briefcase-line w-8 h-8 flex items-center justify-center text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Build Skills That Companies Actually Demand</h3>
+                        <p class="text-gray-600">SLAM, Navigation, Sensor Fusion, ROS2 workflows — everything needed for
+                            a robotics career.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20 bg-gray-50">
+            <div class="w-full px-6">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="lg:w-1/3">
+                        <div class="relative">
+                            <!-- <img src=https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20Indian%20robotics%20professor%20Dr%20Sabique%20in%20modern%20laboratory%20setting%2C%20confident%20expression%2C%20wearing%20formal%20attire%2C%20high-tech%20robotics%20equipment%20in%20background%2C%20professional%20lighting&width=400&height=500&seq=dr-sabique&orientation=portrait"
+                                alt="Dr. P. V. Sabique" class="w-full rounded-2xl shadow-xl object-cover object-top"> -->
+                            <img src="/static/Director_photo/Sabique.jpeg"
+                                alt="Dr. P. V. Sabique"
+                                class="w-full rounded-2xl shadow-xl object-cover object-top"
+                                style="width:400px; height:500px;">
+
+                            <div class="absolute bottom-4 left-4 right-4 bg-white bg-opacity-95 p-4 rounded-xl">
+                                <h3 class="font-bold text-lg">Dr. P. V. Sabique</h3>
+                                <p class="text-gray-600 text-sm">India's Leading Robotics Educator</p>
+                                <div class="flex items-center space-x-3 mt-3">
+                                    <a href="https://www.linkedin.com/in/dr-sabique-pv-23740a8a"
+                                        class="w-8 h-8 flex items-center justify-center bg-blue-600 text-white rounded-full">
+                                        <i class="ri-linkedin-fill"></i>
+                                    </a>
+                                    <!-- <button class="text-primary text-sm font-medium">More Details</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-2/3 space-y-8">
+                        <h2 class="text-3xl font-bold">Who Is This Program For?</h2>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-white p-6 rounded-xl shadow-lg">
+                                <div
+                                    class="w-12 h-12 bg-primary bg-opacity-10 rounded-xl flex items-center justify-center mb-4">
+                                    <i
+                                        class="ri-graduation-cap-line w-6 h-6 flex items-center justify-center text-primary"></i>
+                                </div>
+                                <h4 class="font-bold mb-2">Students & Beginners</h4>
+                                <p class="text-gray-600 text-sm">STEM students passionate about robotics and autonomous
+                                    systems.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl shadow-lg">
+                                <div
+                                    class="w-12 h-12 bg-secondary bg-opacity-10 rounded-xl flex items-center justify-center mb-4">
+                                    <i class="ri-code-line w-6 h-6 flex items-center justify-center text-secondary"></i>
+                                </div>
+                                <h4 class="font-bold mb-2">Engineers & Developers</h4>
+                                <p class="text-gray-600 text-sm">Transitioning to real-time robotics, embedded systems &
+                                    automation.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl shadow-lg">
+                                <div
+                                    class="w-12 h-12 bg-primary bg-opacity-10 rounded-xl flex items-center justify-center mb-4">
+                                    <i
+                                        class="ri-microscope-line w-6 h-6 flex items-center justify-center text-primary"></i>
+                                </div>
+                                <h4 class="font-bold mb-2">Researchers & Academics</h4>
+                                <p class="text-gray-600 text-sm">Building simulation-based or ROS-integrated research
+                                    projects.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl shadow-lg">
+                                <div
+                                    class="w-12 h-12 bg-secondary bg-opacity-10 rounded-xl flex items-center justify-center mb-4">
+                                    <i
+                                        class="ri-tools-line w-6 h-6 flex items-center justify-center text-secondary"></i>
+                                </div>
+                                <h4 class="font-bold mb-2">Makers & Hobbyists</h4>
+                                <p class="text-gray-600 text-sm">Anyone who wants to build real robots or autonomous
+                                    systems.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20 bg-white">
+            <div class="w-full px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">15-Day Intensive Hands-On Learning Experience</h2>
+                    <p class="text-xl text-gray-600">Complete curriculum designed to take you from beginner to
+                        industry-ready</p>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div class="bg-gradient-to-br from-primary to-blue-600 p-8 rounded-2xl text-white">
+                        <h3 class="text-2xl font-bold mb-6">WEEK 1 — Foundations & Simulation</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <div
+                                    class="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-sm font-bold">
+                                    1</div>
+                                <div>
+                                    <h4 class="font-semibold">Intro to ROS2 & Core Concepts</h4>
+                                    <p class="text-sm opacity-90">Understand ROS2 architecture, packages, nodes, topics,
+                                        QoS & CLI tools.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div
+                                    class="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-sm font-bold">
+                                    2</div>
+                                <div>
+                                    <h4 class="font-semibold">ROS2 Workspace & Python Programming</h4>
+                                    <p class="text-sm opacity-90">Build ROS2 packages, write publisher/subscriber nodes,
+                                        manage colcon builds.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div
+                                    class="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-sm font-bold">
+                                    3</div>
+                                <div>
+                                    <h4 class="font-semibold">Visualization with RViz2 & TF2</h4>
+                                    <p class="text-sm opacity-90">Frame transforms, topic visualization, robot state
+                                        monitoring.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div
+                                    class="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-sm font-bold">
+                                    4</div>
+                                <div>
+                                    <h4 class="font-semibold">Robot Modeling (URDF & TF)</h4>
+                                    <p class="text-sm opacity-90">Create robot models, define links/joints, setup
+                                        transforms.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div
+                                    class="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-sm font-bold">
+                                    5</div>
+                                <div>
+                                    <h4 class="font-semibold">Gazebo Simulation with ROS2</h4>
+                                    <p class="text-sm opacity-90">Simulate mobile robots, sensors, plugins & dynamics.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div
+                                    class="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-sm font-bold">
+                                    6</div>
+                                <div>
+                                    <h4 class="font-semibold">Robot Motion Control</h4>
+                                    <p class="text-sm opacity-90">Velocity commands, teleop, wheel kinematics.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-secondary to-green-600 p-8 rounded-2xl text-white">
+                        <h3 class="text-2xl font-bold mb-6">WEEK 2 — Perception, Embedded Robotics & Navigation</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <div
+                                    class="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-sm font-bold">
+                                    7</div>
+                                <div>
+                                    <h4 class="font-semibold">Sensor Integration (LiDAR, LaserScan)</h4>
+                                    <p class="text-sm opacity-90">Integrate 2D LiDAR, depth data, simulate sensor
+                                        streams.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div
+                                    class="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-sm font-bold">
+                                    8</div>
+                                <div>
+                                    <h4 class="font-semibold">Perception using Camera & OpenCV</h4>
+                                    <p class="text-sm opacity-90">Video feeds, object detection basics, camera
+                                        calibration.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div
+                                    class="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-sm font-bold">
+                                    9</div>
+                                <div>
+                                    <h4 class="font-semibold">System Integration with Launch Files</h4>
+                                    <p class="text-sm opacity-90">ROS2 launch architecture, multi-node applications.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div
+                                    class="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-sm font-bold">
+                                    10</div>
+                                <div>
+                                    <h4 class="font-semibold">Embedded ROS & Real Robot Implementation</h4>
+                                    <p class="text-sm opacity-90">ESP32 firmware upload, motor control, sensor
+                                        interfacing.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div
+                                    class="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-sm font-bold">
+                                    11</div>
+                                <div>
+                                    <h4 class="font-semibold">SLAM, Mapping & Navigation</h4>
+                                    <p class="text-sm opacity-90">Build maps, configure Nav2, path planning, obstacle
+                                        avoidance.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <div
+                                    class="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-sm font-bold">
+                                    12</div>
+                                <div>
+                                    <h4 class="font-semibold">Autonomous Navigation Testing</h4>
+                                    <p class="text-sm opacity-90">Deploy full navigation stack on real mobile robot in
+                                        PixelBotix lab.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20 bg-gray-50">
+            <div class="w-full px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Why Choose PixelBotix</h2>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4">Learn by Doing, Not Just Watching</h3>
+                            <p class="text-gray-600">Every day is filled with real robot experiments, coding sessions,
+                                and practical tasks.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4">Mentorship From India's Top Robotics Instructor</h3>
+                            <p class="text-gray-600">Dr. P. V. Sabique has trained thousands — known for turning complex
+                                robotics into simple, enjoyable learning.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4">State-of-the-Art Robotics Lab</h3>
+                            <p class="text-gray-600">LiDAR, Cameras, ESP32 robots, SLAM arena, Navigation testbed — a
+                                complete environment for mastering robotics.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4">Become Industry Ready in Just 15 Days</h3>
+                            <p class="text-gray-600">Students leave with the skills and confidence to work on real-world
+                                robotics projects.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-xl">
+                        <h3 class="text-2xl font-bold mb-8 text-center">Skills You'll Master</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-bold text-lg mb-4 text-primary">Technical Skills</h4>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">ROS2 Architecture</span>
+                                    <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">System Design</span>
+                                    <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Real-Time Control</span>
+                                    <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Pub/Sub & Services</span>
+                                    <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">SLAM Basics</span>
+                                    <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Gazebo Simulation</span>
+                                    <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">RViz Visualization</span>
+                                    <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">LiDAR Setup</span>
+                                    <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Camera Perception</span>
+                                    <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Robot Navigation</span>
+                                    <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Linux Deployment</span>
+                                    <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">URDF Modeling</span>
+                                    <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Sensor Integration</span>
+                                    <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Shell Scripting</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-4 text-secondary">Soft Skills</h4>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Adaptability</span>
+                                    <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Problem Solving</span>
+                                    <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Communication</span>
+                                    <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Teamwork</span>
+                                    <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Leadership</span>
+                                    <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Attention to Detail</span>
+                                    <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Time Management</span>
+                                    <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Critical Thinking</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20 bg-white">
+            <div class="w-full px-6">
+                <div class="text-center mb-16">
+                    <div class="flex items-center justify-center space-x-2 mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                        <span class="text-2xl font-bold">4.8 / 5</span>
+                    </div>
+                    <h2 class="text-3xl font-bold">Join 1,000+ happy students trained by PixelBotix</h2>
+                </div>
+                <div class="overflow-hidden">
+                    <div class="flex space-x-8 testimonial-scroll">
+                        <div class="bg-gray-50 p-6 rounded-xl min-w-80 shadow-lg">
+                            <div class="flex text-yellow-400 mb-4">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                            </div>
+                            <p class="text-gray-600 mb-4">"The hands-on approach at PixelBotix completely transformed my
+                                understanding of robotics. Working with real robots made all the difference."</p>
+                            <div class="flex items-center space-x-3">
+                                <div
+                                    class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold">
+                                    A</div>
+                                <div>
+                                    <div class="font-semibold">Arjun Krishnamurthy</div>
+                                    <div class="text-sm text-gray-500">VIT University</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl min-w-80 shadow-lg">
+                            <div class="flex text-yellow-400 mb-4">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                            </div>
+                            <p class="text-gray-600 mb-4">"Dr. Sabique's teaching methodology is exceptional. Complex
+                                ROS2 concepts became crystal clear through practical implementation."</p>
+                            <div class="flex items-center space-x-3">
+                                <div
+                                    class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white font-bold">
+                                    P</div>
+                                <div>
+                                    <div class="font-semibold">Priya Sharma</div>
+                                    <div class="text-sm text-gray-500">Anna University</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl min-w-80 shadow-lg">
+                            <div class="flex text-yellow-400 mb-4">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                            </div>
+                            <p class="text-gray-600 mb-4">"From zero robotics knowledge to building autonomous
+                                navigation systems in just 15 days. Incredible learning experience!"</p>
+                            <div class="flex items-center space-x-3">
+                                <div
+                                    class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold">
+                                    R</div>
+                                <div>
+                                    <div class="font-semibold">Rahul Mehta</div>
+                                    <div class="text-sm text-gray-500">IIT Chennai</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl min-w-80 shadow-lg">
+                            <div class="flex text-yellow-400 mb-4">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                            </div>
+                            <p class="text-gray-600 mb-4">"The lab facilities are world-class and the mentorship is
+                                unparalleled. Best investment in my robotics career."</p>
+                            <div class="flex items-center space-x-3">
+                                <div
+                                    class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white font-bold">
+                                    S</div>
+                                <div>
+                                    <div class="font-semibold">Sneha Patel</div>
+                                    <div class="text-sm text-gray-500">SRM Institute</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20 bg-gray-50">
+            <div class="w-full px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Group Offers for Students</h2>
+                    <p class="text-xl text-gray-600">Perfect for college groups, clubs & project teams</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                        <div class="text-3xl font-bold text-primary mb-2">10%</div>
+                        <div class="text-lg font-semibold mb-2">Group of 5</div>
+                        <div class="text-gray-600 mb-4">₹800 per student savings</div>
+                        <div class="text-sm text-gray-500">OFF</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                        <div class="text-3xl font-bold text-primary mb-2">15%</div>
+                        <div class="text-lg font-semibold mb-2">Group of 10</div>
+                        <div class="text-gray-600 mb-4">₹1200 per student savings</div>
+                        <div class="text-sm text-gray-500">OFF</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg text-center border-2 border-primary relative">
+                        <div
+                            class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-sm">
+                            Most Popular</div>
+                        <div class="text-3xl font-bold text-primary mb-2">20%</div>
+                        <div class="text-lg font-semibold mb-2">Group of 15</div>
+                        <div class="text-gray-600 mb-4">₹1600 per student savings</div>
+                        <div class="text-sm text-gray-500">OFF</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                        <div class="text-3xl font-bold text-primary mb-2">25%</div>
+                        <div class="text-lg font-semibold mb-2">Group of 20</div>
+                        <div class="text-gray-600 mb-4">₹2000 per student savings</div>
+                        <div class="text-sm text-gray-500">OFF</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20 bg-white">
+            <div class="w-full px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-8">One-Time Payment</h2>
+                    <p class="text-xl text-gray-600 mb-8">Full Access to Training, Lab, Materials & Certificate</p>
+                    <div class="inline-flex flex-col items-center">
+                        <div class="flex items-center space-x-4 mb-6">
+                            <span class="text-5xl font-bold text-primary">₹7,999</span>
+                            <div class="text-left">
+                                <div class="text-2xl text-gray-400 line-through">₹9,999</div>
+                                <div class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm font-semibold">20% OFF
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button
+                                class="px-8 py-4 bg-primary text-white rounded-button font-semibold hover:bg-opacity-90 transition-colors whitespace-nowrap !rounded-button">
+                                Apply Now
+                            </button>
+                            <button
+                                class="px-8 py-4 border-2 border-secondary text-secondary rounded-button font-semibold hover:bg-secondary hover:text-white transition-colors whitespace-nowrap !rounded-button">
+                                Check Group Discount
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20 bg-gray-50">
+            <div class="w-full px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold">Frequently Asked Questions</h2>
+                </div>
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <div class="faq-item bg-white rounded-xl shadow-lg">
+                        <button class="w-full p-6 text-left flex items-center justify-between faq-toggle">
+                            <span class="font-semibold">What is the structure of the program?</span>
+                            <i
+                                class="ri-add-line w-6 h-6 flex items-center justify-center text-primary transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">A 15-day hands-on offline internship with daily lab sessions from 9
+                                AM to 1 PM, covering ROS2 fundamentals to advanced autonomous navigation.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white rounded-xl shadow-lg">
+                        <button class="w-full p-6 text-left flex items-center justify-between faq-toggle">
+                            <span class="font-semibold">Will I receive a certificate?</span>
+                            <i
+                                class="ri-add-line w-6 h-6 flex items-center justify-center text-primary transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">Yes, an industry-recognized PixelBotix Internship Certificate upon
+                                successful completion of the program.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white rounded-xl shadow-lg">
+                        <button class="w-full p-6 text-left flex items-center justify-between faq-toggle">
+                            <span class="font-semibold">Can I manage college + internship?</span>
+                            <i
+                                class="ri-add-line w-6 h-6 flex items-center justify-center text-primary transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">Yes, timings are 9 AM–1 PM, designed to accommodate college
+                                schedules and other commitments.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white rounded-xl shadow-lg">
+                        <button class="w-full p-6 text-left flex items-center justify-between faq-toggle">
+                            <span class="font-semibold">Do you offer scholarships or discounts?</span>
+                            <i
+                                class="ri-add-line w-6 h-6 flex items-center justify-center text-primary transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">Group discounts up to 25% OFF for groups of 5-20 students. Perfect
+                                for college teams and robotics clubs.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white rounded-xl shadow-lg">
+                        <button class="w-full p-6 text-left flex items-center justify-between faq-toggle">
+                            <span class="font-semibold">What support will I get?</span>
+                            <i
+                                class="ri-add-line w-6 h-6 flex items-center justify-center text-primary transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">Lifetime LMS access, alumni group, internship opportunities, and
+                                continued mentorship support.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white rounded-xl shadow-lg">
+                        <button class="w-full p-6 text-left flex items-center justify-between faq-toggle">
+                            <span class="font-semibold">Do I need prior experience?</span>
+                            <i
+                                class="ri-add-line w-6 h-6 flex items-center justify-center text-primary transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">No. Complete beginners are welcome. We start from the basics and
+                                build up to advanced concepts progressively.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">PixelBotix Technologies</h3>
+                    <p class="text-gray-400 mb-6">Future-driven product innovation and EdTech company pioneering the
+                        convergence of Robotics, AI, Smart Manufacturing, and Emerging Technologies.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=61575683369348" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-facebook-fill ri-lg"></i>
+                        </a>
+                        <a href="https://x.com/PixelBotix" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-twitter-fill ri-lg"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/pixelbotix/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-linkedin-fill ri-lg"></i>
+                        </a>
+                        <a href="https://www.instagram.com/pixel_botix/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-instagram-fill ri-lg"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@PixelBotix" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-youtube-fill ri-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="/about/about-us.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#ai-robotics" class="text-gray-400 hover:text-white transition-colors">AI & Robotics</a></li>
+                        <li><a href="#eduverse" class="text-gray-400 hover:text-white transition-colors">Eduverse</a></li>
+                        <li><a href="#skill-labs" class="text-gray-400 hover:text-white transition-colors">Skill Labs</a></li>
+                        <li><a href="https://shop.pixelbotix.com/" class="text-gray-400 hover:text-white transition-colors">Products</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Programs -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Our Programs</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#brainy-babies" class="text-gray-400 hover:text-white transition-colors">Brainy Babies (0-5 years)</a></li>
+                        <li><a href="#little-techies" class="text-gray-400 hover:text-white transition-colors">Little Techies (5-9 years)</a></li>
+                        <li><a href="#maker-school" class="text-gray-400 hover:text-white transition-colors">Maker School (9-17 years)</a></li>
+                        <li><a href="#future-innovators" class="text-gray-400 hover:text-white transition-colors">Future Innovators (16-25 years)</a></li>
+                        <li><a href="#school-lab-setup" class="text-gray-400 hover:text-white transition-colors">School Lab Setup</a></li>
+                        <li><a href="#faculty-development" class="text-gray-400 hover:text-white transition-colors">Faculty Development</a></li>
+                    </ul>
+                </div>
+
+                <!-- Policies -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Policies</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/policies/privacy_policy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="/policies/terms.html" class="text-gray-400 hover:text-white transition-colors">Terms & Conditions</a></li>
+                        <li><a href="/policies/refund_cancellation.html" class="text-gray-400 hover:text-white transition-colors">Refund & Cancellation</a></li>
+                        <li><a href="/policies/shipping_policy.html" class="text-gray-400 hover:text-white transition-colors">Shipping Policy</a></li>
+                        <li><a href="/policies/disclaimer.html" class="text-gray-400 hover:text-white transition-colors">Disclaimer</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Subscribe to Our Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Stay updated with our latest news, programs, and innovations.</p>
+                    <form class="mb-4">
+                        <div class="flex">
+                            <input type="email" placeholder="Your email address"
+                                class="px-4 py-3 bg-gray-800 text-white rounded-l focus:outline-none focus:ring-2 focus:ring-primary border-none flex-grow">
+                            <button type="submit"
+                                class="bg-primary text-white px-4 py-3 rounded-r hover:bg-blue-600 transition-colors whitespace-nowrap">Subscribe</button>
+                        </div>
+                    </form>
+                    <p class="text-gray-500 text-sm">By subscribing, you agree to our Privacy Policy and consent to
+                        receive updates from our company.</p>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2025 PixelBotix Technologies Pvt. Ltd. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Buttons Container -->
+            <div class="fixed bottom-8 right-8 z-50 flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
+                <!-- Back to Top Button -->
+                <button id="back-to-top"
+                    class="bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+                    <i class="ri-arrow-up-line ri-lg"></i>
+                </button>
+
+                <!-- WhatsApp Button -->
+                <a href="https://wa.me/917200445335?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20PixelBotix%20and%20your%20programs.%20Can%20you%20help%20me?" target="_blank"
+                    class="bg-green-500 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-green-600 transition-all transform hover:scale-105">
+                    <i class="ri-whatsapp-line text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script id="theme-toggle-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const themeToggle = document.getElementById('theme-toggle');
+            const html = document.documentElement;
+            themeToggle.addEventListener('click', function () {
+                html.classList.toggle('light');
+                localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+            });
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                if (savedTheme === 'dark') {
+                    html.classList.add('dark');
+                } else {
+                    html.classList.remove('dark');
+                }
+            }
+        });
+    </script>
+
+    <script id="mobile-menu-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuToggle.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+    <script id="back-to-top-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const backToTopButton = document.getElementById('back-to-top');
+            function toggleBackToTopButton() {
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.remove('opacity-0', 'invisible');
+                    backToTopButton.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopButton.classList.remove('opacity-100', 'visible');
+                    backToTopButton.classList.add('opacity-0', 'invisible');
+                }
+            }
+            window.addEventListener('scroll', toggleBackToTopButton);
+            backToTopButton.addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <script id="faq-accordion">
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', function () {
+                    const faqItem = this.closest('.faq-item');
+                    const content = faqItem.querySelector('.faq-content');
+                    const icon = this.querySelector('i');
+                    const isOpen = !content.classList.contains('hidden');
+                    document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+                    document.querySelectorAll('.faq-toggle i').forEach(i => {
+                        i.className = 'ri-add-line w-6 h-6 flex items-center justify-center text-primary transition-transform';
+                    });
+                    if (!isOpen) {
+                        content.classList.remove('hidden');
+                        icon.className = 'ri-subtract-line w-6 h-6 flex items-center justify-center text-primary transition-transform';
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
