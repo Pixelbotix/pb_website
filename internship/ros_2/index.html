@@ -80,7 +80,7 @@
 </head>
 
 <body class="bg-white text-gray-900 transition-colors duration-300">
-    <nav class="w-full bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+    <!-- <nav class="w-full bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
@@ -103,12 +103,174 @@
                 </div>
             </div>
         </div>
-    </nav>
-    <div class="w-full bg-gradient-to-r from-primary to-secondary text-white py-3">
+    </nav> -->
+    <!-- Header -->
+
+    <!-- Announcement Bar -->
+    <div class="fixed top-0 left-0 w-full z-[60] text-center py-2 text-sm font-medium 
+                bg-blue-600 text-white dark:bg-blue-500 dark:text-white">
+        🚀 New Programme Launched — 
+        <a href="ros_internship.html" class="underline font-semibold">ROS Robotics</a> & 
+        <a href="bionic_arm_internship.html" class="underline font-semibold">Bionic Arm</a> — Register Now!
+    </div>
+
+    <header class="fixed top-14 md:top-8 left-0 right-0 z-50 bg-white dark:bg-gray-800 shadow-lg transition-colors duration-300">
+
+
+        <div class="w-full px-4 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#" class="flex items-center">
+                    <!-- Dark theme logo (shown only in dark mode) -->
+                    <img src="/static/logo/logo-dark.png" alt="Logo Light" class="w-20 h-20 hidden dark:inline-block">
+                    <img src="/static/logo/logo-white.png" alt="Logo Dark" class="w-20 h-20 inline-block dark:hidden">
+                </a>
+
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Home</a>
+                    <a href="/about/about-us.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">About Us</a>
+
+                    <!-- Dropdown for Services -->
+                    <div class="relative group">
+                        <button
+                            class="text-gray-900 dark:text-white hover:text-primary transition-colors flex items-center space-x-2">
+                            <i class="ri-service-line"></i> <!-- Service Icon -->
+                            <span>Services</span>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div
+                            class="absolute left-0 mt-2 w-64 bg-white dark:bg-gray-800 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 group-hover:block transition-opacity duration-300 p-4 space-y-3">
+                            <!-- AI & Robotics -->
+                            <a href="index.html#ai-robotics"
+                                class="flex items-center space-x-3 py-2 px-4 text-gray-900 dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                <i class="ri-robot-line text-xl"></i>
+                                <span>AI & Robotics</span>
+                            </a>
+                            <!-- Eduverse -->
+                            <a href="index.html#eduverse"
+                                class="flex items-center space-x-3 py-2 px-4 text-gray-900 dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                <i class="ri-earth-line text-xl"></i>
+                                <span>Eduverse</span>
+                            </a>
+                            <!-- Skill Labs -->
+                            <a href="index.html#skill-labs"
+                                class="flex items-center space-x-3 py-2 px-4 text-gray-900 dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                <i class="ri-laptop-line text-xl"></i>
+                                <span>Skill Labs</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="https://shop.pixelbotix.com/"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Products</a>
+
+                        <!-- Dropdown for Workshops -->
+                        <div class="relative group">
+                            <button
+                                class="text-gray-900 dark:text-white hover:text-primary transition-colors flex items-center space-x-2">
+                                <i class="ri-book-open-line"></i> <!-- Workshop Icon -->
+                                <!-- <span>Workshops</span> -->
+
+                                <span class="flex items-center gap-2">
+                                    Programme
+                                    <span class="text-[10px] px-2 py-0.5 rounded-full bg-red-500 text-white font-semibold animate-pulse">
+                                        NEW
+                                    </span>
+                                </span>
+
+                            </button>
+
+                                <!-- Dropdown Menu -->
+                                <div
+                                    class="absolute left-0 mt-2 w-64 bg-white dark:bg-gray-800 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 group-hover:block transition-opacity duration-300 p-4 space-y-3">
+                                    <a href="ros_internship.html" class="flex items-center space-x-3 py-2 px-4 hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                        <i class="ri-route-line text-xl"></i>
+                                        <span>ROS & Autonomous Mobile Robot Internship Program</span>
+                                    </a>
+                                    <a href="bionic_arm_internship.html" class="flex items-center space-x-3 py-2 px-4 hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                        <i class="ri-hand-heart-line text-xl"></i>
+                                        <span>Bionic Arm & Gesture Control Internship Program</span>
+                                    </a>
+                                </div>
+                            </div>
+
+
+                    <a href="index.html#contact"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Contact</a>
+                </nav>
+
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle"
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                        <i class="ri-sun-line dark:hidden ri-lg"></i>
+                        <i class="ri-moon-line hidden dark:block ri-lg"></i>
+                    </button>
+                    <button id="mobile-menu-toggle"
+                        class="md:hidden w-10 h-10 flex items-center justify-center text-gray-900 dark:text-white">
+                        <i class="ri-menu-line ri-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="md:hidden hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-900 dark:text-white hover:text-primary">Home</a>
+                <a href="/about/about-us.html" class="block py-2 text-gray-900 dark:text-white hover:text-primary">About Us</a>
+
+                <!-- Mobile dropdown for Services -->
+                <div class="space-y-2">
+                    <button class="w-full text-left text-gray-900 dark:text-white hover:text-primary">
+                        Services
+                    </button>
+                    <div class="space-y-2 pl-4">
+                        <a href="index.html#ai-robotics"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">AI & Robotics</a>
+                        <a href="index.html#eduverse"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">Eduverse</a>
+                        <a href="index.html#skill-labs"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">Skill Labs</a>
+                    </div>
+                </div>
+
+                <a href="https://shop.pixelbotix.com/" class="block py-2 text-gray-900 dark:text-white hover:text-primary">Products</a>
+
+                <div class="space-y-2">
+
+
+                    <button class="w-full text-left text-gray-900 dark:text-white hover:text-primary flex items-center gap-2">
+                        Programme
+                        <span class="text-[10px] px-2 py-0.5 rounded-full bg-red-500 text-white font-semibold animate-pulse">
+                            NEW
+                        </span>
+                    </button>
+
+                    <div class="space-y-2 pl-4">
+                        <a href="ros_internship.html"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">
+                            ROS & Autonomous Mobile Robot Internship Program
+                        </a>
+                        <a href="bionic_arm_internship.html"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">
+                            Bionic Arm & Gesture Control Internship Program
+                        </a>
+                    </div>
+                </div>
+
+                <a href="index.html#contact"
+                    class="block py-2 text-gray-900 dark:text-white hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- <div class="w-full bg-gradient-to-r from-primary to-secondary text-white py-3">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <p class="text-lg font-semibold">🔥 Highlighted Program: ROS Internship Program (15 Days Hands-On)</p>
         </div>
-    </div>
+    </div> -->
     
     <section class="relative min-h-screen bg-white overflow-hidden"
         style="background-image: url('https://readdy.ai/api/search-image?query=modern%20robotics%20laboratory%20with%20autonomous%20mobile%20robots%20and%20ROS2%20workstations%2C%20students%20working%20with%20robotic%20systems%2C%20clean%20white%20background%20with%20blue%20accents%2C%20professional%20engineering%20environment%2C%20high-tech%20atmosphere&width=1920&height=1080&seq=hero-bg&orientation=landscape'); background-size: cover; background-position: center;">
@@ -154,11 +316,13 @@
                         <i class="ri-arrow-right-line"></i>
                         Apply Now
                     </button>
+                    <a href="#group-discount">
                     <button
                         class="px-8 py-4 bg-secondary text-white text-lg font-semibold !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap flex items-center gap-2">
                         <i class="ri-discount-percent-line"></i>
                         Check Discount
                     </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -877,7 +1041,7 @@
             </div>
         </div>
     </section>
-    <section class="py-20 bg-white">
+    <section id = "group-discount" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">Group Discount Section</h2>
@@ -997,90 +1161,171 @@
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer id="contact" class="bg-gray-900 text-white py-16">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <!-- Company Info -->
                 <div>
-                    <h3 class="text-2xl font-['Pacifico'] text-primary mb-4">PixelBotix</h3>
-                    <p class="text-gray-300 mb-4">Leading robotics education and training institute in India.</p>
+                    <h3 class="text-xl font-bold mb-6">PixelBotix Technologies</h3>
+                    <p class="text-gray-400 mb-6">Future-driven product innovation and EdTech company pioneering the
+                        convergence of Robotics, AI, Smart Manufacturing, and Emerging Technologies.</p>
                     <div class="flex space-x-4">
-                        <a href="#"
-                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
-                            <i class="ri-facebook-fill"></i>
+                        <a href="https://www.facebook.com/profile.php?id=61575683369348" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-facebook-fill ri-lg"></i>
                         </a>
-                        <a href="#"
-                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
-                            <i class="ri-twitter-fill"></i>
+                        <a href="https://x.com/PixelBotix" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-twitter-fill ri-lg"></i>
                         </a>
-                        <a href="#"
-                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
-                            <i class="ri-linkedin-fill"></i>
+                        <a href="https://www.linkedin.com/company/pixelbotix/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-linkedin-fill ri-lg"></i>
                         </a>
-                        <a href="#"
-                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
-                            <i class="ri-youtube-fill"></i>
+                        <a href="https://www.instagram.com/pixel_botix/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-instagram-fill ri-lg"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@PixelBotix" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-youtube-fill ri-lg"></i>
                         </a>
                     </div>
                 </div>
+
+                <!-- Quick Links -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-300">
-                        <li><a href="#curriculum" class="hover:text-primary transition-colors">Curriculum</a></li>
-                        <li><a href="#projects" class="hover:text-primary transition-colors">Projects</a></li>
-                        <li><a href="#reviews" class="hover:text-primary transition-colors">Reviews</a></li>
-                        <li><a href="#faqs" class="hover:text-primary transition-colors">FAQs</a></li>
+                    <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="/about/about-us.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#ai-robotics" class="text-gray-400 hover:text-white transition-colors">AI & Robotics</a></li>
+                        <li><a href="#eduverse" class="text-gray-400 hover:text-white transition-colors">Eduverse</a></li>
+                        <li><a href="#skill-labs" class="text-gray-400 hover:text-white transition-colors">Skill Labs</a></li>
+                        <li><a href="https://shop.pixelbotix.com/" class="text-gray-400 hover:text-white transition-colors">Products</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
                     </ul>
                 </div>
+
+                <!-- Our Programs -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Programs</h4>
-                    <ul class="space-y-2 text-gray-300">
-                        <li><a href="#" class="hover:text-primary transition-colors">ROS2 Internship</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">Autonomous Robotics</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">SLAM & Navigation</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">Embedded Systems</a></li>
+                    <h3 class="text-xl font-bold mb-6">Our Programs</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#brainy-babies" class="text-gray-400 hover:text-white transition-colors">Brainy Babies (0-5 years)</a></li>
+                        <li><a href="#little-techies" class="text-gray-400 hover:text-white transition-colors">Little Techies (5-9 years)</a></li>
+                        <li><a href="#maker-school" class="text-gray-400 hover:text-white transition-colors">Maker School (9-17 years)</a></li>
+                        <li><a href="#future-innovators" class="text-gray-400 hover:text-white transition-colors">Future Innovators (16-25 years)</a></li>
+                        <li><a href="#school-lab-setup" class="text-gray-400 hover:text-white transition-colors">School Lab Setup</a></li>
+                        <li><a href="#faculty-development" class="text-gray-400 hover:text-white transition-colors">Faculty Development</a></li>
                     </ul>
                 </div>
+
+                <!-- Policies -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
-                    <div class="space-y-3 text-gray-300">
-                        <div class="flex items-center gap-3">
-                            <i class="ri-map-pin-line"></i>
-                            <span>Chennai (Tambaram), Tamil Nadu</span>
+                    <h3 class="text-xl font-bold mb-6">Policies</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/policies/privacy_policy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="/policies/terms.html" class="text-gray-400 hover:text-white transition-colors">Terms & Conditions</a></li>
+                        <li><a href="/policies/refund_cancellation.html" class="text-gray-400 hover:text-white transition-colors">Refund & Cancellation</a></li>
+                        <li><a href="/policies/shipping_policy.html" class="text-gray-400 hover:text-white transition-colors">Shipping Policy</a></li>
+                        <li><a href="/policies/disclaimer.html" class="text-gray-400 hover:text-white transition-colors">Disclaimer</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Subscribe to Our Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Stay updated with our latest news, programs, and innovations.</p>
+                    <form class="mb-4">
+                        <div class="flex">
+                            <input type="email" placeholder="Your email address"
+                                class="px-4 py-3 bg-gray-800 text-white rounded-l focus:outline-none focus:ring-2 focus:ring-primary border-none flex-grow">
+                            <button type="submit"
+                                class="bg-primary text-white px-4 py-3 rounded-r hover:bg-blue-600 transition-colors whitespace-nowrap">Subscribe</button>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <i class="ri-phone-line"></i>
-                            <span>+91 98765 43210</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i class="ri-mail-line"></i>
-                            <span>info@pixelbotix.com</span>
-                        </div>
+                    </form>
+                    <p class="text-gray-500 text-sm">By subscribing, you agree to our Privacy Policy and consent to
+                        receive updates from our company.</p>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2025 PixelBotix Technologies Pvt. Ltd. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Cookie Policy</a>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                <p>� 2025 PixelBotix Technologies. All rights reserved.</p>
+
+            <!-- Floating Buttons Container -->
+            <div class="fixed bottom-8 right-8 z-50 flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
+                <!-- Back to Top Button -->
+                <button id="back-to-top"
+                    class="bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+                    <i class="ri-arrow-up-line ri-lg"></i>
+                </button>
+
+                <!-- WhatsApp Button -->
+                <a href="https://wa.me/917200445335?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20PixelBotix%20and%20your%20programs.%20Can%20you%20help%20me?" target="_blank"
+                    class="bg-green-500 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-green-600 transition-all transform hover:scale-105">
+                    <i class="ri-whatsapp-line text-xl"></i>
+                </a>
             </div>
         </div>
     </footer>
-    
-    <script id="theme-toggle">
+
+    <script id="theme-toggle-script">
         document.addEventListener('DOMContentLoaded', function () {
-            const themeToggle = document.getElementById('themeToggle');
-            const body = document.body;
-            const icon = themeToggle.querySelector('i');
+            const themeToggle = document.getElementById('theme-toggle');
+            const html = document.documentElement;
             themeToggle.addEventListener('click', function () {
-                body.classList.toggle('dark');
-                if (body.classList.contains('dark')) {
-                    icon.className = 'ri-moon-line text-lg';
+                html.classList.toggle('dark');
+                localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+            });
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                if (savedTheme === 'dark') {
+                    html.classList.add('dark');
                 } else {
-                    icon.className = 'ri-sun-line text-lg';
+                    html.classList.remove('dark');
                 }
+            }
+        });
+    </script>
+
+    <script id="mobile-menu-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuToggle.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
             });
         });
     </script>
-    
+
+    <script id="back-to-top-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const backToTopButton = document.getElementById('back-to-top');
+            function toggleBackToTopButton() {
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.remove('opacity-0', 'invisible');
+                    backToTopButton.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopButton.classList.remove('opacity-100', 'visible');
+                    backToTopButton.classList.add('opacity-0', 'invisible');
+                }
+            }
+            window.addEventListener('scroll', toggleBackToTopButton);
+            backToTopButton.addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
     <script id="faq-functionality">
         document.addEventListener('DOMContentLoaded', function () {
             const faqToggles = document.querySelectorAll('.faq-toggle');
