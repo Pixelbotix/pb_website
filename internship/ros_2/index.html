@@ -13,6 +13,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/remixicon.min.css">
     <style>
+
+        @keyframes scrollInfinite {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
+
+        #logoScroller {
+            display: flex;
+            animation: scrollInfinite 100s linear infinite;
+            width: max-content; /* IMPORTANT */
+            will-change: transform;
+        }
         :where([class^="ri-"])::before {
             content: "\f3c2";
         }
@@ -297,7 +309,8 @@
             </div>
         </div>
     </section>
-    <section class="py-16 bg-gray-50">
+    
+    <!-- <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <h2 class="text-2xl font-bold text-gray-800 mb-8">Trusted by India's leading engineering colleges & robotics
                 companies</h2>
@@ -338,7 +351,21 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+        <h2 class="text-2xl font-bold text-gray-800 mb-8">
+            Trusted by India's leading engineering colleges & robotics companies
+        </h2>
+
+        <div class="overflow-hidden">
+            <div id="logoScroller" class="flex animate-scroll space-x-12 items-center"></div>
+        </div>
+    </div>
+</section>
+
+
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
@@ -431,11 +458,6 @@
             </div>
             <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-12">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <!-- <div>
-                        <img src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20Indian%20robotics%20professor%20Dr%20P%20V%20Sabique%20in%20laboratory%20setting%2C%20experienced%20robotics%20mentor%20with%20confident%20smile%2C%20academic%20professional%20headshot%2C%20clean%20background&width=500&height=600&seq=dr-sabique&orientation=portrait"
-                            alt="Dr. P. V. Sabique" class="w-full max-w-md mx-auto rounded-xl shadow-lg">
-
-                    </div> -->
 
                     <div>
                         <img src="/static/Director_photo/Sabique.jpeg"
@@ -938,7 +960,7 @@
                         <i class="ri-star-fill"></i>
                         <i class="ri-star-fill"></i>
                     </div>
-                    <span class="text-2xl font-bold text-gray-900">4.9 / 5</span>
+                    <span class="text-2xl font-bold text-gray-900">4.7 / 5</span>
                 </div>
                 <p class="text-xl text-gray-600">Join 8,000+ successful robotics students from PixelBotix</p>
             </div>
@@ -1357,6 +1379,59 @@ animation: scroll 10s linear infinite;
     </script>
 
     <script src="js/share.js"></script>
+
+<script>
+const BASE = "/static/images/trusted_by/";
+
+const logos = [
+    "3devok-logo_4.png",
+    "actlogo_10.jpg",
+    "Airobo_infinity_2.png",
+    "Bigzero-logo_3.jpg",
+    "CEG_col_2.png",
+    "DMI_5.png",
+    "iitm_logo.png",
+    "KIT_2.svg.png",
+    "LMEC_7.webp",
+    "Loyola_6.png",
+    "make3d_6.png",
+    "medical_spectra.jpeg",
+    "Mithra_3d_tech_5.jpg",
+    "mit_logo_1.png",
+    "nitt_13.png",
+    "perfin_health_care_1.png",
+    "Pertinent-Logo-1.png",
+    "Rajeshwari_engg_college_9.png",
+    "remo_11.webp",
+    "sairam_8.gif",
+    "sairam-sec-logo_8.png",
+    "Saveetha_1.png",
+    "sri_balaji_14.png",
+    "SRM_Institute_of_Science_and_Technology_Logo.svg_3.png",
+    "Vellore_Institute_of_Technology_seal_4.svg.png"
+];
+
+const scroller = document.getElementById("logoScroller");
+
+function addLogos(list) {
+    list.forEach(file => {
+        const img = document.createElement("img");
+        img.src = BASE + file;
+        img.loading = "lazy";
+        img.className =
+            "h-12 object-contain flex-shrink-0 opacity-100 will-change-transform transition-all";
+        img.onerror = () => img.style.display = "none"; // hide if image fails
+        scroller.appendChild(img);
+    });
+}
+
+// Add logos twice for smooth infinite scrolling
+addLogos(logos);
+addLogos(logos);
+</script>
+
+
+
 </body>
 
 </html>
