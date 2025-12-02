@@ -550,7 +550,7 @@
                     <p class="text-gray-700 font-semibold">Students Trained by PixelBotix</p>
                 </div>
                 <div class="text-center">
-                    <div class="text-4xl font-bold text-primary mb-2">300+</div>
+                    <div class="text-4xl font-bold text-primary mb-2">100+</div>
                     <p class="text-gray-700 font-semibold">Colleges Reached Across India</p>
                 </div>
                 <div class="text-center">
@@ -560,153 +560,143 @@
             </div>
         </div>
     </section>
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Program Walkthrough</h2>
-                <p class="text-xl text-gray-600 mb-8">A complete walkthrough of ROS2, Gazebo simulation, sensors, SLAM,
-                    mapping, and full autonomous navigation tested inside our PixelBotix robotics lab.</p>
-            </div>
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div class="aspect-video bg-gray-900 relative">
-                    <img src="https://readdy.ai/api/search-image?query=robotics%20laboratory%20video%20demonstration%20showing%20ROS2%20Gazebo%20simulation%20SLAM%20mapping%20autonomous%20navigation%20testing%2C%20comprehensive%20robotics%20training%20program%20overview%2C%20modern%20lab%20equipment&width=1200&height=675&seq=video-demo&orientation=landscape"
-                        alt="Program Video" class="w-full h-full object-cover object-top">
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <button
-                            class="w-20 h-20 flex items-center justify-center bg-primary bg-opacity-90 rounded-full hover:bg-opacity-100 transition-all">
-                            <i class="ri-play-fill text-3xl text-white ml-1"></i>
-                        </button>
+
+<section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Program Walkthrough</h2>
+            <p class="text-xl text-gray-600 mb-8">
+                A complete walkthrough of ROS2, Gazebo simulation, sensors, SLAM,
+                mapping, and full autonomous navigation tested inside our PixelBotix robotics lab.
+            </p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div class="aspect-video relative group" id="video-container">
+
+                <!-- THUMBNAIL -->
+                <img 
+                    src="https://img.youtube.com/vi/hi0jIaFB2ZE/maxresdefault.jpg"
+                    class="w-full h-full object-cover"
+                    id="video-thumbnail"
+                >
+
+                <!-- PLAY BUTTON -->
+                <button
+                    id="play-button"
+                    class="absolute inset-0 flex items-center justify-center"
+                >
+                    <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-all">
+                        <i class="ri-play-fill text-4xl text-white ml-1"></i>
                     </div>
-                </div>
+                </button>
+
             </div>
         </div>
-    </section>
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">What You Will Learn</h2>
-                <p class="text-xl text-gray-600">3-Part Skill Structure for Complete Robotics Mastery</p>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 border border-blue-100">
-                    <div class="w-12 h-12 flex items-center justify-center bg-primary rounded-lg mb-6">
-                        <i class="ri-code-line text-2xl text-white"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">A. Technical Skills (Robotics & ROS2)</h3>
-                    <ul class="space-y-2 text-gray-700">
-                        <li class="flex items-start gap-2">
-                            <i class="ri-check-line text-green-500 mt-1"></i>
-                            <span>ROS2 architecture, nodes, topics, QoS</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="ri-check-line text-green-500 mt-1"></i>
-                            <span>Python programming for ROS2</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="ri-check-line text-green-500 mt-1"></i>
-                            <span>RViz2 visualization & TF2 robot transforms</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="ri-check-line text-green-500 mt-1"></i>
-                            <span>URDF robot modeling</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="ri-check-line text-green-500 mt-1"></i>
-                            <span>Gazebo simulation of mobile robots</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="ri-check-line text-green-500 mt-1"></i>
-                            <span>LiDAR, LaserScan & camera perception</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="ri-check-line text-green-500 mt-1"></i>
-                            <span>OpenCV basics & vision processing</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="ri-check-line text-green-500 mt-1"></i>
-                            <span>Robot kinematics & motion control</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="ri-check-line text-green-500 mt-1"></i>
-                            <span>Launch files, multi-node systems</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="ri-check-line text-green-500 mt-1"></i>
-                            <span>SLAM, mapping, localization</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="ri-check-line text-green-500 mt-1"></i>
-                            <span>Navigation stack (Nav2), path planning</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="ri-check-line text-green-500 mt-1"></i>
-                            <span>Real robot testing with embedded control (ESP32)</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-8 border border-green-100">
-                    <div class="w-12 h-12 flex items-center justify-center bg-secondary rounded-lg mb-6">
-                        <i class="ri-user-line text-2xl text-white"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">B. Soft Skills (Professional Growth)</h3>
-                    <ul class="space-y-2 text-gray-700">
-                        <li class="flex items-start gap-2">
-                            <i class="ri-check-line text-green-500 mt-1"></i>
-                            <span>Engineering problem-solving skills</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="ri-check-line text-green-500 mt-1"></i>
-                            <span>System thinking & debugging approach</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="ri-check-line text-green-500 mt-1"></i>
-                            <span>Team collaboration and communication</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="ri-check-line text-green-500 mt-1"></i>
-                            <span>Project documentation & presentation</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="ri-check-line text-green-500 mt-1"></i>
-                            <span>Hands-on confidence in robotics labs</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-8 border border-orange-100">
-                    <div class="w-12 h-12 flex items-center justify-center bg-orange-500 rounded-lg mb-6">
-                        <i class="ri-briefcase-line text-2xl text-white"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">C. Career Skills (Industry-Ready Training)</h3>
-                    <ul class="space-y-2 text-gray-700">
-                        <li class="flex items-start gap-2">
-                            <i class="ri-check-line text-green-500 mt-1"></i>
-                            <span>Building robotics portfolios & resumes</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="ri-check-line text-green-500 mt-1"></i>
-                            <span>Preparing for robotics job interviews</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="ri-check-line text-green-500 mt-1"></i>
-                            <span>Understanding AMR & warehouse robotics industry</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="ri-check-line text-green-500 mt-1"></i>
-                            <span>Research roadmap for ROS / SLAM / navigation</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="ri-check-line text-green-500 mt-1"></i>
-                            <span>Guidance for MTech/PhD academic work</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="ri-check-line text-green-500 mt-1"></i>
-                            <span>Internship & project opportunities through PixelBotix</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+
+    </div>
+</section>
+
+<script>
+    document.getElementById("play-button").addEventListener("click", function () {
+        const container = document.getElementById("video-container");
+
+        container.innerHTML = `
+            <iframe 
+                class="w-full h-full"
+                src="https://www.youtube.com/embed/hi0jIaFB2ZE?autoplay=1&mute=1&rel=0"
+                title="Program Walkthrough Video"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+            ></iframe>
+        `;
+    });
+</script>
+
+
+
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">What You Will Learn</h2>
+            <p class="text-xl text-gray-600">3-Part Skill Structure for Complete Robotics Mastery</p>
         </div>
-    </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            <!-- A. Technical Skills -->
+            <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 border border-blue-100">
+                <div class="w-12 h-12 flex items-center justify-center bg-primary rounded-lg mb-6">
+                    <i class="ri-code-line text-2xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-8">A. Technical Skills</h3>
+
+                <div class="grid grid-cols-3 gap-6 text-center text-sm text-gray-700">
+                    <div><img src="/static/images/internship_icon/ros_2.png" class="w-12 mx-auto mb-2"><p>ROS2 Basics</p></div>
+                    <div><img src="/static/images/internship_icon/python_icon.png" class="w-12 mx-auto mb-2"><p>Python</p></div>
+                    <div><img src="/static/images/internship_icon/rvix_2.png" class="w-12 mx-auto mb-2"><p>RViz2</p></div>
+
+                    <div><img src="/static/images/internship_icon/urdf.png" class="w-12 mx-auto mb-2"><p>URDF</p></div>
+                    <div><img src="/static/images/internship_icon/gazebo.png" class="w-12 mx-auto mb-2"><p>Gazebo</p></div>
+                    <div><img src="/static/images/internship_icon/lidar.png" class="w-12 mx-auto mb-2"><p>LiDAR</p></div>
+
+                    <div><img src="/static/images/internship_icon/opencv.png" class="w-12 mx-auto mb-2"><p>OpenCV</p></div>
+                    <div><img src="/static/images/internship_icon/kinematics.png" class="w-12 mx-auto mb-2"><p>Kinematics</p></div>
+                    <div><img src="/static/images/internship_icon/navigation.png" class="w-12 mx-auto mb-2"><p>Navigation</p></div>
+                </div>
+            </div>
+
+            <!-- B. Soft Skills -->
+            <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-8 border border-green-100">
+                <div class="w-12 h-12 flex items-center justify-center bg-secondary rounded-lg mb-6">
+                    <i class="ri-user-line text-2xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-8">B. Soft Skills</h3>
+
+                <div class="grid grid-cols-3 gap-6 text-center text-sm text-gray-700">
+                    <div><img src="/static/images/internship_icon/problem_solving.png" class="w-12 mx-auto mb-2"><p>Problem Solving</p></div>
+                    <div><img src="/static/images/internship_icon/system_thinking.png" class="w-12 mx-auto mb-2"><p>System Thinking</p></div>
+                    <div><img src="/static/images/internship_icon/debugging.png" class="w-12 mx-auto mb-2"><p>Debugging</p></div>
+
+                    <div><img src="/static/images/internship_icon/team_work.png" class="w-12 mx-auto mb-2"><p>Teamwork</p></div>
+                    <div><img src="/static/images/internship_icon/communication_skill.png" class="w-12 mx-auto mb-2"><p>Communication</p></div>
+                    <div><img src="/static/images/internship_icon/documentation.png" class="w-12 mx-auto mb-2"><p>Documentation</p></div>
+
+                    <div><img src="/static/images/internship_icon/presentation_skill.png" class="w-12 mx-auto mb-2"><p>Presentation</p></div>
+                    <div><img src="/static/images/internship_icon/confidence.png" class="w-12 mx-auto mb-2"><p>Lab Confidence</p></div>
+                    <div><img src="/static/images/internship_icon/leadership.png" class="w-12 mx-auto mb-2"><p>Leadership</p></div>
+                </div>
+            </div>
+
+            <!-- C. Career Skills -->
+            <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-8 border border-orange-100">
+                <div class="w-12 h-12 flex items-center justify-center bg-orange-500 rounded-lg mb-6">
+                    <i class="ri-briefcase-line text-2xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-8">C. Career Skills</h3>
+
+                <div class="grid grid-cols-3 gap-6 text-center text-sm text-gray-700">
+                    <div><img src="/static/images/internship_icon/portfolio.png" class="w-12 mx-auto mb-2"><p>Portfolio</p></div>
+                    <div><img src="/static/images/internship_icon/interview.png" class="w-12 mx-auto mb-2"><p>Interviews</p></div>
+                    <div><img src="/static/images/internship_icon/industry.png" class="w-12 mx-auto mb-2"><p>Industry</p></div>
+
+                    <div><img src="/static/images/internship_icon/research.png" class="w-12 mx-auto mb-2"><p>Research</p></div>
+                    <div><img src="/static/images/internship_icon/academic.png" class="w-12 mx-auto mb-2"><p>Academics</p></div>
+                    <div><img src="/static/images/internship_icon/internship.png" class="w-12 mx-auto mb-2"><p>Internships</p></div>
+
+                    <div><img src="/static/images/internship_icon/resume.png" class="w-12 mx-auto mb-2"><p>Resume</p></div>
+                    <div><img src="/static/images/internship_icon/career_path.png" class="w-12 mx-auto mb-2"><p>Career Path</p></div>
+                    <div><img src="/static/images/internship_icon/networking.png" class="w-12 mx-auto mb-2"><p>Networking</p></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
     <section id="curriculum" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
