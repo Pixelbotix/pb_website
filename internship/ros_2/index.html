@@ -297,10 +297,18 @@
             </div>
             <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-12">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div>
+                    <!-- <div>
                         <img src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20Indian%20robotics%20professor%20Dr%20P%20V%20Sabique%20in%20laboratory%20setting%2C%20experienced%20robotics%20mentor%20with%20confident%20smile%2C%20academic%20professional%20headshot%2C%20clean%20background&width=500&height=600&seq=dr-sabique&orientation=portrait"
                             alt="Dr. P. V. Sabique" class="w-full max-w-md mx-auto rounded-xl shadow-lg">
+
+                    </div> -->
+
+                    <div>
+                        <img src="/static/Director_photo/Sabique.jpeg"
+                            alt="Dr. P. V. Sabique"
+                            class="w-[400px] h-[500px] object-cover mx-auto rounded-xl shadow-lg">
                     </div>
+
                     <div>
                         <div class="flex items-center gap-4 mb-4">
                             <div>
@@ -988,6 +996,8 @@
             </div>
         </div>
     </section>
+
+    <!-- Footer Section -->
     <footer id="contact" class="bg-gray-900 text-white py-16">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -1054,6 +1064,7 @@
             </div>
         </div>
     </footer>
+    
     <script id="theme-toggle">
         document.addEventListener('DOMContentLoaded', function () {
             const themeToggle = document.getElementById('themeToggle');
@@ -1069,6 +1080,7 @@
             });
         });
     </script>
+    
     <script id="faq-functionality">
         document.addEventListener('DOMContentLoaded', function () {
             const faqToggles = document.querySelectorAll('.faq-toggle');
@@ -1086,6 +1098,7 @@
             });
         });
     </script>
+
     <script id="scroll-animation">
         document.addEventListener('DOMContentLoaded', function () {
             const style = document.createElement('style');
@@ -1095,7 +1108,7 @@
 100% { transform: translateX(-50%); }
 }
 .animate-scroll {
-animation: scroll 30s linear infinite;
+animation: scroll 10s linear infinite;
 }
 `;
             document.head.appendChild(style);
