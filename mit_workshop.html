@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript" crossorigin="anonymous" async="" src="js/array.js"></script>
+    <script src="js/e.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Integration in 3D Printing Workshop - Pixelbotix</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300">
+
+    <!-- Header -->
+    <!-- <header class="fixed top-[36px] left-0 right-0 z-[70] bg-white dark:bg-gray-800 shadow-lg transition-colors duration-300"> -->
+    <header class="fixed top-0 left-0 right-0 z-[70] bg-white dark:bg-gray-800 shadow-lg transition-colors duration-300">
+
+
+        <div class="w-full px-4 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#" class="flex items-center">
+                    <!-- Dark theme logo (shown only in dark mode) -->
+                    <img src="/static/logo/logo-dark.png" alt="Logo Light" class="w-20 h-20 hidden dark:inline-block">
+                    <img src="/static/logo/logo-white.png" alt="Logo Dark" class="w-20 h-20 inline-block dark:hidden">
+                </a>
+
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Home</a>
+                    <a href="/about/about-us.html"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">About Us</a>
+
+                    <!-- Dropdown for Services -->
+                    <div class="relative group">
+                        <button
+                            class="text-gray-900 dark:text-white hover:text-primary transition-colors flex items-center space-x-2">
+                            <i class="ri-service-line"></i> <!-- Service Icon -->
+                            <span>Services</span>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div
+                            class="absolute left-0 mt-2 w-64 bg-white dark:bg-gray-800 shadow-lg rounded-lg opacity-0 group-hover:opacity-100 group-hover:block transition-opacity duration-300 p-4 space-y-3">
+                            <!-- AI & Robotics -->
+                            <a href="index.html#ai-robotics"
+                                class="flex items-center space-x-3 py-2 px-4 text-gray-900 dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                <i class="ri-robot-line text-xl"></i>
+                                <span>AI & Robotics</span>
+                            </a>
+                            <!-- Eduverse -->
+                            <a href="index.html#eduverse"
+                                class="flex items-center space-x-3 py-2 px-4 text-gray-900 dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                <i class="ri-earth-line text-xl"></i>
+                                <span>Eduverse</span>
+                            </a>
+                            <!-- Skill Labs -->
+                            <a href="index.html#skill-labs"
+                                class="flex items-center space-x-3 py-2 px-4 text-gray-900 dark:text-white hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-all">
+                                <i class="ri-laptop-line text-xl"></i>
+                                <span>Skill Labs</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="https://shop.pixelbotix.com/"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Products</a>
+
+                        <!-- Programme Link -->
+                        <div class="relative group">
+                            <a href="mit_workshop.html"
+                            class="text-gray-900 dark:text-white hover:text-primary transition-colors flex items-center space-x-2">
+                                <i class="ri-book-open-line"></i>
+
+                                <span class="flex items-center gap-2">
+                                    Programme
+                                    <span class="text-[10px] px-2 py-0.5 rounded-full bg-red-500 text-white font-semibold animate-pulse">
+                                        NEW
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+
+
+                    <a href="index.html#contact"
+                        class="text-gray-900 dark:text-white hover:text-primary transition-colors">Contact</a>
+                </nav>
+
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle"
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                        <i class="ri-sun-line dark:hidden ri-lg"></i>
+                        <i class="ri-moon-line hidden dark:block ri-lg"></i>
+                    </button>
+                    <button id="mobile-menu-toggle"
+                        class="md:hidden w-10 h-10 flex items-center justify-center text-gray-900 dark:text-white">
+                        <i class="ri-menu-line ri-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="md:hidden hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-900 dark:text-white hover:text-primary">Home</a>
+                <a href="/about/about-us.html" class="block py-2 text-gray-900 dark:text-white hover:text-primary">About Us</a>
+
+                <!-- Mobile dropdown for Services -->
+                <div class="space-y-2">
+                    <button class="w-full text-left text-gray-900 dark:text-white hover:text-primary">
+                        Services
+                    </button>
+                    <div class="space-y-2 pl-4">
+                        <a href="index.html#ai-robotics"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">AI & Robotics</a>
+                        <a href="index.html#eduverse"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">Eduverse</a>
+                        <a href="index.html#skill-labs"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">Skill Labs</a>
+                    </div>
+                </div>
+
+                <a href="https://shop.pixelbotix.com/" class="block py-2 text-gray-900 dark:text-white hover:text-primary">Products</a>
+
+                <div class="space-y-2">
+
+
+                    <a href="mit_workshop.html"
+                    class="w-full text-left text-gray-900 dark:text-white hover:text-primary flex items-center gap-2">
+                        Programme
+                        <span class="text-[10px] px-2 py-0.5 rounded-full bg-red-500 text-white font-semibold animate-pulse">
+                            NEW
+                        </span>
+                    </a>
+
+
+                    <!-- <div class="space-y-2 pl-4">
+                        <a href="ros_internship.html"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">
+                            ROS & Autonomous Mobile Robot Internship Program
+                        </a> -->
+                        <!-- <a href="bionic_arm_internship.html"
+                            class="block py-2 text-gray-900 dark:text-white hover:text-primary">
+                            Bionic Arm & Gesture Control Internship Program
+                        </a> -->
+                    <!-- </div> -->
+                </div>
+
+                <a href="index.html#contact"
+                    class="block py-2 text-gray-900 dark:text-white hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden"
+        style="background-image: url('https://readdy.ai/api/search-image?query=diverse%20group%20of%20indian%20engineering%20students%20working%20collaboratively%20with%203D%20printers%20and%20AI%20technology%20in%20modern%20laboratory%20setting%20young%20indian%20faces%20focused%20on%20learning%20hands-on%20experience%20with%20additive%20manufacturing%20equipment%20bright%20clean%20workspace%20with%20white%20and%20blue%20tones%20professional%20educational%20environment%20with%20digital%20displays%20and%20robotic%20systems&width=1920&height=1080&seq=hero2&orientation=landscape'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-white/80 dark:bg-gray-900/80"></div>
+        <div class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="mb-6">
+                    <span
+                        class="inline-block px-4 py-2 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">
+                        Workshop Event
+                    </span>
+                    <h1 class="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4">
+                        AI Integration in 3D Printing
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8">
+                        Basics to Advanced • Hands-on Workshop
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
+                    <div class="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl p-6 shadow-lg">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mx-auto mb-3">
+                            <i class="ri-calendar-line ri-xl text-primary"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Date</h3>
+                        <p class="text-gray-600 dark:text-gray-300">January 7-8, 2026</p>
+                    </div>
+                    <div class="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl p-6 shadow-lg">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mx-auto mb-3">
+                            <i class="ri-map-pin-line ri-xl text-primary"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Venue</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Prof. SRK Hall, MIT Campus</p>
+                    </div>
+                    <div class="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl p-6 shadow-lg">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mx-auto mb-3">
+                            <i class="ri-graduation-cap-line ri-xl text-primary"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Organized by</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Robotics Association, MIT</p>
+                    </div>
+                </div>
+                <div class="mb-8">
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">In collaboration with</p>
+                    <div class="flex justify-center items-center space-x-8">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded">
+                                <i class="ri-building-line text-primary"></i>
+                            </div>
+                            <span class="text-gray-700 dark:text-gray-300 font-medium">Anna University</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-8 h-8 flex items-center justify-center bg-secondary/10 rounded">
+                                <i class="ri-robot-line text-secondary"></i>
+                            </div>
+                            <span class="text-gray-700 dark:text-gray-300 font-medium">Tech Innovation Hub</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- <button
+                    class="bg-primary hover:bg-blue-600 text-white px-8 py-4 rounded-button text-lg font-semibold shadow-lg hover:shadow-xl transition-all transform hover:scale-105 whitespace-nowrap !rounded-button">
+                    Register Now
+                </button> -->
+            </div>
+            <!-- Speaker Details Modal -->
+            <div id="speaker-modal"
+                class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+                <div
+                    class="bg-white dark:bg-gray-900 rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto shadow-2xl">
+                    <div class="flex justify-between items-start mb-6">
+                        <div id="modal-header" class="flex items-center space-x-4">
+                            <img id="modal-image" src="" alt="" class="w-20 h-20 rounded-full object-cover object-top">
+                            <div>
+                                <h3 id="modal-name" class="text-2xl font-bold text-gray-900 dark:text-white"></h3>
+                                <p id="modal-title" class="text-primary font-medium text-lg"></p>
+                                <p id="modal-organization" class="text-gray-600 dark:text-gray-300"></p>
+                            </div>
+                        </div>
+                        <button id="close-modal"
+                            class="w-10 h-10 flex items-center justify-center text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-all">
+                            <i class="ri-close-line ri-xl"></i>
+                        </button>
+                    </div>
+                    <div id="modal-content" class="text-gray-600 dark:text-gray-300 space-y-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Institutional Credibility</h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    This workshop is organized by the prestigious Robotics and Automation Association of Madras
+                    Institute of Technology, Anna University, known for fostering innovation and excellence in
+                    engineering education.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-xl mx-auto mb-4">
+                        <i class="ri-team-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Robotics Association</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Leading student organization promoting robotics research
+                        and innovation</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 flex items-center justify-center bg-secondary/10 rounded-xl mx-auto mb-4">
+                        <i class="ri-building-2-line ri-2x text-secondary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Department of Mechanical
+                        Engineering</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Renowned for excellence in mechanical and manufacturing
+                        engineering</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-xl mx-auto mb-4">
+                        <i class="ri-school-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Madras Institute of Technology
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300">Premier engineering institution under Anna University
+                    </p>
+                </div>
+            </div>
+            <!-- <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">Faculty & Office Bearers
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <h4 class="font-semibold text-gray-900 dark:text-white">Dr. Rajesh Kumar</h4>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Faculty Advisor</p>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="font-semibold text-gray-900 dark:text-white">Priya Sharma</h4>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Association President</p>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="font-semibold text-gray-900 dark:text-white">Arjun Patel</h4>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Technical Secretary</p>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="font-semibold text-gray-900 dark:text-white">Meera Krishnan</h4>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Event Coordinator</p>
+                    </div>
+                </div>
+            </div> -->
+            <!-- Speaker Details Modal -->
+            <div id="speaker-modal"
+                class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+                <div
+                    class="bg-white dark:bg-gray-900 rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto shadow-2xl">
+                    <div class="flex justify-between items-start mb-6">
+                        <div id="modal-header" class="flex items-center space-x-4">
+                            <img id="modal-image" src="" alt="" class="w-20 h-20 rounded-full object-cover object-top">
+                            <div>
+                                <h3 id="modal-name" class="text-2xl font-bold text-gray-900 dark:text-white"></h3>
+                                <p id="modal-title" class="text-primary font-medium text-lg"></p>
+                                <p id="modal-organization" class="text-gray-600 dark:text-gray-300"></p>
+                            </div>
+                        </div>
+                        <button id="close-modal"
+                            class="w-10 h-10 flex items-center justify-center text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-all">
+                            <i class="ri-close-line ri-xl"></i>
+                        </button>
+                    </div>
+                    <div id="modal-content" class="text-gray-600 dark:text-gray-300 space-y-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">About the Workshop</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                        This intensive offline, hands-on workshop focuses on the revolutionary integration of AI
+                        technologies with 3D printing processes. Designed to address the growing demand for smart
+                        manufacturing solutions, participants will explore how artificial intelligence enhances additive
+                        manufacturing workflows, from design optimization to quality control. This workshop is essential
+                        for engineering students who want to stay ahead in the rapidly evolving landscape of Industry
+                        4.0 and smart manufacturing technologies.
+                    </p>
+                </div>
+                <div class="relative">
+                    <img src="https://readdy.ai/api/search-image?query=3D%20printer%20printing%20detailed%20scale%20model%20car%20chassis%20and%20body%20parts%20layer%20by%20layer%20modern%20FDM%20printer%20in%20clean%20laboratory%20setting%20indian%20engineering%20students%20observing%20the%20printing%20process%20white%20background%20with%20blue%20accent%20lighting%20professional%20educational%20workspace%20automotive%20prototype%20development&width=600&height=400&seq=about1&orientation=landscape"
+                        alt="AI 3D Printing Workshop" class="rounded-2xl shadow-lg object-cover w-full h-80">
+                </div>
+            </div>
+            <!-- Speaker Details Modal -->
+            <div id="speaker-modal"
+                class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+                <div
+                    class="bg-white dark:bg-gray-900 rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto shadow-2xl">
+                    <div class="flex justify-between items-start mb-6">
+                        <div id="modal-header" class="flex items-center space-x-4">
+                            <img id="modal-image" src="" alt="" class="w-20 h-20 rounded-full object-cover object-top">
+                            <div>
+                                <h3 id="modal-name" class="text-2xl font-bold text-gray-900 dark:text-white"></h3>
+                                <p id="modal-title" class="text-primary font-medium text-lg"></p>
+                                <p id="modal-organization" class="text-gray-600 dark:text-gray-300"></p>
+                            </div>
+                        </div>
+                        <button id="close-modal"
+                            class="w-10 h-10 flex items-center justify-center text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-all">
+                            <i class="ri-close-line ri-xl"></i>
+                        </button>
+                    </div>
+                    <div id="modal-content" class="text-gray-600 dark:text-gray-300 space-y-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Who Can Attend</h2>
+                <p class="text-gray-600 dark:text-gray-300">This workshop is designed for students and professionals
+                    passionate about technology</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg">
+                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-4">
+                        <i class="ri-graduation-cap-line ri-xl text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Engineering Students</h3>
+                    <p class="text-gray-600 dark:text-gray-300">All branches of engineering welcome</p>
+                </div>
+                <div class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg">
+                    <div class="w-12 h-12 flex items-center justify-center bg-secondary/10 rounded-lg mb-4">
+                        <i class="ri-book-line ri-xl text-secondary"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Polytechnic Students</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Technical diploma holders</p>
+                </div>
+                <div class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg">
+                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-4">
+                        <i class="ri-palette-line ri-xl text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Designers & Makers</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Creative professionals and hobbyists</p>
+                </div>
+                <div class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg">
+                    <div class="w-12 h-12 flex items-center justify-center bg-secondary/10 rounded-lg mb-4">
+                        <i class="ri-robot-line ri-xl text-secondary"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Robotics Enthusiasts</h3>
+                    <p class="text-gray-600 dark:text-gray-300">AI and manufacturing technology lovers</p>
+                </div>
+                <div class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg">
+                    <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-4">
+                        <i class="ri-microscope-line ri-xl text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Research Scholars</h3>
+                    <p class="text-gray-600 dark:text-gray-300">PhD and postgraduate researchers</p>
+                </div>
+                <div class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg">
+                    <div class="w-12 h-12 flex items-center justify-center bg-secondary/10 rounded-lg mb-4">
+                        <i class="ri-user-line ri-xl text-secondary"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Industry Professionals</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Working professionals seeking upskilling</p>
+                </div>
+            </div>
+            <!-- Speaker Details Modal -->
+            <div id="speaker-modal"
+                class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+                <div
+                    class="bg-white dark:bg-gray-900 rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto shadow-2xl">
+                    <div class="flex justify-between items-start mb-6">
+                        <div id="modal-header" class="flex items-center space-x-4">
+                            <img id="modal-image" src="" alt="" class="w-20 h-20 rounded-full object-cover object-top">
+                            <div>
+                                <h3 id="modal-name" class="text-2xl font-bold text-gray-900 dark:text-white"></h3>
+                                <p id="modal-title" class="text-primary font-medium text-lg"></p>
+                                <p id="modal-organization" class="text-gray-600 dark:text-gray-300"></p>
+                            </div>
+                        </div>
+                        <button id="close-modal"
+                            class="w-10 h-10 flex items-center justify-center text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-all">
+                            <i class="ri-close-line ri-xl"></i>
+                        </button>
+                    </div>
+                    <div id="modal-content" class="text-gray-600 dark:text-gray-300 space-y-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Learning Outcomes</h2>
+                <p class="text-gray-600 dark:text-gray-300">What you'll achieve after completing this workshop</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-lg flex-shrink-0 mt-1">
+                            <i class="ri-check-line text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">2D & 3D Model Design
+                                Abilities</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Master professional CAD software and design
+                                principles for creating complex geometries</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-8 h-8 flex items-center justify-center bg-secondary/10 rounded-lg flex-shrink-0 mt-1">
+                            <i class="ri-check-line text-secondary"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">AI Integration
+                                Understanding</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Comprehend how machine learning algorithms
+                                optimize additive manufacturing processes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-lg flex-shrink-0 mt-1">
+                            <i class="ri-check-line text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Hands-on Slicing &
+                                Prototyping</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Practical experience with slicing software and
+                                rapid prototyping techniques</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-8 h-8 flex items-center justify-center bg-secondary/10 rounded-lg flex-shrink-0 mt-1">
+                            <i class="ri-check-line text-secondary"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Real-world Industrial
+                                Workflows</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Exposure to industry-standard processes and
+                                quality control methodologies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Speaker Details Modal -->
+            <div id="speaker-modal"
+                class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+                <div
+                    class="bg-white dark:bg-gray-900 rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto shadow-2xl">
+                    <div class="flex justify-between items-start mb-6">
+                        <div id="modal-header" class="flex items-center space-x-4">
+                            <img id="modal-image" src="" alt="" class="w-20 h-20 rounded-full object-cover object-top">
+                            <div>
+                                <h3 id="modal-name" class="text-2xl font-bold text-gray-900 dark:text-white"></h3>
+                                <p id="modal-title" class="text-primary font-medium text-lg"></p>
+                                <p id="modal-organization" class="text-gray-600 dark:text-gray-300"></p>
+                            </div>
+                        </div>
+                        <button id="close-modal"
+                            class="w-10 h-10 flex items-center justify-center text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-all">
+                            <i class="ri-close-line ri-xl"></i>
+                        </button>
+                    </div>
+                    <div id="modal-content" class="text-gray-600 dark:text-gray-300 space-y-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- WOrkshop Agenda -->
+    <section class="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Workshop Agenda</h2>
+                <p class="text-gray-600 dark:text-gray-300">Detailed day-wise schedule of activities and sessions</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mr-4">
+                            <span class="text-primary font-bold text-lg">1</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Day 1</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Foundation & Design</p>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <img src="https://readdy.ai/api/search-image?query=modern%20FDM%203D%20printer%20in%20clean%20laboratory%20setting%20white%20and%20blue%20color%20scheme%20professional%20educational%20workspace%20indian%20engineering%20students%20observing%20printer%20operation%20detailed%20view%20of%20printing%20mechanism%20layer%20by%20layer%20manufacturing%20process&width=400&height=250&seq=day1printer&orientation=landscape"
+                            alt="Day 1 3D Printer" class="w-full h-40 object-cover object-top rounded-xl">
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-primary rounded-full"></div>
+                            <span class="text-gray-700 dark:text-gray-300">Inauguration Ceremony</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-primary rounded-full"></div>
+                            <span class="text-gray-700 dark:text-gray-300">Introduction to 3D Printing Technology</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-primary rounded-full"></div>
+                            <span class="text-gray-700 dark:text-gray-300">AI Integration in 3D Printing</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-primary rounded-full"></div>
+                            <span class="text-gray-700 dark:text-gray-300">Applications across Industries</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-primary rounded-full"></div>
+                            <span class="text-gray-700 dark:text-gray-300">2D & 3D Modelling (Hands-on)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 flex items-center justify-center bg-secondary/10 rounded-lg mr-4">
+                            <span class="text-secondary font-bold text-lg">2</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Day 2</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Slicing & Prototyping</p>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <img src="https://readdy.ai/api/search-image?query=advanced%203D%20printer%20with%20multiple%20extruders%20printing%20complex%20prototype%20parts%20modern%20manufacturing%20facility%20indian%20students%20learning%20hands-on%20rapid%20prototyping%20technology%20white%20background%20with%20green%20accent%20lighting%20professional%20workspace&width=400&height=250&seq=day2printer&orientation=landscape"
+                            alt="Day 2 3D Printer" class="w-full h-40 object-cover object-top rounded-xl">
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-secondary rounded-full"></div>
+                            <span class="text-gray-700 dark:text-gray-300">Introduction to Slicing Software</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-secondary rounded-full"></div>
+                            <span class="text-gray-700 dark:text-gray-300">Slicing 3D Models (Hands-on)</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-secondary rounded-full"></div>
+                            <span class="text-gray-700 dark:text-gray-300">Real-time Rapid Prototyping</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-secondary rounded-full"></div>
+                            <span class="text-gray-700 dark:text-gray-300">Interactive Q&A Session</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-secondary rounded-full"></div>
+                            <span class="text-gray-700 dark:text-gray-300">Valedictory Ceremony</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Speaker Details Modal -->
+            <div id="speaker-modal"
+                class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+                <div
+                    class="bg-white dark:bg-gray-900 rounded-2xl p-8 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto shadow-2xl">
+                    <div class="flex justify-between items-start mb-6">
+                        <div id="modal-header" class="flex items-center space-x-4">
+                            <img id="modal-image" src="" alt="" class="w-20 h-20 rounded-full object-cover object-top">
+                            <div>
+                                <h3 id="modal-name" class="text-2xl font-bold text-gray-900 dark:text-white"></h3>
+                                <p id="modal-title" class="text-primary font-medium text-lg"></p>
+                                <p id="modal-organization" class="text-gray-600 dark:text-gray-300"></p>
+                            </div>
+                        </div>
+                        <button id="close-modal"
+                            class="w-10 h-10 flex items-center justify-center text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-all">
+                            <i class="ri-close-line ri-xl"></i>
+                        </button>
+                    </div>
+                    <div id="modal-content" class="text-gray-600 dark:text-gray-300 space-y-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Resource Person -->
+    <!-- Key Resource Persons -->
+    <section class="py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                    Resource Persons
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300">
+                    Learn from industry experts and academic leaders
+                </p>
+            </div>
+
+            <!-- Speakers Grid -->
+            <div class="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
+                <!-- Speaker 1 -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg h-full text-center">
+                    <img src="static/Director_photo/Sabique.jpeg"
+                        alt="Dr. Sabique P V"
+                        class="w-28 h-28 rounded-full mx-auto mb-4 object-cover object-top">
+
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">
+                        Dr. Sabique P V
+                    </h3>
+
+                    <p class="text-primary font-medium mb-1">
+                        Founder
+                    </p>
+
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                        Pixelbotix Technologies Pvt. Ltd.
+                    </p>
+
+                    <div class="text-left text-sm text-gray-600 dark:text-gray-300 space-y-2">
+                        <p><strong>Experience:</strong> 5+ years in additive manufacturing and AI integration</p>
+                        <p><strong>Expertise:</strong> AI-driven optimization in 3D printing and smart manufacturing</p>
+                        <p><strong>Publications:</strong> 5+ international research papers</p>
+                        <!-- <p><strong>Awards:</strong> Best Research Award – Manufacturing Innovation (2024)</p> -->
+                        <p><strong>Education:</strong> PhD in Robotics, MIT Anna University</p>
+                    </div>
+
+                    <div class="flex justify-center mt-6">
+                        <a href="#"
+                        class="inline-flex items-center justify-center w-10 h-10 bg-primary/10 hover:bg-primary hover:text-white rounded-lg transition-all">
+                            <i class="ri-linkedin-fill ri-lg text-primary hover:text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Speaker 2 -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg h-full text-center">
+                    <img src="static/Director_photo/Siva.jpeg"
+                        alt="Dr. Sivaperumal R"
+                        class="w-28 h-28 rounded-full mx-auto mb-4 object-cover object-top">
+
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">
+                        Dr. Sivaperumal R
+                    </h3>
+
+                    <p class="text-secondary font-medium mb-1">
+                        Co-Founder
+                    </p>
+
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                        Pixelbotix Technologies Pvt. Ltd.
+                    </p>
+
+                    <div class="text-left text-sm text-gray-600 dark:text-gray-300 space-y-2">
+                        <p><strong>Experience:</strong> 5+ years in AI applications for manufacturing</p>
+                        <p><strong>Expertise:</strong> 3D Printing,AI application systems</p>
+                        <p><strong>Projects:</strong> Led 20+ smart manufacturing deployments</p>
+                        <p><strong>Certifications:</strong> Certified Additive Manufacturing Specialist</p>
+                        <p><strong>Education:</strong> PhD in Composite Materials, MIT Anna University</p>
+                    </div>
+
+                    <div class="flex justify-center mt-6">
+                        <a href="#"
+                        class="inline-flex items-center justify-center w-10 h-10 bg-secondary/10 hover:bg-secondary hover:text-white rounded-lg transition-all">
+                            <i class="ri-linkedin-fill ri-lg text-secondary hover:text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+<!-- Event Logistics -->
+<section class="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                Event Logistics
+            </h2>
+            <p class="text-gray-600 dark:text-gray-300">
+                All essential details at a glance
+            </p>
+        </div>
+
+        <!-- Key Logistics Cards -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 max-w-5xl mx-auto">
+
+            <div class="bg-white dark:bg-gray-900 rounded-2xl p-6 text-center shadow-lg">
+                <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mx-auto mb-4">
+                    <i class="ri-calendar-2-line ri-xl text-primary"></i>
+                </div>
+                <h3 class="font-semibold text-gray-900 dark:text-white mb-1">Dates</h3>
+                <p class="text-gray-600 dark:text-gray-300">7–8 January 2026</p>
+            </div>
+
+            <div class="bg-white dark:bg-gray-900 rounded-2xl p-6 text-center shadow-lg">
+                <div class="w-12 h-12 flex items-center justify-center bg-secondary/10 rounded-lg mx-auto mb-4">
+                    <i class="ri-time-line ri-xl text-secondary"></i>
+                </div>
+                <h3 class="font-semibold text-gray-900 dark:text-white mb-1">Timings</h3>
+                <p class="text-gray-600 dark:text-gray-300">9:00 AM – 5:00 PM</p>
+            </div>
+
+            <div class="bg-white dark:bg-gray-900 rounded-2xl p-6 text-center shadow-lg">
+                <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mx-auto mb-4">
+                    <i class="ri-building-line ri-xl text-primary"></i>
+                </div>
+                <h3 class="font-semibold text-gray-900 dark:text-white mb-1">Venue</h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                    Prof. SRK Hall<br>MIT Campus
+                </p>
+            </div>
+
+        </div>
+
+        <!-- What's Included -->
+        <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg max-w-5xl mx-auto">
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+                What’s Included
+            </h3>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <div class="flex items-center space-x-4">
+                    <div class="w-10 h-10 flex items-center justify-center bg-secondary/10 rounded-lg">
+                        <i class="ri-cup-line text-secondary ri-lg"></i>
+                    </div>
+                    <span class="text-gray-700 dark:text-gray-300">Refreshments</span>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-lg">
+                        <i class="ri-book-2-line text-primary ri-lg"></i>
+                    </div>
+                    <span class="text-gray-700 dark:text-gray-300">Workshop Materials</span>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <div class="w-10 h-10 flex items-center justify-center bg-secondary/10 rounded-lg">
+                        <i class="ri-award-line text-secondary ri-lg"></i>
+                    </div>
+                    <span class="text-gray-700 dark:text-gray-300">Participation Certificate</span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">PixelBotix Technologies</h3>
+                    <p class="text-gray-400 mb-6">Future-driven product innovation and EdTech company pioneering the
+                        convergence of Robotics, AI, Smart Manufacturing, and Emerging Technologies.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=61575683369348" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-facebook-fill ri-lg"></i>
+                        </a>
+                        <a href="https://x.com/PixelBotix" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-twitter-fill ri-lg"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/pixelbotix/" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-linkedin-fill ri-lg"></i>
+                        </a>
+                        <a href="https://www.instagram.com/pixel_botix/" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-instagram-fill ri-lg"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@PixelBotix" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-youtube-fill ri-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="/about/about-us.html" class="text-gray-400 hover:text-white transition-colors">About
+                                Us</a></li>
+                        <li><a href="#ai-robotics" class="text-gray-400 hover:text-white transition-colors">AI &
+                                Robotics</a></li>
+                        <li><a href="#eduverse" class="text-gray-400 hover:text-white transition-colors">Eduverse</a>
+                        </li>
+                        <li><a href="#skill-labs" class="text-gray-400 hover:text-white transition-colors">Skill
+                                Labs</a></li>
+                        <li><a href="https://shop.pixelbotix.com/" class="text-gray-400 hover:text-white transition-colors">Products</a>
+                        </li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Programs -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Our Programs</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#brainy-babies" class="text-gray-400 hover:text-white transition-colors">Brainy
+                                Babies (0-5 years)</a></li>
+                        <li><a href="#little-techies" class="text-gray-400 hover:text-white transition-colors">Little
+                                Techies (5-9 years)</a></li>
+                        <li><a href="#maker-school" class="text-gray-400 hover:text-white transition-colors">Maker
+                                School (9-17 years)</a></li>
+                        <li><a href="#future-innovators" class="text-gray-400 hover:text-white transition-colors">Future
+                                Innovators (16-25 years)</a></li>
+                        <li><a href="#school-lab-setup" class="text-gray-400 hover:text-white transition-colors">School
+                                Lab Setup</a></li>
+                        <li><a href="#faculty-development"
+                                class="text-gray-400 hover:text-white transition-colors">Faculty Development</a></li>
+                    </ul>
+                </div>
+
+                <!-- Policies -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Policies</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/policies/privacy_policy.html"
+                                class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="/policies/terms.html" class="text-gray-400 hover:text-white transition-colors">Terms &
+                                Conditions</a></li>
+                        <li><a href="/policies/refund_cancellation.html"
+                                class="text-gray-400 hover:text-white transition-colors">Refund & Cancellation</a></li>
+                        <li><a href="/policies/shipping_policy.html"
+                                class="text-gray-400 hover:text-white transition-colors">Shipping Policy</a></li>
+                        <li><a href="/policies/disclaimer.html"
+                                class="text-gray-400 hover:text-white transition-colors">Disclaimer</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Subscribe to Our Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Stay updated with our latest news, programs, and innovations.</p>
+                    <form class="mb-4">
+                        <div class="flex">
+                            <input type="email" placeholder="Your email address"
+                                class="px-4 py-3 bg-gray-800 text-white rounded-l focus:outline-none focus:ring-2 focus:ring-primary border-none flex-grow">
+                            <button type="submit"
+                                class="bg-primary text-white px-4 py-3 rounded-r hover:bg-blue-600 transition-colors whitespace-nowrap">Subscribe</button>
+                        </div>
+                    </form>
+                    <p class="text-gray-500 text-sm">By subscribing, you agree to our Privacy Policy and consent to
+                        receive updates from our company.</p>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2025 PixelBotix Technologies Pvt. Ltd. All
+                        rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Terms of
+                            Service</a>
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Buttons Container -->
+            <div class="fixed bottom-8 right-8 z-50 flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
+                <!-- Back to Top Button -->
+                <button id="back-to-top"
+                    class="bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+                    <i class="ri-arrow-up-line ri-lg"></i>
+                </button>
+
+                <!-- WhatsApp Button -->
+                <a href="https://wa.me/917200445335?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20PixelBotix%20and%20your%20programs.%20Can%20you%20help%20me?"
+                    target="_blank"
+                    class="bg-green-500 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-green-600 transition-all transform hover:scale-105">
+                    <i class="ri-whatsapp-line text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    
+    <script id="theme-toggle-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+            const html = document.documentElement;
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            if (savedTheme === 'dark') {
+                html.classList.add('dark');
+            }
+            function toggleTheme() {
+                html.classList.toggle('dark');
+                const isDark = html.classList.contains('dark');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            }
+            themeToggle.addEventListener('click', toggleTheme);
+            themeToggleMobile.addEventListener('click', toggleTheme);
+        });
+    </script>
+
+    <script id="mobile-menu-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuToggle.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+    <script id="speaker-details-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const modal = document.getElementById('speaker-modal');
+            const closeModal = document.getElementById('close-modal');
+            const modalImage = document.getElementById('modal-image');
+            const modalName = document.getElementById('modal-name');
+            const modalTitle = document.getElementById('modal-title');
+            const modalOrganization = document.getElementById('modal-organization');
+            const modalContent = document.getElementById('modal-content');
+
+            const speakersData = {
+                1: {
+                    name: "Dr. Sabique P V",
+                    title: "Senior Research Scientist",
+                    organization: "Indian Institute of Technology",
+                    image: "https://readdy.ai/api/search-image?query=professional%20portrait%20of%20indian%20male%20engineer%20in%20formal%20shirt%20smiling%20confidently%20clean%20white%20background%20corporate%20headshot%20style%20well%20groomed%20appearance%20technology%20professional%20lighting&width=300&height=300&seq=speaker1&orientation=squarish",
+                    details: [
+                        "<strong>Experience:</strong> 15+ years in additive manufacturing and AI integration",
+                        "<strong>Expertise:</strong> Machine learning algorithms for 3D printing optimization, smart manufacturing systems",
+                        "<strong>Publications:</strong> 50+ research papers in international journals",
+                        "<strong>Awards:</strong> Best Research Award in Manufacturing Innovation 2024",
+                        "<strong>Education:</strong> PhD in Mechanical Engineering from IIT Delhi"
+                    ]
+                },
+                2: {
+                    name: "Dr. SIVAPERUMAL R",
+                    title: "AI & Manufacturing Expert",
+                    organization: "Pixelbotix Technologies",
+                    image: "https://readdy.ai/api/search-image?query=professional%20portrait%20of%20indian%20female%20engineer%20in%20business%20attire%20smiling%20warmly%20clean%20white%20background%20corporate%20headshot%20style%20confident%20expression%20technology%20professional%20lighting&width=300&height=300&seq=speaker2&orientation=squarish",
+                    details: [
+                        "<strong>Experience:</strong> 12+ years in AI applications for manufacturing industry",
+                        "<strong>Expertise:</strong> Computer vision for quality control, predictive maintenance algorithms",
+                        "<strong>Projects:</strong> Led 20+ industry projects in smart manufacturing",
+                        "<strong>Certifications:</strong> Certified AI Professional, Advanced Manufacturing Specialist",
+                        "<strong>Education:</strong> M.Tech in AI & Robotics from NIT Trichy"
+                    ]
+                },
+                3: {
+                    name: "Mr. Rohit Sharma",
+                    title: "Industry Consultant",
+                    organization: "Advanced Manufacturing Solutions",
+                    image: "https://readdy.ai/api/search-image?query=professional%20portrait%20of%20indian%20male%20technology%20executive%20in%20casual%20business%20shirt%20friendly%20smile%20clean%20white%20background%20corporate%20headshot%20style%20approachable%20demeanor%20modern%20professional%20lighting&width=300&height=300&seq=speaker3&orientation=squarish",
+                    details: [
+                        "<strong>Experience:</strong> 18+ years in manufacturing consulting and technology implementation",
+                        "<strong>Expertise:</strong> Industrial automation, lean manufacturing, 3D printing applications",
+                        "<strong>Clients:</strong> Worked with 100+ companies across automotive, aerospace, healthcare",
+                        "<strong>Achievements:</strong> Helped companies reduce manufacturing costs by 30-40%",
+                        "<strong>Education:</strong> MBA in Operations & B.Tech in Production Engineering"
+                    ]
+                }
+            };
+
+            const readMoreBtns = document.querySelectorAll('.read-more-btn');
+            readMoreBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const speakerId = this.getAttribute('data-speaker');
+                    const speaker = speakersData[speakerId];
+                    if (speaker) {
+                        modalImage.src = speaker.image;
+                        modalImage.alt = speaker.name;
+                        modalName.textContent = speaker.name;
+                        modalTitle.textContent = speaker.title;
+                        modalOrganization.textContent = speaker.organization;
+                        modalContent.innerHTML = speaker.details.map(detail => `<p class="mb-2">${detail}</p>`).join('');
+                        modal.classList.remove('hidden');
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+
+            function closeModalHandler() {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+
+            closeModal.addEventListener('click', closeModalHandler);
+
+            modal.addEventListener('click', function (e) {
+                if (e.target === modal) {
+                    closeModalHandler();
+                }
+            });
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                    closeModalHandler();
+                }
+            });
+        });
+    </script>
+
+    <script id="back-to-top-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const backToTopButton = document.getElementById('back-to-top');
+            function toggleBackToTopButton() {
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.remove('opacity-0', 'invisible');
+                    backToTopButton.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopButton.classList.remove('opacity-100', 'visible');
+                    backToTopButton.classList.add('opacity-0', 'invisible');
+                }
+            }
+            window.addEventListener('scroll', toggleBackToTopButton);
+            backToTopButton.addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
